@@ -12,25 +12,29 @@ local Skill = class("Skill",
 					cfg = nil,
 					cdLeft = 0,
 					keytype = nil,
-					caster = nil
+					caster = nil,
+
+					group = nil
 					})
 
 function Skill:ctor(id,keytype,caster)
 	self:initCfg(id)
 	self:setKeyType(keytype)
+	self:setCaster(caster)
 
 	local avatarType = caster:getCfgByKey("AvatarType")
 	local anim_events = __skill_anim_events[tostring(avatarType)]
-	print("avatarType",avatarType)
+	-- print("avatarType",avatarType)
 	self:set_anim_events(anim_events)
 end
 
 function Skill:initCfg(id)
 	local cfg = getCfg(id, "SkillConfig")
+	if not cfg then print("ID为",id,"的技能找不到") end
 	self.cfg = cfg
 end
 
-function Skill:getCfg()
+function Skill:getCfg() 
 	return self.cfg
 end
 
@@ -38,10 +42,23 @@ function Skill:getCfgByKey(key)
 	return self:getCfg()[key]
 end
 
+function Skill:setCaster(val)
+	self.caster = val
+end
+function Skill:getCaster()
+	return self.caster
+end
+
+
+---
 function Skill:updateCdLeft(gap)
 	local gap = gap or 1
 	self.cdLeft = self.cdLeft - gap 
-	print("_______技能：",self:getCfgBgKey("Name"),"剩余冷却：",self.cdLeft)
+	if self.cdLeft <0 then 
+		self.cdLeft = -1
+	else
+		print("_______技能：",self:getCfgByKey("Name"),"剩余冷却：",self.cdLeft)
+	end
 end
 
 function Skill:getCdLeft()
@@ -50,6 +67,7 @@ end
 
 function Skill:setCdLeft(val)
 	self.cdLeft = val
+	print("setCdLeft",self.cdLeft)
 end
 
 

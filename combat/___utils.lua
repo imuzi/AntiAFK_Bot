@@ -139,7 +139,8 @@ end
 
 
 --  
-function sort__(tar_table,sorParmas)  
+--- sorting func begins 
+function sort__(data,sorParmas)  
 	local get_conditions = 
 	function(depth,a,b)
 		local sortData = sorParmas[depth] 
@@ -173,29 +174,110 @@ function sort__(tar_table,sorParmas)
 				{{'baseInfo','id'},"<"}, 
 			}"]])
  	end 
-
  	
+ 	local hasNIL = false 
+ 	local hasTempPriorityKey = false
+	table.sort(data, 
+		function(a, b)  
+			if not a or not b then  
+				hasNIL  = true 
+				print("a or b is nil")
+			-- elseif a.baseAttrs and b.baseAttrs then 
+			-- 	print("__",a.baseAttrs.id,b.baseAttrs.id)
+		 
+		  	end 
 
-	table.sort(tar_table, 
-		function(a, b) 
-	 		local sortOne 
-	 		sortOne = 
-	 		function(depth)
-	 			local h,l,sort_type = get_conditions(depth,a,b)--conditions[depth]
-	 			if not h then return false end 
-	 			
-	 			-- local h,l = unpack(_conditions)
-	 			depth = depth + 1  
-	 			
-	 			if h==l then  
-	 				return sortOne(depth)
-	 			else
-	 				local result = sort_type == "<" and h<l or h>l
-	 				return result
-	 			end  
-			end
-			return sortOne(1) 
+			-- if a == b then 
+			-- 	print("a==== b")
+			-- end   
+
+			if not a then 
+				return true 
+			elseif not b then 
+				return false 
+			elseif a == b then
+				return false
+			else 
+				local result
+		 		local sortOne 
+		 		sortOne = 
+		 		function(depth)
+		 			local h,l,sort_type = get_conditions(depth,a,b)--conditions[depth]
+		 			-- print("h,l",h,l,sort_type)
+		 			if not h then return result end 
+
+		 			if sort_type == "<" then
+	 					result = h<l
+	 				else 
+	 					result = h>l
+	 				end  
+		 		 
+		 			depth = depth + 1  
+		 			
+		 			if h==l then  
+		 				result = sortOne(depth)   
+		 			end  
+		 			return result
+				end
+
+				result = sortOne(1) 
+
+				-- check is there a temp sort priority key to reset after sorting 
+				if tempSortPriority__(a) then hasTempPriorityKey = true end 
+				-- print("___________result",result)
+				return result
+			end  
+			
 		end
 	) 
+
+	if hasTempPriorityKey then 
+		-- print("____hasTempPriorityKey_____",hasTempPriorityKey)
+		for i,v in ipairs(data) do
+			-- print("v[TEMP_SORT_PRORITY_KEY]",tempSortPriority__(v))
+			tempSortPriority__(v,false)
+		end
+	end 
+	if hasNIL then 
+		dump(data)
+		os.exit()
+	end 
+	return data
+end
+
+local TEMP_SORT_PRORITY_KEY = "_sortPriority" 
+function tempSortPriority__(instance,val)
+	local value = instance[TEMP_SORT_PRORITY_KEY]
+
+	if val~=nil then 
+		value = val  
+	else
+		return value
+	end
+
+	instance[TEMP_SORT_PRORITY_KEY] = value 
+	return instance 
 end
 	
+------ sorting funcs end 
+
+
+local __random_count = 0
+local __random_recoder = {}
+function random__(...)
+	__random_count = __random_count+1
+	local random_result = math.random(...)
+	-- print("__________random_count",__random_count,random_result,...)
+
+	local string_rec =  "\n"..__random_count.."^^^^"..random_result
+	table.insert(__random_recoder, string_rec)
+	
+	return random_result
+end
+
+function set_random_count(var)
+	dump(__random_recoder)
+ 	
+	__random_recoder = {}
+	__random_count = var or 0
+end	

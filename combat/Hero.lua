@@ -12,9 +12,8 @@ local Hero = class("Hero",
 					status      = nil, 
 					frameStep   = 0,
 					skillToCast = nil,
-					groupName   = nil, 
-
-					_didBasicAtk = false,
+					group   = nil, 
+  
 					}) 
 
 function Hero:ctor(heroData)
@@ -25,7 +24,7 @@ function Hero:ctor(heroData)
 	self:initCfg(type_)
 	self:__initAttrs(heroData)
 
-	print("svr_id,type_",svr_id,type_)
+	print("svr_id,type_",svr_id,type_,"\n--------------------------------------------\n")
 end
 
 function Hero:initCfg(id)
@@ -40,6 +39,15 @@ end
 function Hero:getCfgByKey(key)
 	return self:getCfg()[key]
 end
+ 
+
+function Hero:setGroup(val)
+	self.group = val
+end
+function Hero:getGroup()
+	return self.group 
+end
+
 --- Attributes
 function Hero:__initAttrs(attrData)
 	local attrData = attrData  
@@ -47,7 +55,9 @@ function Hero:__initAttrs(attrData)
 
 	for k,v in pairs(attrData) do
 		self:setAttr(k,v)
-	end  
+	end 
+
+	self:setAttr("hp",self:getAttr("maxHP")) 
 end
 
 function Hero:getAttr(name)
@@ -61,12 +71,7 @@ function Hero:setAttr(name,val)
 	print("name,val",name,val)
 end
 
-function Hero:setGroupName(val)
-	self.groupName = val
-end
-function Hero:getGroupName()
-	return self.groupName 
-end
+
 --- status 
 function Hero:setStatus(val)
 	self.status = val 
@@ -76,19 +81,6 @@ function Hero:getStatus()
 	return self.status
 end
 
-
-function Hero:didBasicAtk(val)
-	local didBasicAtk = self._didBasicAtk
-
-	if val~=nil then 
-		didBasicAtk = val  
-	else
-		return didBasicAtk
-	end
-
-	self._didBasicAtk = didBasicAtk
-	return self
-end 
 
 --- frame step  
 function Hero:updateFrameStep(gap)
@@ -123,7 +115,7 @@ function Hero:getSkillToCast()
 end
 
 
-
+ 
 
 
 

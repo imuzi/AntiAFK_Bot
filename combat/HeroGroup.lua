@@ -8,6 +8,8 @@ local HeroGroup = class("HeroGroup",
 						heros = {},
 						speed = 0,
 						name = "",
+						skills = {},
+ 
 						})
 
 function HeroGroup:ctor(name)
@@ -17,17 +19,25 @@ end
 function HeroGroup:getHeros()
 	return self.heros
 end
-
+function HeroGroup:getSkills()
+	return self.skills
+end
 
 function HeroGroup:add(hero)
 	local heros = self:getHeros()
-	hero:setGroupName(self:getName())
+	hero:setGroup(self)
 	table.insert(heros,hero)
 end
 
 function HeroGroup:addSpeed(hero)
 	local hero_speed = hero:getAttr("speed")
+	-- print("addSpeed",self:getName(),self:getSpeed())
 	self.speed = self.speed + hero_speed 
+end
+
+function HeroGroup:addSkill(skill)
+	local skills = self:getSkills()
+	table.insert(skills,skill)
 end
 
 function HeroGroup:getSpeed()
@@ -49,4 +59,5 @@ function HeroGroup:release()
 	-- body
 end
 
+ 
 return HeroGroup

@@ -12,23 +12,24 @@ module(...,package.seeall)
 
 -- 战斗模式 pvp or pve or something else
 mode = nil
+
+groupNames=
+{
+	ATTACKER,
+	DEFENDER
+}
 -- 场上所有阵营数据
 groupMap = 
 {
-	myself = 0,
-	enemy = 0,
+	[ATTACKER] = 0,
+	[DEFENDER] = 0,
 }
 
 basicAttackOrderSet = 
 {}
 
 
--- 所有技能集合
-skillMap = 
-{
-	myself = {},
-	enemy = {}
-}
+
 
 -- 保存手动释放的技能数据
 manualCastData  =
@@ -42,28 +43,33 @@ function init(data)
 	local data = data or decodeLocalMsg()
  
 
-	__init_groups(data)
-
-	__init_skills()
+	__init_groups(data) 
  
 end 
 
+function getGroupByName(name)
+	return groupMap[name]
+end
 
 ------ 武将数据集
 function __init_groups(data)
   	local BattleGroupData = data.groups
   	local HeroGroupData = data.myGroup
  
-  	local dataForGroupInit = 
+  	local transDataForGroupInit = 
   	{
-		myself = {HeroGroupData},
-		enemy  = BattleGroupData
+		[ATTACKER] = {HeroGroupData},
+		[DEFENDER]  = BattleGroupData
   	} 
 	for k,v in pairs(groupMap) do 
-		local initData = dataForGroupInit[k]
+		local initData = transDataForGroupInit[k]
 		v = heroGroup.new(k)
+		v:setName(k)
 
 		__init_heros(v,initData)
+
+		__init_skills(v)
+
 
 		groupMap[k] = v
 	end
@@ -96,9 +102,9 @@ end
  
 
 -- skills 
-function __init_skills()
-	for k,skills in pairs(skillMap) do
-		local heroGroup = groupMap[k] 
+function __init_skills(group)
+	-- for k,skills in pairs(skillMap) do
+		local heroGroup = group
 		assert(heroGroup~=nil,"heroGroup未初始化，skill 要在heroGroup初始化后初始")
 		local heros = heroGroup:getHeros()
 		
@@ -107,15 +113,19 @@ function __init_skills()
 			local ids = __getSkillIdsFromHero(caster) 
 
 			for k_,id in pairs(ids) do
-				local skill = skill.new(id,k_,caster)
-				skill:setCdLeft(INIT_CD)
-				table.insert(skills, skill) 
+				local id = id[1]
+				if id ~= nil then 
+					local skill = skill.new(id,k_,caster) 
+					skill:setCdLeft(INIT_CD)
+
+					group:addSkill(skill)
+				end
 			end
 		end
 
-		skillMap[k] = skills
+		-- skillMap[k] = skills
 
-	end
+	-- end
 end
  
 

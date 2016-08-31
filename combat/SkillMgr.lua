@@ -20,18 +20,80 @@ module(...,package.seeall)
 
 ]]
 
-readySkills = {}
+
+readySkills = 
+{
+	[ATTACKER] = {},
+	[DEFENDER] = {}
+}
 
 
+function loop()
+	updateSkillCd()
+end
 
+function updateSkillCd() 
+	local groupMap = combatData.groupMap
+	for k,v in pairs(groupMap) do
+		local group = v 
+		local skills = group:getSkills() 
+		print("\n____刷新技能CD__阵营",k)
+		for i,skill in ipairs(skills) do
+			checkSkillCd(skill)
+		end
+	end 
+end
+
+
+function checkSkillCd(skill)
+	if isSkillJustReady(skill) then 
+		onSkillReady(skill) 
+	end
+	skill:updateCdLeft()
+
+
+	targetFilters.getTargets(skill)
+	getSkillToCast()
+end
+
+function isSkillJustReady(skill)
+	return skill:getCdLeft() == 0
+end
+function isSkillReady(skill)
+	return skill:getCdLeft() <= 0
+end
+
+function onSkillReady(skill)
+	storeReadySkill(skill)
+
+
+end	
+
+function storeReadySkill(skill)
+	local groupName = skill:getCaster():getGroup():getName()
+	local set_ = readySkills[groupName]
+
+	table.insert(set_, skill) 
+	print("添加技能到readySkills,技能名：",skill:getCfgByKey("Name")
+		,"groupName",groupName) 
+end
+
+
+-- note:  这里不是找到技能后去决定武将何事放技能，而是 当武将的回合结束或要开始某个回合时去执行
 function getSkillToCast()
-	-- body
+	
+	local nextTurnGroup = turnOrders.skill:whosTurn() 
+	local nextGroupName =  nextTurnGroup:getName()
+
+	local skills = readySkills[nextGroupName]
+	local skillToCast = nil 
+
+
+
+	print("\n__getSkillToCast________nextGroupName_",nextGroupName,"readySkills",#skills)
+	return skillToCast
 end
 
+ 
 
-
-
-function startCoolDown( ... )
-	-- body
-end
-
+ 

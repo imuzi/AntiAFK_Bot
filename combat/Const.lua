@@ -13,6 +13,16 @@ SKILLTYPES =
 	"REVIVE"
 }
 
+STATUS = {
+	BATK
+}
+
+
+
+-- 将出战双方抽象为 攻方  守方
+ATTACKER = "ATTACKER"
+DEFENDER = "DEFENDER"
+
 
 -- 公CD
 G_CD = 12 

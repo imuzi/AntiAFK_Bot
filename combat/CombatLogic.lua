@@ -42,18 +42,22 @@ solution；只做基本功能。后期慢慢移植
  
 module(...,package.seeall) 
 
+inturn = false 
+
+
+
 
 function loop()
-	local heros = combatData.basicAttackOrderSet
-
+	local turnOwner = turnOrders.basicAttack:whosTurn()
+	trans_status(turnOwner,"BASICATTACK")  
 end
 
 function do_ai(hero)
 	
 end
 
-function trans_status(hero)
-	-- body
+function trans_status(hero,val)
+	hero:setStatus(val)
 end
 
 
@@ -66,24 +70,13 @@ function turn_end(hero)
 end
 
 
--- 染红的写法 确保动态插入后 仍能正确找到正确的attacker
-function get_next_basic_attacker(basicAttackOrderSet)
-	local basicAttackOrderSet = basicAttackOrderSet 
-	local attacker = nil
 
-	for i,v in ipairs(basicAttackOrderSet) do
-		local hero = v 
-		local didBasicAtk = hero:didBasicAtk()
 
-		if didBasicAtk == false then 
-			attacker = hero 
-			hero:didBasicAtk(true)
-			break
-		end 
-	end
 
-	return attacker
-end
+
+
+
+ 
  
 
 
