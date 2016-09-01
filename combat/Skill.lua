@@ -13,19 +13,39 @@ local Skill = class("Skill",
 					cdLeft = 0,
 					keytype = nil,
 					caster = nil,
+					targets = {},
 
 					group = nil
 					})
 
 function Skill:ctor(id,keytype,caster)
-	self:initCfg(id)
+	
 	self:setKeyType(keytype)
 	self:setCaster(caster)
+
+	if self:isBasicAttack() then 
+		self:initBasicAttack()
+	else 
+		self:initCfg(id)
+	end 
+	
 
 	local avatarType = caster:getCfgByKey("AvatarType")
 	local anim_events = __skill_anim_events[tostring(avatarType)]
 	-- print("avatarType",avatarType)
 	self:set_anim_events(anim_events)
+end
+
+
+function Skill:initBasicAttack()
+	local cfg = self:getCaster():getCfg()
+	-- self:setCfg(cfg)
+	self.cfg = cfg
+end
+
+
+function Skill:isBasicAttack()
+	return self:getKeyType() == BASIC_SKILL_TYPE
 end
 
 function Skill:initCfg(id)
@@ -47,6 +67,13 @@ function Skill:setCaster(val)
 end
 function Skill:getCaster()
 	return self.caster
+end
+
+function Skill:setTargets(val)
+	self.targets = val
+end
+function Skill:getTargets()
+	return self.targets
 end
 
 
@@ -71,15 +98,22 @@ function Skill:setCdLeft(val)
 end
 
 
-function Skill:getInterval(key)
-	local key = key or self:getKeyType()
-	local anim_events = self:get_anim_events()
-	local events = anim_events[k] or anim_events["attack"] 
 
+--- anim _events funcs
+function Skill:getInterval(key)
+	local events = self:getAnimEvent(key) 
 	return events.interval
 end
 
+-- function Skill:getPoint(key,evt)
+-- 	local events = self:getAnimEvent(key) 
+-- 	return events[evt]
+-- end
 
+function Skill:getAnimEvent(key)
+	local key = key or self:getKeyType()
+	return self:get_anim_events()[key]
+end
 
 function Skill:set_anim_events(val)
 	self.anim_events = val
@@ -88,6 +122,8 @@ end
 function Skill:get_anim_events()
 	return self.anim_events
 end
+--- anim _events funcs end
+
 
 -- 区分表头做特殊用
 function Skill:setKeyType(var)

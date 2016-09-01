@@ -13,12 +13,12 @@ basicAttack = {
 		end 
 
 		local trunOwner = getTurnOwner(data,instanceGetter)
-		
+
 		if not trunOwner then 
-			basicAttack:reset()  
+			basicAttack.reset()  
 			trunOwner = getTurnOwner(data,instanceGetter)
 		end
-
+		print("本轮攻击者：",trunOwner:getCfgByKey("Name"),"speed",trunOwner:getAttr("speed"))
 		return trunOwner
 	end,
 	reset = 
@@ -69,10 +69,10 @@ skill = {
 		local trunOwner = getTurnOwner(data,instanceGetter)
 
 		if not trunOwner then 
-			skill:reset()  
+			skill.reset()  
 			trunOwner = getTurnOwner(data,instanceGetter)
 		end
-
+		print("本轮攻击者：",trunOwner:getName(),"speed",trunOwner:getSpeed())
 		return trunOwner
 	end,
 	reset = 
@@ -108,12 +108,12 @@ function getTurnOwner(data,instanceGetter)
 
 	for i,v in ipairs(data) do
 		local instance = instanceGetter(v)
-		local turnOrderTag = tempTurnOrderTag__(instance)
+		local turnOrderTag = tempTurnOrderFlag__(instance)
 
 		-- print("turnOrderTag",turnOrderTag,v)
 		if not turnOrderTag  then 
 			trunOwner = instance 
-			tempTurnOrderTag__(instance,true)
+			tempTurnOrderFlag__(instance,true)
 			break
 		end 
 	end
@@ -125,16 +125,17 @@ function resetTrunTag(data,instanceGetter)
 	local data = data
 	for i,v in ipairs(data) do
 		local instance = instanceGetter(v)  
-		tempTurnOrderTag__(instance,false) 
+		tempTurnOrderFlag__(instance,false) 
 	end 
 
 	print("_____resetTrunTag")
 end
 
 
-local TEMP_TURN_ORDER_KEY = "_turnOrderTag" 
-function tempTurnOrderTag__(instance,val)
-	local value = instance[TEMP_TURN_ORDER_KEY]
+local TEMP_TURN_ORDER_KEY = "_turnOrderFlag" 
+function tempTurnOrderFlag__(instance,val)
+	local key = TEMP_TURN_ORDER_KEY
+	local value = instance[key]
 
 	if val~=nil then 
 		value = val  
@@ -142,6 +143,6 @@ function tempTurnOrderTag__(instance,val)
 		return value
 	end
 
-	instance[TEMP_TURN_ORDER_KEY] = value 
+	instance[key] = value 
 	return instance 
 end

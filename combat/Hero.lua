@@ -13,6 +13,7 @@ local Hero = class("Hero",
 					frameStep   = 0,
 					skillToCast = nil,
 					group   = nil, 
+					basicSkill = nil,
   
 					}) 
 
@@ -100,7 +101,7 @@ end
 
 function Hero:isSkillOver()
 	local interval = self:getSkillToCast():getInterval()
-	local frameStep = self:getgetFrameStep()
+	local frameStep = self:getFrameStep()
 	local isOver = interval <= frameStep
 
 	return isOver 
@@ -114,7 +115,13 @@ function Hero:getSkillToCast()
 	return self.skillToCast
 end
 
+function Hero:setBasicSkill(skill)
+	self.basicSkill = skill
+end
 
+function Hero:getBasicSkill()
+	return self.basicSkill
+end
  
 
 

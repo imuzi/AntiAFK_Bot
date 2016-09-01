@@ -87,11 +87,19 @@ function __init_heros(group,initData)
 			group:add(hero)  
 			group:addSpeed(hero)  
 
+			__init_basic_skill(hero)
+
 			__add_to_basicAttackOrderSet(hero)
 		end 
 
 		print(group:getName(),"速度是：",group:getSpeed())
 	end 
+end
+
+function __init_basic_skill(hero)
+	local caster = hero 
+	local skill = skill.new(nil,BASIC_SKILL_TYPE,caster)
+	hero:setBasicSkill(skill) 
 end
 
 function __add_to_basicAttackOrderSet(hero)

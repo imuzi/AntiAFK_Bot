@@ -247,7 +247,8 @@ end
 
 local TEMP_SORT_PRORITY_KEY = "_sortPriority" 
 function tempSortPriority__(instance,val)
-	local value = instance[TEMP_SORT_PRORITY_KEY]
+	local key = TEMP_SORT_PRORITY_KEY
+	local value = instance[key]
 
 	if val~=nil then 
 		value = val  
@@ -255,7 +256,7 @@ function tempSortPriority__(instance,val)
 		return value
 	end
 
-	instance[TEMP_SORT_PRORITY_KEY] = value 
+	instance[key] = value 
 	return instance 
 end
 	

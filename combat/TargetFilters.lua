@@ -149,7 +149,7 @@ OrderRule = {
 		return hero:getCfgByKey("Gender")
 	end,
 
-	function(hero)
+	function(hero) 
 		return hero:getAttr("attack")
 	end,
 	function(hero)
@@ -177,16 +177,23 @@ function getTargets(skill)
 	curSkill = skill
 	local targets
 
-	targets = __doLogic(skill,"Target",skill) 
+	targets = __doLogic("Target",skill,skill) 
 	targets = clone(targets)
 	print("targets",skill:getCfgByKey("Name"),#targets)
-	targets = __doLogic(skill,"TargetFilter",targets) 
+	targets = __doLogic("TargetFilter",skill,targets) 
 
 	print("TargetFilter",skill:getCfgByKey("Name"),#targets)
 	sort__(targets,{
+		--Fixme ,冰冻 锁定 嘲讽 优先级 加入  
+		-- {
+		-- 	function(hero)
+		-- 		return hero:getPriority()--hero:getCfgByKey("ID")
+		-- 	end,
+		-- 	"<"
+		-- },
 		{
-			__getLogic(skill,"OrderRule"),
-			__getLogic(skill,"Descend")
+			__getLogic("OrderRule",skill),
+			__getLogic("Descend",skill)
 		},
 		-- {
 		-- 	function(hero)
@@ -214,7 +221,7 @@ end
 
 
 
-function __doLogic(skill,key,param)
+function __doLogic(key,skill,param)
 	local value = skill:getCfgByKey(key)
 	value = value + 1  --  从0开始 所以 加+1
 
@@ -234,7 +241,7 @@ function __doLogic(skill,key,param)
 	end 
 end
 
-function __getLogic(skill,key)
+function __getLogic(key,skill)
 	local value = skill:getCfgByKey(key)
 	value = value + 1
 	print("__getLogic",key,"值:",value)

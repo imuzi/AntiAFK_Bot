@@ -9,10 +9,11 @@ require(_.."Const")
 combatData = require(_.."CombatData")
 targetFilters = require(_.."TargetFilters")
 turnOrders = require(_.."TurnOrders")
+behaviors = require(_.."Behaviors")
 
-local combatLogic = require(_.."CombatLogic")
+combatLogic = require(_.."CombatLogic")
 -- local skillLogic = require(_.."SkillLogic")
-local skillMgr = require(_.."SkillMgr")
+skillMgr = require(_.."SkillMgr")
 
 module(...,package.seeall) 
  
@@ -29,8 +30,8 @@ game_speed = 1
 function init()
 	combatData.init() 
 
-	turnOrders.basicAttack:sort()
-	turnOrders.skill:sort() 
+	turnOrders.basicAttack.sort()
+	turnOrders.skill.sort() 
 
 end
 
