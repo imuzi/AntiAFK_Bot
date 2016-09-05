@@ -14,7 +14,10 @@ local Hero = class("Hero",
 					skillToCast = nil,
 					group   = nil, 
 					basicSkill = nil,
-  
+
+
+					effectList = {} -- 每个hero 都有个effectlist 在做任何行为时要检测的
+  					tempEffectList = {}
 					}) 
 
 function Hero:ctor(heroData)
@@ -59,6 +62,9 @@ function Hero:__initAttrs(attrData)
 	end 
 
 	self:setAttr("hp",self:getAttr("maxHP")) 
+	for i,v in ipairs(TEMP_EFFECT_VARS) do
+		self:setAttr(v,false) 
+	end
 end
 
 function Hero:getAttr(name)
@@ -123,10 +129,32 @@ function Hero:getBasicSkill()
 	return self.basicSkill
 end
  
+-- - - effects 
+function Hero:getEffectList()
+	return self.effectList
+end
+function Hero:getTempEffectList()
+	return self.tempEffectList
+end
 
+function Hero:setEffectList(val)
+	self.effectList = val
+end
+function Hero:setTempEffectList(val)
+	self.tempEffectList = val
+end
 
+function Hero:addEffect(val)
+	local list = self:getEffectList()
+	table.insert(list, val)
+	self:setEffectList(list)
+end
+function Hero:addTempEffect(val)
+	local list = self:getTempEffectList()
+	table.insert(list, val)
+	self:setTempEffectList(list)
+end
 
-
-
+--- -effects end 
 
 return Hero

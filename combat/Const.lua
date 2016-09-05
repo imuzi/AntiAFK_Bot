@@ -13,6 +13,16 @@ SKILLTYPES =
 	"REVIVE"
 }
 
+TEMP_EFFECT_VARS = 
+{
+	"mustCrit",
+	"mustIgnoreDefence",
+	"mustDie",
+	"mustCounterAttack",
+	"buSi",
+}
+
+
 STATUS = {
 	BASICATTACK = "basicAttack",
 	COUNTERATTACK = "counterAttack",
@@ -38,7 +48,7 @@ MAX_FPS = 60
 LOGIC_FPS = 30
 -- 游戏速度数值 保底的 20fps  fixme
 SP_X2 = MAX_FPS/LOGIC_FPS
-SP_X1 = SP_X3/2 
+SP_X1 = SP_X2/2 
 -- SP_X1 = SP_X3/3
 MAXSPEED = SP_X2 
 

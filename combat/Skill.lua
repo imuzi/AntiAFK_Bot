@@ -14,7 +14,7 @@ local Skill = class("Skill",
 					keytype = nil,
 					caster = nil,
 					targets = {},
-
+					
 					group = nil
 					})
 

@@ -134,8 +134,20 @@ end
 
 
 
+-- 给实例添加一个临时的变量。。  便于查错
+function tempVarOfInstance__(keyName,instance,val) 
+	local key = keyName
+	local value = instance[key]
 
+	if val~=nil then 
+		value = val  
+	else
+		return value
+	end
 
+	instance[key] = value 
+	return instance  
+end 
 
 
 --  
@@ -248,16 +260,7 @@ end
 local TEMP_SORT_PRORITY_KEY = "_sortPriority" 
 function tempSortPriority__(instance,val)
 	local key = TEMP_SORT_PRORITY_KEY
-	local value = instance[key]
-
-	if val~=nil then 
-		value = val  
-	else
-		return value
-	end
-
-	instance[key] = value 
-	return instance 
+	return tempVarOfInstance__(key,instance,val)
 end
 	
 ------ sorting funcs end 

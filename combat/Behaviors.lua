@@ -5,44 +5,59 @@
 module(...,package.seeall) 
 self = package.loaded[...]
 
-basicAttack =
+
+castSkill = 
 {
-	start =
+	begin =
 	function(hero)
-		local skill = hero:getBasicSkill()
+		local skill = hero:getSkillToCast()
 		local targets = targetFilters.getTargets(skill)
 
 		if #targets > 0 then 
 			skill:setTargets(targets)
 			tempLoopFlag__(skill,true)
-			print("_________tempLoopFlag__(skill,true)")
 		else 
-			basicAttack.over(hero)
+			over(hero)
 		end   
 	end,
 	loop = 
 	function(hero)
-		local skill = hero:getBasicSkill()
+		local skill = hero:getSkillToCast()
 		local loopFlag = tempLoopFlag__(skill)
 		
-		if not loopFlag then return end 
+		if not loopFlag then return end  
 
-		hero:setSkillToCast(skill)
 		hero:updateFrameStep()
 		 
 		if isHit(hero) then 
 			combatLogic.onHit(skill)
 		elseif isOver(hero) then  
-			basicAttack.over(hero)
-		end  
-
+			over(hero)
+		end   
 	end,
 	over = 
 	function(hero)
-		local skill = hero:getBasicSkill()
+		local skill = hero:getSkillToCast()
 		tempLoopFlag__(skill,false)  
 
 		combatLogic.trans_status(hero,"STANDBY")
+	end
+}
+
+
+basicAttack =
+{
+	begin =
+	function(hero)
+		castSkill.begin(hero)
+	end,
+	loop = 
+	function(hero)
+		castSkill.loop(hero) 
+	end,
+	over = 
+	function(hero)
+		castSkill.over(hero)
 	end
 } 
 
@@ -53,7 +68,7 @@ comboAttack = {}
 extraTurn = {}
 
 standBy = {
-	start =
+	begin =
 	function(hero) 
 	end,
 	loop = 
@@ -64,19 +79,27 @@ standBy = {
 	end
 }
 
-castSkill = {}
-
 dead={}
 
 
-function do__(hero)
-	local status = hero:getStatus() 
-	self[status].start(hero)
+function begin(hero)
+	getBehavior(hero).begin(hero) 
+	triggerEvents.listen("behaviorBegin")
 end
 
 function loop(hero)
+	getBehavior(hero).loop(hero)
+end
+function over(hero)
+ 	getBehavior(hero).over(hero)
+ 	triggerEvents.listen("behaviorOver")
+end
+
+
+
+function getBehavior(hero)
 	local status = hero:getStatus() 
-	self[status].loop(hero)
+	return self[status]
 end
 
 function isHit(hero,animName,frame_dif)
@@ -144,14 +167,5 @@ end
 local TEMP_LOOP_FLAG_KEY = "_loopFlag" 
 function tempLoopFlag__(instance,val)
 	local key = TEMP_LOOP_FLAG_KEY
-	local value = instance[key]
-
-	if val~=nil then 
-		value = val  
-	else
-		return value
-	end
-
-	instance[key] = value 
-	return instance 
+	return tempVarOfInstance__(key,instance,val)
 end

@@ -135,14 +135,5 @@ end
 local TEMP_TURN_ORDER_KEY = "_turnOrderFlag" 
 function tempTurnOrderFlag__(instance,val)
 	local key = TEMP_TURN_ORDER_KEY
-	local value = instance[key]
-
-	if val~=nil then 
-		value = val  
-	else
-		return value
-	end
-
-	instance[key] = value 
-	return instance 
+	return tempVarOfInstance__(key,instance,val)
 end

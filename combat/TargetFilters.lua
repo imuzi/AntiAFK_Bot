@@ -7,26 +7,30 @@ module(...,package.seeall)
 
 self = package.loaded[...]
 
--- logicKeys = {
--- 	"Target",
--- 	"TargetFilter",
--- 	"OrderRule",[[FrontHitRate ，BackHitRate]]
--- 	"Descend",
--- 	"SelectCount"
+logicKeys = {
+	"Target",
+	"TargetFilter",
+	"OrderRule",--[[FrontHitRate ，BackHitRate]]
+	"Descend",
+	"SelectCount"
 
--- }
-curSkill = nil 
+}
+
+--TODO   统一传入实例的接口 
+filter = nil
+caster = nil 
 --[[
 		己方=0,
         敌方=1,
         自己=2,
 		]]
+		-- TODO WITH FIX  加入 技能方面的 过滤 如 某个BUFF的释放者 / 作用对象 等复杂过滤
 Target = {
-	function(skill)
-		return skill:getCaster():getGroup():getHeros()
+	function()
+		return caster:getGroup():getHeros()
 	end,
-	function(skill)
-		local myGroup = skill:getCaster():getGroup()
+	function()
+		local myGroup = caster:getGroup()
 		local myGroupName = myGroup:getName()
 		local tarGroup 
 		local groupMap = combatData.groupMap
@@ -39,8 +43,8 @@ Target = {
 		end
 		return tarGroup:getHeros()
 	end,
-	function(skill)
-		return {skill:getCaster()}
+	function()
+		return {caster}
 	end
 
 }
@@ -113,7 +117,7 @@ OrderRule = {
 			return sortPriority 
 		else  
 			local probability = random__(1,100)
-			local caster = curSkill:getCaster()
+			local caster = caster
 			local frontHitRate = caster:getCfgByKey("FrontHitRate")
 			local backHitRate = caster:getCfgByKey("BackHitRate")
 
@@ -172,17 +176,19 @@ Descend = {
 	">" 
 }
 
- 
-function getTargets(skill)
-	curSkill = skill
+
+function do__(filter,caster)
+	filter = filter
+	caster = caster
+
 	local targets
 
-	targets = __doLogic("Target",skill,skill) 
+	targets = __doLogic("Target",filter) 
 	targets = clone(targets)
-	print("targets",skill:getCfgByKey("Name"),#targets)
-	targets = __doLogic("TargetFilter",skill,targets) 
+	 
+	targets = __doLogic("TargetFilter",filter,targets) 
 
-	print("TargetFilter",skill:getCfgByKey("Name"),#targets)
+	 
 	sort__(targets,{
 		--Fixme ,冰冻 锁定 嘲讽 优先级 加入  
 		-- {
@@ -192,8 +198,8 @@ function getTargets(skill)
 		-- 	"<"
 		-- },
 		{
-			__getLogic("OrderRule",skill),
-			__getLogic("Descend",skill)
+			__getLogic("OrderRule",filter),
+			__getLogic("Descend",filter)
 		},
 		-- {
 		-- 	function(hero)
@@ -204,7 +210,7 @@ function getTargets(skill)
 
 
 	local final_targets = {}
-	local selectCount = skill:getCfgByKey("SelectCount")
+	local selectCount = filter.SelectCount
 
 	for i=1,selectCount do
 		local hero = targets[i]
@@ -215,14 +221,27 @@ function getTargets(skill)
 		end 
 	end
 
-	print("skill__getTargets",skill:getCfgByKey("Name"),#final_targets)
+	 
 	return final_targets 
+
+
+end
+ 
+function getTargets(skill)
+	caster = skill:getCaster()
+
+	local filter = {}
+	for i,v in ipairs(logicKeys) do
+		filter[v] = skill:getCfgByKey(v)
+	end
+	 
+	return do__(filter,caster)  
 end
 
 
 
-function __doLogic(key,skill,param)
-	local value = skill:getCfgByKey(key)
+function __doLogic(key,filter,param)
+	local value = filter[key]
 	value = value + 1  --  从0开始 所以 加+1
 
 	local data = self[key]
@@ -241,8 +260,8 @@ function __doLogic(key,skill,param)
 	end 
 end
 
-function __getLogic(key,skill)
-	local value = skill:getCfgByKey(key)
+function __getLogic(key,filter)
+	local value = filter[key]
 	value = value + 1
 	print("__getLogic",key,"值:",value)
 	return self[key][value]

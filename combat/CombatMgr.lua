@@ -10,6 +10,10 @@ combatData = require(_.."CombatData")
 targetFilters = require(_.."TargetFilters")
 turnOrders = require(_.."TurnOrders")
 behaviors = require(_.."Behaviors")
+castAi = require(_.."CastAi") 
+
+triggerEvents = require(_.."TriggerEvents")
+
 
 combatLogic = require(_.."CombatLogic")
 -- local skillLogic = require(_.."SkillLogic")

@@ -49,13 +49,27 @@ turnOwner = nil
 
 function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
+
 	if shouldFindNextTurnOwner then 
-		turnOwner = turnOrders.basicAttack.whosTurn()
-		trans_status(turnOwner,"BASICATTACK") 
+		local skillToCast = castAi.think()
+
+		if skillToCast then 
+			turnOwner = skillToCast:getCaster() 
+			turnOwner:setSkillToCast(skillToCast)
+			trans_status(turnOwner,"CASTSKILL") 
+		else 
+			
+			turnOwner = turnOrders.basicAttack.whosTurn() 
+
+			local basicSkill = turnOwner:getBasicSkill()
+			turnOwner:setSkillToCast(basicSkill)
+			trans_status(turnOwner,"BASICATTACK") 
+		end 
 
 	end  
-	behaviors.loop(turnOwner)
-	-- targetFilters.getTargets(turnOwner:getBasicSkill())
+
+
+	behaviors.loop(turnOwner) 
  
 end
 
@@ -69,15 +83,15 @@ function trans_status(hero,status_key)
 
 	
 	print("___trans_status_",hero:getCfgByKey("Name"),val)
-	behaviors.do__(hero)
+	behaviors.begin(hero)
 end
 
 
-function turn_start(hero)
+function turn_begin(hero)
 	-- body
 end
 
-function turn_end(hero)
+function turn_over(hero)
 	-- body
 end
 
@@ -110,6 +124,8 @@ function onHit(skill)
 		calculateDamage(skill,target)	
 		putEffects(skill,target)
 	end
+
+
 end
 
 --- hit events 
@@ -230,9 +246,16 @@ function calculateDamage(skill,target)
 	return damage 
 end
 
+function calculateSkillDamage()
+	-- body
+end
+
+
+
 function changeHp(target,val)
 
 end
+
 
 
 function putEffects(skill,target)
