@@ -230,14 +230,18 @@ end
 function getTargets(skill)
 	caster = skill:getCaster()
 
-	local filter = {}
-	for i,v in ipairs(logicKeys) do
-		filter[v] = skill:getCfgByKey(v)
-	end
+	filter = generateFilter(skill)
 	 
 	return do__(filter,caster)  
 end
 
+function generateFilter(skill)
+	local filter = {}
+	for i,v in ipairs(logicKeys) do
+		filter[v] = skill:getCfgByKey(v)
+	end
+	return filter
+end
 
 
 function __doLogic(key,filter,param)

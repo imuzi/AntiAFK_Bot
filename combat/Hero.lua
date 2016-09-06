@@ -16,7 +16,7 @@ local Hero = class("Hero",
 					basicSkill = nil,
 
 
-					effectList = {} -- 每个hero 都有个effectlist 在做任何行为时要检测的
+					effectList = {},  
   					tempEffectList = {}
 					}) 
 

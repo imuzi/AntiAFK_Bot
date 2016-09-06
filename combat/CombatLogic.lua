@@ -50,7 +50,7 @@ turnOwner = nil
 function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
 
-	if shouldFindNextTurnOwner then 
+	if shouldFindNextTurnOwner then  
 		local skillToCast = castAi.think()
 
 		if skillToCast then 
@@ -64,8 +64,7 @@ function loop()
 			local basicSkill = turnOwner:getBasicSkill()
 			turnOwner:setSkillToCast(basicSkill)
 			trans_status(turnOwner,"BASICATTACK") 
-		end 
-
+		end  
 	end  
 
 
@@ -73,26 +72,22 @@ function loop()
  
 end
 
-function do_ai(hero)
-	-- behaviors
-end
-
+ 
 function trans_status(hero,status_key)
 	local val = STATUS[status_key]
-	hero:setStatus(val) 
-
+	hero:setStatus(val)  
 	
 	print("___trans_status_",hero:getCfgByKey("Name"),val)
 	behaviors.begin(hero)
 end
 
 
-function turn_begin(hero)
-	-- body
+function turn_begin()
+	triggerEvents.listen("turnBegin")
 end
 
-function turn_over(hero)
-	-- body
+function turn_over()
+	triggerEvents.listen("turnOver") 
 end
 
 function shouldFindNextTurnOwner()
@@ -106,7 +101,7 @@ function shouldFindNextTurnOwner()
 end
 
 
-function __isBingo(ratio) 
+function isBingo(ratio) 
 	local ratio = math.max(0,ratio)
 	ratio = ratio*100/(ratio+100)
 	local probability = random__(1,100)
@@ -116,16 +111,18 @@ end
 
 function onHit(skill)
 
-	local targets = skill:getTargets()
-	print(" onHit(skill)",#targets)
-	for i,v in ipairs(targets) do
-		local target = v 
-		print("calculateDamage")
-		calculateDamage(skill,target)	
-		putEffects(skill,target)
-	end
+	-- local targets = skill:getTargets()
+	-- print(" onHit(skill)",#targets)
+	-- for i,v in ipairs(targets) do
+	-- 	local target = v 
+	-- 	print("calculateDamage")
+	-- 	calculateDamage(skill,target)	
+	-- 	putEffects(skill,target)
+	-- end
 
-
+	local evtName = skill:isBasicAttack() and "basicHit" or "skillHit" 
+	triggerEvents.listen(evtName)
+	triggerEvents.listen("onHit")
 end
 
 --- hit events 
@@ -151,17 +148,17 @@ end
 ]]
  
 
-local needRandomVars = {
-"comboRate", -- 
-"blockRate",
-"counterRate",
-"critRate",
-"hitRate",
-"effectHitRate",
-}
+-- local needRandomVars = {
+-- "comboRate", -- 
+-- "blockRate",
+-- "counterRate",
+-- "critRate",
+-- "hitRate",
+-- "effectHitRate",
+-- }
 
-function calculateDamage(skill,target)	
-	local targets = skill:getTargets()
+function calculateDamage(effect,target)	
+	local skill = effect:getSkill()
 	local caster = skill:getCaster()
 
 	print(
@@ -174,17 +171,17 @@ function calculateDamage(skill,target)
 	local hitRate = caster:getAttr("hit") - target:getAttr("miss") + 100
 
 	
-	local isHit = __isBingo(hitRate) 
+	local isHit = isBingo(hitRate) 
 
 	if not isHit then 
 		print("______miss,hitRate",hitRate)
 		return 0 
 	end 
 
-	local isCrit = __isBingo(caster:getAttr("critRate"))
-	local isBlock = __isBingo(caster:getAttr("blockRate"))
+	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate"))
+	local isBlock = isBingo(caster:getAttr("blockRate"))
 
-	local isIgnoreDefence = false
+	local isIgnoreDefence = caster:getAttr("mustIgnoreDefence")
  
 
 
@@ -202,7 +199,7 @@ function calculateDamage(skill,target)
 
 
  	-- fix me  技能伤害放大 倍率 通过既能获得
- 	local skillDamageScaleRatio = 1 
+ 	local skillDamageScaleRatio = effect:getAction().params.power 
 
 
  	local checkVal = function(val)
@@ -232,7 +229,8 @@ function calculateDamage(skill,target)
 					*
 					skillDamageScaleRatio
 
-	
+	if isCrit then triggerEvents.listen("critHit") end
+
 	print( 
 		"伤害：",damage
 		,"\nattack,critDamage,tenacityRatio"
@@ -246,16 +244,14 @@ function calculateDamage(skill,target)
 	return damage 
 end
 
-function calculateSkillDamage()
-	-- body
-end
-
+ 
 
 
 function changeHp(target,val)
-
-end
-
+	local hp = target:getAttr("hp")
+	hp = hp - val 
+	target:setAttr("hp",hp)
+end 
 
 
 function putEffects(skill,target)
@@ -264,11 +260,9 @@ function putEffects(skill,target)
 	
 	-- for i,v in ipairs(Effs) do
 		-- fix me  多个效果 同一个人 每一个效果都要随机一次
-		local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
+	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
 		print("effectHitRate",effectHitRate)
-	-- end
-
-	
+	-- end 
 
 end
 

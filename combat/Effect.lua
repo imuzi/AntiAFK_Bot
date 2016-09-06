@@ -11,6 +11,7 @@ local Effect = class("Effect",
 					 triggerEvent = nil, -- 包含 {eventName，targetFilter}
 					 round = nil,
 
+					 skill = nil,
 					})
 
 function Effect:ctor(params)
@@ -19,6 +20,9 @@ function Effect:ctor(params)
 	local targetFilter = params.targetFilter
 	local triggerEvent = params.triggerEvent
 	local round  = params.round
+
+
+	self:setParams(params)
 	
 	self:setTargetFilter(targetFilter)
 	self:setTriggerEvent(triggerEvent)
@@ -28,7 +32,21 @@ function Effect:ctor(params)
 	self:setRound(round) 
 	print("effct has been ceated!",params.ClassName) 
 end
- 
+
+function Effect:setSkill(val)
+ 	self.skill = val 
+end
+
+function Effect:getSkill(val)
+ 	return self.skill
+end  
+
+function Effect:setParams(val)
+	self.params = val
+end
+function Effect:getParams()
+	return self.params
+end
 
 function Effect:getTargetFilter()
 	return self.targetFilter
@@ -66,7 +84,7 @@ end
 
 
 function Effect:updateRound(gap)
-	local gap = gap or 1 
+	local gap = gap or -1 
 	local round = self:getRound()
 
 	round = round + gap

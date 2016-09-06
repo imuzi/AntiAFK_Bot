@@ -10,10 +10,13 @@ castSkill =
 {
 	begin =
 	function(hero)
+		combatLogic.turn_begin()
+
 		local skill = hero:getSkillToCast()
 		local targets = targetFilters.getTargets(skill)
 
 		if #targets > 0 then 
+			skillLogic.castSkill(skill)
 			skill:setTargets(targets)
 			tempLoopFlag__(skill,true)
 		else 
@@ -41,6 +44,8 @@ castSkill =
 		tempLoopFlag__(skill,false)  
 
 		combatLogic.trans_status(hero,"STANDBY")
+
+		combatLogic.turn_over()
 	end
 }
 

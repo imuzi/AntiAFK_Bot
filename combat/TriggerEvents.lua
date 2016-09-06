@@ -11,45 +11,34 @@ eventNames =
 	"behaviorOver",
 	"turnBegin",
 	"turnOver",
+	"onHit",
 	"skillHit",
 	"basicHit",
 	"critHit",
+	"effectOver",
+	"effectBegin",
+
 }
 
-behaviorBegin = {}
-behaviorOver = {} 
+-- behaviorBegin = {}
+-- behaviorOver = {} 
 
 
 
-turnBegin = {} 
+-- turnBegin = {} 
 
-turnOver = {}
+-- turnOver = {}
 
-skillHit = {}
+-- skillHit = {}
 
-basicHit = {}
+-- basicHit = {}
 
-critHit = {}
-
-
-
-
-
-
- 
-
-
--- -- 主属性 阈值
--- attributeThreshold = {}
-
--- -- 表属性 满足
--- cfgSatisfied = {}
-
+-- critHit = {} 
 
 
 
 function listen(evtName)
-	for _,name in ipairs(eventNames) do
+	-- for _,name in ipairs(eventNames) do
 		local groupMap = combatData.groupMap
 		for k,group in pairs(groupMap) do
 
@@ -57,25 +46,30 @@ function listen(evtName)
 			for i,hero in ipairs(heros) do
 
 				local effList = hero:getEffectList()
-				for _i,effect in ipairs(effList) do
-
-					if matchs(effect,evetName) then 
-						skillLogic.doEffect(effect) 
-				 	end
-				end
-
+				local tempEffList = hero:getTempEffectList()
+				foreachEffectList(effList,evtName)
+				-- print("size--effList",#effList)
+				foreachEffectList(tempEffList,evtName)
+				-- print("size--tempEffList",#tempEffList)
 			end
 		end
-	end
+	-- end
  
 end 
 
----  triger 是否要计入 targetfilter  fix me 
-function matchs(eff,evtName)
+
+function doEff(eff,evtName)
+	if matchs(eff,evtName) then 
+		skillLogic.doEffect(eff) 
+ 	end
+end
+
+
+function matchTarget(eff)
 	local caster = eff:getSkill():getCaster()
 
-	local targetFilter = eff:getTargetFilter()
-	local targets = targetFilter.do__(targetFilter,caster)
+	local targetFilter = eff:getTriggerEvent().targetFilter
+	local targets = targetFilters.do__(targetFilter,caster)
 
 	local isIn = false
 
@@ -85,6 +79,90 @@ function matchs(eff,evtName)
 			break
 		end 
 	end
- 
-	return (eff:getTriggerEvent() == evtName) and isIn
+	
+	print("______isIn",isIn)
+	return isIn
 end
+
+function matchName(eff,evtName)	 
+	print("eff:getTriggerEvent().name",eff:getTriggerEvent().name,evtName)
+	return eff:getTriggerEvent().name == evtName
+end
+
+ 
+function matchs(eff,evtName)  
+	local mathNames = matchName(eff,evtName)
+					or matchEffectOverEvent(eff,evtName)
+					or matchEffectBeginEvent(eff,evtName)
+	local matchs = mathNames and matchTarget(eff)	
+
+	print("mathNames",mathNames,matchs)		
+	return matchs
+end
+
+
+function foreachEffectList(val,evtName)
+	local indexsToRemove = {} 
+	local list = val 
+	for i,v in ipairs(list) do
+
+		local effect = v 
+
+		decreaseEffRound(effect,evtName)
+
+		doEff(effect,evtName)
+
+		if isEffOver(effect) then 
+			table.insert(indexsToRemove,i)
+		end   
+	end 
+
+	local size = #indexsToRemove
+
+	for i=size,1,-1 do
+		local index = indexsToRemove[i] 
+		table.remove(list,index)
+
+		print("onBuffRemoved",index,"size",#list)
+	end
+
+end
+
+function decreaseEffRound(eff,evtName)
+	if evtName == "turnOver" then
+		eff:updateRound() 
+	end
+end
+
+
+function matchEffectBeginEvent(eff,evtName)  
+	if evetName ~= "turnBegin" then return false end  
+	local triggerEvent = "effectBegin" 
+	return isEffBorn(eff) and matchName(eff,triggerEvent) 
+end
+
+function matchEffectOverEvent(eff,evtName)  
+	if evetName ~= "turnOver" then return false end  
+	local triggerEvent = "effectOver" 
+	return isEffOver(eff) and matchName(eff,triggerEvent) 
+end
+
+function isEffOver(eff)
+	local roundLeft = eff:getRound() 
+	return roundLeft < 1
+end
+
+function isEffBorn(eff)
+	local roundLeft = eff:getRound()
+	local originRound = eff:getParams().round
+	return roundLeft == originRound
+end
+
+
+function removeEff(eff)
+	if isEffOver(eff) then 
+
+	end 
+end
+ 
+

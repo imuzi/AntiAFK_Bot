@@ -16,7 +16,7 @@ triggerEvents = require(_.."TriggerEvents")
 
 
 combatLogic = require(_.."CombatLogic")
--- local skillLogic = require(_.."SkillLogic")
+skillLogic = require(_.."SkillLogic")
 skillMgr = require(_.."SkillMgr")
 
 module(...,package.seeall) 

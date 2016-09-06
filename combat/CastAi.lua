@@ -55,7 +55,6 @@ function think()
 	
 	local nextTurnGroup = turnOrders.skill.whosTurn() 
  
-
 	local skills = nextTurnGroup:getSkills()
 
 	local readySkills = getReadySkills(skills)
@@ -63,7 +62,9 @@ function think()
 
 	local skillToCast = nil 
 
-	skillToCast = readySkills[random__(1,#readySkills)] 
+	if #readySkills >0 then  
+		skillToCast = readySkills[random__(1,#readySkills)] 
+	end
 
 
 	print("\n__getSkillToCast________nextGroupName_",nextGroupName,"readySkills",#skills)
