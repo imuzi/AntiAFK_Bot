@@ -17,7 +17,7 @@ triggerEvents = require(_.."TriggerEvents")
 
 combatLogic = require(_.."CombatLogic")
 skillLogic = require(_.."SkillLogic")
-skillMgr = require(_.."SkillMgr")
+local CDUpdater = require(_.."CDUpdater")
 
 module(...,package.seeall) 
  
@@ -35,7 +35,7 @@ function init()
 	combatData.init() 
 
 	turnOrders.basicAttack.sort()
-	turnOrders.skill.sort() 
+	turnOrders.skill.sort()  
 
 end
 
@@ -43,6 +43,10 @@ function start()
  
 	looper = scheduler.scheduleGlobal(main_loop, 0) 
 
+	skillLogic.castPassiveSkills()
+
+	triggerEvents.listen("combatBegin")
+	
 	print("combat,started!")
 end
 
@@ -74,13 +78,15 @@ function main_loop()
 
 
 		combatLogic.loop()
-		skillMgr.loop()
+
+		CDUpdater.loop()
 
 		frame_step = frame_step + 1
 	end
 
-	print(frame_count%dt,dt,"_______fame_count",frame_count
-		,"frame_step",frame_step
+	print("____________________________________________________________________________________\n\n\n"
+		,frame_count%dt,dt,"_______fame_count",frame_count
+		,"\nframe_step",frame_step
 		,"MAXSPEED,game_speed",MAXSPEED,game_speed)
 end
 

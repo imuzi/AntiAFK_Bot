@@ -36,7 +36,7 @@ function decodeLocalMsg(name,msg)
 end
 
 
-function class(classname, super)
+function class__(classname, super)
 	local superType = type(super)
 	local cls
 
@@ -63,9 +63,21 @@ function class(classname, super)
 		cls.__ctype = 1
 
 		function cls.new(...)
+			print("_______________cls.new(...)__")
 			local instance = cls.__create(...)
 			-- copy fields from class to native object
-			for k,v in pairs(cls) do instance[k] = v end
+			for k,v in pairs(cls) do  
+				local newVarValue = 0 
+				if v == "{}" then 
+					newVarValue = {}
+				elseif v == "nil" then 
+					newVarValue = nil
+				elseif tonumber(v) then
+					newVarValue = tonumber(v) 
+				end   
+				print("v",v,"newVarValue",newVarValue)
+				instance[k] = newVarValue
+		 	end
 			instance.class = cls
 			instance:ctor(...)
 			return instance
@@ -85,8 +97,23 @@ function class(classname, super)
 		cls.__ctype = 2 -- lua
 		cls.__index = cls
 
-		function cls.new(...)
+		function cls.new(...) 
+			print("_______________cls.new(...)__no super")
 			local instance = setmetatable({}, cls)
+
+			for k,v in pairs(super) do  
+				local newVarValue = 0 
+				if v == "{}" then 
+					newVarValue = {}
+				elseif v == "nil" then 
+					newVarValue = nil
+				elseif tonumber(v) then
+					newVarValue = tonumber(v) 
+				end   
+				print("v",v,"newVarValue",newVarValue,type(newVarValue))
+				instance[k] = newVarValue
+		 	end
+
 			instance.class = cls
 			instance:ctor(...)
 			return instance

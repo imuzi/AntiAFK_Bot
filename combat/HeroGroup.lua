@@ -3,12 +3,12 @@
 -- Date: 2016-08-23 16:17:01
 --
 
-local HeroGroup = class("HeroGroup",
+local HeroGroup = class__("HeroGroup",
 						{
-						heros = {},
-						speed = 0,
-						name = "",
-						skills = {},
+						heros = "{}",
+						speed = "0",
+						name = "nil",
+						skills = "{}",
  
 						})
 

@@ -42,8 +42,6 @@ solution；只做基本功能。后期慢慢移植
  
 module(...,package.seeall) 
 
-inturn = false 
-
 turnOwner = nil
 
 
@@ -251,20 +249,22 @@ function changeHp(target,val)
 	local hp = target:getAttr("hp")
 	hp = hp - val 
 	target:setAttr("hp",hp)
+	target:setAttr("hpPercent",target:getAttr("hp")*100/target:getAttr("maxHP")) 
 end 
 
 
-function putEffects(skill,target)
-	local targets = skill:getTargets()
-	local caster = skill:getCaster()
+--  应该在 effectAction 中
+-- function putEffects(skill,target)
+-- 	local targets = skill:getTargets()
+-- 	local caster = skill:getCaster()
 	
-	-- for i,v in ipairs(Effs) do
-		-- fix me  多个效果 同一个人 每一个效果都要随机一次
-	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
-		print("effectHitRate",effectHitRate)
-	-- end 
+-- 	-- for i,v in ipairs(Effs) do
+-- 		-- fix me  多个效果 同一个人 每一个效果都要随机一次
+-- 	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
+-- 		print("effectHitRate",effectHitRate)
+-- 	-- end 
 
-end
+-- end
 
 -- hit events end 
 

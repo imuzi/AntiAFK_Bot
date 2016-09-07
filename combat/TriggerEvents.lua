@@ -7,6 +7,7 @@ module(...,package.seeall)
 
 eventNames = 
 {
+	"combatBegin",
 	"behaviorBegin",
 	"behaviorOver",
 	"turnBegin",
@@ -38,6 +39,7 @@ eventNames =
 
 
 function listen(evtName)
+	print("\n\n\n\n --listen",evtName)
 	-- for _,name in ipairs(eventNames) do
 		local groupMap = combatData.groupMap
 		for k,group in pairs(groupMap) do
@@ -45,6 +47,7 @@ function listen(evtName)
 			local heros = group:getHeros()
 			for i,hero in ipairs(heros) do
 
+				print("______________i",i,"???___heroId",hero:getAttr("id"))
 				local effList = hero:getEffectList()
 				local tempEffList = hero:getTempEffectList()
 				foreachEffectList(effList,evtName)
@@ -60,6 +63,7 @@ end
 
 function doEff(eff,evtName)
 	if matchs(eff,evtName) then 
+		print("_______mathcs and do ")
 		skillLogic.doEffect(eff) 
  	end
 end
@@ -80,12 +84,12 @@ function matchTarget(eff)
 		end 
 	end
 	
-	print("______isIn",isIn)
+	-- print("______isIn",isIn)
 	return isIn
 end
 
 function matchName(eff,evtName)	 
-	print("eff:getTriggerEvent().name",eff:getTriggerEvent().name,evtName)
+	-- print("eff:getTriggerEvent().name",eff:getTriggerEvent().name,evtName)
 	return eff:getTriggerEvent().name == evtName
 end
 
@@ -96,7 +100,7 @@ function matchs(eff,evtName)
 					or matchEffectBeginEvent(eff,evtName)
 	local matchs = mathNames and matchTarget(eff)	
 
-	print("mathNames",mathNames,matchs)		
+	-- print("mathNames",mathNames,matchs)		
 	return matchs
 end
 
@@ -109,7 +113,7 @@ function foreachEffectList(val,evtName)
 		local effect = v 
 
 		decreaseEffRound(effect,evtName)
-
+		print("________foreachEffectList_____\n\n",#list)
 		doEff(effect,evtName)
 
 		if isEffOver(effect) then 

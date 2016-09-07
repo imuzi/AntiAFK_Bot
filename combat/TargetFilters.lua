@@ -245,6 +245,8 @@ end
 
 
 function __doLogic(key,filter,param)
+	dump(filter)
+	print("________key",key)
 	local value = filter[key]
 	value = value + 1  --  从0开始 所以 加+1
 
@@ -255,7 +257,7 @@ function __doLogic(key,filter,param)
 
 	assert(_logic~=nil,"TargetFilter中",key,"值错误:",value)
  	
- 	print("__doLogic",key,"值:",value)
+ 	-- print("__doLogic",key,"值:",value)
 	local type_ = type(_logic)
 	if type_ == "function" then 
 		return _logic(param)
@@ -267,7 +269,7 @@ end
 function __getLogic(key,filter)
 	local value = filter[key]
 	value = value + 1
-	print("__getLogic",key,"值:",value)
+	-- print("__getLogic",key,"值:",value)
 	return self[key][value]
 end
 

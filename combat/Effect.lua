@@ -3,15 +3,15 @@
 -- Date: 2016-09-02 15:38:03
 --
 
-local Effect = class("Effect",
+local Effect = class__("Effect",
 					{ 
-					 action = nil,
-					 targetConditions = nil,
-					 targetFilter = nil,
-					 triggerEvent = nil, -- 包含 {eventName，targetFilter}
-					 round = nil,
+					 action = "nil",
+					 targetConditions = "nil",
+					 targetFilter = "nil",
+					 triggerEvent = "nil", -- 包含 {eventName，targetFilter}
+					 round = "nil",
 
-					 skill = nil,
+					 skill = "nil",
 					})
 
 function Effect:ctor(params)
@@ -30,7 +30,7 @@ function Effect:ctor(params)
 	self:setTargetConditions(targetConditions)
 
 	self:setRound(round) 
-	print("effct has been ceated!",params.ClassName) 
+ 
 end
 
 function Effect:setSkill(val)

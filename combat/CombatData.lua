@@ -101,13 +101,7 @@ function __init_basic_skill(hero)
 	local skill = skill.new(nil,BASIC_SKILL_TYPE,caster)
 	hero:setBasicSkill(skill) 
 end
-
-function __init_passive_skill(hero)
-	local caster = hero 
-	local skill = skill.new(nil,BASIC_SKILL_TYPE,caster)
-	hero:setBasicSkill(skill) 
-end
-
+ 
 function __add_to_basicAttackOrderSet(hero)
 	table.insert(basicAttackOrderSet, hero)
 end
@@ -129,13 +123,16 @@ function __init_skills(group)
 			for k_,id in pairs(ids) do
 				local id = id[1]
 				if id ~= nil then 
-					local skill = skill.new(id,k_,caster) 
+					local skill = skill.new(id,k_,caster)  
 
 
-					
-					skill:setCdLeft(INIT_CD)
-
-					group:addSkill(skill)
+					if k_=="SkillC" or k_=="SkillD" then 
+						caster:addPassiveSkill(skill)
+					else 
+						skill:setCdLeft(INIT_CD) 
+						group:addSkill(skill)
+					end 
+ 
 				end
 			end
 		end

@@ -4,23 +4,24 @@
 --
 local getCfg = getConfig
 
-local Hero = class("Hero",
+local Hero = class__("Hero",
 					{
-					cfg         = nil,
-					baseAttrs   = {},
-					externAttrs = {},
-					status      = nil, 
-					frameStep   = 0,
-					skillToCast = nil,
-					group   = nil, 
-					basicSkill = nil,
+					cfg         = "nil",
+					baseAttrs   = "{}",
+					externAttrs = "{}",
+					status      = "nil", 
+					frameStep   = "0",
+					skillToCast = "nil",
+					group   = "nil", 
+					basicSkill = "nil",
+					passiveSkills = "{}",
 
-
-					effectList = {},  
-  					tempEffectList = {}
+					effectList = "{}",  
+  					tempEffectList = "{}"
 					}) 
 
-function Hero:ctor(heroData)
+function Hero:ctor(heroData) 
+
 	local heroData = heroData 
 	local svr_id = heroData.id 
 	local type_ = heroData.type
@@ -28,6 +29,8 @@ function Hero:ctor(heroData)
 	self:initCfg(type_)
 	self:__initAttrs(heroData)
 
+	-- self.effectList = {}
+	-- self.tempEffectList = {}
 	print("svr_id,type_",svr_id,type_,"\n--------------------------------------------\n")
 end
 
@@ -62,6 +65,7 @@ function Hero:__initAttrs(attrData)
 	end 
 
 	self:setAttr("hp",self:getAttr("maxHP")) 
+	self:setAttr("hpPercent",self:getAttr("hp")*100/self:getAttr("maxHP")) 
 	for i,v in ipairs(TEMP_EFFECT_VARS) do
 		self:setAttr(v,false) 
 	end
@@ -129,6 +133,19 @@ function Hero:getBasicSkill()
 	return self.basicSkill
 end
  
+function Hero:getPassiveSkills()
+	return self.passiveSkills
+end
+function Hero:setPassiveSkills(val)
+	self.passiveSkills = val
+end
+
+function Hero:addPassiveSkill(val)
+	local list = self:getPassiveSkills()
+	table.insert(list, val)
+	self:setPassiveSkills(list)
+end
+
 -- - - effects 
 function Hero:getEffectList()
 	return self.effectList

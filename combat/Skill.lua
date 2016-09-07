@@ -6,16 +6,16 @@ local _ = (...):match("(.-)[^%.]+$")
 local getCfg = getConfig
 local __skill_anim_events = require(_.."__skill_anim_events")
 
-local Skill = class("Skill",
+local Skill = class__("Skill",
 					{	
-					anim_events = nil,
-					cfg = nil,
-					cdLeft = 0,
-					keytype = nil,
-					caster = nil,
-					targets = {},
-					
-					group = nil
+					anim_events = "nil",
+					cfg = "nil",
+					cdLeft = "0",
+					keytype = "nil",
+					caster = "nil",
+					targets = "{}",
+
+					group = "nil"
 					})
 
 function Skill:ctor(id,keytype,caster)
