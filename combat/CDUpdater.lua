@@ -19,7 +19,7 @@ function updateSkillCd()
 	for k,v in pairs(groupMap) do
 		local group = v 
 		local skills = group:getSkills() 
-		print("\n____刷新技能CD__阵营",k)
+		-- print("\n____刷新技能CD__阵营",k)
 		for i,skill in ipairs(skills) do
 			checkSkillCd(skill)
 		end

@@ -64,10 +64,12 @@ function think()
 
 	if #readySkills >0 then  
 		skillToCast = readySkills[random__(1,#readySkills)] 
+
+		print("\nskillToCast",skillToCast:getCfgByKey("Name"),"readySkills",#readySkills)
 	end
 
-
-	print("\n__getSkillToCast________nextGroupName_",nextGroupName,"readySkills",#skills)
+	print("___did CastAi")
+	
 	return skillToCast
 end
 

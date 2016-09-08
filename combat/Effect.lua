@@ -12,6 +12,7 @@ local Effect = class__("Effect",
 					 round = "nil",
 
 					 skill = "nil",
+					 host = "nil"
 					})
 
 function Effect:ctor(params)
@@ -39,7 +40,15 @@ end
 
 function Effect:getSkill(val)
  	return self.skill
-end  
+end 
+
+function Effect:setHost(val)
+ 	self.host = val 
+end
+
+function Effect:getHost(val)
+ 	return self.host
+end   
 
 function Effect:setParams(val)
 	self.params = val

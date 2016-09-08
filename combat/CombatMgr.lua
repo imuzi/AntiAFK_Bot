@@ -85,9 +85,10 @@ function main_loop()
 	end
 
 	print("____________________________________________________________________________________\n\n\n"
-		,frame_count%dt,dt,"_______fame_count",frame_count
+		,frame_count%dt,dt
+		,"\n_______fame_count",frame_count
 		,"\nframe_step",frame_step
-		,"MAXSPEED,game_speed",MAXSPEED,game_speed)
+		,"\nMAXSPEED,game_speed",MAXSPEED,game_speed)
 end
 
  

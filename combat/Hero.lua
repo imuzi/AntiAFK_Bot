@@ -17,7 +17,9 @@ local Hero = class__("Hero",
 					passiveSkills = "{}",
 
 					effectList = "{}",  
-  					tempEffectList = "{}"
+  					tempEffectList = "{}",
+  					effectToDo = "nil",
+
 					}) 
 
 function Hero:ctor(heroData) 
@@ -79,7 +81,7 @@ end
 function Hero:setAttr(name,val)
 	local baseAttrs = self.baseAttrs
 	baseAttrs[name] = val
-	print("name,val",name,val)
+	print("setAttr：",name,val)
 end
 
 
@@ -122,7 +124,7 @@ function Hero:setSkillToCast(skill)
 end
 
 function Hero:getSkillToCast()
-	return self.skillToCast
+	return self.skillToCast 
 end
 
 function Hero:setBasicSkill(skill)

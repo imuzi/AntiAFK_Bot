@@ -63,7 +63,7 @@ function class__(classname, super)
 		cls.__ctype = 1
 
 		function cls.new(...)
-			print("_______________cls.new(...)__")
+			-- print("_______________cls.new(...)__")
 			local instance = cls.__create(...)
 			-- copy fields from class to native object
 			for k,v in pairs(cls) do  
@@ -75,7 +75,7 @@ function class__(classname, super)
 				elseif tonumber(v) then
 					newVarValue = tonumber(v) 
 				end   
-				print("v",v,"newVarValue",newVarValue)
+				-- print("v",v,"newVarValue",newVarValue)
 				instance[k] = newVarValue
 		 	end
 			instance.class = cls
@@ -98,20 +98,24 @@ function class__(classname, super)
 		cls.__index = cls
 
 		function cls.new(...) 
-			print("_______________cls.new(...)__no super")
+			-- print("_______________cls.new(...)__no super")
 			local instance = setmetatable({}, cls)
 
 			for k,v in pairs(super) do  
-				local newVarValue = 0 
+				 
 				if v == "{}" then 
-					newVarValue = {}
+					instance[k] = {}
 				elseif v == "nil" then 
-					newVarValue = nil
+					-- print("____v == nil")
+					instance[k] = false
 				elseif tonumber(v) then
-					newVarValue = tonumber(v) 
+					instance[k] = tonumber(v) 
 				end   
-				print("v",v,"newVarValue",newVarValue,type(newVarValue))
-				instance[k] = newVarValue
+				
+				-- if v == newVarValue  then print("v",v,"newVarValue",newVarValue,type(newVarValue)) os.exit() end 
+				-- instance[k] = newVarValue
+
+				-- print("v",v,instance[k],type(instance[k]))
 		 	end
 
 			instance.class = cls

@@ -45,9 +45,8 @@ function listen(evtName)
 		for k,group in pairs(groupMap) do
 
 			local heros = group:getHeros()
-			for i,hero in ipairs(heros) do
+			for i,hero in ipairs(heros) do 
 
-				print("______________i",i,"???___heroId",hero:getAttr("id"))
 				local effList = hero:getEffectList()
 				local tempEffList = hero:getTempEffectList()
 				foreachEffectList(effList,evtName)
@@ -57,13 +56,14 @@ function listen(evtName)
 			end
 		end
 	-- end
+
+	print("listen End \n\n")
  
 end 
 
 
-function doEff(eff,evtName)
-	if matchs(eff,evtName) then 
-		print("_______mathcs and do ")
+function checkDoEffect(eff,evtName)
+	if matchs(eff,evtName) then  
 		skillLogic.doEffect(eff) 
  	end
 end
@@ -97,7 +97,7 @@ end
 function matchs(eff,evtName)  
 	local mathNames = matchName(eff,evtName)
 					or matchEffectOverEvent(eff,evtName)
-					or matchEffectBeginEvent(eff,evtName)
+					-- or matchEffectBeginEvent(eff,evtName)
 	local matchs = mathNames and matchTarget(eff)	
 
 	-- print("mathNames",mathNames,matchs)		
@@ -112,11 +112,11 @@ function foreachEffectList(val,evtName)
 
 		local effect = v 
 
-		decreaseEffRound(effect,evtName)
-		print("________foreachEffectList_____\n\n",#list)
-		doEff(effect,evtName)
+		decreaseEffectRound(effect,evtName)
+		-- print("________foreachEffectList_____\n\n",#list)
+		checkDoEffect(effect,evtName)
 
-		if isEffOver(effect) then 
+		if isEffectOver(effect) then 
 			table.insert(indexsToRemove,i)
 		end   
 	end 
@@ -132,39 +132,39 @@ function foreachEffectList(val,evtName)
 
 end
 
-function decreaseEffRound(eff,evtName)
+function decreaseEffectRound(eff,evtName)
 	if evtName == "turnOver" then
 		eff:updateRound() 
 	end
 end
 
-
-function matchEffectBeginEvent(eff,evtName)  
-	if evetName ~= "turnBegin" then return false end  
-	local triggerEvent = "effectBegin" 
-	return isEffBorn(eff) and matchName(eff,triggerEvent) 
-end
+-- 这个点不确定 所以 逻辑不成立
+-- function matchEffectBeginEvent(eff,evtName)  
+-- 	if evetName ~= "turnBegin" then return false end  
+-- 	local triggerEvent = "effectBegin" 
+-- 	return isEffBorn(eff) and matchName(eff,triggerEvent) 
+-- end
 
 function matchEffectOverEvent(eff,evtName)  
 	if evetName ~= "turnOver" then return false end  
 	local triggerEvent = "effectOver" 
-	return isEffOver(eff) and matchName(eff,triggerEvent) 
+	return isEffectOver(eff) and matchName(eff,triggerEvent) 
 end
 
-function isEffOver(eff)
+function isEffectOver(eff)
 	local roundLeft = eff:getRound() 
 	return roundLeft < 1
 end
 
-function isEffBorn(eff)
-	local roundLeft = eff:getRound()
-	local originRound = eff:getParams().round
-	return roundLeft == originRound
-end
+-- function isEffBorn(eff)
+-- 	local roundLeft = eff:getRound()
+-- 	local originRound = eff:getParams().round
+-- 	return roundLeft == originRound
+-- end
 
 
 function removeEff(eff)
-	if isEffOver(eff) then 
+	if isEffectOver(eff) then 
 
 	end 
 end

@@ -6,12 +6,11 @@ module(...,package.seeall)
 self = package.loaded[...]
 
 
-castSkill = 
+
+__castSkill = 
 {
 	begin =
-	function(hero)
-		combatLogic.turn_begin()
-
+	function(hero) 
 		local skill = hero:getSkillToCast()
 		local targets = targetFilters.getTargets(skill)
 
@@ -20,6 +19,9 @@ castSkill =
 			skill:setTargets(targets)
 			tempLoopFlag__(skill,true)
 		else 
+			-- WARN::无目标 技能不能放时  机会还给回去  FIX 如果不停还回去 是否 反复执行
+			resetTurnOrders(hero)
+			
 			over(hero)
 		end   
 	end,
@@ -33,19 +35,42 @@ castSkill =
 		hero:updateFrameStep()
 		 
 		if isHit(hero) then 
+			print("________hit")
 			combatLogic.onHit(skill)
 		elseif isOver(hero) then  
+			print("________over")
 			over(hero)
 		end   
 	end,
 	over = 
 	function(hero)
 		local skill = hero:getSkillToCast()
-		tempLoopFlag__(skill,false)  
+		tempLoopFlag__(skill,false)   
+		combatLogic.trans_status(hero,"STANDBY") 
 
-		combatLogic.trans_status(hero,"STANDBY")
+		hero:setSkillToCast(nil)
+	end
+}
 
-		combatLogic.turn_over()
+castSkill = 
+{
+	begin =
+	function(hero)
+		combatLogic.turn_begin()
+		__castSkill.begin(hero)
+	end,
+	loop = 
+	function(hero)
+		__castSkill.loop(hero) 
+	end,
+	over = 
+	function(hero)
+		__castSkill.over(hero)
+ 
+		if not combatLogic.checkCombo() then  
+			combatLogic.checkCounterOwner()
+		end
+ 
 	end
 }
 
@@ -53,22 +78,59 @@ castSkill =
 basicAttack =
 {
 	begin =
-	function(hero)
-		castSkill.begin(hero)
+	function(hero) 
+		__castSkill.begin(hero)
 	end,
 	loop = 
 	function(hero)
-		castSkill.loop(hero) 
+		__castSkill.loop(hero) 
 	end,
 	over = 
 	function(hero)
-		castSkill.over(hero)
+		__castSkill.over(hero) 
+
+		if not combatLogic.checkCombo() then  
+			combatLogic.checkCounterOwner()
+		end
+ 
 	end
 } 
 
-counterAttack = {}
+counterAttack = {
+	begin =
+	function(hero)
+		
+		__castSkill.begin(hero)
+	end,
+	loop = 
+	function(hero)
+		__castSkill.loop(hero) 
+	end,
+	over = 
+	function(hero)
+		__castSkill.over(hero) 
+	end
+}
 
-comboAttack = {}
+-- 先连击 再反击
+comboAttack = {
+	begin =
+	function(hero)
+		 
+		__castSkill.begin(hero)
+	end,
+	loop = 
+	function(hero)
+		__castSkill.loop(hero) 
+	end,
+	over = 
+	function(hero)
+		__castSkill.over(hero)
+
+		combatLogic.checkCounterOwner()
+		---- FIXME check combo
+	end
+}
 
 extraTurn = {}
 
@@ -84,12 +146,9 @@ standBy = {
 	end
 }
 
-dead={}
-
-
-function begin(hero)
+function begin(hero) 
 	getBehavior(hero).begin(hero) 
-	triggerEvents.listen("behaviorBegin")
+	-- triggerEvents.listen("behaviorBegin")
 end
 
 function loop(hero)
@@ -97,13 +156,22 @@ function loop(hero)
 end
 function over(hero)
  	getBehavior(hero).over(hero)
- 	triggerEvents.listen("behaviorOver")
+ 	-- triggerEvents.listen("behaviorOver")
 end
 
+function resetTurnOrders(hero)
+	local status = hero:getStatus()
+	if status == STATUS.BASICATTACK then 
+		turnOrders.tempTurnOrderFlag__(hero,false)
+	elseif status == STATUS.CASTSKILL then 
+		turnOrders.tempTurnOrderFlag__(hero:getGroup(),false)
+	end 
 
+end
 
 function getBehavior(hero)
 	local status = hero:getStatus() 
+	print("status",status,hero:getCfgByKey("Name"))
 	return self[status]
 end
 

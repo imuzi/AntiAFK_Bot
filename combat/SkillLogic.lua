@@ -16,9 +16,52 @@ local effect_module =
 							{
 								power = 100,
 								element = 0, 
-							}
-						
+							} 
 						} ,
+
+						-- situations = {
+						-- 	{
+						-- 	name = "target",
+						-- 	conditions = {
+						-- 			{
+						-- 				name="attribute",
+						-- 				params = {key="hpPercent",value=30,comp="=="}
+										 
+						-- 			},
+						-- 			{
+						-- 				name="haveBuff",
+						-- 				params = {id=1,actionName=""}
+										 
+						-- 			}  
+						-- 		}
+						-- 	},
+						-- 	{
+						-- 	name = "host",
+						-- 	conditions = {
+						-- 			{
+						-- 				name="attribute",
+						-- 				params = {key="hpPercent",value=30,comp="=="}
+										 
+						-- 			},
+						-- 			{
+						-- 				name="haveBuff",
+						-- 				params = {id=1,actionName=""}
+										 
+						-- 			}  
+						-- 		}
+						-- 	},
+						-- 	{
+						-- 	name = "weather",
+						-- 	conditions = {
+						-- 			{
+						-- 				name="attribute",
+						-- 				params = {key="isNight",value=true,comp="=="}
+										 
+						-- 			} 
+						-- 		}
+						-- 	},
+
+						-- }
 						targetConditions = {
 							{
 								name="attribute",
@@ -64,10 +107,10 @@ function castSkill(skill)
 
 	print("_____castSkill_____________",caster:getCfgByKey("name"),caster:getAttr("id"))
 
-	for i,v in ipairs(eff_funcs) do 
-		if not v.targetConditions then os.exit() end 
+	for i,v in ipairs(eff_funcs) do  
 		local eff = effect.new(v) 
-		eff:setSkill(skill) 
+		eff:setSkill(skill)  
+		eff:setHost(caster)
 
 		caster:addEffect(eff)
 	end 
@@ -76,7 +119,7 @@ end
 
 
 function doEffect(effect)
-	print("______Start Do Effect")
+	print("\n\n______Start Do Effect_______")
  	local skill = effect:getSkill()
  	local caster = skill:getCaster()
 
@@ -85,14 +128,16 @@ function doEffect(effect)
  	local targets = skill:getTargets() 
  	local targetFilter = effect:getTargetFilter()
 
- 	print("targetFilter",targetFilter and 1 or 0)
- 	targets = type(targetFilter)=="table"  and targetFilters.do__(targetFilter,caster) or targets
+ 	local hasTargetFilter = type(targetFilter)=="table" 
+ 	-- print("targetFilter",targetFilter and 1 or 0)
+ 	targets = hasTargetFilter and targetFilters.do__(targetFilter,caster) or targets
  	print( 
-			"skill：",skill:getCfgByKey("Name")
-			,"释放者：",caster:getCfgByKey("Name")
-			,"targets数量",#targets
-			,"effectListSize",#caster:getEffectList()
-			,"tempEffectListSize",#caster:getTempEffectList()
+			"\nskill：",skill:getCfgByKey("Name")
+			,"\n释放者：",caster:getCfgByKey("Name")
+			,"\ntargets数量",#targets
+			,"\nhasTargetFilter",hasTargetFilter
+			,"\neffectListSize",#caster:getEffectList()
+			,"\ntempEffectListSize",#caster:getTempEffectList()
 			) 
 
  	local action = effect:getAction()
@@ -101,12 +146,15 @@ function doEffect(effect)
  		local name = action.name
  		-- local params = 
  		local meets = conditions.meets(target,targetConditions)
- 		effectActions[name](effect,target)
-
- 			print(
- 			"actionName:",name
- 			,"目标：",target:getCfgByKey("Name") 
+ 
+ 		print(
+ 			"\nactionName:",name
+ 			,"\n是否满足targetConditions",meets
+ 			,"\n目标：",target:getCfgByKey("Name") 
 			) 
+ 		if meets then 
+ 			effectActions[name](effect,target)
+ 		end 
 
  	end  
 

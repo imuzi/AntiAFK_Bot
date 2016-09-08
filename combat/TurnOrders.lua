@@ -8,8 +8,9 @@ basicAttack = {
 	whosTurn = 
 	function()
 		local data = combatData.basicAttackOrderSet 
-		local instanceGetter = function(v)
-			return v 
+		local instanceGetter = function(v) 
+			 
+			return combatLogic.isAlive(v) and v or nil 
 		end 
 
 		local trunOwner = getTurnOwner(data,instanceGetter)
@@ -18,7 +19,15 @@ basicAttack = {
 			basicAttack.reset()  
 			trunOwner = getTurnOwner(data,instanceGetter)
 		end
-		print("本轮攻击者：",trunOwner:getCfgByKey("Name"),"speed",trunOwner:getAttr("speed"))
+
+		
+		if not trunOwner then 
+			for i,v in ipairs(data) do
+				print(i,v.status)
+			end
+			dump(data)
+		end 
+		print("\n本轮攻击者：",trunOwner:getCfgByKey("Name"),"speed",trunOwner:getAttr("speed"))
 		return trunOwner
 	end,
 	reset = 
@@ -72,7 +81,7 @@ skill = {
 			skill.reset()  
 			trunOwner = getTurnOwner(data,instanceGetter)
 		end
-		print("本轮攻击者：",trunOwner:getName(),"speed",trunOwner:getSpeed())
+		print("\n本轮攻击者：",trunOwner:getName(),"speed",trunOwner:getSpeed())
 		return trunOwner
 	end,
 	reset = 
@@ -108,14 +117,16 @@ function getTurnOwner(data,instanceGetter)
 
 	for i,v in ipairs(data) do
 		local instance = instanceGetter(v)
-		local turnOrderTag = tempTurnOrderFlag__(instance)
+		if instance then 
+			local turnOrderTag = tempTurnOrderFlag__(instance)
 
-		-- print("turnOrderTag",turnOrderTag,v)
-		if not turnOrderTag  then 
-			trunOwner = instance 
-			tempTurnOrderFlag__(instance,true)
-			break
-		end 
+			-- print("turnOrderTag",turnOrderTag,v)
+			if not turnOrderTag  then 
+				trunOwner = instance 
+				tempTurnOrderFlag__(instance,true)
+				break
+			end 
+		end
 	end
 
 	return trunOwner

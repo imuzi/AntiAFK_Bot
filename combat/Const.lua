@@ -19,7 +19,13 @@ TEMP_EFFECT_VARS =
 	"mustIgnoreDefence",
 	"mustDie",
 	"mustCounterAttack",
-	"buSi",
+	"buSi", 
+	"ingnoreSelect", -- 不能被选中 
+	"selectFirst", -- 优先选中
+	"iceBlock",
+	"stun",
+	"sleep",
+	"silence",
 }
 
 

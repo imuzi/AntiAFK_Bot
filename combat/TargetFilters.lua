@@ -23,6 +23,7 @@ caster = nil
 		己方=0,
         敌方=1,
         自己=2,
+ 
 		]]
 		-- TODO WITH FIX  加入 技能方面的 过滤 如 某个BUFF的释放者 / 作用对象 等复杂过滤
 Target = {
@@ -50,51 +51,48 @@ Target = {
 }
 
 --[[
-		如果是冰冻状态，则是在这层筛选前，将冰冻目标剔除
+		 
 		0: 全部
 		1：前排，如果没有前排，则取后排所有人
 		2：后排，如果没有后排，则取前排所有人
 		3: 死亡
-		如果是冰冻状态，则是在这层筛选过后，将冰冻目标剔除
+		 
 		]]
 TargetFilter = {
 	function(targets)
-		return targets
+		local conditon = function(v)
+			return not __isIngnoreSelect(v)
+		end
+
+	 	return __filterTargets(targets,conditon)
+		-- return targets
 	end,
 	function(targets)
-		local targetsFilted = {}
- 
-		for i,v in ipairs(targets) do
-			if __isFrontLine(v) then 
-				table.insert(targetsFilted, v) 
-			end
+		local conditon = function(v)
+			return __isFrontLine(v) and not __isIngnoreSelect(v)
 		end
+
+		local targetsFilted = __filterTargets(targets,conditon) 
 
 		targetsFilted = #targetsFilted==0 and targets or targetsFilted
 		return targetsFilted
 	end,
 	function(targets)
-		local targetsFilted = {}
-	
-		for i,v in ipairs(targets) do
-			if not __isFrontLine(v) then 
-				table.insert(targetsFilted, v) 
-			end
+		local conditon = function(v)
+			return not __isFrontLine(v) and not __isIngnoreSelect(v)
 		end
 
+		local targetsFilted = __filterTargets(targets,conditon) 
+		 
 		targetsFilted = #targetsFilted==0 and targets or targetsFilted
 		return targetsFilted
 	end,
-	function(targets)
-		local targetsFilted = {}
-	
-		for i,v in ipairs(targets) do
-			if false then --fixe me 
-				table.insert(targetsFilted, v) 
-			end
+	function(targets) 
+		local conditon = function(v)
+			return not combatLogic.isAlive(v)
 		end
 
-	 	return targetsFilted
+	 	return __filterTargets(targets,conditon)
 	end,
 
 
@@ -182,21 +180,23 @@ function do__(filter,caster)
 	caster = caster
 
 	local targets
-
+		print("TargetFilter3")
 	targets = __doLogic("Target",filter) 
-	targets = clone(targets)
+		-- dump(targets)
+		print("TargetFilter4",#targets)
+	-- targets = clone(targets)
+		print("TargetFilter5")
 	 
 	targets = __doLogic("TargetFilter",filter,targets) 
 
-	 
+	 	print("TargetFilter6")
 	sort__(targets,{
-		--Fixme ,冰冻 锁定 嘲讽 优先级 加入  
-		-- {
-		-- 	function(hero)
-		-- 		return hero:getPriority()--hero:getCfgByKey("ID")
-		-- 	end,
-		-- 	"<"
-		-- },
+		--WARN , 锁定 嘲讽 优先级 加入  
+		{
+			function(hero)
+				return hero:getAttr("selectFirst") and 0 or 1--hero:getCfgByKey("ID")
+			end  
+		},
 		{
 			__getLogic("OrderRule",filter),
 			__getLogic("Descend",filter)
@@ -207,7 +207,7 @@ function do__(filter,caster)
 		-- 	end
 		-- }
 	})
-
+		print("TargetFilter7")
 
 	local final_targets = {}
 	local selectCount = filter.SelectCount
@@ -221,7 +221,7 @@ function do__(filter,caster)
 		end 
 	end
 
-	 
+	 print("TargetFilter8")
 	return final_targets 
 
 
@@ -229,9 +229,9 @@ end
  
 function getTargets(skill)
 	caster = skill:getCaster()
-
+	print("TargetFilter1")
 	filter = generateFilter(skill)
-	 
+	print("TargetFilter2")
 	return do__(filter,caster)  
 end
 
@@ -244,9 +244,7 @@ function generateFilter(skill)
 end
 
 
-function __doLogic(key,filter,param)
-	dump(filter)
-	print("________key",key)
+function __doLogic(key,filter,param)  
 	local value = filter[key]
 	value = value + 1  --  从0开始 所以 加+1
 
@@ -278,3 +276,19 @@ function __isFrontLine(hero)
 	return hero:getAttr("position")<3
 end
 
+--冰冻
+function __isIngnoreSelect(hero)
+	return hero:getAttr("ingnoreSelect")
+end
+
+function __filterTargets(targets,conditonFunc)
+	local targetsFilted = {}
+
+ 	for i,v in ipairs(targets) do
+ 		if conditonFunc(v) then 
+ 			table.insert(targetsFilted, v) 
+ 		end
+ 	end
+
+ 	return targetsFilted
+ end 

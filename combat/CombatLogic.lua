@@ -44,19 +44,29 @@ module(...,package.seeall)
 
 turnOwner = nil
 
+counterOwner = nil  -- 一次只有一个人能反击。。  记录下个反击者
+
+
+
 
 function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
 
 	if shouldFindNextTurnOwner then  
+		turn_over()
+
+		counterOwner = nil  
+
 		local skillToCast = castAi.think()
 
+		--- 技能 游离回合之外  WARN
 		if skillToCast then 
 			turnOwner = skillToCast:getCaster() 
 			turnOwner:setSkillToCast(skillToCast)
 			trans_status(turnOwner,"CASTSKILL") 
 		else 
-			
+			turn_begin()
+
 			turnOwner = turnOrders.basicAttack.whosTurn() 
 
 			local basicSkill = turnOwner:getBasicSkill()
@@ -66,16 +76,20 @@ function loop()
 	end  
 
 
-	behaviors.loop(turnOwner) 
+	if isAlive(turnOwner) then 
+		behaviors.loop(turnOwner) 
+	end 
  
 end
 
  
-function trans_status(hero,status_key)
+function trans_status(hero,status_key) 
+	if canDoNothing(hero) then return end 
+
 	local val = STATUS[status_key]
 	hero:setStatus(val)  
-	
-	print("___trans_status_",hero:getCfgByKey("Name"),val)
+	hero:resetFrameStep() 
+	print("改变 ",hero:getCfgByKey("Name"),"状态为 ：",val)
 	behaviors.begin(hero)
 end
 
@@ -88,10 +102,15 @@ function turn_over()
 	triggerEvents.listen("turnOver") 
 end
 
+function isOverAction(hero)
+	local status = hero:getStatus() 
+	return status == STATUS.STANDBY or status == STATUS.DEAD
+end
+
 function shouldFindNextTurnOwner()
-	if turnOwner then 
-		local status = turnOwner:getStatus() 
-		return status ~= STATUS.BASICATTACK and status ~= STATUS.CASTSKILL
+	if turnOwner then  
+		 return isOverAction(turnOwner) and isOverAction(counterOwner) 
+		-- status ~= STATUS.BASICATTACK and status ~= STATUS.CASTSKILL
 
 	else
 		return true 
@@ -99,11 +118,31 @@ function shouldFindNextTurnOwner()
 end
 
 
-function isBingo(ratio) 
-	local ratio = math.max(0,ratio)
-	ratio = ratio*100/(ratio+100)
-	local probability = random__(1,100)
-	return probability <= ratio  
+function checkCounterOwner()
+	if counterOwner then 
+		local basicSkill = counterOwner:getBasicSkill()
+		counterOwner:setSkillToCast(basicSkill)
+		trans_status(counterOwner,"COUNTERATTACK")
+		-- counterOwner = nil   -- 要在下回合开始时  重置
+	end 
+end
+--[[
+	一回合 只触发至多 一次反击 一次连击
+	当同时存在是 
+	先连击 
+]]
+function checkCombo()
+	local hero = turnOwner
+	local isCombo = isBingo(hero:getAttr("comboRate"))
+
+	if isCombo then  
+		local basicSkill = hero:getBasicSkill()
+		hero:setSkillToCast(basicSkill)
+		trans_status(hero,"COMBOATTACK")
+		return true
+	end  
+
+	return false
 end
 
 
@@ -154,9 +193,17 @@ end
 -- "hitRate",
 -- "effectHitRate",
 -- }
+function isBingo(ratio) 
+	local ratio = math.max(0,ratio)
+	ratio = ratio*100/(ratio+100)
+	local probability = random__(1,100)
+	return probability <= ratio  
+end
 
 function calculateDamage(effect,target)	
 	local skill = effect:getSkill()
+
+	-- local host = effect:getHost()
 	local caster = skill:getCaster()
 
 	print(
@@ -164,7 +211,8 @@ function calculateDamage(effect,target)
 	,"释放者：",caster:getCfgByKey("Name")
 	,"目标：",target:getCfgByKey("Name")
 	) 
-
+	-- print(host,type(host))
+	-- caster = host or caster
 
 	local hitRate = caster:getAttr("hit") - target:getAttr("miss") + 100
 
@@ -172,9 +220,16 @@ function calculateDamage(effect,target)
 	local isHit = isBingo(hitRate) 
 
 	if not isHit then 
-		print("______miss,hitRate",hitRate)
+		print("————未命中,hitRate",hitRate,hitRate*100/(hitRate+100))
 		return 0 
 	end 
+
+	local isCounter = isBingo(caster:getAttr("counterRate"))
+	if isCounter and not counterOwner then 
+		counterOwner = target
+	end 
+
+
 
 	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate"))
 	local isBlock = isBingo(caster:getAttr("blockRate"))
@@ -194,9 +249,7 @@ function calculateDamage(effect,target)
  	local cureIncrease = caster:getAttr("cureIncrease") - target:getAttr("cureDecrease")
  	local AOEIncrease = caster:getAttr("AOEIncrease") - target:getAttr("AOEDecrease")
  	local skillDamageIncrease = caster:getAttr("skillDamageIncrease") - target:getAttr("skillDamageDecrease")
-
-
- 	-- fix me  技能伤害放大 倍率 通过既能获得
+ 
  	local skillDamageScaleRatio = effect:getAction().params.power 
 
 
@@ -229,8 +282,9 @@ function calculateDamage(effect,target)
 
 	if isCrit then triggerEvents.listen("critHit") end
 
+	damage = math.floor(damage)
 	print( 
-		"伤害：",damage
+		"\n伤害：",damage
 		,"\nattack,critDamage,tenacityRatio"
 		,attack,critDamage,tenacityRatio
 		,"\ndamageIncrease,cureIncrease,AOEIncrease,skillDamageIncrease"
@@ -247,10 +301,34 @@ end
 
 function changeHp(target,val)
 	local hp = target:getAttr("hp")
-	hp = hp - val 
+	hp = hp - val  
+
+	hp = math.max(hp,0)
 	target:setAttr("hp",hp)
 	target:setAttr("hpPercent",target:getAttr("hp")*100/target:getAttr("maxHP")) 
 end 
+
+function checkDeath(target)
+	local hp = target:getAttr("hp")
+	if hp <= 0 then 
+
+		onDeath(target) 
+	end 
+end
+
+function onDeath(target)
+	target:setStatus(STATUS.DEAD) 
+	target:setAttr("ingnoreSelect",true) -- WARN 只选死亡 可以被选择
+end
+
+
+function isAlive(hero)
+	return hero:getStatus() ~= STATUS.DEAD
+end
+ 
+function canDoNothing(hero)
+	return hero:getAttr("stun") or hero:getAttr("iceBlock")
+end
 
 
 --  应该在 effectAction 中

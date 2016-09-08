@@ -36,6 +36,7 @@ damage =
 function(effect,target) 
 	local damage = combatLogic.calculateDamage(effect,target)   
 	combatLogic.changeHp(target,damage) 
+	combatLogic.checkDeath(target)   --  WARN这里 死亡 状态 表现上应该是对面行为结束后才消失 目标依然可攻击
 end
 
 -- damage1 = 
@@ -63,6 +64,7 @@ function(effect,target)
 	target:setAttr("hp",reivedHp)
 	-- target:setStatus("")
 	combatLogic.trans_status(target,"STANDBY")
+	target:setAttr("ingnoreSelect",false)
 end
 
 -- {
@@ -89,7 +91,7 @@ end
 -- 	}
 -- }
 -- 叠加 是该变 当前存在的buff的回合数为最新的buff回合数 
--- 必暴击和 必怎么 怎么样的  护盾和 不死等也是 changeattr
+-- 必暴击和 必怎么 怎么样的  护盾和 不死 沉默 眩晕 冰冻 沉睡 等也是 changeattr
 changeAttr = 
 function(effect,target)
 	local params = effect:getParams()
@@ -126,6 +128,7 @@ end
 -- 	params = 
 -- 	{
 -- 	effect = {}, 
+--  isBuff = false， 当是buff时  享受目标抵抗 并显示出来
 --  stackType = 1,  FIX ME 
 -- 	}
 -- } 
@@ -137,13 +140,20 @@ function(effect,target)
 
 	local stackType = params.stackType
 
-	local caster = effect:getSkill():getCaster()
+	local skill = effect:getSkill()
+	local caster = skill:getCaster()
+
+
 	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
 
 	local isHit = combatLogic.isBingo(effectHitRate)
 	if isHit then 
 		local newEffect = effectCls.new(params_)
+		newEffect:setSkill(skill)
 		target:addTempEffect(newEffect)
+		newEffect:setHost(target)
+
+		triggerEvents.checkDoEffect(newEffect,"effectBegin") 
 	end
 
 	-- 如果是  changeattr则赋予target 一个 changeattr 的action  
