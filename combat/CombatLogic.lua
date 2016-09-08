@@ -53,6 +53,7 @@ function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
 
 	if shouldFindNextTurnOwner then  
+		
 		turn_over()
 
 		counterOwner = nil  
@@ -103,6 +104,8 @@ function turn_over()
 end
 
 function isOverAction(hero)
+	if not hero then return true end 
+
 	local status = hero:getStatus() 
 	return status == STATUS.STANDBY or status == STATUS.DEAD
 end
