@@ -5,9 +5,9 @@
 local _ = (...):match("(.-)[^%.]+$") 
 
 
-local hero = require(_.."Hero")
-local heroGroup = require(_.."HeroGroup") 
-local skill = require(_.."Skill")
+local Hero = require(_.."Hero")
+local HeroGroup = require(_.."HeroGroup") 
+local Skill = require(_.."Skill")
 module(...,package.seeall) 
 
 -- 战斗模式 pvp or pve or something else
@@ -63,7 +63,7 @@ function __init_groups(data)
   	} 
 	for k,v in pairs(groupMap) do 
 		local initData = transDataForGroupInit[k]
-		v = heroGroup.new(k)
+		v = HeroGroup.new(k)
 		v:setName(k)
 
 		__init_heros(v,initData)
@@ -83,7 +83,7 @@ function __init_heros(group,initData)
 		local group = group
 
 		for i,v in ipairs(heros) do
-			local hero = hero.new(v)
+			local hero = Hero.new(v)
 			group:add(hero)  
 			group:addSpeed(hero)  
 
@@ -98,7 +98,7 @@ end
 
 function __init_basic_skill(hero)
 	local caster = hero 
-	local skill = skill.new(nil,BASIC_SKILL_TYPE,caster)
+	local skill = Skill.new(nil,BASIC_SKILL_TYPE,caster)
 	hero:setBasicSkill(skill) 
 end
  
@@ -123,7 +123,7 @@ function __init_skills(group)
 			for k_,id in pairs(ids) do
 				local id = id[1]
 				if id ~= nil then 
-					local skill = skill.new(id,k_,caster)  
+					local skill = Skill.new(id,k_,caster)  
 
 
 					if k_=="SkillC" or k_=="SkillD" then 
@@ -165,8 +165,27 @@ function __getSkillIdsFromHero(hero)
 end
 
 
+function foreachAllHeros(func)
+	local groupMap = groupMap
+	for k,group in pairs(groupMap) do
 
+		local heros = group:getHeros()
+		for i,hero in ipairs(heros) do 
+			func(hero)
+		end
+	end
+end
 
+function foreachAllSkills(func)
+	local groupMap = groupMap
+	for k,group in pairs(groupMap) do
+
+		local skills = group:getSkills() 
+		for i,skill in ipairs(skills) do 
+			func(skill)
+		end
+	end
+end
 
 
 

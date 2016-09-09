@@ -53,7 +53,7 @@ AICategory = {
 function think()
 	if isAllSkillOnCd() then return end 
 	
-	local nextTurnGroup = turnOrders.skill.whosTurn() 
+	local nextTurnGroup = TurnOrders.skill.whosTurn() 
  
 	local skills = nextTurnGroup:getSkills()
 
@@ -88,19 +88,15 @@ end
 
 
 -- 或者通过 INIT_CD <=frame_step 对比  FIXME  
-function isAllSkillOnCd()
-	local groupMap = combatData.groupMap 
+function isAllSkillOnCd() 
+	local bool_ = true
 
-	for k,group in pairs(groupMap) do 
-
-		local skills = group:getSkills()
-
-		for i,skill in ipairs(skills) do
-			if skill:getCdLeft()<=0 then  
-				return false 
-			end
+	CombatData.foreachAllSkills(
+	function(skill)
+		if skill:getCdLeft()<=0 then  
+			bool_ = false 
 		end
-	end
-
-	return true 
+	end) 
+	 
+	return bool_ 
 end

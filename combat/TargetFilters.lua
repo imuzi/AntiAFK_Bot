@@ -19,22 +19,25 @@ logicKeys = {
 --TODO   统一传入实例的接口 
 filter = nil
 caster = nil 
+host = nil  --  效果的宿主
 --[[
 		己方=0,
         敌方=1,
         自己=2,
- 
+        宿主=3
 		]]
 		-- TODO WITH FIX  加入 技能方面的 过滤 如 某个BUFF的释放者 / 作用对象 等复杂过滤
 Target = {
 	function()
+		print("___找我方目标")
 		return caster:getGroup():getHeros()
 	end,
 	function()
+		print("___找敌方目标")
 		local myGroup = caster:getGroup()
 		local myGroupName = myGroup:getName()
 		local tarGroup 
-		local groupMap = combatData.groupMap
+		local groupMap = CombatData.groupMap
 
 		for k,v in pairs(groupMap) do
 			if v:getName() ~= myGroupName then 
@@ -45,7 +48,12 @@ Target = {
 		return tarGroup:getHeros()
 	end,
 	function()
+		print("___找自己")
 		return {caster}
+	end,
+	function()
+		print("___找宿主")
+		return {host}
 	end
 
 }
@@ -89,7 +97,7 @@ TargetFilter = {
 	end,
 	function(targets) 
 		local conditon = function(v)
-			return not combatLogic.isAlive(v)
+			return not CombatLogic.isAlive(v)
 		end
 
 	 	return __filterTargets(targets,conditon)
@@ -179,6 +187,7 @@ function do__(filter,caster)
 	filter = filter
 	caster = caster
 
+	dump(filter)
 	local targets
 		print("TargetFilter3")
 	targets = __doLogic("Target",filter) 
@@ -227,11 +236,27 @@ function do__(filter,caster)
 
 end
  
-function getTargets(skill)
-	caster = skill:getCaster()
-	print("TargetFilter1")
-	filter = generateFilter(skill)
-	print("TargetFilter2")
+function getTargets(instance)
+	local className = instance.__cname
+	if className == "Effect" then 
+
+		local effect = instance
+		local skill = effect:getSkill()
+	 	caster = skill:getCaster()
+	 	host = effect:getHost()
+
+	 	filter = effect:targetFilter()	 
+
+	elseif className == "Skill" then 
+		
+		local skill = instance
+		caster = skill:getCaster()
+		host = caster
+		print("TargetFilter1")
+		filter = generateFilter(skill)
+		print("TargetFilter2")
+	end 
+	
 	return do__(filter,caster)  
 end
 

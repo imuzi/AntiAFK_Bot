@@ -6,19 +6,20 @@ local _ = (...):match("(.-)[^%.]+$")
 require(_.."___utils")
 require(_.."Const")
 
-combatData = require(_.."CombatData")
-targetFilters = require(_.."TargetFilters")
-turnOrders = require(_.."TurnOrders")
-behaviors = require(_.."Behaviors")
-castAi = require(_.."CastAi") 
+CombatData = require(_.."CombatData")
+TargetFilters = require(_.."TargetFilters")
+TurnOrders = require(_.."TurnOrders")
+Behaviors = require(_.."Behaviors")
+CastAi = require(_.."CastAi") 
 
-triggerEvents = require(_.."TriggerEvents")
+TriggerEvents = require(_.."TriggerEvents")
 
 
-combatLogic = require(_.."CombatLogic")
-skillLogic = require(_.."SkillLogic")
+CombatLogic = require(_.."CombatLogic")
+SkillLogic = require(_.."SkillLogic")
 local CDUpdater = require(_.."CDUpdater")
 
+Performances = require(_.."Performances")
 module(...,package.seeall) 
  
 
@@ -26,26 +27,28 @@ local scheduler = require("framework.scheduler")
 local socket = require "socket"
 
 
+ 
+
 looper = nil 
 frame_count = 0
 frame_step = 0
 game_speed = 1
 
 function init()
-	combatData.init() 
+	CombatData.init() 
 
-	turnOrders.basicAttack.sort()
-	turnOrders.skill.sort()  
-
+	TurnOrders.basicAttack.sort()
+	TurnOrders.skill.sort()  
+ 
 end
 
 function start() 
  
 	looper = scheduler.scheduleGlobal(main_loop, 0) 
 
-	skillLogic.castPassiveSkills()
+	SkillLogic.castPassiveSkills()
 
-	triggerEvents.listen("combatBegin")
+	TriggerEvents.listen("combatBegin")
 	
 	print("combat,started!")
 end
@@ -77,10 +80,12 @@ function main_loop()
 
 
 
-		combatLogic.loop()
+		CombatLogic.loop()
 
 		CDUpdater.loop()
 
+		Performances.loop()
+		
 		frame_step = frame_step + 1
 	end
 

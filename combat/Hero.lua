@@ -9,7 +9,7 @@ local Hero = class__("Hero",
 					cfg         = "nil",
 					baseAttrs   = "{}",
 					externAttrs = "{}",
-					status      = "nil", 
+					status      = STATUS.STANDBY, 
 					frameStep   = "0",
 					skillToCast = "nil",
 					group   = "nil", 
@@ -29,10 +29,8 @@ function Hero:ctor(heroData)
 	local type_ = heroData.type
 
 	self:initCfg(type_)
-	self:__initAttrs(heroData)
-
-	-- self.effectList = {}
-	-- self.tempEffectList = {}
+	self:__initAttrs(heroData) 
+ 
 	print("svr_id,type_",svr_id,type_,"\n--------------------------------------------\n")
 end
 

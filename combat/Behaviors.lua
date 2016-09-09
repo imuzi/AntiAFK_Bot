@@ -6,16 +6,16 @@ module(...,package.seeall)
 self = package.loaded[...]
 
 
-
-__castSkill = 
+-- 基本行为  所谓的技能触发连击 并非连击 只是再做一次基本行为  
+baseAction = 
 {
 	begin =
 	function(hero) 
-		local skill = hero:getSkillToCast()
-		local targets = targetFilters.getTargets(skill)
+		local skill = hero:getSkillToCast() or hero:getBasicSkill()  -- 
+		local targets = TargetFilters.getTargets(skill)
 
 		if #targets > 0 then 
-			skillLogic.castSkill(skill)
+			SkillLogic.castSkill(skill)
 			skill:setTargets(targets)
 			tempLoopFlag__(skill,true)
 		else 
@@ -36,7 +36,7 @@ __castSkill =
 		 
 		if isHit(hero) then 
 			print("________hit")
-			combatLogic.onHit(skill)
+			CombatLogic.onHit(skill)
 		elseif isOver(hero) then  
 			print("________over")
 			over(hero)
@@ -46,7 +46,7 @@ __castSkill =
 	function(hero)
 		local skill = hero:getSkillToCast()
 		tempLoopFlag__(skill,false)   
-		combatLogic.trans_status(hero,"STANDBY") 
+		CombatLogic.trans_status(hero,"STANDBY") 
 
 		hero:setSkillToCast(nil)
 	end
@@ -55,20 +55,19 @@ __castSkill =
 castSkill = 
 {
 	begin =
-	function(hero)
-		combatLogic.turn_begin()
-		__castSkill.begin(hero)
+	function(hero) 
+		baseAction.begin(hero)
 	end,
 	loop = 
 	function(hero)
-		__castSkill.loop(hero) 
+		baseAction.loop(hero) 
 	end,
 	over = 
 	function(hero)
-		__castSkill.over(hero)
+		baseAction.over(hero)
  
-		if not combatLogic.checkCombo() then  
-			combatLogic.checkCounterOwner()
+		if not CombatLogic.checkCombo() then  
+			CombatLogic.checkCounterOwner()
 		end
  
 	end
@@ -79,18 +78,18 @@ basicAttack =
 {
 	begin =
 	function(hero) 
-		__castSkill.begin(hero)
+		baseAction.begin(hero)
 	end,
 	loop = 
 	function(hero)
-		__castSkill.loop(hero) 
+		baseAction.loop(hero) 
 	end,
 	over = 
 	function(hero)
-		__castSkill.over(hero) 
+		baseAction.over(hero) 
 
-		if not combatLogic.checkCombo() then  
-			combatLogic.checkCounterOwner()
+		if not CombatLogic.checkCombo() then  
+			CombatLogic.checkCounterOwner()
 		end
  
 	end
@@ -100,15 +99,15 @@ counterAttack = {
 	begin =
 	function(hero)
 		
-		__castSkill.begin(hero)
+		baseAction.begin(hero)
 	end,
 	loop = 
 	function(hero)
-		__castSkill.loop(hero) 
+		baseAction.loop(hero) 
 	end,
 	over = 
 	function(hero)
-		__castSkill.over(hero) 
+		baseAction.over(hero) 
 	end
 }
 
@@ -117,17 +116,17 @@ comboAttack = {
 	begin =
 	function(hero)
 		 
-		__castSkill.begin(hero)
+		baseAction.begin(hero)
 	end,
 	loop = 
 	function(hero)
-		__castSkill.loop(hero) 
+		baseAction.loop(hero) 
 	end,
 	over = 
 	function(hero)
-		__castSkill.over(hero)
+		baseAction.over(hero)
 
-		combatLogic.checkCounterOwner()
+		CombatLogic.checkCounterOwner()
 		---- FIXME check combo
 	end
 }
@@ -148,7 +147,7 @@ standBy = {
 
 function begin(hero) 
 	getBehavior(hero).begin(hero) 
-	-- triggerEvents.listen("behaviorBegin")
+	-- TriggerEvents.listen("behaviorBegin")
 end
 
 function loop(hero)
@@ -156,15 +155,15 @@ function loop(hero)
 end
 function over(hero)
  	getBehavior(hero).over(hero)
- 	-- triggerEvents.listen("behaviorOver")
+ 	-- TriggerEvents.listen("behaviorOver")
 end
 
 function resetTurnOrders(hero)
 	local status = hero:getStatus()
 	if status == STATUS.BASICATTACK then 
-		turnOrders.tempTurnOrderFlag__(hero,false)
+		TurnOrders.tempTurnOrderFlag__(hero,false)
 	elseif status == STATUS.CASTSKILL then 
-		turnOrders.tempTurnOrderFlag__(hero:getGroup(),false)
+		TurnOrders.tempTurnOrderFlag__(hero:getGroup(),false)
 	end 
 
 end

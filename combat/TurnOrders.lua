@@ -7,10 +7,10 @@ module(...,package.seeall)
 basicAttack = {
 	whosTurn = 
 	function()
-		local data = combatData.basicAttackOrderSet 
+		local data = CombatData.basicAttackOrderSet 
 		local instanceGetter = function(v) 
 			 
-			return combatLogic.isAlive(v) and v or nil 
+			return CombatLogic.isAlive(v) and v or nil 
 		end 
 
 		local trunOwner = getTurnOwner(data,instanceGetter)
@@ -32,7 +32,7 @@ basicAttack = {
 	end,
 	reset = 
 	function()
-		local data = combatData.basicAttackOrderSet 
+		local data = CombatData.basicAttackOrderSet 
 		local instanceGetter = function(v)
 			return v 
 		end 
@@ -41,7 +41,7 @@ basicAttack = {
 	end,
 	sort = 
 	function()
-		local heros = combatData.basicAttackOrderSet
+		local heros = CombatData.basicAttackOrderSet
 		sort__(heros,{
 			{
 				function(hero)
@@ -70,9 +70,9 @@ basicAttack = {
 skill = {
 	whosTurn = 
 	function() 
-		local data = combatData.groupNames
+		local data = CombatData.groupNames
 		local instanceGetter = function(v)
-			return combatData.getGroupByName(v)   
+			return CombatData.getGroupByName(v)   
 		end 
 
 		local trunOwner = getTurnOwner(data,instanceGetter)
@@ -86,20 +86,20 @@ skill = {
 	end,
 	reset = 
 	function()
-		local data = combatData.groupNames
+		local data = CombatData.groupNames
 		local instanceGetter = function(v)
-			return combatData.getGroupByName(v)   
+			return CombatData.getGroupByName(v)   
 		end 
 
 		resetTrunTag(data,instanceGetter)
 	end,
 	sort = 
 	function()
-		local groupNames = combatData.groupNames
+		local groupNames = CombatData.groupNames
 		sort__(groupNames,{
 			{	
 				function(groupName)
-					local group = combatData.getGroupByName(groupName)   
+					local group = CombatData.getGroupByName(groupName)   
 					return group:getSpeed()
 				end,
 				">"

@@ -41,21 +41,18 @@ eventNames =
 function listen(evtName)
 	print("\n\n\n\n --listen",evtName)
 	-- for _,name in ipairs(eventNames) do
-		local groupMap = combatData.groupMap
-		for k,group in pairs(groupMap) do
 
-			local heros = group:getHeros()
-			for i,hero in ipairs(heros) do 
 
-				local effList = hero:getEffectList()
-				local tempEffList = hero:getTempEffectList()
-				foreachEffectList(effList,evtName)
-				-- print("size--effList",#effList)
-				foreachEffectList(tempEffList,evtName)
-				-- print("size--tempEffList",#tempEffList)
-			end
-		end
-	-- end
+		CombatData.foreachAllHeros(
+		function(hero)
+			local effList = hero:getEffectList()
+			local tempEffList = hero:getTempEffectList()
+			foreachEffectList(effList,evtName)
+			-- print("size--effList",#effList)
+			foreachEffectList(tempEffList,evtName)
+			-- print("size--tempEffList",#tempEffList)
+		end)
+		 
 
 	print("listen End \n\n")
  
@@ -64,7 +61,7 @@ end
 
 function checkDoEffect(eff,evtName)
 	if matchs(eff,evtName) then  
-		skillLogic.doEffect(eff) 
+		SkillLogic.doEffect(eff) 
  	end
 end
 
@@ -73,7 +70,9 @@ function matchTarget(eff)
 	local caster = eff:getSkill():getCaster()
 
 	local targetFilter = eff:getTriggerEvent().targetFilter
-	local targets = targetFilters.do__(targetFilter,caster)
+	local hasTargetFilter = type(targetFilter) == "table"  -- 如果没有targetfiter 则为自己
+
+	local targets = hasTargetFilter and TargetFilters.do__(targetFilter,caster) or {caster}
 
 	local isIn = false
 

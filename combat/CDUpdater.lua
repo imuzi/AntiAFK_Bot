@@ -15,15 +15,10 @@ function loop()
 end
 
 function updateSkillCd() 
-	local groupMap = combatData.groupMap
-	for k,v in pairs(groupMap) do
-		local group = v 
-		local skills = group:getSkills() 
-		-- print("\n____刷新技能CD__阵营",k)
-		for i,skill in ipairs(skills) do
-			checkSkillCd(skill)
-		end
-	end 
+	CombatData.foreachAllSkills(
+	function(skill)
+		checkSkillCd(skill)
+	end)  
 end
 
 
@@ -33,9 +28,7 @@ function checkSkillCd(skill)
 	end
 	skill:updateCdLeft()
 
-
-	-- targetFilters.getTargets(skill)
-	-- getSkillToCast()
+ 
 end
 
 function isSkillJustReady(skill)

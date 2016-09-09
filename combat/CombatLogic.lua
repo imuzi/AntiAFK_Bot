@@ -58,7 +58,7 @@ function loop()
 
 		counterOwner = nil  
 
-		local skillToCast = castAi.think()
+		local skillToCast = CastAi.think()
 
 		--- 技能 游离回合之外  WARN
 		if skillToCast then 
@@ -68,7 +68,7 @@ function loop()
 		else 
 			turn_begin()
 
-			turnOwner = turnOrders.basicAttack.whosTurn() 
+			turnOwner = TurnOrders.basicAttack.whosTurn() 
 
 			local basicSkill = turnOwner:getBasicSkill()
 			turnOwner:setSkillToCast(basicSkill)
@@ -78,7 +78,7 @@ function loop()
 
 
 	if isAlive(turnOwner) then 
-		behaviors.loop(turnOwner) 
+		Behaviors.loop(turnOwner) 
 	end 
  
 end
@@ -91,16 +91,16 @@ function trans_status(hero,status_key)
 	hero:setStatus(val)  
 	hero:resetFrameStep() 
 	print("改变 ",hero:getCfgByKey("Name"),"状态为 ：",val)
-	behaviors.begin(hero)
+	Behaviors.begin(hero)
 end
 
 
 function turn_begin()
-	triggerEvents.listen("turnBegin")
+	TriggerEvents.listen("turnBegin")
 end
 
 function turn_over()
-	triggerEvents.listen("turnOver") 
+	TriggerEvents.listen("turnOver") 
 end
 
 function isOverAction(hero)
@@ -122,7 +122,7 @@ end
 
 
 function checkCounterOwner()
-	if counterOwner then 
+	if counterOwner and isAlive(counterOwner) then 
 		local basicSkill = counterOwner:getBasicSkill()
 		counterOwner:setSkillToCast(basicSkill)
 		trans_status(counterOwner,"COUNTERATTACK")
@@ -161,8 +161,9 @@ function onHit(skill)
 	-- end
 
 	local evtName = skill:isBasicAttack() and "basicHit" or "skillHit" 
-	triggerEvents.listen(evtName)
-	triggerEvents.listen("onHit")
+	TriggerEvents.listen(evtName)
+	TriggerEvents.listen("onHit") 
+
 end
 
 --- hit events 
@@ -226,15 +227,12 @@ function calculateDamage(effect,target)
 		print("————未命中,hitRate",hitRate,hitRate*100/(hitRate+100))
 		return 0 
 	end 
+ 
 
-	local isCounter = isBingo(caster:getAttr("counterRate"))
-	if isCounter and not counterOwner then 
-		counterOwner = target
-	end 
-
+	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate")) 
+	if isCrit then TriggerEvents.listen("critHit") end  -- WARN 要先于计算伤害 
 
 
-	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate"))
 	local isBlock = isBingo(caster:getAttr("blockRate"))
 
 	local isIgnoreDefence = caster:getAttr("mustIgnoreDefence")
@@ -283,7 +281,7 @@ function calculateDamage(effect,target)
 					*
 					skillDamageScaleRatio
 
-	if isCrit then triggerEvents.listen("critHit") end
+	
 
 	damage = math.floor(damage)
 	print( 
@@ -300,15 +298,25 @@ function calculateDamage(effect,target)
 end
 
  
+function checkCounter(target,isDamge)
+	if not isDamge then return end 
 
+	local isCounter = isBingo(target:getAttr("counterRate"))
+	if isCounter and not counterOwner then 
+		counterOwner = target
+	end  
+end
 
 function changeHp(target,val)
+	local isDamage = val > 0  
 	local hp = target:getAttr("hp")
 	hp = hp - val  
 
 	hp = math.max(hp,0)
 	target:setAttr("hp",hp)
 	target:setAttr("hpPercent",target:getAttr("hp")*100/target:getAttr("maxHP")) 
+
+	checkCounter(target,isDamage)
 end 
 
 function checkDeath(target)

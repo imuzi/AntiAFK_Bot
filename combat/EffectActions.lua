@@ -34,9 +34,9 @@ heal
 					
 damage = 
 function(effect,target) 
-	local damage = combatLogic.calculateDamage(effect,target)   
-	combatLogic.changeHp(target,damage) 
-	combatLogic.checkDeath(target)   --  WARN这里 死亡 状态 表现上应该是对面行为结束后才消失 目标依然可攻击
+	local damage = CombatLogic.calculateDamage(effect,target)   
+	CombatLogic.changeHp(target,damage) 
+	CombatLogic.checkDeath(target)   --  WARN这里 死亡 状态 表现上应该是对面行为结束后才消失 目标依然可攻击
 end
 
 -- damage1 = 
@@ -63,7 +63,7 @@ function(effect,target)
 	local reivedHp = maxHp*hpRatio
 	target:setAttr("hp",reivedHp)
 	-- target:setStatus("")
-	combatLogic.trans_status(target,"STANDBY")
+	CombatLogic.trans_status(target,"STANDBY")
 	target:setAttr("ingnoreSelect",false)
 end
 
@@ -132,7 +132,7 @@ end
 --  stackType = 1,  FIX ME 
 -- 	}
 -- } 
-local effectCls = require(_.."Effect")
+local EffectCls = require(_.."Effect")
 newEffect = 
 function(effect,target)
 	local params = effect:getParams()
@@ -146,17 +146,24 @@ function(effect,target)
 
 	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
 
-	local isHit = combatLogic.isBingo(effectHitRate)
+	local isHit = CombatLogic.isBingo(effectHitRate)
 	if isHit then 
-		local newEffect = effectCls.new(params_)
+		local newEffect = EffectCls.new(params_)
 		newEffect:setSkill(skill)
 		target:addTempEffect(newEffect)
 		newEffect:setHost(target)
 
-		triggerEvents.checkDoEffect(newEffect,"effectBegin") 
+		TriggerEvents.checkDoEffect(newEffect,"effectBegin") 
 	end
 
 	-- 如果是  changeattr则赋予target 一个 changeattr 的action  
 
 
 end
+
+-- 针对多个同类BUFF 同时存在   取值高的 底的不生效 当 高的消失时  低的就生效的问题 
+
+-- 这个buff 也要保存 但不保存在原有生效的 效果集合里 
+-- hero  增加一个 sleepEffectList的集合 每次 buff结束时 去比较生效的效果集合里的值是否仍有比他高的 
+-- 没有就加入到 tempEffect 里面 去作用  并触发 effectBegin事件 
+--  或者将 effectlist 的 子集扩展成 数组   同类型的BUFF类技能 放在一个数组中  

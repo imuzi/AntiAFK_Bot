@@ -3,9 +3,9 @@
 --
 local _ = (...):match("(.-)[^%.]+$") 
  
-local effect = require(_.."Effect")
-local effectActions = require(_.."EffectActions")
-local conditions = require(_.."Conditions")
+local Effect = require(_.."Effect")
+local EffectActions = require(_.."EffectActions")
+local Conditions = require(_.."Conditions")
 module(...,package.seeall)
 
 local effect_module =  
@@ -108,7 +108,7 @@ function castSkill(skill)
 	print("_____castSkill_____________",caster:getCfgByKey("name"),caster:getAttr("id"))
 
 	for i,v in ipairs(eff_funcs) do  
-		local eff = effect.new(v) 
+		local eff = Effect.new(v) 
 		eff:setSkill(skill)  
 		eff:setHost(caster)
 
@@ -130,7 +130,7 @@ function doEffect(effect)
 
  	local hasTargetFilter = type(targetFilter)=="table" 
  	-- print("targetFilter",targetFilter and 1 or 0)
- 	targets = hasTargetFilter and targetFilters.do__(targetFilter,caster) or targets
+ 	targets = hasTargetFilter and TargetFilters.getTargets(effect) or targets
  	print( 
 			"\nskill：",skill:getCfgByKey("Name")
 			,"\n释放者：",caster:getCfgByKey("Name")
@@ -145,7 +145,7 @@ function doEffect(effect)
  		local target = v 
  		local name = action.name
  		-- local params = 
- 		local meets = conditions.meets(target,targetConditions)
+ 		local meets = Conditions.meets(target,targetConditions)
  
  		print(
  			"\nactionName:",name
@@ -153,7 +153,7 @@ function doEffect(effect)
  			,"\n目标：",target:getCfgByKey("Name") 
 			) 
  		if meets then 
- 			effectActions[name](effect,target)
+ 			EffectActions[name](effect,target)
  		end 
 
  	end  
@@ -161,19 +161,13 @@ function doEffect(effect)
 end
 
 function castPassiveSkills()
-	local groupMap = combatData.groupMap
-	for k,group in pairs(groupMap) do
-
-		local heros = group:getHeros()
-		for i,hero in ipairs(heros) do
-			local skills = hero:getPassiveSkills()
-			for _,skill in ipairs(skills) do
-
-			 	castSkill(skill)
-		 	end 
-		end
-	end
-
+	CombatData.foreachAllHeros(
+	function(hero)
+		local skills = hero:getPassiveSkills()
+		for _,skill in ipairs(skills) do 
+		 	castSkill(skill)
+	 	end 
+	end) 
 end
 
 
@@ -182,7 +176,7 @@ end
 function generateBasicSkillStruct(skill)
 	local caster = skill:getCaster()
 
-	local targetFilter = targetFilters.generateFilter(skill)
+	local targetFilter = TargetFilters.generateFilter(skill)
 
 
 end

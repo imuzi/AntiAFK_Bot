@@ -110,6 +110,9 @@ function class__(classname, super)
 					instance[k] = false
 				elseif tonumber(v) then
 					instance[k] = tonumber(v) 
+				elseif type(v) == "string" then 
+					instance[k] = v 
+						
 				end   
 				
 				-- if v == newVarValue  then print("v",v,"newVarValue",newVarValue,type(newVarValue)) os.exit() end 
@@ -184,6 +187,8 @@ end
 --  
 --- sorting func begins 
 function sort__(data,sorParmas)  
+	if #data <= 1 then return data end
+
 	local get_conditions = 
 	function(depth,a,b)
 		local sortData = sorParmas[depth] 
@@ -316,3 +321,144 @@ function set_random_count(var)
 	__random_recoder = {}
 	__random_count = var or 0
 end	
+
+
+
+
+
+
+
+
+
+
+
+-----
+function newCcs(param) 
+	local anim 
+	local armatureName
+
+	local fullPathName = param.fullPathName
+	local parent       = param.parent 
+	local x            = param.x or display.cx
+	local y            = param.y or display.cy
+ 	local actionName   = param.actionName or "Animation1"
+	local cb           = param.cb or function() end
+	local autoRemove   = param.autoRemove -- fix me by lxc  
+	local zorder       = param.zorder or 0
+	local speed        = param.speed or 1 
+	local playSound    = param.playSound 
+
+	local movementEvent = param.movementEvent or function() end 
+
+	local armatureDataManager = CCArmatureDataManager:sharedArmatureDataManager()
+
+	string.gsub(fullPathName,"([%w_]+)",function(v) 
+		armatureName = v 
+	end)   
+
+	print("-----------------------------armatureName",fullPathName,armatureName,actionName)
+	local __onLoaded = function()
+	 	anim = CCArmature:create(armatureName):pos(x,y)   
+	 	if parent then  
+	 		anim:addTo(parent,zorder)
+	 	end
+	 	-- if playSound then 
+		 -- 	animation:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
+			-- 	if string.sub(evt, 1, 9) == "playSound" then
+			-- 		local source = string.sub(evt, 10, string.len(evt)) 
+			-- 		audioManager:playSound(string.format("sound/skill/%s.mp3", source))
+			-- 	end
+			-- end)
+	 	-- end 
+
+		if loop then 
+			anim:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
+				if string.sub(evt, 1, 11) == "gotoAndPlay" then
+					local frame = checkint(string.sub(evt, 12, string.len(evt))) + 1
+					anim:getAnimation():gotoAndPlay(frame)
+				end  
+			end)  
+		end  
+
+		anim:getAnimation():setMovementEventCallFunc(movementEvent)
+ 
+		-- anim:performWithDelay(function()
+		anim:getAnimation():play(actionName)
+
+	 	anim:getAnimation():setSpeedScale(speed)
+		 -- end, 0)
+		-- play 要保证在 注册时间之前 不然会有各种问题 ccs bug
+		
+	end
+
+ 
+	armatureDataManager:addArmatureFileInfo(fullPathName..".ExportJson")
+	__onLoaded()
+	 
+	return anim 
+end
+
+
+function newSpine(dir)
+	local cache = 0---1
+	local scale = 1--scale or 1
+	local withMask = 0--withMask or 1
+ 
+	local spine 
+	spine = SkeletonAnimation:createWithFile(dir, false, scale, withMask, cache)
+
+	return spine
+end
+
+
+
+
+
+
+--- 引擎代码库版本
+function engineCodeBaseVersion()
+	if not __engineCodeBaseVersion then
+		if not CCConfiguration.getCodeBaseVersion then
+			__engineCodeBaseVersion = 0
+		else
+			__engineCodeBaseVersion = CCConfiguration:getCodeBaseVersion()
+		end
+	end
+	print("==================__engineCodeBaseVersion", __engineCodeBaseVersion)
+	return __engineCodeBaseVersion
+end
+
+--- 加载武将Spine
+-- @param project 骨骼项目名
+-- @param avatar 骨骼编号
+-- @param isSkin 是否是用了皮肤机制进行换肤的，bool
+-- @param cache 是否要缓存起来 int 1:缓的,其他:不缓
+-- @param scale 缩放
+-- @param withMask 是否是png8+jpg模式 int 1:是的,其他:不是
+function loadWarriorSpine(project, avatar, isSkin, cache, scale, withMask)
+	-- cache = cache or 0
+	cache = -1
+	scale = scale or 1
+	withMask = withMask or 1
+	-- local socket = require "socket"
+	-- local t = socket.gettime()
+	-- print("spine/" .. project .. ".zip", project .. ".json", project .. ".atlas", scale, withMask, cache)
+	local spine
+	if engineCodeBaseVersion() >= 1 then
+		spine = SkeletonAnimation:createWithFile("spine/" .. project .. ".json", false, scale, withMask, cache)
+	else
+		spine = SkeletonAnimation:createWithZip("spine/" .. project .. ".zip", "spine/" .. project .. ".json", "spine/" .. project .. ".atlas", scale, withMask, cache)
+	end
+
+	-- print("加载", project, "耗时:", socket.gettime() - t)
+	
+	if isSkin then
+		spine:setSkin(avatar)
+	end
+	return spine
+end
+
+--- 加载敌方关卡武将Spine
+function loadSpine(avatarData) 
+	return loadWarriorSpine(avatarData.Spine, avatarData.Avatar, avatarData.IsSkin == 1, nil, nil, 0)
+end
