@@ -16,7 +16,7 @@ end)
 
 function CombatScene:ctor()
 	CombatMgr.init()
-	Performances.init(self) 
+	VisualEffect.init(self) 
 
 end
 

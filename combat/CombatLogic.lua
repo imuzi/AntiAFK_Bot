@@ -53,8 +53,9 @@ function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
 
 	if shouldFindNextTurnOwner then  
-		
-		turn_over()
+		if turnOwner then 
+			turn_over()
+		end
 
 		counterOwner = nil  
 
@@ -81,6 +82,10 @@ function loop()
 		Behaviors.loop(turnOwner) 
 	end 
  
+	if counterOwner and counterOwner:getStatus()==STATUS.COUNTERATTACK then 
+		Behaviors.loop(counterOwner) 
+	end 
+
 end
 
  
@@ -90,8 +95,11 @@ function trans_status(hero,status_key)
 	local val = STATUS[status_key]
 	hero:setStatus(val)  
 	hero:resetFrameStep() 
+	hero:resetFrameEventRecorder()
 	print("改变 ",hero:getCfgByKey("Name"),"状态为 ：",val)
 	Behaviors.begin(hero)
+
+	VisualEffect.updateAction(hero)
 end
 
 
@@ -142,10 +150,21 @@ function checkCombo()
 		local basicSkill = hero:getBasicSkill()
 		hero:setSkillToCast(basicSkill)
 		trans_status(hero,"COMBOATTACK")
+
+
 		return true
 	end  
 
 	return false
+end
+
+function checkCounter(target,isDamge)
+	if not isDamge or not isAlive(target) then return end 
+
+	local isCounter = isBingo(target:getAttr("counterRate"))
+	if isCounter and not counterOwner then 
+		counterOwner = target
+	end  
 end
 
 
@@ -225,6 +244,7 @@ function calculateDamage(effect,target)
 
 	if not isHit then 
 		print("————未命中,hitRate",hitRate,hitRate*100/(hitRate+100))
+		VisualEffect.showMiss(target)
 		return 0 
 	end 
  
@@ -233,17 +253,17 @@ function calculateDamage(effect,target)
 	if isCrit then TriggerEvents.listen("critHit") end  -- WARN 要先于计算伤害 
 
 
-	local isBlock = isBingo(caster:getAttr("blockRate"))
+	local isBlock = isBingo(target:getAttr("blockRate"))
 
 	local isIgnoreDefence = caster:getAttr("mustIgnoreDefence")
  
 
 
 	local attack = caster:getAttr("attack")
-	local defence = caster:getAttr("defence") 
+	local defence = target:getAttr("defence") 
 	local critDamage = caster:getAttr("critDamage")
 
-	local tenacity = caster:getAttr("tenacity")
+	local tenacity = target:getAttr("tenacity")
 	tenacityRatio = 1-tenacity/(tenacity+100)
  
  	local damageIncrease = caster:getAttr("damageIncrease") - target:getAttr("damageDecrease")
@@ -293,30 +313,25 @@ function calculateDamage(effect,target)
 		,"\nskillDamageScaleRatio"
 		,skillDamageScaleRatio
 		,"\nisCrit,isHit,isBlock,isIgnoreDefence"
-		,isCrit,isHit,isBlock,isIgnoreDefence)				
+		,isCrit,isHit,isBlock,isIgnoreDefence)		
+
+
+	VisualEffect.showDamage(damage,isCrit,isBlock,target)			
 	return damage 
 end
 
  
-function checkCounter(target,isDamge)
-	if not isDamge then return end 
 
-	local isCounter = isBingo(target:getAttr("counterRate"))
-	if isCounter and not counterOwner then 
-		counterOwner = target
-	end  
-end
 
-function changeHp(target,val)
-	local isDamage = val > 0  
+function changeHp(target,val) 
 	local hp = target:getAttr("hp")
+	local maxHp = target:getAttr("maxHP")
 	hp = hp - val  
 
 	hp = math.max(hp,0)
+	hp = math.min(hp,maxHp)
 	target:setAttr("hp",hp)
-	target:setAttr("hpPercent",target:getAttr("hp")*100/target:getAttr("maxHP")) 
-
-	checkCounter(target,isDamage)
+	target:setAttr("hpPercent",hp*100/maxHp)   
 end 
 
 function checkDeath(target)
@@ -328,8 +343,8 @@ function checkDeath(target)
 end
 
 function onDeath(target)
-	target:setStatus(STATUS.DEAD) 
-	target:setAttr("ingnoreSelect",true) -- WARN 只选死亡 可以被选择
+	-- target:setStatus(STATUS.DEAD) 
+	-- target:setAttr("ignoreSelect",true) -- WARN 只选死亡 可以被选择
 end
 
 

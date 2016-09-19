@@ -323,8 +323,14 @@ function set_random_count(var)
 end	
 
 
-
-
+function modf__(val)
+	local val,modf = math.modf(val)
+	if modf > 0.5 then--[[if modf ~= 0 then]] 
+		 val = val + 1
+	end
+	return val 
+end
+ 
 
 
 

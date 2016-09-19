@@ -7,10 +7,12 @@ local getCfg = getConfig
 local Hero = class__("Hero",
 					{
 					cfg         = "nil",
+					avatarCfg   = "nil",
 					baseAttrs   = "{}",
 					externAttrs = "{}",
 					status      = STATUS.STANDBY, 
 					frameStep   = "0",
+					frameEventRecorder = "{}", --记录执行过的事件点
 					skillToCast = "nil",
 					group   = "nil", 
 					basicSkill = "nil",
@@ -18,6 +20,10 @@ local Hero = class__("Hero",
 
 					effectList = "{}",  
   					tempEffectList = "{}",
+  					castingEffectList = "{}",  -- 暂时这样 这个里面的效果 作用完就自己移除 通常是行为结束的点 而不是 回合结束
+  					buffList = "{}",
+  					deBuffList = "{}",
+
   					effectToDo = "nil",
 
 					}) 
@@ -29,6 +35,7 @@ function Hero:ctor(heroData)
 	local type_ = heroData.type
 
 	self:initCfg(type_)
+	self:initAvatarCfg()
 	self:__initAttrs(heroData) 
  
 	print("svr_id,type_",svr_id,type_,"\n--------------------------------------------\n")
@@ -45,6 +52,19 @@ end
 
 function Hero:getCfgByKey(key)
 	return self:getCfg()[key]
+end
+
+function Hero:initAvatarCfg() 
+	local avatarType = self:getCfgByKey("AvatarType")
+	self.avatarCfg = getConfig(avatarType, "AvatarConfig") 
+end
+
+function Hero:getAvatarCfg()
+	return self.avatarCfg
+end
+
+function Hero:getAvatarCfgByKey(key)
+	return self:getAvatarCfg()[key]
 end
  
 
@@ -107,15 +127,27 @@ function Hero:getFrameStep()
 	return self.frameStep 
 end
 
-
-
-function Hero:isSkillOver()
-	local interval = self:getSkillToCast():getInterval()
-	local frameStep = self:getFrameStep()
-	local isOver = interval <= frameStep
-
-	return isOver 
+function Hero:recordFrameEvent(name)
+	self.frameEventRecorder[name] = true 
 end
+
+function Hero:resetFrameEventRecorder()
+	self.frameEventRecorder = {}
+end
+function Hero:getFrameEventRecorder()
+	return self.frameEventRecorder  
+end
+ 
+
+
+
+-- function Hero:isSkillOver()
+-- 	local interval = self:getSkillToCast():getInterval()
+-- 	local frameStep = self:getFrameStep()
+-- 	local isOver = interval <= frameStep
+
+-- 	return isOver 
+-- end
 
 function Hero:setSkillToCast(skill)
 	self.skillToCast = skill
@@ -154,11 +186,19 @@ function Hero:getTempEffectList()
 	return self.tempEffectList
 end
 
+function Hero:getCastingEffectList()
+	return self.castingEffectList
+end
+
 function Hero:setEffectList(val)
 	self.effectList = val
 end
 function Hero:setTempEffectList(val)
 	self.tempEffectList = val
+end
+
+function Hero:setCastingEffectList(val)
+	self.castingEffectList = val
 end
 
 function Hero:addEffect(val)
@@ -170,6 +210,41 @@ function Hero:addTempEffect(val)
 	local list = self:getTempEffectList()
 	table.insert(list, val)
 	self:setTempEffectList(list)
+end
+
+function Hero:addCastingEffect(val)
+	local list = self:getCastingEffectList()
+	table.insert(list, val)
+	self:setCastingEffectList(list)
+end
+
+function Hero:getBuffList()
+	return self.buffList
+end
+
+function Hero:setBuffList(val)
+	self.buffList = val
+end
+
+function Hero:addBuff(val)
+	local list = self:getBuffList()
+	table.insert(list, val)
+	self:setBuffList(list)
+end
+
+
+function Hero:getDeBuffList()
+	return self.buffList
+end
+
+function Hero:setDeBuffList(val)
+	self.buffList = val
+end
+
+function Hero:addDeBuff(val)
+	local list = self:getDeBuffList()
+	table.insert(list, val)
+	self:setDeBuffList(list)
 end
 
 --- -effects end 

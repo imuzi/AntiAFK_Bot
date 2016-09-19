@@ -19,20 +19,19 @@ CombatLogic = require(_.."CombatLogic")
 SkillLogic = require(_.."SkillLogic")
 local CDUpdater = require(_.."CDUpdater")
 
-Performances = require(_.."Performances")
+VisualEffect = require(_.."VisualEffect")
 module(...,package.seeall) 
  
 
 local scheduler = require("framework.scheduler")
 local socket = require "socket"
 
-
  
 
 looper = nil 
 frame_count = 0
 frame_step = 0
-game_speed = 1
+game_speed = 3   -- 
 
 function init()
 	CombatData.init() 
@@ -51,6 +50,8 @@ function start()
 	TriggerEvents.listen("combatBegin")
 	
 	print("combat,started!")
+
+	CCDirector:sharedDirector():getScheduler():setTimeScale(game_speed) 
 end
 
 function stop()
@@ -69,28 +70,49 @@ function resume(  )
 end
 
 
-function main_loop()
-	 
-	frame_count = frame_count + 1 
+function main_loop(_dt_)
+	local gap = _dt_*MAX_FPS/game_speed
+	frame_count = frame_count + gap   --1  
 
-	local dt = MAXSPEED/game_speed
-	
-	if frame_count%dt == 0 then 
-
+	local scale_ratio = MAX_FPS/LOGIC_FPS/game_speed
+	local frame_count_modf = modf__(frame_count)
 
 
+	-- local real_logic_frame = 1/CCDirector:sharedDirector():getSecondsPerFrame()
 
+	-- local frame_point_scale = real_logic_frame/LOGIC_FPS
+	-- Behaviors.frame_point_scale = frame_point_scale
+	local dif_step = frame_count/scale_ratio - frame_step
+	dif_step = modf__(dif_step)
+	for i=1,dif_step do
 		CombatLogic.loop()
 
 		CDUpdater.loop()
 
-		Performances.loop()
+		VisualEffect.loop()
 		
 		frame_step = frame_step + 1
 	end
 
+	-- if (frame_count_modf%dt == 0)
+	-- or (frame_count_modf/game_speed - frame_step) >= 1 then 
+
+
+
+
+	-- 	CombatLogic.loop()
+
+	-- 	CDUpdater.loop()
+
+	-- 	VisualEffect.loop()
+		
+	-- 	frame_step = frame_step + 1
+	-- end
+
 	print("____________________________________________________________________________________\n\n\n"
-		,frame_count%dt,dt
+		,"\ngap is ",gap
+		,"\dif_step",dif_step
+		,"\nreal_logic_frame",real_logic_frame,1/_dt_,_dt_,frame_point_scale 
 		,"\n_______fame_count",frame_count
 		,"\nframe_step",frame_step
 		,"\nMAXSPEED,game_speed",MAXSPEED,game_speed)

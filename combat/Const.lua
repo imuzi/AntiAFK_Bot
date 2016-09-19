@@ -2,6 +2,35 @@
 -- Author: (£þ.£þ)
 -- Date: 2016-08-24 15:41:23
 --
+
+---------------------------
+---- frame consts   -------
+---------------------------
+MAX_FPS = 60 
+-- 正常速度的逻辑的调用间隔fps
+LOGIC_FPS = 30
+ 
+-- SP_X2 = MAX_FPS/LOGIC_FPS
+-- SP_X1 = SP_X2/2 
+-- -- SP_X1 = SP_X3/3
+-- MAXSPEED = SP_X2 
+
+
+
+-- 公CD
+G_CD = 16*30 
+-- 初始CD
+INIT_CD = 4*30
+
+-- 子弹飞行fps
+BULLET_FLYFRAME = 10
+RUN_FRAME = 10  -- 跑动耗时
+
+---------------------------
+---- frame consts   -------
+---------------------------
+
+
 COMBATSCENE_NAME = "CombatScene"
 
 
@@ -22,7 +51,7 @@ TEMP_EFFECT_VARS =
 	"mustDie",
 	"mustCounterAttack",
 	"buSi", 
-	"ingnoreSelect", -- 不能被选中 
+	"ignoreSelect", -- 不能被选中 
 	"selectFirst", -- 优先选中
 	"iceBlock",
 	"stun",
@@ -50,26 +79,6 @@ DEFENDER = "DEFENDER"
 
 BASIC_SKILL_TYPE = "attack"
 
-
-
-MAX_FPS = 60 
--- 正常速度的逻辑的调用间隔fps
-LOGIC_FPS = 30
--- 游戏速度数值 保底的 20fps  fixme
-SP_X2 = MAX_FPS/LOGIC_FPS
-SP_X1 = SP_X2/2 
--- SP_X1 = SP_X3/3
-MAXSPEED = SP_X2 
-
-
-
--- 公CD
-G_CD = 16*30 
--- 初始CD
-INIT_CD = 4*30
-
--- 子弹飞行fps
-BULLET_FLYFRAME = 10
 
 
 

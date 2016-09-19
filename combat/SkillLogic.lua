@@ -83,13 +83,13 @@ local effect_module =
 						-- },
 						triggerEvent = {
 							name= "onHit",
-							targetFilter= {
-								Target= 2,
-								TargetFilter= 0,
-								OrderRule= 0,
-								Descend= 0,
-								SelectCount= 1,
-							},
+							-- targetFilter= {
+							-- 	Target= 2,
+							-- 	TargetFilter= 0,
+							-- 	OrderRule= 0,
+							-- 	Descend= 0,
+							-- 	SelectCount= 1,
+							-- },
 						},
 						round = 1,
 						} 
@@ -105,14 +105,14 @@ function castSkill(skill)
 	local caster = skill:getCaster()
  
 
-	print("_____castSkill_____________",caster:getCfgByKey("name"),caster:getAttr("id"))
+	print("_____castSkill_____________",caster:getCfgByKey("Name"),caster:getAttr("id"))
 
 	for i,v in ipairs(eff_funcs) do  
 		local eff = Effect.new(v) 
 		eff:setSkill(skill)  
 		eff:setHost(caster)
 
-		caster:addEffect(eff)
+		caster:addCastingEffect(eff)
 	end 
 end
 
@@ -179,4 +179,84 @@ function generateBasicSkillStruct(skill)
 	local targetFilter = TargetFilters.generateFilter(skill)
 
 
+end
+
+
+--[[
+ 
+           0还是若存在，则无视
+           1表示若更强则取代并刷新Round，
+           2表示取代但不刷新Round,
+           3表示叠加并刷新Round,
+           4表示叠加但不算新Round"	
+]]
+check_buff_stack = 
+function(buff,isDebuff)
+	local effect = buff[1]
+	local host = effect:getHost()
+	local params = effect:getParams()
+	local attrName = params.attrName
+	local value = params.value
+	local stackType = params.stackType
+
+
+	local buffList  
+	if isDebuff then 
+		buffList = host:getDeBuffList()
+	else 
+		buffList = host:getBuffList()
+	end 
+
+	
+	local isIgnore = false
+
+	for i,v in ipairs(buffList) do
+		local eff_add = v[1]
+		local _params = eff_add:getParams()
+		local _attrName = _params.attrName
+		local _value = _params.value
+
+		if eff_add:sleep() == false then
+			local hasSameType = attrName == _attrName
+
+			local better = value > _value
+
+
+			if hasSameType then 
+				if stackType == 0 then 
+					 isIgnore = true 
+				elseif stackType == 1 then 
+					if better then 
+						for _i,eff in ipairs(v) do  
+							TriggerEvents.checkDoEffect(eff,"effectOver") 
+						end
+						buffList[i] = buff 
+					 	isIgnore = true  
+					 else 
+					 	for _,eff in ipairs(buff) do  
+							eff:sleep(true)
+						end
+					 end 
+				elseif stackType == 2 then 
+					for _i,eff in ipairs(v) do  
+						buff[_i]:setRound(eff:getRound())
+						TriggerEvents.checkDoEffect(eff,"effectOver")  
+					end
+					buffList[i] = buff
+					isIgnore = true  
+				elseif stackType == 3 then 
+					for _i,eff in ipairs(v) do  
+						eff:setRound(buff[_i]:getRound()) 
+					end 
+				elseif stackType == 4 then  
+					-- donothing
+				end  
+				break
+			end 
+
+		end  
+
+	end
+
+	return isIgnore
 end

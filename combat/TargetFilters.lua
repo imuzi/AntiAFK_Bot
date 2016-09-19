@@ -69,7 +69,7 @@ Target = {
 TargetFilter = {
 	function(targets)
 		local conditon = function(v)
-			return not __isIngnoreSelect(v)
+			return not __isignoreSelect(v)
 		end
 
 	 	return __filterTargets(targets,conditon)
@@ -77,7 +77,7 @@ TargetFilter = {
 	end,
 	function(targets)
 		local conditon = function(v)
-			return __isFrontLine(v) and not __isIngnoreSelect(v)
+			return __isFrontLine(v) and not __isignoreSelect(v)
 		end
 
 		local targetsFilted = __filterTargets(targets,conditon) 
@@ -87,7 +87,7 @@ TargetFilter = {
 	end,
 	function(targets)
 		local conditon = function(v)
-			return not __isFrontLine(v) and not __isIngnoreSelect(v)
+			return not __isFrontLine(v) and not __isignoreSelect(v)
 		end
 
 		local targetsFilted = __filterTargets(targets,conditon) 
@@ -117,7 +117,7 @@ TargetFilter = {
 		]]
 	 
 OrderRule = {
-	function(hero) -- 根据前后牌选取的概率 来给出一个优先值  FIXME
+	function(hero) -- 根据前后牌选取的概率 来给出一个优先值  
 		local sortPriority = tempSortPriority__(hero) --hero:sortPriority()
 		if sortPriority then 
 			return sortPriority 
@@ -302,8 +302,8 @@ function __isFrontLine(hero)
 end
 
 --冰冻
-function __isIngnoreSelect(hero)
-	return hero:getAttr("ingnoreSelect")
+function __isignoreSelect(hero)
+	return hero:getAttr("ignoreSelect")
 end
 
 function __filterTargets(targets,conditonFunc)

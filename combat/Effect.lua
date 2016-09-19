@@ -10,28 +10,32 @@ local Effect = class__("Effect",
 					 targetFilter = "nil",
 					 triggerEvent = "nil", -- 包含 {eventName，targetFilter}
 					 round = "nil",
+					 times = "9999999", -- WARN  FIXME只是持续回合数限制有一些问题 比如 在接下来的几次攻击中 额外造成什么什么
 
 					 skill = "nil",
-					 host = "nil"
+					 host = "nil",
+					 _sleep = "false" -- 针对有写效果在不确定情况下才执行 并非施放的时候FIXME
 					})
 
 function Effect:ctor(params)
-	local targetConditions = params.targetConditions
-	local action = params.action
-	local targetFilter = params.targetFilter
-	local triggerEvent = params.triggerEvent
-	local round  = params.round
+	if params then 
+		local targetConditions = params.targetConditions
+		local action = params.action
+		local targetFilter = params.targetFilter
+		local triggerEvent = params.triggerEvent
+		local round  = params.round 
 
+		self:setParams(params)
+		
+		self:setTargetFilter(targetFilter)
+		self:setTriggerEvent(triggerEvent)
+		self:setAction(action)
+		self:setTargetConditions(targetConditions)
 
-	self:setParams(params)
-	
-	self:setTargetFilter(targetFilter)
-	self:setTriggerEvent(triggerEvent)
-	self:setAction(action)
-	self:setTargetConditions(targetConditions)
-
-	self:setRound(round) 
- 
+		self:setRound(round)  
+	end
+ 	
+ 	self:sleep(false)
 end
 
 function Effect:setSkill(val)
@@ -92,6 +96,23 @@ end
 
 
 
+function Effect:updateTimes(gap)
+	local gap = gap or -1 
+	local times = self:getRound()
+
+	times = times + gap
+
+	self:setTimes(times)   
+end
+
+function Effect:setTimes(val)
+	self.times = val 
+end
+
+function Effect:getTimes()
+	return self.times
+end
+
 function Effect:updateRound(gap)
 	local gap = gap or -1 
 	local round = self:getRound()
@@ -108,5 +129,16 @@ end
 function Effect:getRound()
 	return self.round
 end
+
+
+function Effect:sleep(val)
+	return tempVarOfInstance__("_sleep",self,val)
+end
+
+function Effect:awake()
+	self:sleep(false)
+
+ 	TriggerEvents.checkDoEffect(self,"effectBegin") 
+end 
 
 return Effect

@@ -47,9 +47,16 @@ function listen(evtName)
 		function(hero)
 			local effList = hero:getEffectList()
 			local tempEffList = hero:getTempEffectList()
+			local castingEffect = hero:getCastingEffectList()
+			local buffList = hero:getBuffList()
+			local deBuffList = hero:getDeBuffList()
+
 			foreachEffectList(effList,evtName)
 			-- print("size--effList",#effList)
 			foreachEffectList(tempEffList,evtName)
+			foreachEffectList(castingEffect,evtName)
+			foreachEffectList(buffList,evtName)
+			foreachEffectList(deBuffList,evtName,false,true)
 			-- print("size--tempEffList",#tempEffList)
 		end)
 		 
@@ -62,10 +69,15 @@ end
 function checkDoEffect(eff,evtName)
 	if matchs(eff,evtName) then  
 		SkillLogic.doEffect(eff) 
+		return true 
  	end
+
+ 	return false 
 end
 
-
+----  这里有问题 每次 应该把 当前 时间 所需要的 信息 保存  比如 onHit 该保存 施方和 受方 
+--  这里应该是 当无filter 时 就是全部了 。。 有的时候 判断 是自己还是  对方  该是一个condition 才对 不
+-- 应该是targetfitler  ————FIXME
 function matchTarget(eff)
 	local caster = eff:getSkill():getCaster()
 
@@ -104,18 +116,32 @@ function matchs(eff,evtName)
 end
 
 
-function foreachEffectList(val,evtName)
+function foreachEffectList(val,evtName,removeAfterDone,isDeBuffList)
 	local indexsToRemove = {} 
 	local list = val 
-	for i,v in ipairs(list) do
 
-		local effect = v 
-
+	local eachFunc = function(effect)
 		decreaseEffectRound(effect,evtName)
 		-- print("________foreachEffectList_____\n\n",#list)
-		checkDoEffect(effect,evtName)
+		 
+		local shouldRemove = --[[(removeAfterDone and]] 
+		checkDoEffect(effect,evtName) or isEffectOver(effect)
+		return shouldRemove
+	end
 
-		if isEffectOver(effect) then 
+	for i,v in ipairs(list) do
+		local shouldRemove
+		local isBuffList = #v > 1 
+		if isBuffList then 
+			for _i,_v in ipairs(v) do 
+				shouldRemove = eachFunc(_v)
+			end 
+		else 
+			shouldRemove = eachFunc(v)
+		end
+		
+
+		if shouldRemove then 
 			table.insert(indexsToRemove,i)
 		end   
 	end 
@@ -124,6 +150,8 @@ function foreachEffectList(val,evtName)
 
 	for i=size,1,-1 do
 		local index = indexsToRemove[i] 
+
+		onEffectRemove(list[index],isDeBuffList)
 		table.remove(list,index)
 
 		print("onBuffRemoved",index,"size",#list)
@@ -162,10 +190,29 @@ end
 -- end
 
 
-function removeEff(eff)
-	if isEffectOver(eff) then 
+-- 当有BUFF被移除时检测 sleep的BUFF是否要生效了  FIXEME WARN
+-- 还有在驱散的时候要做个检测FIXEME WARN
+function onEffectRemove(val,isDeBuffList)
+	local isBuffList = #val > 1 
+	if isBuffList then 
+		local host = val[1]:getHost()
+		local buffList
+		if isDeBuffList then 
+			buffList = host:getDeBuffList()
+		else
+			buffList = host:getBuffList() 
+		end 
+
+		for i,v in ipairs(buffList) do
+			if v[1]:sleep() then 
+				if not SkillLogic.check_buff_stack(v,isDeBuffList) then 
+					for _i,_v in ipairs(v) do
+						_v:awake()
+					end
+				end 
+			end 
+		end 
 
 	end 
-end
- 
 
+end

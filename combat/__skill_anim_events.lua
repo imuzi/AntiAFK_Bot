@@ -4,418 +4,418 @@ return
     attack = {
       hit = 10,
       interval = 25
-    } --[[table: 0ABF5228]],
+    } --[[table: 0A905248]],
     death = {
       interval = 17
-    } --[[table: 0ABF53B8]],
+    } --[[table: 0A905018]],
     hit = {
       interval = 13
-    } --[[table: 0ABF4D78]],
+    } --[[table: 0A905748]],
     run = {
       interval = 24
-    } --[[table: 0ABF5048]],
+    } --[[table: 0A905338]],
     SkillA = {
       clearColorLayer = 30,
       createColorLayer = 5,
       hit = 16,
       interval = 30,
       reset = 30
-    } --[[table: 0ABF4D28]],
+    } --[[table: 0A9056F8]],
     SkillB = {
       hit = 22,
       interval = 30,
       reset = 30
-    } --[[table: 0ABF5138]],
+    } --[[table: 0A9055B8]],
     stun = {
       interval = 70
-    } --[[table: 0ABF4DC8]],
+    } --[[table: 0A905798]],
     wait = {
       interval = 40
-    } --[[table: 0ABF4EB8]]
-  } --[[table: 0ABF4FA8]],
+    } --[[table: 0A9053D8]]
+  } --[[table: 0A9051A8]],
   ["2"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 0AEA7B08]],
+    } --[[table: 0ABDAD28]],
     death = {
       interval = 17
-    } --[[table: 0AEA81E8]],
+    } --[[table: 0ABDAE18]],
     hit = {
       interval = 13
-    } --[[table: 0AEA80A8]],
+    } --[[table: 0ABDB548]],
     run = {
       interval = 24
-    } --[[table: 0AEA7FB8]],
+    } --[[table: 0ABDB458]],
     SkillA = {
       hit = 21,
       interval = 35,
       reset = 35
-    } --[[table: 0AEA79C8]],
+    } --[[table: 0ABDB688]],
     SkillB = {
       hit = 23,
       interval = 40,
       reset = 40
-    } --[[table: 0AEA7AB8]],
+    } --[[table: 0ABDB6D8]],
     stun = {
       interval = 70
-    } --[[table: 0AEA8288]],
+    } --[[table: 0ABDB048]],
     wait = {
       interval = 40
-    } --[[table: 0AEA8198]]
-  } --[[table: 0AEA8238]],
+    } --[[table: 0ABDB5E8]]
+  } --[[table: 0ABDADC8]],
   ["3"] = {
     attack = {
       fire = 26,
       interval = 35
-    } --[[table: 0B1AD380]],
+    } --[[table: 0AE09D00]],
     death = {
       interval = 17
-    } --[[table: 0B1ACC50]],
+    } --[[table: 0AE0A250]],
     hit = {
       interval = 13
-    } --[[table: 0B1ACCA0]],
+    } --[[table: 0AE0A430]],
     run = {
       interval = 24
-    } --[[table: 0B1AD240]],
+    } --[[table: 0AE0A020]],
     SkillA = {
       clearColorLayer = 50,
       createColorLayer = 18,
       hit = 38,
       interval = 50,
       reset = 50
-    } --[[table: 0B1AD1A0]],
+    } --[[table: 0AE09E40]],
     SkillB = {
       hit = 24,
       interval = 34,
       reset = 34
-    } --[[table: 0B1ACD90]],
+    } --[[table: 0AE09E90]],
     stun = {
       interval = 63
-    } --[[table: 0B1AD290]],
+    } --[[table: 0AE09EE0]],
     wait = {
       interval = 38
-    } --[[table: 0B1ACE30]]
-  } --[[table: 0B1AD100]],
+    } --[[table: 0AE09B20]]
+  } --[[table: 0AE09CB0]],
   ["4"] = {
     attack = {
       hit = 10,
       interval = 25
-    } --[[table: 0B2C6E58]],
+    } --[[table: 09C45620]],
     death = {
       interval = 17
-    } --[[table: 0B2C6F48]],
+    } --[[table: 09C45850]],
     hit = {
       interval = 16
-    } --[[table: 0B2C7038]],
+    } --[[table: 09C45350]],
     run = {
       interval = 24
-    } --[[table: 0B2C6818]],
+    } --[[table: 09C45440]],
     SkillA = {
       clearColorLayer = 28,
       createColorLayer = 5,
       hit = 16,
       interval = 28,
       reset = 28
-    } --[[table: 0B2C6D18]],
+    } --[[table: 09C45120]],
     SkillB = {
       hit = 22,
       interval = 30,
       reset = 30
-    } --[[table: 0B2C6A48]],
+    } --[[table: 09C455D0]],
     stun = {
       interval = 70
-    } --[[table: 0B2C6908]],
+    } --[[table: 09C451C0]],
     wait = {
       interval = 40
-    } --[[table: 0B2C6C78]]
-  } --[[table: 0B2C6958]],
+    } --[[table: 09C45530]]
+  } --[[table: 09C45580]],
   ["5"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 0B02B170]],
+    } --[[table: 0B2379C0]],
     death = {
       interval = 17
-    } --[[table: 0B02B490]],
+    } --[[table: 0B237E70]],
     hit = {
       interval = 18
-    } --[[table: 0B02BA80]],
+    } --[[table: 0B237BF0]],
     run = {
       interval = 24
-    } --[[table: 0B02B260]],
+    } --[[table: 0B237D30]],
     SkillA = {
       hit = 21,
       interval = 35,
       reset = 35
-    } --[[table: 0B02B300]],
+    } --[[table: 0B237FB0]],
     SkillB = {
       hit = 23,
       interval = 40,
       reset = 40
-    } --[[table: 0B02B850]],
+    } --[[table: 0B237C40]],
     stun = {
       interval = 70
-    } --[[table: 0B02BA30]],
+    } --[[table: 0B237920]],
     wait = {
       interval = 40
-    } --[[table: 0B02B620]]
-  } --[[table: 0B02B350]],
+    } --[[table: 0B238050]]
+  } --[[table: 0B237790]],
   ["6"] = {
     attack = {
       fire = 26,
       interval = 35
-    } --[[table: 0BAFD900]],
+    } --[[table: 0A425720]],
     death = {
       interval = 17
-    } --[[table: 0BAFD950]],
+    } --[[table: 0A425BD0]],
     hit = {
       interval = 14
-    } --[[table: 0BAFD860]],
+    } --[[table: 0A425770]],
     run = {
       interval = 24
-    } --[[table: 0BAFDCC0]],
+    } --[[table: 0A4257C0]],
     SkillA = {
       clearColorLayer = 50,
       createColorLayer = 18,
       hit = 37,
       interval = 50,
       reset = 50
-    } --[[table: 0BAFDE00]],
+    } --[[table: 0A4256D0]],
     SkillB = {
       hit = 18,
       interval = 34,
       reset = 34
-    } --[[table: 0BAFE080]],
+    } --[[table: 0A425680]],
     stun = {
       interval = 41
-    } --[[table: 0BAFDDB0]],
+    } --[[table: 0A4255E0]],
     wait = {
       interval = 38
-    } --[[table: 0BAFDF40]]
-  } --[[table: 0BAFDC70]],
+    } --[[table: 0A425400]]
+  } --[[table: 0A425B80]],
   ["7"] = {
     attack = {
       hit = 10,
       interval = 25
-    } --[[table: 0BC91F58]],
+    } --[[table: 0BA9EBF8]],
     death = {
       interval = 17
-    } --[[table: 0BC92188]],
+    } --[[table: 0BA9E928]],
     hit = {
       interval = 14
-    } --[[table: 0BC92098]],
+    } --[[table: 0BA9EC98]],
     run = {
       interval = 24
-    } --[[table: 0BC91E68]],
+    } --[[table: 0BAA9558]],
     SkillA = {
       clearColorLayer = 31,
       createColorLayer = 5,
       hit = 16,
       interval = 31,
       reset = 31
-    } --[[table: 0BC923B8]],
+    } --[[table: 0BA9EB58]],
     SkillB = {
       hit = 22,
       interval = 30,
       reset = 30
-    } --[[table: 0BC92318]],
+    } --[[table: 0BA9EA18]],
     stun = {
       interval = 70
-    } --[[table: 0BC91D78]],
+    } --[[table: 0BA9EA68]],
     wait = {
       interval = 40
-    } --[[table: 0BC92228]]
-  } --[[table: 0BC925E8]],
+    } --[[table: 0BA9ED88]]
+  } --[[table: 0BA9E978]],
   ["8"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 0AB60930]],
+    } --[[table: 0BCE2320]],
     death = {
       interval = 17
-    } --[[table: 0AB607F0]],
+    } --[[table: 0BCE2500]],
     hit = {
       interval = 18
-    } --[[table: 0AB61060]],
+    } --[[table: 0BCE2140]],
     run = {
       interval = 26
-    } --[[table: 0AB610B0]],
+    } --[[table: 0BCE1F10]],
     SkillA = {
       hit = 21,
       interval = 35,
       reset = 35
-    } --[[table: 0AB609D0]],
+    } --[[table: 0BCE1D80]],
     SkillB = {
       hit = 23,
       interval = 40,
       reset = 40
-    } --[[table: 0AB60FC0]],
+    } --[[table: 0BCE1F60]],
     stun = {
       interval = 70
-    } --[[table: 0AB60B60]],
+    } --[[table: 0BCE2370]],
     wait = {
       interval = 40
-    } --[[table: 0AB608E0]]
-  } --[[table: 0AB60890]],
+    } --[[table: 0BCE20F0]]
+  } --[[table: 0BCE24B0]],
   ["9"] = {
     attack = {
       fire = 26,
       interval = 30
-    } --[[table: 0AB9A710]],
+    } --[[table: 0A392BB8]],
     death = {
       interval = 17
-    } --[[table: 0AB9B700]],
+    } --[[table: 0A392708]],
     hit = {
       interval = 14
-    } --[[table: 0AB9AB20]],
+    } --[[table: 0A392618]],
     run = {
       interval = 26
-    } --[[table: 0AB9A760]],
+    } --[[table: 0A392E88]],
     SkillA = {
       clearColorLayer = 50,
       createColorLayer = 18,
       hit = 38,
       interval = 50,
       reset = 50
-    } --[[table: 0AB9A800]],
+    } --[[table: 0A392B68]],
     SkillB = {
       hit = 24,
       interval = 34,
       reset = 34
-    } --[[table: 0AB9A7B0]],
+    } --[[table: 0A3925C8]],
     stun = {
       interval = 60
-    } --[[table: 0AB9AE40]],
+    } --[[table: 0A392A78]],
     wait = {
       interval = 38
-    } --[[table: 0AB9A580]]
-  } --[[table: 0AB9AEE0]],
+    } --[[table: 0A392A28]]
+  } --[[table: 0A392C58]],
   ["10"] = {
     attack = {
       hit = 6,
       interval = 16
-    } --[[table: 0BD98ED0]],
+    } --[[table: 0B5DA208]],
     death = {
       interval = 11
-    } --[[table: 0BD98CA0]],
+    } --[[table: 0B5DA2A8]],
     hit = {
       interval = 12
-    } --[[table: 0BD986B0]],
+    } --[[table: 0B5DA348]],
     run = {
       interval = 12
-    } --[[table: 0BD985C0]],
+    } --[[table: 0B5DA258]],
     SkillA = {
       clearColorLayer = 25,
       createColorLayer = 11,
       hit = 16,
       interval = 25,
       reset = 25
-    } --[[table: 0BD98520]],
+    } --[[table: 0B5DA078]],
     SkillB = {
       hit = 21,
       interval = 45,
       reset = 35
-    } --[[table: 0BD98660]],
+    } --[[table: 0B5DA398]],
     stun = {
       interval = 30
-    } --[[table: 0BD98570]],
+    } --[[table: 0B5DA4D8]],
     wait = {
       interval = 25
-    } --[[table: 0BD98930]]
-  } --[[table: 0BD98A70]],
+    } --[[table: 0B5D9E48]]
+  } --[[table: 0B5D9DF8]],
   ["11"] = {
     attack = {
       hit = 6,
       interval = 16
-    } --[[table: 0B0EDB20]],
+    } --[[table: 0C521660]],
     death = {
       interval = 11
-    } --[[table: 0B0EE110]],
+    } --[[table: 0C521ED0]],
     hit = {
       interval = 14
-    } --[[table: 0B0EDEE0]],
+    } --[[table: 0C521DE0]],
     run = {
       interval = 12
-    } --[[table: 0B0EE390]],
+    } --[[table: 0C521D90]],
     SkillA = {
       clearColorLayer = 25,
       createColorLayer = 11,
       hit = 16,
       interval = 25,
       reset = 25
-    } --[[table: 0B0EE0C0]],
+    } --[[table: 0C51D380]],
     SkillB = {
       hit = 21,
       interval = 45,
       reset = 35
-    } --[[table: 0B0EDC10]],
+    } --[[table: 0C51D290]],
     stun = {
       interval = 30
-    } --[[table: 0B0EDBC0]],
+    } --[[table: 0C51D6A0]],
     wait = {
       interval = 25
-    } --[[table: 0B0EE3E0]]
-  } --[[table: 0B0EDE90]],
+    } --[[table: 0C51D830]]
+  } --[[table: 0C51D8D0]],
   ["12"] = {
     attack = {
       hit = 6,
       interval = 16
-    } --[[table: 0ABEC9E8]],
+    } --[[table: 0A397348]],
     death = {
       interval = 11
-    } --[[table: 0ABEC7B8]],
+    } --[[table: 0A396F38]],
     hit = {
       interval = 13
-    } --[[table: 0ABEC718]],
+    } --[[table: 0A396EE8]],
     run = {
       interval = 13
-    } --[[table: 0ABEC3A8]],
+    } --[[table: 0A397168]],
     SkillA = {
       clearColorLayer = 25,
       createColorLayer = 11,
       hit = 16,
       interval = 25,
       reset = 25
-    } --[[table: 0ABEC948]],
+    } --[[table: 0A397118]],
     SkillB = {
       hit = 21,
       interval = 46,
       reset = 35
-    } --[[table: 0ABEC8F8]],
+    } --[[table: 0A396E98]],
     stun = {
       interval = 30
-    } --[[table: 0ABEC538]],
+    } --[[table: 0A396C18]],
     wait = {
       interval = 25
-    } --[[table: 0ABECA88]]
-  } --[[table: 0ABECA38]],
-  ["13"] = {} --[[table: 09C8E720]],
+    } --[[table: 0A396E48]]
+  } --[[table: 0A397488]],
+  ["13"] = {} --[[table: 09C49400]],
   ["14"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 0C9E02D0]],
+    } --[[table: 0A3A7568]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 0C9E0000]],
+    } --[[table: 0A3A7338]],
     death = {
       interval = 19
-    } --[[table: 0C9DFA10]],
+    } --[[table: 0A3A7518]],
     hit = {
       interval = 11
-    } --[[table: 0C9E0280]],
+    } --[[table: 0A3A7108]],
     run = {
       interval = 16
-    } --[[table: 0C9E0140]],
+    } --[[table: 0A3A7838]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 0C9DFDD0]],
+    } --[[table: 0A3A7478]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -423,39 +423,39 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 0C9DFB00]],
+    } --[[table: 0A3A7388]],
     stun = {
       interval = 36
-    } --[[table: 0C9DFC40]],
+    } --[[table: 0A3A78D8]],
     wait = {
       interval = 30
-    } --[[table: 0C9DFBF0]]
-  } --[[table: 0C9E0190]],
+    } --[[table: 0A3A77E8]]
+  } --[[table: 0A3A76A8]],
   ["15"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 0ABAFBB0]],
+    } --[[table: 0C9B2DA0]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 0ABAFED0]],
+    } --[[table: 0C9B2C60]],
     death = {
       interval = 19
-    } --[[table: 0ABAFCF0]],
+    } --[[table: 0C9B2D00]],
     hit = {
       interval = 11
-    } --[[table: 0ABB00B0]],
+    } --[[table: 0C9B3160]],
     run = {
       interval = 16
-    } --[[table: 0ABB0100]],
+    } --[[table: 0C9B2BC0]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 0ABAFFC0]],
+    } --[[table: 0C9B3390]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -463,39 +463,39 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 0ABAFF70]],
+    } --[[table: 0C9B2D50]],
     stun = {
       interval = 36
-    } --[[table: 0ABAF9D0]],
+    } --[[table: 0C9B2CB0]],
     wait = {
       interval = 30
-    } --[[table: 0ABAFAC0]]
-  } --[[table: 0ABB01A0]],
+    } --[[table: 0C9B3480]]
+  } --[[table: 0C9B3200]],
   ["16"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 0C9EB9F0]],
+    } --[[table: 0A3A0E48]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 0C9EBAE0]],
+    } --[[table: 0A3A0F88]],
     death = {
       interval = 19
-    } --[[table: 0C9EB720]],
+    } --[[table: 0A3A0D08]],
     hit = {
       interval = 11
-    } --[[table: 0C9EBBD0]],
+    } --[[table: 0A3A1028]],
     run = {
       interval = 16
-    } --[[table: 0C9EB810]],
+    } --[[table: 0A3A14D8]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 0C9EBC70]],
+    } --[[table: 0A3A0C18]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -503,39 +503,39 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 0C9EBA90]],
+    } --[[table: 0A3A0F38]],
     stun = {
       interval = 36
-    } --[[table: 0C9EBEF0]],
+    } --[[table: 0A3A0B78]],
     wait = {
       interval = 30
-    } --[[table: 0C9EBD10]]
-  } --[[table: 0C9EB9A0]],
+    } --[[table: 0A3A0C68]]
+  } --[[table: 0A3A0CB8]],
   ["17"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 0ABA3B30]],
+    } --[[table: 0C7AA338]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 0ABA43F0]],
+    } --[[table: 0C7AA0B8]],
     death = {
       interval = 19
-    } --[[table: 0ABA44E0]],
+    } --[[table: 0C7AA108]],
     hit = {
       interval = 11
-    } --[[table: 0ABA42B0]],
+    } --[[table: 0C7AA018]],
     run = {
       interval = 16
-    } --[[table: 0ABA4350]],
+    } --[[table: 0C7AA478]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 0ABA3F40]],
+    } --[[table: 0C7AA608]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -543,3259 +543,3259 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 0ABA3CC0]],
+    } --[[table: 0C7AA6F8]],
     stun = {
       interval = 36
-    } --[[table: 0ABA3D10]],
+    } --[[table: 0C7AA568]],
     wait = {
       interval = 30
-    } --[[table: 0ABA4260]]
-  } --[[table: 0ABA41C0]],
+    } --[[table: 0C7AA518]]
+  } --[[table: 0C7AA388]],
   ["18"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 0C3A1610]],
+    } --[[table: 0C099AB8]],
     death = {
       interval = 30
-    } --[[table: 0C3A1520]],
+    } --[[table: 0C099928]],
     hit = {
       interval = 13
-    } --[[table: 0C3A1BB0]],
+    } --[[table: 0C099FB8]],
     run = {
       interval = 26
-    } --[[table: 0C3A1AC0]],
+    } --[[table: 0C099A68]],
     SkillA = {
       hit = 19,
       interval = 32,
       reset = 32
-    } --[[table: 0C3A1570]],
+    } --[[table: 0C099BF8]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 0C3A1840]],
+    } --[[table: 0C099F68]],
     stun = {
       interval = 38
-    } --[[table: 0C3A19D0]],
+    } --[[table: 0C099E78]],
     wait = {
       interval = 32
-    } --[[table: 0C3A1D90]]
-  } --[[table: 0C3A1A70]],
+    } --[[table: 0C099C98]]
+  } --[[table: 0C099978]],
   ["19"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 0B816370]],
+    } --[[table: 09CCC170]],
     death = {
       interval = 30
-    } --[[table: 0B816500]],
+    } --[[table: 09CCB8B0]],
     hit = {
       interval = 13
-    } --[[table: 0B816730]],
+    } --[[table: 09CCBCC0]],
     run = {
       interval = 26
-    } --[[table: 0B816320]],
+    } --[[table: 09CCC6C0]],
     SkillA = {
       hit = 19,
       interval = 32,
       reset = 32
-    } --[[table: 0B816780]],
+    } --[[table: 09CCBD10]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 0B816AA0]],
+    } --[[table: 09CCC0D0]],
     stun = {
       interval = 38
-    } --[[table: 0B816AF0]],
+    } --[[table: 09CCBC20]],
     wait = {
       interval = 32
-    } --[[table: 0B816460]]
-  } --[[table: 0B815FB0]],
+    } --[[table: 09CCBB80]]
+  } --[[table: 09CCBEF0]],
   ["20"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 13564E10]],
+    } --[[table: 0B8B6970]],
     death = {
       interval = 30
-    } --[[table: 13565680]],
+    } --[[table: 0B8B6A10]],
     hit = {
       interval = 13
-    } --[[table: 13565590]],
+    } --[[table: 0B8B6E70]],
     run = {
       interval = 26
-    } --[[table: 13564F50]],
+    } --[[table: 0B8B6C40]],
     SkillA = {
       hit = 19,
       interval = 32,
       reset = 32
-    } --[[table: 135651D0]],
+    } --[[table: 0B8B7000]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 13565090]],
+    } --[[table: 0B8B70A0]],
     stun = {
       interval = 38
-    } --[[table: 13564D70]],
+    } --[[table: 0B8B6BF0]],
     wait = {
       interval = 32
-    } --[[table: 13564F00]]
-  } --[[table: 13565540]],
+    } --[[table: 0B8B6FB0]]
+  } --[[table: 0B8B6C90]],
   ["21"] = {
     attack = {
       hit = 24,
       interval = 43
-    } --[[table: 0AB5C650]],
+    } --[[table: 0B854910]],
     death = {
       interval = 30
-    } --[[table: 0AB5C420]],
+    } --[[table: 0B8547D0]],
     hit = {
       interval = 13
-    } --[[table: 0AB5C1A0]],
+    } --[[table: 0B854730]],
     run = {
       interval = 26
-    } --[[table: 0AB5C4C0]],
+    } --[[table: 0B854820]],
     SkillA = {
       hit = 19,
       interval = 39,
       reset = 32
-    } --[[table: 0AB5C1F0]],
+    } --[[table: 0B8548C0]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 0AB5C100]],
+    } --[[table: 0B854B40]],
     stun = {
       interval = 38
-    } --[[table: 0AB5C600]],
+    } --[[table: 0B854960]],
     wait = {
       interval = 32
-    } --[[table: 0AB5C330]]
-  } --[[table: 0AB5C290]],
+    } --[[table: 0B854870]]
+  } --[[table: 0B854AF0]],
   ["22"] = {
     attack = {
       hit = 24,
       interval = 43
-    } --[[table: 0CE18CB8]],
+    } --[[table: 0C0471D0]],
     death = {
       interval = 30
-    } --[[table: 0CE19438]],
+    } --[[table: 0C047180]],
     hit = {
       interval = 13
-    } --[[table: 0CE18B78]],
+    } --[[table: 0C0474A0]],
     run = {
       interval = 26
-    } --[[table: 0CE192A8]],
+    } --[[table: 0C0474F0]],
     SkillA = {
       hit = 19,
       interval = 39,
       reset = 32
-    } --[[table: 0CE19028]],
+    } --[[table: 0C047130]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 0CE18BC8]],
+    } --[[table: 0C046F50]],
     stun = {
       interval = 38
-    } --[[table: 0CE190C8]],
+    } --[[table: 0C047590]],
     wait = {
       interval = 32
-    } --[[table: 0CE19398]]
-  } --[[table: 0CE19258]],
+    } --[[table: 0C047040]]
+  } --[[table: 0C047450]],
   ["23"] = {
     attack = {
       hit = 24,
       interval = 43
-    } --[[table: 0B035940]],
+    } --[[table: 0AF5A5B8]],
     death = {
       interval = 30
-    } --[[table: 0B035350]],
+    } --[[table: 0AF5A478]],
     hit = {
       interval = 13
-    } --[[table: 0B0354E0]],
+    } --[[table: 0AF5A7E8]],
     run = {
       interval = 26
-    } --[[table: 0B0358F0]],
+    } --[[table: 0AF5A568]],
     SkillA = {
       hit = 19,
       interval = 39,
       reset = 32
-    } --[[table: 0B035A80]],
+    } --[[table: 0AF59F28]],
     SkillB = {
       hit = 30,
       interval = 51,
       reset = 51
-    } --[[table: 0B0353A0]],
+    } --[[table: 0AF5A1F8]],
     stun = {
       interval = 38
-    } --[[table: 0B035300]],
+    } --[[table: 0AF5A6F8]],
     wait = {
       interval = 32
-    } --[[table: 0B035210]]
-  } --[[table: 0B035800]],
+    } --[[table: 0AF5A108]]
+  } --[[table: 0AF5A0B8]],
   ["24"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 0ABA3A40]],
+    } --[[table: 0B857F70]],
     death = {
       interval = 22
-    } --[[table: 0ABA3630]],
+    } --[[table: 0B857E80]],
     hit = {
       interval = 19
-    } --[[table: 0ABA34A0]],
+    } --[[table: 0B857980]],
     run = {
       interval = 20
-    } --[[table: 0ABA3810]],
+    } --[[table: 0B857FC0]],
     SkillA = {
       clearColorLayer = 55,
       createColorLayer = 0,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 0ABA3A90]],
+    } --[[table: 0B857F20]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 10,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 0ABA37C0]],
+    } --[[table: 0B857ED0]],
     stun = {
       interval = 24
-    } --[[table: 0ABA3720]],
+    } --[[table: 0B857C00]],
     wait = {
       interval = 24
-    } --[[table: 0ABA3310]]
-  } --[[table: 0ABA3AE0]],
+    } --[[table: 0B857DE0]]
+  } --[[table: 0B857CF0]],
   ["25"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 1355D3E0]],
+    } --[[table: 0CB6B368]],
     death = {
       interval = 22
-    } --[[table: 1355D070]],
+    } --[[table: 0CB6B7C8]],
     hit = {
       interval = 19
-    } --[[table: 1355CF80]],
+    } --[[table: 0CB6B728]],
     run = {
       interval = 20
-    } --[[table: 1355D0C0]],
+    } --[[table: 0CB6B228]],
     SkillA = {
       clearColorLayer = 55,
       createColorLayer = 0,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 1355CB70]],
+    } --[[table: 0CB6B318]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 10,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 1355D390]],
+    } --[[table: 0CB6B6D8]],
     stun = {
       interval = 24
-    } --[[table: 1355CEE0]],
+    } --[[table: 0CB6B278]],
     wait = {
       interval = 24
-    } --[[table: 1355CC60]]
-  } --[[table: 1355CBC0]],
+    } --[[table: 0CB6B138]]
+  } --[[table: 0CB6B688]],
   ["26"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 0C7B3A90]],
+    } --[[table: 0C72F420]],
     death = {
       interval = 22
-    } --[[table: 0C7B3CC0]],
+    } --[[table: 0C72EDE0]],
     hit = {
       interval = 19
-    } --[[table: 0C7B2D70]],
+    } --[[table: 0C72F290]],
     run = {
       interval = 20
-    } --[[table: 0C7B3B30]],
+    } --[[table: 0C72F010]],
     SkillA = {
       clearColorLayer = 55,
       createColorLayer = 0,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 0C7B3FE0]],
+    } --[[table: 0C72F1A0]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 10,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 0C7B36D0]],
+    } --[[table: 0C72ED40]],
     stun = {
       interval = 24
-    } --[[table: 0C7B3450]],
+    } --[[table: 0C72F0B0]],
     wait = {
       interval = 24
-    } --[[table: 0C7B3270]]
-  } --[[table: 0C7B3590]],
+    } --[[table: 0C72F060]]
+  } --[[table: 0C72ECF0]],
   ["27"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 0C6EFE50]],
+    } --[[table: 14663988]],
     death = {
       interval = 22
-    } --[[table: 0C6EFEA0]],
+    } --[[table: 14663848]],
     hit = {
       interval = 19
-    } --[[table: 0C6EFF40]],
+    } --[[table: 14663528]],
     run = {
       interval = 20
-    } --[[table: 0C6EFB80]],
+    } --[[table: 146638E8]],
     SkillA = {
       hit = 14,
       interval = 30,
       reset = 30
-    } --[[table: 0C6EFAE0]],
+    } --[[table: 146637F8]],
     SkillB = {
       clearColorLayer = 54,
       createColorLayer = 0,
       hit = 27,
       interval = 54,
       reset = 54
-    } --[[table: 0C6EFEF0]],
+    } --[[table: 14663ED8]],
     stun = {
       interval = 24
-    } --[[table: 0C6F00D0]],
+    } --[[table: 14663E88]],
     wait = {
       interval = 40
-    } --[[table: 0C6EFDB0]]
-  } --[[table: 0C6EFC70]],
+    } --[[table: 14663CA8]]
+  } --[[table: 14663BB8]],
   ["28"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 0AFDE8A0]],
+    } --[[table: 14481980]],
     death = {
       interval = 22
-    } --[[table: 0AFDE850]],
+    } --[[table: 14481ED0]],
     hit = {
       interval = 19
-    } --[[table: 0AFDE3A0]],
+    } --[[table: 14481E30]],
     run = {
       interval = 20
-    } --[[table: 0AFDE4E0]],
+    } --[[table: 144816B0]],
     SkillA = {
       hit = 14,
       interval = 30,
       reset = 30
-    } --[[table: 0AFDE300]],
+    } --[[table: 14481D90]],
     SkillB = {
       clearColorLayer = 54,
       createColorLayer = 0,
       hit = 27,
       interval = 54,
       reset = 54
-    } --[[table: 0AFDE800]],
+    } --[[table: 14481520]],
     stun = {
       interval = 24
-    } --[[table: 0AFDE9E0]],
+    } --[[table: 14481A70]],
     wait = {
       interval = 40
-    } --[[table: 0AFDE440]]
-  } --[[table: 0AFDE3F0]],
+    } --[[table: 144815C0]]
+  } --[[table: 144817F0]],
   ["29"] = {
     attack = {
       hit = 13,
       interval = 30
-    } --[[table: 0C3AC1F0]],
+    } --[[table: 0B22D920]],
     death = {
       interval = 22
-    } --[[table: 0C3A51C0]],
+    } --[[table: 0B22D9C0]],
     hit = {
       interval = 19
-    } --[[table: 0C3A5120]],
+    } --[[table: 0B22DA10]],
     run = {
       interval = 20
-    } --[[table: 0C3A53A0]],
+    } --[[table: 0B22DEC0]],
     SkillA = {
       hit = 14,
       interval = 30,
       reset = 30
-    } --[[table: 0C3A5670]],
+    } --[[table: 0B22D7E0]],
     SkillB = {
       clearColorLayer = 54,
       createColorLayer = 0,
       hit = 27,
       interval = 54,
       reset = 54
-    } --[[table: 0C3A5A80]],
+    } --[[table: 0B22DDD0]],
     stun = {
       interval = 24
-    } --[[table: 0C3A5170]],
+    } --[[table: 0B22E0A0]],
     wait = {
       interval = 40
-    } --[[table: 0C3A57B0]]
-  } --[[table: 0C3A5440]],
+    } --[[table: 0B22DE70]]
+  } --[[table: 0B22DB50]],
   ["30"] = {
     attack = {
       hit = 14,
       interval = 32
-    } --[[table: 0CDFE2A8]],
+    } --[[table: 0D1BD450]],
     death = {
       interval = 15
-    } --[[table: 0CDFE2F8]],
+    } --[[table: 0D1BD220]],
     hit = {
       interval = 13
-    } --[[table: 0CDFDC68]],
+    } --[[table: 0D1BCDC0]],
     run = {
       interval = 24
-    } --[[table: 0CDFDB78]],
+    } --[[table: 0D1BD6D0]],
     SkillA = {
       hit = 40,
       interval = 57,
       reset = 56
-    } --[[table: 0CDFE118]],
+    } --[[table: 0D1BD090]],
     SkillB = {
       clearColorLayer = 31,
       createColorLayer = 0,
       hit = 14,
       interval = 31,
       reset = 31
-    } --[[table: 0CDFE438]],
+    } --[[table: 0D1BD3B0]],
     stun = {
       interval = 38
-    } --[[table: 0CDFDEE8]],
+    } --[[table: 0D1BCD20]],
     wait = {
       interval = 30
-    } --[[table: 0CDFDDA8]]
-  } --[[table: 0CDFDD58]],
+    } --[[table: 0D1BD310]]
+  } --[[table: 0D1BCE60]],
   ["31"] = {
     attack = {
       hit = 14,
       interval = 32
-    } --[[table: 0B8CE8E0]],
+    } --[[table: 0B83FF60]],
     death = {
       interval = 15
-    } --[[table: 0B8CE110]],
+    } --[[table: 0B83FEC0]],
     hit = {
       interval = 13
-    } --[[table: 0B8CE7F0]],
+    } --[[table: 0B840190]],
     run = {
       interval = 24
-    } --[[table: 0B8CE5C0]],
+    } --[[table: 0B8404B0]],
     SkillA = {
       hit = 40,
       interval = 57,
       reset = 56
-    } --[[table: 0B8CE570]],
+    } --[[table: 0B8400F0]],
     SkillB = {
       clearColorLayer = 31,
       createColorLayer = 0,
       hit = 14,
       interval = 31,
       reset = 31
-    } --[[table: 0B8CE7A0]],
+    } --[[table: 0B840550]],
     stun = {
       interval = 38
-    } --[[table: 0B8CE840]],
+    } --[[table: 0B840000]],
     wait = {
       interval = 30
-    } --[[table: 0B8CE700]]
-  } --[[table: 0B8CE6B0]],
+    } --[[table: 0B840500]]
+  } --[[table: 0B83FF10]],
   ["32"] = {
     attack = {
       hit = 14,
       interval = 32
-    } --[[table: 1386BA78]],
+    } --[[table: 0A3CE3D0]],
     death = {
       interval = 15
-    } --[[table: 1386B988]],
+    } --[[table: 0A3CE060]],
     hit = {
       interval = 13
-    } --[[table: 1386B938]],
+    } --[[table: 0A3CE240]],
     run = {
       interval = 24
-    } --[[table: 1386BBB8]],
+    } --[[table: 0A3CE330]],
     SkillA = {
       hit = 40,
       interval = 57,
       reset = 56
-    } --[[table: 1386BA28]],
+    } --[[table: 0A3CE740]],
     SkillB = {
       clearColorLayer = 31,
       createColorLayer = 0,
       hit = 14,
       interval = 31,
       reset = 31
-    } --[[table: 1386B6B8]],
+    } --[[table: 0A3CE2E0]],
     stun = {
       interval = 38
-    } --[[table: 1386B618]],
+    } --[[table: 0A3CE5B0]],
     wait = {
       interval = 30
-    } --[[table: 1386B7A8]]
-  } --[[table: 1386B5C8]],
+    } --[[table: 0A3CDF70]]
+  } --[[table: 0A3CE6F0]],
   ["33"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 0ABA4FD0]],
+    } --[[table: 09C43550]],
     death = {
       interval = 22
-    } --[[table: 0ABA5200]],
+    } --[[table: 09C43A00]],
     hit = {
       interval = 15
-    } --[[table: 0ABA5660]],
+    } --[[table: 09C43410]],
     run = {
       interval = 24
-    } --[[table: 0ABA4F80]],
+    } --[[table: 09C43690]],
     SkillA = {
       hit = 11,
       interval = 39,
       reset = 39
-    } --[[table: 0ABA5340]],
+    } --[[table: 09C439B0]],
     SkillB = {
       hit = 39,
       interval = 57,
       reset = 57
-    } --[[table: 0ABA5570]],
+    } --[[table: 09C43C30]],
     stun = {
       interval = 30
-    } --[[table: 0ABA5480]],
+    } --[[table: 09C43460]],
     wait = {
       interval = 30
-    } --[[table: 0ABA52F0]]
-  } --[[table: 0ABA52A0]],
+    } --[[table: 09C43BE0]]
+  } --[[table: 09C43C80]],
   ["34"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 0B903878]],
+    } --[[table: 0A3A2BF8]],
     death = {
       interval = 22
-    } --[[table: 0B903738]],
+    } --[[table: 0A3A2F18]],
     hit = {
       interval = 15
-    } --[[table: 0B903378]],
+    } --[[table: 0A3A2EC8]],
     run = {
       interval = 24
-    } --[[table: 0B903AF8]],
+    } --[[table: 0A3A3148]],
     SkillA = {
       hit = 11,
       interval = 39,
       reset = 39
-    } --[[table: 0B9036E8]],
+    } --[[table: 0A3A2A68]],
     SkillB = {
       hit = 39,
       interval = 57,
       reset = 57
-    } --[[table: 0B9035F8]],
+    } --[[table: 0A3A2B08]],
     stun = {
       interval = 30
-    } --[[table: 0B9037D8]],
+    } --[[table: 0A3A2DD8]],
     wait = {
       interval = 30
-    } --[[table: 0B903558]]
-  } --[[table: 0B9035A8]],
+    } --[[table: 0A3A2A18]]
+  } --[[table: 0A3A2978]],
   ["35"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 13FCD4D8]],
+    } --[[table: 09C41B10]],
     death = {
       interval = 22
-    } --[[table: 13FCD2A8]],
+    } --[[table: 09C41D90]],
     hit = {
       interval = 15
-    } --[[table: 13FCCFD8]],
+    } --[[table: 09C41CF0]],
     run = {
       interval = 24
-    } --[[table: 13FCCB78]],
+    } --[[table: 09C41980]],
     SkillA = {
       hit = 11,
       interval = 39,
       reset = 39
-    } --[[table: 13FCD028]],
+    } --[[table: 09C41D40]],
     SkillB = {
       hit = 39,
       interval = 57,
       reset = 57
-    } --[[table: 13FCCF38]],
+    } --[[table: 09C415C0]],
     stun = {
       interval = 30
-    } --[[table: 13FCD2F8]],
+    } --[[table: 09C41AC0]],
     wait = {
       interval = 30
-    } --[[table: 13FCCB28]]
-  } --[[table: 13FCCF88]],
+    } --[[table: 09C41570]]
+  } --[[table: 09C41700]],
   ["36"] = {
     attack = {
       hit = 27,
       interval = 35
-    } --[[table: 0B901078]],
+    } --[[table: 0A7A3150]],
     death = {
       interval = 22
-    } --[[table: 0B9010C8]],
+    } --[[table: 0A7A3830]],
     hit = {
       interval = 15
-    } --[[table: 0B900DF8]],
+    } --[[table: 0A7A31F0]],
     run = {
       interval = 24
-    } --[[table: 0B900CB8]],
+    } --[[table: 0A7A30B0]],
     SkillA = {
       hit = 17,
       interval = 53,
       reset = 45
-    } --[[table: 0B900F88]],
+    } --[[table: 0A7A36F0]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 50
-    } --[[table: 0B900B78]],
+    } --[[table: 0A7A2F20]],
     stun = {
       interval = 30
-    } --[[table: 0B900BC8]],
+    } --[[table: 0A7A34C0]],
     wait = {
       interval = 30
-    } --[[table: 0B901118]]
-  } --[[table: 0B900E98]],
+    } --[[table: 0A7A3010]]
+  } --[[table: 0A7A3510]],
   ["37"] = {
     attack = {
       hit = 27,
       interval = 35
-    } --[[table: 149F1BA8]],
+    } --[[table: 0B22BDF0]],
     death = {
       interval = 22
-    } --[[table: 149F1B08]],
+    } --[[table: 0B22BB20]],
     hit = {
       interval = 15
-    } --[[table: 149F1978]],
+    } --[[table: 0B22B990]],
     run = {
       interval = 24
-    } --[[table: 149F1E78]],
+    } --[[table: 0B22BEE0]],
     SkillA = {
       hit = 17,
       interval = 53,
       reset = 45
-    } --[[table: 149F1E28]],
+    } --[[table: 0B22B9E0]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 50
-    } --[[table: 149F1A18]],
+    } --[[table: 0B22BAD0]],
     stun = {
       interval = 30
-    } --[[table: 149F2148]],
+    } --[[table: 0B22BDA0]],
     wait = {
       interval = 30
-    } --[[table: 149F22D8]]
-  } --[[table: 149F1D88]],
+    } --[[table: 0B22BD50]]
+  } --[[table: 0B22BCB0]],
   ["38"] = {
     attack = {
       hit = 27,
       interval = 35
-    } --[[table: 13FD42D8]],
+    } --[[table: 0A78D3F0]],
     death = {
       interval = 22
-    } --[[table: 13FD3C98]],
+    } --[[table: 0A78D4E0]],
     hit = {
       interval = 15
-    } --[[table: 13FD3A18]],
+    } --[[table: 0A78D2B0]],
     run = {
       interval = 24
-    } --[[table: 13FD3F68]],
+    } --[[table: 0A78D120]],
     SkillA = {
       hit = 17,
       interval = 53,
       reset = 45
-    } --[[table: 13FD3D38]],
+    } --[[table: 0A78D620]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 50
-    } --[[table: 13FD40A8]],
+    } --[[table: 0A78D8F0]],
     stun = {
       interval = 30
-    } --[[table: 13FD3B58]],
+    } --[[table: 0A78DAD0]],
     wait = {
       interval = 30
-    } --[[table: 13FD3D88]]
-  } --[[table: 13FD3EC8]],
+    } --[[table: 0A78D9E0]]
+  } --[[table: 0A78D8A0]],
   ["39"] = {
     attack = {
       hit = 21,
       interval = 66
-    } --[[table: 16095298]],
+    } --[[table: 14D39288]],
     death = {
       interval = 30
-    } --[[table: 160957E8]],
+    } --[[table: 14D39148]],
     hit = {
       interval = 30
-    } --[[table: 16095108]],
+    } --[[table: 14D38BF8]],
     run = {
       interval = 24
-    } --[[table: 16095248]],
+    } --[[table: 14D39238]],
     SkillA = {
       hit = 78,
       interval = 133,
       reset = 130
-    } --[[table: 16095798]],
+    } --[[table: 14D390F8]],
     SkillB = {
       hit = 67,
       interval = 112,
       reset = 112
-    } --[[table: 16095158]],
+    } --[[table: 14D389C8]],
     stun = {
       interval = 30
-    } --[[table: 16095388]],
+    } --[[table: 14D38BA8]],
     wait = {
       interval = 30
-    } --[[table: 160956F8]]
-  } --[[table: 160956A8]],
+    } --[[table: 14D391E8]]
+  } --[[table: 14D39058]],
   ["40"] = {
     attack = {
       hit = 21,
       interval = 66
-    } --[[table: 0AFE9E80]],
+    } --[[table: 0BCFE0C0]],
     death = {
       interval = 30
-    } --[[table: 0AFE9930]],
+    } --[[table: 0BCFE5C0]],
     hit = {
       interval = 30
-    } --[[table: 0AFE9C50]],
+    } --[[table: 0BCFE480]],
     run = {
       interval = 24
-    } --[[table: 0AFE9980]],
+    } --[[table: 0BCFE020]],
     SkillA = {
       hit = 78,
       interval = 133,
       reset = 130
-    } --[[table: 0AFE9A20]],
+    } --[[table: 0BCFE390]],
     SkillB = {
       hit = 67,
       interval = 112,
       reset = 112
-    } --[[table: 0AFE9C00]],
+    } --[[table: 0BCFE2F0]],
     stun = {
       interval = 30
-    } --[[table: 0AFE9ED0]],
+    } --[[table: 0BCFE700]],
     wait = {
       interval = 30
-    } --[[table: 0AFE9B10]]
-  } --[[table: 0AFE9CA0]],
+    } --[[table: 0BCFE2A0]]
+  } --[[table: 0BCFE110]],
   ["41"] = {
     attack = {
       hit = 21,
       interval = 66
-    } --[[table: 13CAD1E0]],
+    } --[[table: 152ABDC0]],
     death = {
       interval = 30
-    } --[[table: 13CACC90]],
+    } --[[table: 152AC360]],
     hit = {
       interval = 30
-    } --[[table: 13CACEC0]],
+    } --[[table: 152ABF50]],
     run = {
       interval = 24
-    } --[[table: 13CAC9C0]],
+    } --[[table: 152AC540]],
     SkillA = {
       hit = 78,
       interval = 133,
       reset = 130
-    } --[[table: 13CAD230]],
+    } --[[table: 152AC2C0]],
     SkillB = {
       hit = 67,
       interval = 112,
       reset = 112
-    } --[[table: 13CACBA0]],
+    } --[[table: 152AC0E0]],
     stun = {
       interval = 30
-    } --[[table: 13CACE70]],
+    } --[[table: 152AC630]],
     wait = {
       interval = 30
-    } --[[table: 13CAD0F0]]
-  } --[[table: 13CACC40]],
+    } --[[table: 152ABFF0]]
+  } --[[table: 152AC590]],
   ["42"] = {
     attack = {
       hit = 38,
       interval = 90
-    } --[[table: 178A7E68]],
+    } --[[table: 0C512E30]],
     death = {
       interval = 30
-    } --[[table: 178A84A8]],
+    } --[[table: 0C511D00]],
     hit = {
       interval = 30
-    } --[[table: 178A7DC8]],
+    } --[[table: 0C5124D0]],
     run = {
       interval = 24
-    } --[[table: 178A7EB8]],
+    } --[[table: 0C512890]],
     SkillA = {
       hit = 36,
       interval = 86,
       reset = 86
-    } --[[table: 178A7E18]],
+    } --[[table: 0C511CB0]],
     SkillB = {
       hit = 18,
       interval = 130,
       reset = 130
-    } --[[table: 178A8188]],
+    } --[[table: 0C512430]],
     stun = {
       interval = 30
-    } --[[table: 178A8368]],
+    } --[[table: 0C5123E0]],
     wait = {
       interval = 30
-    } --[[table: 178A8318]]
-  } --[[table: 178A82C8]],
+    } --[[table: 0C50C3A0]]
+  } --[[table: 0C50C260]],
   ["43"] = {
     attack = {
       hit = 38,
       interval = 90
-    } --[[table: 17B81D70]],
+    } --[[table: 0B843570]],
     death = {
       interval = 30
-    } --[[table: 17B81D20]],
+    } --[[table: 0B843340]],
     hit = {
       interval = 30
-    } --[[table: 17B816E0]],
+    } --[[table: 0B8432F0]],
     run = {
       interval = 24
-    } --[[table: 17B82680]],
+    } --[[table: 0B8434D0]],
     SkillA = {
       hit = 36,
       interval = 86,
       reset = 86
-    } --[[table: 17B814B0]],
+    } --[[table: 0B843610]],
     SkillB = {
       hit = 18,
       interval = 130,
       reset = 130
-    } --[[table: 17B813C0]],
+    } --[[table: 0B843750]],
     stun = {
       interval = 30
-    } --[[table: 17B81AF0]],
+    } --[[table: 0B842FD0]],
     wait = {
       interval = 30
-    } --[[table: 17B81550]]
-  } --[[table: 17B819B0]],
+    } --[[table: 0B842F30]]
+  } --[[table: 0B8438E0]],
   ["44"] = {
     attack = {
       hit = 38,
       interval = 90
-    } --[[table: 17E8CE40]],
+    } --[[table: 0B333640]],
     death = {
       interval = 30
-    } --[[table: 17E86E50]],
+    } --[[table: 0B333370]],
     hit = {
       interval = 30
-    } --[[table: 17E86AE0]],
+    } --[[table: 0B3331E0]],
     run = {
       interval = 24
-    } --[[table: 17E86EF0]],
+    } --[[table: 0B333140]],
     SkillA = {
       hit = 36,
       interval = 86,
       reset = 86
-    } --[[table: 17E86B30]],
+    } --[[table: 0B333550]],
     SkillB = {
       hit = 18,
       interval = 130,
       reset = 130
-    } --[[table: 17E86A40]],
+    } --[[table: 0B333500]],
     stun = {
       interval = 30
-    } --[[table: 17E86900]],
+    } --[[table: 0B332E20]],
     wait = {
       interval = 30
-    } --[[table: 17E86BD0]]
-  } --[[table: 17E86DB0]],
+    } --[[table: 0B333690]]
+  } --[[table: 0B332DD0]],
   ["45"] = {
     attack = {
       hit = 23,
       interval = 65
-    } --[[table: 0C33B030]],
+    } --[[table: 09C3FE50]],
     death = {
       interval = 40
-    } --[[table: 0C33AA90]],
+    } --[[table: 09C3FF40]],
     hit = {
       interval = 20
-    } --[[table: 0C33ABD0]],
+    } --[[table: 09C3FEF0]],
     run = {
       interval = 24
-    } --[[table: 0C33ACC0]],
+    } --[[table: 09C3FCC0]],
     SkillA = {
       hit = 45,
       interval = 68
-    } --[[table: 0C33AA40]],
+    } --[[table: 09C3F7C0]],
     SkillB = {
       hit = 66,
       interval = 114
-    } --[[table: 0C33AFE0]],
+    } --[[table: 09C3F720]],
     stun = {
       interval = 30
-    } --[[table: 0C33AE00]],
+    } --[[table: 09C3F9A0]],
     wait = {
       interval = 24
-    } --[[table: 0C33B080]]
-  } --[[table: 0C33A8B0]],
+    } --[[table: 09C3FC70]]
+  } --[[table: 09C3F770]],
   ["46"] = {
     attack = {
       hit = 23,
       interval = 65
-    } --[[table: 161540F0]],
+    } --[[table: 164248F8]],
     death = {
       interval = 40
-    } --[[table: 161542D0]],
+    } --[[table: 16424AD8]],
     hit = {
       interval = 20
-    } --[[table: 16153D30]],
+    } --[[table: 164245D8]],
     run = {
       interval = 24
-    } --[[table: 16154000]],
+    } --[[table: 16424128]],
     SkillA = {
       hit = 45,
       interval = 68
-    } --[[table: 161541E0]],
+    } --[[table: 164244E8]],
     SkillB = {
       hit = 66,
       interval = 114
-    } --[[table: 16153EC0]],
+    } --[[table: 164242B8]],
     stun = {
       interval = 30
-    } --[[table: 16163B40]],
+    } --[[table: 16423F98]],
     wait = {
       interval = 24
-    } --[[table: 161638C0]]
-  } --[[table: 16163820]],
+    } --[[table: 16423EA8]]
+  } --[[table: 16423E58]],
   ["47"] = {
     attack = {
       hit = 23,
       interval = 65
-    } --[[table: 13B03CA0]],
+    } --[[table: 09CC6270]],
     death = {
       interval = 40
-    } --[[table: 13B03D90]],
+    } --[[table: 09CC6400]],
     hit = {
       interval = 20
-    } --[[table: 13B03A20]],
+    } --[[table: 09CC65E0]],
     run = {
       interval = 24
-    } --[[table: 13B03A70]],
+    } --[[table: 09CC5F50]],
     SkillA = {
       hit = 45,
       interval = 68
-    } --[[table: 13B03FC0]],
+    } --[[table: 09CC5F00]],
     SkillB = {
       hit = 66,
       interval = 114
-    } --[[table: 13B03F70]],
+    } --[[table: 09CC5D70]],
     stun = {
       interval = 30
-    } --[[table: 13B03C50]],
+    } --[[table: 09CC66D0]],
     wait = {
       interval = 24
-    } --[[table: 13B03D40]]
-  } --[[table: 13B03ED0]],
+    } --[[table: 09CC61D0]]
+  } --[[table: 09CC6180]],
   ["48"] = {
     attack = {
       hit = 26,
       interval = 38
-    } --[[table: 0C9E79E0]],
+    } --[[table: 0A416DB0]],
     death = {
       interval = 45
-    } --[[table: 0C9E6900]],
+    } --[[table: 0A417350]],
     hit = {
       interval = 18
-    } --[[table: 0C9E6EF0]],
+    } --[[table: 0A416EA0]],
     run = {
       interval = 24
-    } --[[table: 0C9E7A80]],
+    } --[[table: 0A416D60]],
     SkillA = {
       hit = 33,
       interval = 89
-    } --[[table: 0C9E6720]],
+    } --[[table: 0A4175D0]],
     SkillB = {
       hit = 40,
       interval = 53
-    } --[[table: 0C9E68B0]],
+    } --[[table: 0A416F90]],
     stun = {
       interval = 30
-    } --[[table: 0C9E70D0]],
+    } --[[table: 0A4173F0]],
     wait = {
       interval = 24
-    } --[[table: 0C9E6770]]
-  } --[[table: 0C9E6FE0]],
+    } --[[table: 0A417080]]
+  } --[[table: 0A416FE0]],
   ["49"] = {
     attack = {
       hit = 26,
       interval = 38
-    } --[[table: 0ABA4D50]],
+    } --[[table: 0AF564B8]],
     death = {
       interval = 45
-    } --[[table: 0ABA4580]],
+    } --[[table: 0AF56418]],
     hit = {
       interval = 18
-    } --[[table: 0ABA4530]],
+    } --[[table: 0AF56AA8]],
     run = {
       interval = 24
-    } --[[table: 0ABA4670]],
+    } --[[table: 0AF56AF8]],
     SkillA = {
       hit = 33,
       interval = 89
-    } --[[table: 0ABA4620]],
+    } --[[table: 0AF56328]],
     SkillB = {
       hit = 40,
       interval = 53
-    } --[[table: 0ABA4C60]],
+    } --[[table: 0AF56918]],
     stun = {
       interval = 30
-    } --[[table: 0ABA4BC0]],
+    } --[[table: 0AF567D8]],
     wait = {
       interval = 24
-    } --[[table: 0ABA4EE0]]
-  } --[[table: 0ABA4D00]],
+    } --[[table: 0AF56738]]
+  } --[[table: 0AF56828]],
   ["50"] = {
     attack = {
       hit = 26,
       interval = 38
-    } --[[table: 0BB08800]],
+    } --[[table: 1583D558]],
     death = {
       interval = 45
-    } --[[table: 0BB01550]],
+    } --[[table: 1583D918]],
     hit = {
       interval = 18
-    } --[[table: 0BB01690]],
+    } --[[table: 1583D7D8]],
     run = {
       interval = 24
-    } --[[table: 0BB08990]],
+    } --[[table: 1583D828]],
     SkillA = {
       hit = 33,
       interval = 89
-    } --[[table: 0BB01500]],
+    } --[[table: 1583D878]],
     SkillB = {
       hit = 40,
       interval = 53
-    } --[[table: 0BB01370]],
+    } --[[table: 1583D788]],
     stun = {
       interval = 30
-    } --[[table: 0BB01B90]],
+    } --[[table: 1583D3C8]],
     wait = {
       interval = 24
-    } --[[table: 0BB01B40]]
-  } --[[table: 0BB01AA0]],
+    } --[[table: 1583D738]]
+  } --[[table: 1583D508]],
   ["51"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 149E0448]],
+    } --[[table: 1752DA40]],
     death = {
       interval = 24
-    } --[[table: 149E0718]],
+    } --[[table: 1752E080]],
     hit = {
       interval = 20
-    } --[[table: 149E0128]],
+    } --[[table: 1752DEA0]],
     run = {
       interval = 24
-    } --[[table: 149E0218]],
+    } --[[table: 1752D950]],
     SkillA = {
       hit = 27,
       interval = 52
-    } --[[table: 149E0268]],
+    } --[[table: 1752DEF0]],
     SkillB = {
       hit = 42,
       interval = 63
-    } --[[table: 149E0A38]],
+    } --[[table: 1752D900]],
     stun = {
       interval = 30
-    } --[[table: 149E09E8]],
+    } --[[table: 1752DD60]],
     wait = {
       interval = 24
-    } --[[table: 149E0178]]
-  } --[[table: 149E0A88]],
+    } --[[table: 1752D770]]
+  } --[[table: 1752DB30]],
   ["52"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 14575FB8]],
+    } --[[table: 0CA7CE30]],
     death = {
       interval = 24
-    } --[[table: 14575F18]],
+    } --[[table: 0CA7D240]],
     hit = {
       interval = 20
-    } --[[table: 14575BF8]],
+    } --[[table: 0CA7CCF0]],
     run = {
       interval = 24
-    } --[[table: 14575F68]],
+    } --[[table: 0CA7D290]],
     SkillA = {
       hit = 27,
       interval = 52
-    } --[[table: 14575D88]],
+    } --[[table: 0CA7CD40]],
     SkillB = {
       hit = 42,
       interval = 63
-    } --[[table: 14576058]],
+    } --[[table: 0CA7CC50]],
     stun = {
       interval = 30
-    } --[[table: 145762D8]],
+    } --[[table: 0CA7D2E0]],
     wait = {
       interval = 24
-    } --[[table: 14575CE8]]
-  } --[[table: 14576148]],
+    } --[[table: 0CA7D010]]
+  } --[[table: 0CA7D1A0]],
   ["53"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 14830858]],
+    } --[[table: 157DC0F0]],
     death = {
       interval = 24
-    } --[[table: 148304E8]],
+    } --[[table: 157DB9C0]],
     hit = {
       interval = 20
-    } --[[table: 14830498]],
+    } --[[table: 157DBFB0]],
     run = {
       interval = 24
-    } --[[table: 14830948]],
+    } --[[table: 157DC1E0]],
     SkillA = {
       hit = 27,
       interval = 52
-    } --[[table: 148307B8]],
+    } --[[table: 157DBC90]],
     SkillB = {
       hit = 42,
       interval = 63
-    } --[[table: 14830358]],
+    } --[[table: 157DC050]],
     stun = {
       interval = 30
-    } --[[table: 148308F8]],
+    } --[[table: 157DAF70]],
     wait = {
       interval = 24
-    } --[[table: 148306C8]]
-  } --[[table: 148305D8]],
+    } --[[table: 157EDD50]]
+  } --[[table: 157EDD00]],
   ["54"] = {
     attack = {
       hit = 15,
       interval = 35
-    } --[[table: 0B1AE730]],
+    } --[[table: 0A394C88]],
     death = {
       interval = 50
-    } --[[table: 0B1AE5F0]],
+    } --[[table: 0A394418]],
     hit = {
       interval = 19
-    } --[[table: 0B1AE190]],
+    } --[[table: 0A394378]],
     run = {
       interval = 24
-    } --[[table: 0B1AE8C0]],
+    } --[[table: 0A394C38]],
     SkillA = {
       hit = 8,
       interval = 55,
       reset = 0
-    } --[[table: 0B1AE370]],
+    } --[[table: 0A394508]],
     SkillB = {
       hit = 15,
       interval = 80,
       reset = 0
-    } --[[table: 0B1ADFB0]],
+    } --[[table: 0A394968]],
     stun = {
       interval = 24
-    } --[[table: 0B1AE230]],
+    } --[[table: 0A3945A8]],
     wait = {
       interval = 24
-    } --[[table: 0B1AE0F0]]
-  } --[[table: 0B1AE000]],
+    } --[[table: 0A394918]]
+  } --[[table: 0A394A08]],
   ["55"] = {
     attack = {
       hit = 15,
       interval = 35
-    } --[[table: 18187AB0]],
+    } --[[table: 0B21FAF0]],
     death = {
       interval = 50
-    } --[[table: 18187F60]],
+    } --[[table: 0B21FAA0]],
     hit = {
       interval = 19
-    } --[[table: 18187E70]],
+    } --[[table: 0B21F410]],
     run = {
       interval = 24
-    } --[[table: 18187920]],
+    } --[[table: 0B21F550]],
     SkillA = {
       hit = 8,
       interval = 55,
       reset = 0
-    } --[[table: 18187F10]],
+    } --[[table: 0B21F690]],
     SkillB = {
       hit = 15,
       interval = 80,
       reset = 0
-    } --[[table: 18187DD0]],
+    } --[[table: 0B21FA50]],
     stun = {
       interval = 24
-    } --[[table: 18187D30]],
+    } --[[table: 0B21F9B0]],
     wait = {
       interval = 24
-    } --[[table: 18187D80]]
-  } --[[table: 18187BA0]],
+    } --[[table: 0B21F190]]
+  } --[[table: 0B21F820]],
   ["56"] = {
     attack = {
       hit = 15,
       interval = 35
-    } --[[table: 13FFB3F8]],
+    } --[[table: 0A3A6938]],
     death = {
       interval = 50
-    } --[[table: 13FFB1C8]],
+    } --[[table: 0A3A68E8]],
     hit = {
       interval = 19
-    } --[[table: 13FFB808]],
+    } --[[table: 0A3A6C58]],
     run = {
       interval = 24
-    } --[[table: 13FFB628]],
+    } --[[table: 0A3A6898]],
     SkillA = {
       hit = 8,
       interval = 55,
       reset = 0
-    } --[[table: 13FFB498]],
+    } --[[table: 0A3A6D98]],
     SkillB = {
       hit = 15,
       interval = 80,
       reset = 0
-    } --[[table: 13FFB3A8]],
+    } --[[table: 0A3A6988]],
     stun = {
       interval = 24
-    } --[[table: 13FFB308]],
+    } --[[table: 0A3A6DE8]],
     wait = {
       interval = 24
-    } --[[table: 13FFB9E8]]
-  } --[[table: 13FFB178]],
+    } --[[table: 0A3A6E38]]
+  } --[[table: 0A3A6AC8]],
   ["57"] = {
     attack = {
       hit = 15,
       interval = 40
-    } --[[table: 1496DBD0]],
+    } --[[table: 0315DA58]],
     death = {
       interval = 32
-    } --[[table: 1496DB80]],
+    } --[[table: 0315D9B8]],
     hit = {
       interval = 19
-    } --[[table: 1496DDB0]],
+    } --[[table: 0316CEB8]],
     run = {
       interval = 24
-    } --[[table: 1496D810]],
+    } --[[table: 0315DE68]],
     SkillA = {
       hit = 20,
       interval = 65
-    } --[[table: 1496DE50]],
+    } --[[table: 0315DF08]],
     SkillB = {
       hit = 25,
       interval = 84
-    } --[[table: 1496D9A0]],
+    } --[[table: 0316CE18]],
     stun = {
       interval = 24
-    } --[[table: 1496DD10]],
+    } --[[table: 0316C968]],
     wait = {
       interval = 24
-    } --[[table: 1496DCC0]]
-  } --[[table: 1496E0D0]],
+    } --[[table: 0316C4B8]]
+  } --[[table: 0316C468]],
   ["58"] = {
     attack = {
       hit = 15,
       interval = 40
-    } --[[table: 0C872DA8]],
+    } --[[table: 1C62CB10]],
     death = {
       interval = 32
-    } --[[table: 0C873488]],
+    } --[[table: 1C62CDE0]],
     hit = {
       interval = 19
-    } --[[table: 0C872CB8]],
+    } --[[table: 1C62D060]],
     run = {
       interval = 24
-    } --[[table: 0C872C68]],
+    } --[[table: 1C62CAC0]],
     SkillA = {
       hit = 20,
       interval = 65
-    } --[[table: 0C872B78]],
+    } --[[table: 1C62CBB0]],
     SkillB = {
       hit = 25,
       interval = 84
-    } --[[table: 0C873438]],
+    } --[[table: 1C62C9D0]],
     stun = {
       interval = 24
-    } --[[table: 0C873398]],
+    } --[[table: 1C62CB60]],
     wait = {
       interval = 24
-    } --[[table: 0C8733E8]]
-  } --[[table: 0C873208]],
+    } --[[table: 1C62CFC0]]
+  } --[[table: 1C62D1A0]],
   ["59"] = {
     attack = {
       hit = 15,
       interval = 40
-    } --[[table: 17A9E3A0]],
+    } --[[table: 09A60CF0]],
     death = {
       interval = 32
-    } --[[table: 17A9EA80]],
+    } --[[table: 09A607A0]],
     hit = {
       interval = 19
-    } --[[table: 17A9E260]],
+    } --[[table: 09A60A70]],
     run = {
       interval = 24
-    } --[[table: 17A9E350]],
+    } --[[table: 09A60ED0]],
     SkillA = {
       hit = 20,
       interval = 65
-    } --[[table: 17A9E710]],
+    } --[[table: 09A60890]],
     SkillB = {
       hit = 25,
       interval = 84
-    } --[[table: 17A9E440]],
+    } --[[table: 09A60D90]],
     stun = {
       interval = 24
-    } --[[table: 17ABECE0]],
+    } --[[table: 09A60FC0]],
     wait = {
       interval = 24
-    } --[[table: 17ABE920]]
-  } --[[table: 17ABEFB0]],
+    } --[[table: 09A60B10]]
+  } --[[table: 09A61060]],
   ["60"] = {
     attack = {
       hit = 17,
       interval = 46
-    } --[[table: 0C39B170]],
+    } --[[table: 09CCF870]],
     death = {
       interval = 56
-    } --[[table: 0C39B990]],
+    } --[[table: 09CCFBE0]],
     hit = {
       interval = 25
-    } --[[table: 0C39B5D0]],
+    } --[[table: 09CCF4B0]],
     run = {
       interval = 12
-    } --[[table: 0C39BA30]],
+    } --[[table: 09CCF5A0]],
     SkillA = {
       hit = 38,
       interval = 78,
       reset = 78
-    } --[[table: 0C39B8A0]],
+    } --[[table: 09CCFC80]],
     SkillB = {
       hit = 27,
       interval = 70,
       reset = 70
-    } --[[table: 0C39B670]],
+    } --[[table: 09CCF5F0]],
     stun = {
       interval = 30
-    } --[[table: 0C39B260]],
+    } --[[table: 09CCFA00]],
     wait = {
       interval = 30
-    } --[[table: 0C39B580]]
-  } --[[table: 0C39B530]],
+    } --[[table: 09CCFB90]]
+  } --[[table: 09CCFA50]],
   ["61"] = {
     attack = {
       hit = 17,
       interval = 46
-    } --[[table: 13F96608]],
+    } --[[table: 1CBBCEA0]],
     death = {
       interval = 56
-    } --[[table: 13F96518]],
+    } --[[table: 1CBBCC70]],
     hit = {
       interval = 25
-    } --[[table: 13F96838]],
+    } --[[table: 1CBBCBD0]],
     run = {
       interval = 12
-    } --[[table: 13F96888]],
+    } --[[table: 1CBBD080]],
     SkillA = {
       hit = 38,
       interval = 78,
       reset = 78
-    } --[[table: 13F965B8]],
+    } --[[table: 1CBBCE00]],
     SkillB = {
       hit = 27,
       interval = 70,
       reset = 70
-    } --[[table: 13F964C8]],
+    } --[[table: 1CBBCB80]],
     stun = {
       interval = 30
-    } --[[table: 13F96748]],
+    } --[[table: 1CBBCF40]],
     wait = {
       interval = 30
-    } --[[table: 13F96428]]
-  } --[[table: 13F966F8]],
+    } --[[table: 1CBBCD60]]
+  } --[[table: 1CBBD490]],
   ["62"] = {
     attack = {
       hit = 17,
       interval = 46
-    } --[[table: 1615B8A0]],
+    } --[[table: 1C632F60]],
     death = {
       interval = 56
-    } --[[table: 1615B9E0]],
+    } --[[table: 1C6332D0]],
     hit = {
       interval = 25
-    } --[[table: 1615ADB0]],
+    } --[[table: 1C633140]],
     run = {
       interval = 12
-    } --[[table: 1615B580]],
+    } --[[table: 1C632E20]],
     SkillA = {
       hit = 38,
       interval = 78,
       reset = 78
-    } --[[table: 1615A810]],
+    } --[[table: 1C633690]],
     SkillB = {
       hit = 27,
       interval = 70,
       reset = 70
-    } --[[table: 1615AB80]],
+    } --[[table: 1C6335F0]],
     stun = {
       interval = 30
-    } --[[table: 1615A720]],
+    } --[[table: 1C632D80]],
     wait = {
       interval = 30
-    } --[[table: 1615AA90]]
-  } --[[table: 1615A950]],
+    } --[[table: 1C632F10]]
+  } --[[table: 1C633230]],
   ["63"] = {
     attack = {
       hit = 16,
       interval = 46
-    } --[[table: 14579F28]],
+    } --[[table: 15649278]],
     death = {
       interval = 55
-    } --[[table: 1457A748]],
+    } --[[table: 15648E18]],
     hit = {
       interval = 25
-    } --[[table: 14579F78]],
+    } --[[table: 156494F8]],
     run = {
       interval = 12
-    } --[[table: 1457A838]],
+    } --[[table: 15648D28]],
     SkillA = {
       hit = 25,
       interval = 72,
       reset = 72
-    } --[[table: 1457A888]],
+    } --[[table: 15649638]],
     SkillB = {
       hit = 48,
       interval = 93,
       reset = 93
-    } --[[table: 1457A018]],
+    } --[[table: 15648D78]],
     stun = {
       interval = 30
-    } --[[table: 1457A8D8]],
+    } --[[table: 156493B8]],
     wait = {
       interval = 30
-    } --[[table: 1457A338]]
-  } --[[table: 1457A7E8]],
+    } --[[table: 156494A8]]
+  } --[[table: 156496D8]],
   ["64"] = {
     attack = {
       hit = 16,
       interval = 46
-    } --[[table: 0AB5CE70]],
+    } --[[table: 0A427430]],
     death = {
       interval = 55
-    } --[[table: 0AB5CCE0]],
+    } --[[table: 0A427070]],
     hit = {
       interval = 25
-    } --[[table: 0AB5D230]],
+    } --[[table: 0A4270C0]],
     run = {
       interval = 12
-    } --[[table: 0AB5D280]],
+    } --[[table: 0A4277A0]],
     SkillA = {
       hit = 25,
       interval = 72,
       reset = 72
-    } --[[table: 0AB5D0A0]],
+    } --[[table: 0A4279D0]],
     SkillB = {
       hit = 48,
       interval = 93,
       reset = 93
-    } --[[table: 0AB5D410]],
+    } --[[table: 0A427660]],
     stun = {
       interval = 30
-    } --[[table: 0AB5D320]],
+    } --[[table: 0A427930]],
     wait = {
       interval = 30
-    } --[[table: 0AB5CBA0]]
-  } --[[table: 0AB5D460]],
+    } --[[table: 0A427610]]
+  } --[[table: 0A427020]],
   ["65"] = {
     attack = {
       hit = 16,
       interval = 46
-    } --[[table: 0D216660]],
+    } --[[table: 09C473D0]],
     death = {
       interval = 55
-    } --[[table: 0D216DE0]],
+    } --[[table: 09C471A0]],
     hit = {
       interval = 25
-    } --[[table: 0D216BB0]],
+    } --[[table: 09C47100]],
     run = {
       interval = 12
-    } --[[table: 0D2166B0]],
+    } --[[table: 09C46F70]],
     SkillA = {
       hit = 25,
       interval = 72,
       reset = 72
-    } --[[table: 0D216C50]],
+    } --[[table: 09C47510]],
     SkillB = {
       hit = 48,
       interval = 93,
       reset = 93
-    } --[[table: 0D216A20]],
+    } --[[table: 09C470B0]],
     stun = {
       interval = 30
-    } --[[table: 0D216D40]],
+    } --[[table: 09C47150]],
     wait = {
       interval = 30
-    } --[[table: 0D216B10]]
-  } --[[table: 0D216890]],
+    } --[[table: 09C47380]]
+  } --[[table: 09C476A0]],
   ["72"] = {
     attack = {
       fire = 13,
       interval = 28
-    } --[[table: 16089D08]],
+    } --[[table: 0D1C2F40]],
     death = {
       interval = 30
-    } --[[table: 16089DA8]],
+    } --[[table: 0D1C2C20]],
     hit = {
       interval = 28
-    } --[[table: 16089B78]],
+    } --[[table: 0D1C30D0]],
     run = {
       interval = 24
-    } --[[table: 16089F38]],
+    } --[[table: 0D1C2CC0]],
     SkillA = {
       hit = 34,
       interval = 40,
       reset = 40
-    } --[[table: 16089BC8]],
+    } --[[table: 0D1C27C0]],
     SkillB = {
       hit = 24,
       interval = 50,
       reset = 50
-    } --[[table: 1608A4D8]],
+    } --[[table: 0D1C2B30]],
     stun = {
       interval = 30
-    } --[[table: 1608A348]],
+    } --[[table: 0D1C2810]],
     wait = {
       interval = 30
-    } --[[table: 1608A2F8]]
-  } --[[table: 1608A398]],
+    } --[[table: 0D1C2770]]
+  } --[[table: 0D1C2E50]],
   ["73"] = {
     attack = {
       fire = 13,
       interval = 28
-    } --[[table: 0B103880]],
+    } --[[table: 0B8B6330]],
     death = {
       interval = 30
-    } --[[table: 0B1031F0]],
+    } --[[table: 0B8B62E0]],
     hit = {
       interval = 28
-    } --[[table: 0B103790]],
+    } --[[table: 0B8B6650]],
     run = {
       interval = 24
-    } --[[table: 0B103100]],
+    } --[[table: 0B8B66F0]],
     SkillA = {
       hit = 34,
       interval = 40,
       reset = 40
-    } --[[table: 0B102F20]],
+    } --[[table: 0B8B63D0]],
     SkillB = {
       hit = 24,
       interval = 50,
       reset = 50
-    } --[[table: 0B103650]],
+    } --[[table: 0B8B6290]],
     stun = {
       interval = 30
-    } --[[table: 0B103060]],
+    } --[[table: 0B8B6470]],
     wait = {
       interval = 30
-    } --[[table: 0B1034C0]]
-  } --[[table: 0B102FC0]],
+    } --[[table: 0B8B6600]]
+  } --[[table: 0B8B6100]],
   ["74"] = {
     attack = {
       fire = 13,
       interval = 28
-    } --[[table: 0C39CCF0]],
+    } --[[table: 0C0916D8]],
     death = {
       interval = 30
-    } --[[table: 0C39C700]],
+    } --[[table: 0C091048]],
     hit = {
       interval = 28
-    } --[[table: 0C39CBB0]],
+    } --[[table: 0C091368]],
     run = {
       interval = 24
-    } --[[table: 0C39C570]],
+    } --[[table: 0C0913B8]],
     SkillA = {
       hit = 34,
       interval = 40,
       reset = 40
-    } --[[table: 0C39C840]],
+    } --[[table: 0C0911D8]],
     SkillB = {
       hit = 24,
       interval = 50,
       reset = 50
-    } --[[table: 0C39C660]],
+    } --[[table: 0C0915E8]],
     stun = {
       interval = 30
-    } --[[table: 0C39C930]],
+    } --[[table: 0C0914F8]],
     wait = {
       interval = 30
-    } --[[table: 0C39C610]]
-  } --[[table: 0C39CC50]],
+    } --[[table: 0C090EB8]]
+  } --[[table: 0C091188]],
   ["75"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 0B99D958]],
+    } --[[table: 157DFD90]],
     death = {
       interval = 30
-    } --[[table: 0B99D908]],
+    } --[[table: 157DF520]],
     hit = {
       interval = 28
-    } --[[table: 0B9995D8]],
+    } --[[table: 157DFD40]],
     run = {
       interval = 24
-    } --[[table: 0B99E0D8]],
+    } --[[table: 157DFB60]],
     SkillA = {
       hit = 44,
       interval = 66,
       reset = 66
-    } --[[table: 0B999808]],
+    } --[[table: 157DFA20]],
     SkillB = {
       hit = 68,
       interval = 79,
       reset = 79
-    } --[[table: 0B999218]],
+    } --[[table: 157DF9D0]],
     stun = {
       interval = 30
-    } --[[table: 0B999948]],
+    } --[[table: 157DF5C0]],
     wait = {
       interval = 40
-    } --[[table: 0B999A38]]
-  } --[[table: 0B9994E8]],
+    } --[[table: 157DF930]]
+  } --[[table: 157DF980]],
   ["76"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 0AB4D470]],
+    } --[[table: 149639C0]],
     death = {
       interval = 30
-    } --[[table: 0AB68DB0]],
+    } --[[table: 14963E20]],
     hit = {
       interval = 28
-    } --[[table: 0AB68A40]],
+    } --[[table: 14963CE0]],
     run = {
       interval = 24
-    } --[[table: 0AB68EF0]],
+    } --[[table: 14964140]],
     SkillA = {
       hit = 44,
       interval = 66,
       reset = 66
-    } --[[table: 0AB68BD0]],
+    } --[[table: 14964190]],
     SkillB = {
       hit = 68,
       interval = 79,
       reset = 79
-    } --[[table: 0AB68AE0]],
+    } --[[table: 14963D30]],
     stun = {
       interval = 30
-    } --[[table: 0AB68F40]],
+    } --[[table: 14963B00]],
     wait = {
       interval = 40
-    } --[[table: 0AB68E00]]
-  } --[[table: 0AB69030]],
+    } --[[table: 14963920]]
+  } --[[table: 14963FB0]],
   ["77"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 0ABEA0F8]],
+    } --[[table: 14D29568]],
     death = {
       interval = 30
-    } --[[table: 0ABE9EC8]],
+    } --[[table: 14D293D8]],
     hit = {
       interval = 28
-    } --[[table: 0ABE9A18]],
+    } --[[table: 14D287A8]],
     run = {
       interval = 24
-    } --[[table: 0ABEA008]],
+    } --[[table: 14D29518]],
     SkillA = {
       hit = 44,
       interval = 66,
       reset = 66
-    } --[[table: 0ABE9B58]],
+    } --[[table: 14D291A8]],
     SkillB = {
       hit = 68,
       interval = 79,
       reset = 79
-    } --[[table: 0ABE9E28]],
+    } --[[table: 14D28BB8]],
     stun = {
       interval = 30
-    } --[[table: 0ABE9B08]],
+    } --[[table: 14D286B8]],
     wait = {
       interval = 40
-    } --[[table: 0ABE9D88]]
-  } --[[table: 0ABEA288]],
+    } --[[table: 14D28B68]]
+  } --[[table: 14D28B18]],
   ["78"] = {
     attack = {
       hit = 12,
       interval = 30
-    } --[[table: 1401A758]],
+    } --[[table: 09CD5D10]],
     death = {
       interval = 26
-    } --[[table: 1401ACA8]],
+    } --[[table: 09CD5E50]],
     hit = {
       interval = 20
-    } --[[table: 1401A9D8]],
+    } --[[table: 09CD59A0]],
     run = {
       interval = 25
-    } --[[table: 1401AED8]],
+    } --[[table: 09CD5BD0]],
     SkillA = {
       hit = 47,
       interval = 65,
       reset = 65
-    } --[[table: 1401AA78]],
+    } --[[table: 09CD5EF0]],
     SkillB = {
       hit = 57,
       interval = 75,
       reset = 75
-    } --[[table: 1401A8E8]],
+    } --[[table: 09CD5B80]],
     stun = {
       interval = 40
-    } --[[table: 1401ABB8]],
+    } --[[table: 09CD5AE0]],
     wait = {
       interval = 40
-    } --[[table: 1401A988]]
-  } --[[table: 1401AE38]],
+    } --[[table: 09CD5A90]]
+  } --[[table: 09CD5E00]],
   ["79"] = {
     attack = {
       hit = 12,
       interval = 30
-    } --[[table: 149E6348]],
+    } --[[table: 14A31580]],
     death = {
       interval = 26
-    } --[[table: 149E6208]],
+    } --[[table: 14A31D50]],
     hit = {
       interval = 20
-    } --[[table: 149E5C18]],
+    } --[[table: 14A31A80]],
     run = {
       interval = 25
-    } --[[table: 149E6168]],
+    } --[[table: 14A31DA0]],
     SkillA = {
       hit = 47,
       interval = 65,
       reset = 65
-    } --[[table: 149E5B78]],
+    } --[[table: 14A31B70]],
     SkillB = {
       hit = 57,
       interval = 75,
       reset = 75
-    } --[[table: 149E5F38]],
+    } --[[table: 14A31710]],
     stun = {
       interval = 40
-    } --[[table: 149E5C68]],
+    } --[[table: 14A31A30]],
     wait = {
       interval = 40
-    } --[[table: 149E5DA8]]
-  } --[[table: 149E5E48]],
+    } --[[table: 14A31C60]]
+  } --[[table: 14A31C10]],
   ["80"] = {
     attack = {
       hit = 12,
       interval = 30
-    } --[[table: 0B900858]],
+    } --[[table: 17C7FCF0]],
     death = {
       interval = 26
-    } --[[table: 0B9008A8]],
+    } --[[table: 17C80100]],
     hit = {
       interval = 20
-    } --[[table: 0B900AD8]],
+    } --[[table: 17C7FDE0]],
     run = {
       interval = 25
-    } --[[table: 0B900948]],
+    } --[[table: 17C7F930]],
     SkillA = {
       hit = 47,
       interval = 65,
       reset = 65
-    } --[[table: 0B900448]],
+    } --[[table: 17C7FBB0]],
     SkillB = {
       hit = 57,
       interval = 75,
       reset = 75
-    } --[[table: 0B900498]],
+    } --[[table: 17C7F840]],
     stun = {
       interval = 40
-    } --[[table: 0B900678]],
+    } --[[table: 17C7FE30]],
     wait = {
       interval = 40
-    } --[[table: 0B900178]]
-  } --[[table: 0B900358]],
+    } --[[table: 17C7FA20]]
+  } --[[table: 17C7FFC0]],
   ["81"] = {
     attack = {
       hit = 33,
       interval = 49
-    } --[[table: 1536F948]],
+    } --[[table: 158544D8]],
     death = {
       interval = 26
-    } --[[table: 1536F678]],
+    } --[[table: 15854028]],
     hit = {
       interval = 20
-    } --[[table: 1536F498]],
+    } --[[table: 1584C8C8]],
     run = {
       interval = 25
-    } --[[table: 1536F808]],
+    } --[[table: 15853B78]],
     SkillA = {
       hit = 27,
       interval = 62,
       reset = 62
-    } --[[table: 1536F4E8]],
+    } --[[table: 1584C5A8]],
     SkillB = {
       hit = 64,
       interval = 85,
       reset = 85
-    } --[[table: 1536F308]],
+    } --[[table: 1584C4B8]],
     stun = {
       interval = 40
-    } --[[table: 1536F268]],
+    } --[[table: 1584C788]],
     wait = {
       interval = 40
-    } --[[table: 1536F3A8]]
-  } --[[table: 1536F1C8]],
+    } --[[table: 1584C738]]
+  } --[[table: 1584C558]],
   ["82"] = {
     attack = {
       hit = 33,
       interval = 49
-    } --[[table: 136302F0]],
+    } --[[table: 157DD9F0]],
     death = {
       interval = 26
-    } --[[table: 1362FBC0]],
+    } --[[table: 157DD180]],
     hit = {
       interval = 20
-    } --[[table: 1362FE40]],
+    } --[[table: 157DD3B0]],
     run = {
       interval = 25
-    } --[[table: 13630200]],
+    } --[[table: 157DD220]],
     SkillA = {
       hit = 27,
       interval = 62,
       reset = 62
-    } --[[table: 1362FC10]],
+    } --[[table: 157DD0E0]],
     SkillB = {
       hit = 64,
       interval = 85,
       reset = 85
-    } --[[table: 1362FFD0]],
+    } --[[table: 157DD2C0]],
     stun = {
       interval = 40
-    } --[[table: 13630340]],
+    } --[[table: 157DD040]],
     wait = {
       interval = 40
-    } --[[table: 13630250]]
-  } --[[table: 1362FB70]],
+    } --[[table: 157DD4A0]]
+  } --[[table: 157DCFA0]],
   ["83"] = {
     attack = {
       hit = 33,
       interval = 49
-    } --[[table: 13CA4310]],
+    } --[[table: 0A419830]],
     death = {
       interval = 26
-    } --[[table: 13CA45E0]],
+    } --[[table: 0A419BF0]],
     hit = {
       interval = 20
-    } --[[table: 13CA4590]],
+    } --[[table: 0A419D30]],
     run = {
       interval = 25
-    } --[[table: 13CA3E60]],
+    } --[[table: 0A419DD0]],
     SkillA = {
       hit = 27,
       interval = 62,
       reset = 62
-    } --[[table: 13CA4270]],
+    } --[[table: 0A419470]],
     SkillB = {
       hit = 64,
       interval = 85,
       reset = 85
-    } --[[table: 13CA3D70]],
+    } --[[table: 0A4197E0]],
     stun = {
       interval = 40
-    } --[[table: 13CA44F0]],
+    } --[[table: 0A419790]],
     wait = {
       interval = 40
-    } --[[table: 13CA4220]]
-  } --[[table: 13CA3FA0]],
+    } --[[table: 0A419D80]]
+  } --[[table: 0A419970]],
   ["84"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 1EF0E118]],
+    } --[[table: 0AE04530]],
     death = {
       interval = 46
-    } --[[table: 1EF0DD58]],
+    } --[[table: 0AE04490]],
     hit = {
       interval = 17
-    } --[[table: 1EF0E1B8]],
+    } --[[table: 0AE04800]],
     run = {
       interval = 24
-    } --[[table: 1EF0E488]],
+    } --[[table: 0AE04300]],
     SkillA = {
       hit = 45,
       interval = 55
-    } --[[table: 1EF0DEE8]],
+    } --[[table: 0AE049E0]],
     SkillB = {
       hit = 34,
       interval = 66
-    } --[[table: 1EF0DAD8]],
+    } --[[table: 0AE048F0]],
     stun = {
       interval = 25
-    } --[[table: 1EF0DA38]],
+    } --[[table: 0AE044E0]],
     wait = {
       interval = 30
-    } --[[table: 1EF0D8A8]]
-  } --[[table: 1EF0D948]],
+    } --[[table: 0AE04A30]]
+  } --[[table: 0AE045D0]],
   ["85"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 14848818]],
+    } --[[table: 0D2735B8]],
     death = {
       interval = 46
-    } --[[table: 14848908]],
+    } --[[table: 0D2731A8]],
     hit = {
       interval = 17
-    } --[[table: 14848868]],
+    } --[[table: 0D273428]],
     run = {
       interval = 24
-    } --[[table: 14848D18]],
+    } --[[table: 0D272FC8]],
     SkillA = {
       hit = 45,
       interval = 55
-    } --[[table: 14848728]],
+    } --[[table: 0D273478]],
     SkillB = {
       hit = 34,
       interval = 66
-    } --[[table: 14848E58]],
+    } --[[table: 0D272D98]],
     stun = {
       interval = 25
-    } --[[table: 14848BD8]],
+    } --[[table: 0D273158]],
     wait = {
       interval = 30
-    } --[[table: 14848CC8]]
-  } --[[table: 14848D68]],
+    } --[[table: 0D273108]]
+  } --[[table: 0D273338]],
   ["86"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 1FC1E558]],
+    } --[[table: 0B846180]],
     death = {
       interval = 46
-    } --[[table: 1FC1EA58]],
+    } --[[table: 0B8468B0]],
     hit = {
       interval = 17
-    } --[[table: 1FC1E5A8]],
+    } --[[table: 0B8469F0]],
     run = {
       interval = 24
-    } --[[table: 1FC1E6E8]],
+    } --[[table: 0B846770]],
     SkillA = {
       hit = 45,
       interval = 55
-    } --[[table: 1FC1EA08]],
+    } --[[table: 0B846860]],
     SkillB = {
       hit = 34,
       interval = 66
-    } --[[table: 1FC1E508]],
+    } --[[table: 0B846A90]],
     stun = {
       interval = 25
-    } --[[table: 1FC1E7D8]],
+    } --[[table: 0B846450]],
     wait = {
       interval = 30
-    } --[[table: 1FC1E918]]
-  } --[[table: 1FC1E8C8]],
+    } --[[table: 0B846AE0]]
+  } --[[table: 0B8469A0]],
   ["87"] = {
     attack = {
       hit = 21,
       interval = 35
-    } --[[table: 0AFE8350]],
+    } --[[table: 0CA7C750]],
     death = {
       interval = 46
-    } --[[table: 0AFE83F0]],
+    } --[[table: 0CA7C070]],
     hit = {
       interval = 18
-    } --[[table: 0AFE86C0]],
+    } --[[table: 0CA7C520]],
     run = {
       interval = 24
-    } --[[table: 0AFE84E0]],
+    } --[[table: 0CA7C480]],
     SkillA = {
       hit = 35,
       interval = 51
-    } --[[table: 0AFE8210]],
+    } --[[table: 0CA7C890]],
     SkillB = {
       hit = 20,
       interval = 40
-    } --[[table: 0AFE85D0]],
+    } --[[table: 0CA7C1B0]],
     stun = {
       interval = 25
-    } --[[table: 0AFE8850]],
+    } --[[table: 0CA7C430]],
     wait = {
       interval = 30
-    } --[[table: 0AFE8800]]
-  } --[[table: 0AFE87B0]],
+    } --[[table: 0CA7C2F0]]
+  } --[[table: 0CA7C160]],
   ["88"] = {
     attack = {
       hit = 21,
       interval = 35
-    } --[[table: 0CCC87F8]],
+    } --[[table: 1CBA6E20]],
     death = {
       interval = 46
-    } --[[table: 0CCC8898]],
+    } --[[table: 1CBA6D80]],
     hit = {
       interval = 18
-    } --[[table: 0CCC8668]],
+    } --[[table: 1CBA75A0]],
     run = {
       interval = 24
-    } --[[table: 0CCC8CF8]],
+    } --[[table: 1CBA7140]],
     SkillA = {
       hit = 35,
       interval = 51
-    } --[[table: 0CCC8A78]],
+    } --[[table: 1CBA6DD0]],
     SkillB = {
       hit = 20,
       interval = 40
-    } --[[table: 0CCC8CA8]],
+    } --[[table: 1CBA7320]],
     stun = {
       interval = 25
-    } --[[table: 0CCC8618]],
+    } --[[table: 1CBA71E0]],
     wait = {
       interval = 30
-    } --[[table: 0CCC8D98]]
-  } --[[table: 0CCC87A8]],
+    } --[[table: 1CBA7690]]
+  } --[[table: 1CBA7050]],
   ["89"] = {
     attack = {
       hit = 21,
       interval = 35
-    } --[[table: 0B9012A8]],
+    } --[[table: 0B8417C0]],
     death = {
       interval = 46
-    } --[[table: 0B900218]],
+    } --[[table: 0B841540]],
     hit = {
       interval = 18
-    } --[[table: 0B900538]],
+    } --[[table: 0B8414F0]],
     run = {
       interval = 24
-    } --[[table: 0B901208]],
+    } --[[table: 0B841590]],
     SkillA = {
       hit = 35,
       interval = 51
-    } --[[table: 0B9003F8]],
+    } --[[table: 0B841360]],
     SkillB = {
       hit = 20,
       interval = 40
-    } --[[table: 0B9002B8]],
+    } --[[table: 0B841770]],
     stun = {
       interval = 25
-    } --[[table: 0B900128]],
+    } --[[table: 0B841130]],
     wait = {
       interval = 30
-    } --[[table: 0B9009E8]]
-  } --[[table: 0B9003A8]],
+    } --[[table: 0B841400]]
+  } --[[table: 0B841180]],
   ["90"] = {
     attack = {
       hit = 21,
       interval = 37
-    } --[[table: 14014E48]],
+    } --[[table: 1D1477B8]],
     death = {
       interval = 35
-    } --[[table: 14015348]],
+    } --[[table: 1D147588]],
     hit = {
       interval = 18
-    } --[[table: 14015488]],
+    } --[[table: 1D1471C8]],
     run = {
       interval = 24
-    } --[[table: 14014B28]],
+    } --[[table: 1D1473A8]],
     SkillA = {
       hit = 33,
       interval = 85,
       reset = 85
-    } --[[table: 140151B8]],
+    } --[[table: 1D1473F8]],
     SkillB = {
       hit = 53,
       interval = 84,
       reset = 84
-    } --[[table: 14015258]],
+    } --[[table: 1D147178]],
     stun = {
       interval = 30
-    } --[[table: 14015208]],
+    } --[[table: 1D1472B8]],
     wait = {
       interval = 30
-    } --[[table: 14014DA8]]
-  } --[[table: 140152F8]],
+    } --[[table: 1D1474E8]]
+  } --[[table: 1D147718]],
   ["91"] = {
     attack = {
       hit = 21,
       interval = 37
-    } --[[table: 0CDE56B8]],
+    } --[[table: 09CDBA30]],
     death = {
       interval = 35
-    } --[[table: 0CDE5708]],
+    } --[[table: 09CDB350]],
     hit = {
       interval = 18
-    } --[[table: 0CDE5C58]],
+    } --[[table: 09CDB850]],
     run = {
       interval = 24
-    } --[[table: 0CDE57F8]],
+    } --[[table: 09CDB990]],
     SkillA = {
       hit = 33,
       interval = 85,
       reset = 85
-    } --[[table: 0CDE5D48]],
+    } --[[table: 09CDB8F0]],
     SkillB = {
       hit = 53,
       interval = 84,
       reset = 84
-    } --[[table: 0CDE5AC8]],
+    } --[[table: 09CDB8A0]],
     stun = {
       interval = 30
-    } --[[table: 0CDE5988]],
+    } --[[table: 09CDB120]],
     wait = {
       interval = 30
-    } --[[table: 0CDE5938]]
-  } --[[table: 0CDE5ED8]],
+    } --[[table: 09CDB710]]
+  } --[[table: 09CDB3F0]],
   ["92"] = {
     attack = {
       hit = 21,
       interval = 37
-    } --[[table: 0B9934F8]],
+    } --[[table: 152A8B70]],
     death = {
       interval = 35
-    } --[[table: 0B993228]],
+    } --[[table: 152A8BC0]],
     hit = {
       interval = 18
-    } --[[table: 0B9930E8]],
+    } --[[table: 152A9340]],
     run = {
       interval = 24
-    } --[[table: 0B9934A8]],
+    } --[[table: 152A9250]],
     SkillA = {
       hit = 33,
       interval = 85,
       reset = 85
-    } --[[table: 0B993598]],
+    } --[[table: 152A8EE0]],
     SkillB = {
       hit = 53,
       interval = 84,
       reset = 84
-    } --[[table: 0B9932C8]],
+    } --[[table: 152A94D0]],
     stun = {
       interval = 30
-    } --[[table: 0B993278]],
+    } --[[table: 152A9480]],
     wait = {
       interval = 30
-    } --[[table: 0B993318]]
-  } --[[table: 0B9931D8]],
+    } --[[table: 152A9200]]
+  } --[[table: 152A8CB0]],
   ["93"] = {
     attack = {
       hit = 10,
       interval = 24
-    } --[[table: 0B8D0730]],
+    } --[[table: 150D4B00]],
     death = {
       interval = 25
-    } --[[table: 0B8D1090]],
+    } --[[table: 150D4AB0]],
     hit = {
       interval = 18
-    } --[[table: 0B8D0FA0]],
+    } --[[table: 150D4E70]],
     run = {
       interval = 24
-    } --[[table: 0B8D0B40]],
+    } --[[table: 150D4A60]],
     SkillA = {
       hit = 28,
       interval = 42
-    } --[[table: 0B8D10E0]],
+    } --[[table: 150D4880]],
     SkillB = {
       hit = 45,
       interval = 66
-    } --[[table: 0B8D0870]],
+    } --[[table: 150D49C0]],
     stun = {
       interval = 30
-    } --[[table: 0B8D0F50]],
+    } --[[table: 150D4C40]],
     wait = {
       interval = 24
-    } --[[table: 0B8D0A50]]
-  } --[[table: 0B8D0AF0]],
+    } --[[table: 150D4C90]]
+  } --[[table: 150D47E0]],
   ["94"] = {
     attack = {
       hit = 10,
       interval = 24
-    } --[[table: 178C1958]],
+    } --[[table: 1D4E0EA8]],
     death = {
       interval = 25
-    } --[[table: 178C1F98]],
+    } --[[table: 1D4E0CC8]],
     hit = {
       interval = 18
-    } --[[table: 178C1778]],
+    } --[[table: 1D4E0C78]],
     run = {
       interval = 24
-    } --[[table: 178C1DB8]],
+    } --[[table: 1D4E0E58]],
     SkillA = {
       hit = 28,
       interval = 42
-    } --[[table: 178C17C8]],
+    } --[[table: 1D4E0FE8]],
     SkillB = {
       hit = 45,
       interval = 66
-    } --[[table: 178C18B8]],
+    } --[[table: 1D4E07C8]],
     stun = {
       interval = 30
-    } --[[table: 178C1868]],
+    } --[[table: 1D4E0908]],
     wait = {
       interval = 24
-    } --[[table: 178C1C28]]
-  } --[[table: 178C1728]],
+    } --[[table: 1D4E0778]]
+  } --[[table: 1D4E0BD8]],
   ["95"] = {
     attack = {
       hit = 10,
       interval = 24
-    } --[[table: 0B817450]],
+    } --[[table: 0B21C8F0]],
     death = {
       interval = 25
-    } --[[table: 0B8170E0]],
+    } --[[table: 0B21C710]],
     hit = {
       interval = 18
-    } --[[table: 0B817130]],
+    } --[[table: 0B21C1C0]],
     run = {
       interval = 24
-    } --[[table: 0B816E60]],
+    } --[[table: 0B21C850]],
     SkillA = {
       hit = 28,
       interval = 42
-    } --[[table: 0B8174F0]],
+    } --[[table: 0B21C6C0]],
     SkillB = {
       hit = 45,
       interval = 66
-    } --[[table: 0B816D70]],
+    } --[[table: 0B21C760]],
     stun = {
       interval = 30
-    } --[[table: 0B817270]],
+    } --[[table: 0B21C530]],
     wait = {
       interval = 24
-    } --[[table: 0B8172C0]]
-  } --[[table: 0B817540]],
+    } --[[table: 0B21C300]]
+  } --[[table: 0B21C170]],
   ["97"] = {
     attack = {
       fire = 17,
       interval = 30
-    } --[[table: 1F264518]],
+    } --[[table: 0B847B20]],
     death = {
       interval = 25
-    } --[[table: 1F260B48]],
+    } --[[table: 0B847530]],
     hit = {
       interval = 18
-    } --[[table: 1F2606E8]],
+    } --[[table: 0B847990]],
     run = {
       interval = 24
-    } --[[table: 1F2609B8]],
+    } --[[table: 0B847C60]],
     SkillA = {
       hit = 30,
       interval = 51
-    } --[[table: 1F260738]],
+    } --[[table: 0B8478F0]],
     SkillB = {
       hit = 45,
       interval = 59
-    } --[[table: 1F260378]],
+    } --[[table: 0B847BC0]],
     stun = {
       interval = 30
-    } --[[table: 1F260B98]],
+    } --[[table: 0B8478A0]],
     wait = {
       interval = 24
-    } --[[table: 1F2608C8]]
-  } --[[table: 1F260968]],
+    } --[[table: 0B847E90]]
+  } --[[table: 0B847850]],
   ["98"] = {
     attack = {
       fire = 17,
       interval = 30
-    } --[[table: 180661F8]],
+    } --[[table: 1CBBE430]],
     death = {
       interval = 25
-    } --[[table: 180659D8]],
+    } --[[table: 1CBBE2A0]],
     hit = {
       interval = 18
-    } --[[table: 18065848]],
+    } --[[table: 1CBB94D0]],
     run = {
       interval = 24
-    } --[[table: 180666A8]],
+    } --[[table: 1CBBE0C0]],
     SkillA = {
       hit = 30,
       interval = 51
-    } --[[table: 18065BB8]],
+    } --[[table: 1CBBE5C0]],
     SkillB = {
       hit = 45,
       interval = 59
-    } --[[table: 18065E88]],
+    } --[[table: 1CBB9480]],
     stun = {
       interval = 30
-    } --[[table: 18065B68]],
+    } --[[table: 1CBB8F30]],
     wait = {
       interval = 24
-    } --[[table: 18065E38]]
-  } --[[table: 18065C08]],
+    } --[[table: 1CBB97A0]]
+  } --[[table: 1CBB9340]],
   ["99"] = {
     attack = {
       fire = 17,
       interval = 30
-    } --[[table: 0B959E90]],
+    } --[[table: 1751A990]],
     death = {
       interval = 25
-    } --[[table: 0B95A3E0]],
+    } --[[table: 17519D60]],
     hit = {
       interval = 18
-    } --[[table: 0B9564C0]],
+    } --[[table: 17519DB0]],
     run = {
       interval = 24
-    } --[[table: 0B95A660]],
+    } --[[table: 17519EF0]],
     SkillA = {
       hit = 30,
       interval = 51
-    } --[[table: 0B956470]],
+    } --[[table: 17519CC0]],
     SkillB = {
       hit = 45,
       interval = 59
-    } --[[table: 0B956150]],
+    } --[[table: 17519C70]],
     stun = {
       interval = 30
-    } --[[table: 0B956600]],
+    } --[[table: 17519C20]],
     wait = {
       interval = 24
-    } --[[table: 0B9562E0]]
-  } --[[table: 0B956A60]],
+    } --[[table: 1752DFE0]]
+  } --[[table: 1752DC70]],
   ["100"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 0CDEF938]],
+    } --[[table: 17A73BF8]],
     death = {
       interval = 31
-    } --[[table: 0CDEFE88]],
+    } --[[table: 17A73F18]],
     hit = {
       interval = 18
-    } --[[table: 0CDEF8E8]],
+    } --[[table: 17A70908]],
     run = {
       interval = 24
-    } --[[table: 0CDEF668]],
+    } --[[table: 17A74288]],
     SkillA = {
       hit = 20,
       interval = 55,
       reset = 55
-    } --[[table: 0CDEFD48]],
+    } --[[table: 17A70A98]],
     SkillB = {
       hit = 33,
       interval = 81,
       reset = 65
-    } --[[table: 0CDEFAC8]],
+    } --[[table: 17A70B88]],
     stun = {
       interval = 30
-    } --[[table: 0CDEFC58]],
+    } --[[table: 17A70868]],
     wait = {
       interval = 30
-    } --[[table: 0CDEFDE8]]
-  } --[[table: 0CDEF898]],
+    } --[[table: 17A70778]]
+  } --[[table: 17A70D18]],
   ["101"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 206D1860]],
+    } --[[table: 1D4C9AC8]],
     death = {
       interval = 31
-    } --[[table: 206D1D60]],
+    } --[[table: 1D4C9668]],
     hit = {
       interval = 18
-    } --[[table: 206D1810]],
+    } --[[table: 1D4C9618]],
     run = {
       interval = 24
-    } --[[table: 206D1FE0]],
+    } --[[table: 1D4C9898]],
     SkillA = {
       hit = 20,
       interval = 55,
       reset = 55
-    } --[[table: 206D1B80]],
+    } --[[table: 1D4C9578]],
     SkillB = {
       hit = 33,
       interval = 81,
       reset = 65
-    } --[[table: 206D1720]],
+    } --[[table: 1D4C9BB8]],
     stun = {
       interval = 30
-    } --[[table: 206D1D10]],
+    } --[[table: 1D4C9528]],
     wait = {
       interval = 30
-    } --[[table: 206D2080]]
-  } --[[table: 206D17C0]],
+    } --[[table: 1D4C9CF8]]
+  } --[[table: 1D4C9ED8]],
   ["102"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 0C3396E0]],
+    } --[[table: 0A792440]],
     death = {
       interval = 31
-    } --[[table: 0C339A00]],
+    } --[[table: 0A792260]],
     hit = {
       interval = 18
-    } --[[table: 0C339AA0]],
+    } --[[table: 0A792530]],
     run = {
       interval = 24
-    } --[[table: 0C339C30]],
+    } --[[table: 0A792350]],
     SkillA = {
       hit = 20,
       interval = 55,
       reset = 55
-    } --[[table: 0C3399B0]],
+    } --[[table: 0A7921C0]],
     SkillB = {
       hit = 33,
       interval = 81,
       reset = 65
-    } --[[table: 0C339910]],
+    } --[[table: 0A792210]],
     stun = {
       interval = 30
-    } --[[table: 0C339870]],
+    } --[[table: 0A7929E0]],
     wait = {
       interval = 30
-    } --[[table: 0C3398C0]]
-  } --[[table: 0C339960]],
+    } --[[table: 0A792800]]
+  } --[[table: 0A792300]],
   ["103"] = {
     attack = {
       fire = 18,
       interval = 34
-    } --[[table: 13AEE120]],
+    } --[[table: 0A413DE0]],
     death = {
       interval = 31
-    } --[[table: 13AEE490]],
+    } --[[table: 0A4143D0]],
     hit = {
       interval = 18
-    } --[[table: 13AEE210]],
+    } --[[table: 0A414240]],
     run = {
       interval = 24
-    } --[[table: 13AEE030]],
+    } --[[table: 0A413A70]],
     SkillA = {
       hit = 45,
       interval = 82
-    } --[[table: 13AEDF90]],
+    } --[[table: 0A414380]],
     SkillB = {
       hit = 45,
       interval = 50
-    } --[[table: 13AEDF40]],
+    } --[[table: 0A414330]],
     stun = {
       interval = 30
-    } --[[table: 13AEDC20]],
+    } --[[table: 0A413B10]],
     wait = {
       interval = 30
-    } --[[table: 13AEDD10]]
-  } --[[table: 13AEDE00]],
+    } --[[table: 0A413CF0]]
+  } --[[table: 0A413F70]],
   ["104"] = {
     attack = {
       fire = 18,
       interval = 34
-    } --[[table: 0B98CC48]],
+    } --[[table: 0A39B128]],
     death = {
       interval = 31
-    } --[[table: 0B98C978]],
+    } --[[table: 0A39B178]],
     hit = {
       interval = 18
-    } --[[table: 0B98CD38]],
+    } --[[table: 0A39B718]],
     run = {
       interval = 24
-    } --[[table: 0B98CBF8]],
+    } --[[table: 0A39B8A8]],
     SkillA = {
       hit = 45,
       interval = 82
-    } --[[table: 0B98D0F8]],
+    } --[[table: 0A39B308]],
     SkillB = {
       hit = 45,
       interval = 50
-    } --[[table: 0B98CBA8]],
+    } --[[table: 0A39B7B8]],
     stun = {
       interval = 30
-    } --[[table: 0B98CB08]],
+    } --[[table: 0A39B448]],
     wait = {
       interval = 30
-    } --[[table: 0B98CB58]]
-  } --[[table: 0B98D1E8]],
+    } --[[table: 0A39B808]]
+  } --[[table: 0A39BA38]],
   ["105"] = {
     attack = {
       fire = 18,
       interval = 34
-    } --[[table: 136291D0]],
+    } --[[table: 14837600]],
     death = {
       interval = 31
-    } --[[table: 13629130]],
+    } --[[table: 148374C0]],
     hit = {
       interval = 18
-    } --[[table: 136296D0]],
+    } --[[table: 14837380]],
     run = {
       interval = 24
-    } --[[table: 13629090]],
+    } --[[table: 14837560]],
     SkillA = {
       hit = 45,
       interval = 82
-    } --[[table: 13628E60]],
+    } --[[table: 14837830]],
     SkillB = {
       hit = 45,
       interval = 50
-    } --[[table: 13628FA0]],
+    } --[[table: 14837290]],
     stun = {
       interval = 30
-    } --[[table: 13629220]],
+    } --[[table: 148371F0]],
     wait = {
       interval = 30
-    } --[[table: 13628DC0]]
-  } --[[table: 136294A0]],
+    } --[[table: 14837330]]
+  } --[[table: 14837010]],
   ["106"] = {
     attack = {
       hit = 20,
       interval = 30
-    } --[[table: 17B707A0]],
+    } --[[table: 09C4CD30]],
     death = {
       interval = 17
-    } --[[table: 17B705C0]],
+    } --[[table: 09C4D0F0]],
     hit = {
       interval = 15
-    } --[[table: 17B70A70]],
+    } --[[table: 09C4D280]],
     run = {
       interval = 24
-    } --[[table: 17B70930]],
+    } --[[table: 09C4CA10]],
     SkillA = {
       hit = 55,
       interval = 70
-    } --[[table: 17B706B0]],
+    } --[[table: 09C4D2D0]],
     SkillB = {
       hit = 25,
       interval = 45
-    } --[[table: 17B70610]],
+    } --[[table: 09C4CE20]],
     stun = {
       interval = 30
-    } --[[table: 17B70520]],
+    } --[[table: 09C4CA60]],
     wait = {
       interval = 30
-    } --[[table: 17B70BB0]]
-  } --[[table: 17B70C00]],
+    } --[[table: 09C4CCE0]]
+  } --[[table: 09C4D000]],
   ["107"] = {
     attack = {
       hit = 20,
       interval = 30
-    } --[[table: 149E3C38]],
+    } --[[table: 20452E90]],
     death = {
       interval = 17
-    } --[[table: 149E3788]],
+    } --[[table: 20452F30]],
     hit = {
       interval = 15
-    } --[[table: 149E3468]],
+    } --[[table: 20452BC0]],
     run = {
       interval = 24
-    } --[[table: 149E3AA8]],
+    } --[[table: 20452C60]],
     SkillA = {
       hit = 55,
       interval = 70
-    } --[[table: 149E3558]],
+    } --[[table: 20452B70]],
     SkillB = {
       hit = 25,
       interval = 45
-    } --[[table: 149E3968]],
+    } --[[table: 204531B0]],
     stun = {
       interval = 30
-    } --[[table: 149E3328]],
+    } --[[table: 20452DF0]],
     wait = {
       interval = 30
-    } --[[table: 149E35A8]]
-  } --[[table: 149E3C88]],
+    } --[[table: 20453390]]
+  } --[[table: 204532A0]],
   ["108"] = {
     attack = {
       hit = 20,
       interval = 30
-    } --[[table: 0BD83E90]],
+    } --[[table: 0CA83870]],
     death = {
       interval = 17
-    } --[[table: 0BD843E0]],
+    } --[[table: 0CA83C30]],
     hit = {
       interval = 15
-    } --[[table: 0BD83D00]],
+    } --[[table: 0CA83AF0]],
     run = {
       interval = 24
-    } --[[table: 0BD83C10]],
+    } --[[table: 0CA83780]],
     SkillA = {
       hit = 55,
       interval = 70
-    } --[[table: 0BD83B70]],
+    } --[[table: 0CA83730]],
     SkillB = {
       hit = 25,
       interval = 45
-    } --[[table: 0BD83F80]],
+    } --[[table: 0CA84090]],
     stun = {
       interval = 30
-    } --[[table: 0BD83FD0]],
+    } --[[table: 0CA83CD0]],
     wait = {
       interval = 30
-    } --[[table: 0BD83DA0]]
-  } --[[table: 0BD84020]],
+    } --[[table: 0CA83E10]]
+  } --[[table: 0CA83F00]],
   ["109"] = {
     attack = {
       hit = 18,
       interval = 30
-    } --[[table: 0ABA0890]],
+    } --[[table: 14972830]],
     death = {
       interval = 17
-    } --[[table: 0ABA07A0]],
+    } --[[table: 149721A0]],
     hit = {
       interval = 15
-    } --[[table: 0ABA0160]],
+    } --[[table: 14972600]],
     run = {
       interval = 24
-    } --[[table: 0ABA0750]],
+    } --[[table: 14971F70]],
     SkillA = {
       hit = 29,
       interval = 61
-    } --[[table: 0ABA08E0]],
+    } --[[table: 14972420]],
     SkillB = {
       hit = 47,
       interval = 61
-    } --[[table: 0ABA07F0]],
+    } --[[table: 149726F0]],
     stun = {
       interval = 30
-    } --[[table: 0ABA0110]],
+    } --[[table: 14972330]],
     wait = {
       interval = 30
-    } --[[table: 0ABA0340]]
-  } --[[table: 0ABA02F0]],
+    } --[[table: 149723D0]]
+  } --[[table: 14972380]],
   ["110"] = {
     attack = {
       hit = 18,
       interval = 30
-    } --[[table: 140020B8]],
+    } --[[table: 17C7E0D0]],
     death = {
       interval = 17
-    } --[[table: 14002018]],
+    } --[[table: 17C7DBD0]],
     hit = {
       interval = 15
-    } --[[table: 14002068]],
+    } --[[table: 17C7DFE0]],
     run = {
       interval = 24
-    } --[[table: 14002568]],
+    } --[[table: 17C7DA90]],
     SkillA = {
       hit = 29,
       interval = 61
-    } --[[table: 14001FC8]],
+    } --[[table: 17C7E030]],
     SkillB = {
       hit = 47,
       interval = 61
-    } --[[table: 14001F78]],
+    } --[[table: 17C7DDB0]],
     stun = {
       interval = 30
-    } --[[table: 14002478]],
+    } --[[table: 17C7DE00]],
     wait = {
       interval = 30
-    } --[[table: 14002608]]
-  } --[[table: 14001F28]],
+    } --[[table: 17C7DEF0]]
+  } --[[table: 17C7E260]],
   ["111"] = {
     attack = {
       hit = 18,
       interval = 30
-    } --[[table: 0CA13AB8]],
+    } --[[table: 0CA80A80]],
     death = {
       interval = 17
-    } --[[table: 0CA13E28]],
+    } --[[table: 0CA80D00]],
     hit = {
       interval = 15
-    } --[[table: 0CA13C48]],
+    } --[[table: 0CA80A30]],
     run = {
       interval = 24
-    } --[[table: 0CA13888]],
+    } --[[table: 0CA80940]],
     SkillA = {
       hit = 29,
       interval = 61
-    } --[[table: 0CA13D88]],
+    } --[[table: 0CA80DA0]],
     SkillB = {
       hit = 47,
       interval = 61
-    } --[[table: 0CA13A18]],
+    } --[[table: 0CA80760]],
     stun = {
       interval = 30
-    } --[[table: 0CA138D8]],
+    } --[[table: 0CA80620]],
     wait = {
       interval = 30
-    } --[[table: 0CA13E78]]
-  } --[[table: 0CA13C98]],
+    } --[[table: 0CA80710]]
+  } --[[table: 0CA805D0]],
   ["112"] = {
     attack = {
       hit = 23,
       interval = 30
-    } --[[table: 240D8DB0]],
+    } --[[table: 14D2DD48]],
     death = {
       interval = 23
-    } --[[table: 240D8F90]],
+    } --[[table: 14D2D528]],
     hit = {
       interval = 30
-    } --[[table: 240D9440]],
+    } --[[table: 14D2D8E8]],
     run = {
       interval = 19
-    } --[[table: 240D8EF0]],
+    } --[[table: 14D2D5C8]],
     SkillA = {
       hit = 25,
       interval = 47,
       reset = 47
-    } --[[table: 240D8C70]],
+    } --[[table: 14D2D708]],
     SkillB = {
       hit = 22,
       interval = 40,
       reset = 40
-    } --[[table: 240D8B30]],
+    } --[[table: 14D2CB28]],
     stun = {
       interval = 30
-    } --[[table: 240D8E00]],
+    } --[[table: 14D2D4D8]],
     wait = {
       interval = 30
-    } --[[table: 240D8D60]]
-  } --[[table: 240D8B80]],
+    } --[[table: 14D2D078]]
+  } --[[table: 14D2D028]],
   ["113"] = {
     attack = {
       hit = 23,
       interval = 30
-    } --[[table: 0BF7C6F0]],
+    } --[[table: 149C5E68]],
     death = {
       interval = 23
-    } --[[table: 0BF79860]],
+    } --[[table: 149C6688]],
     hit = {
       interval = 30
-    } --[[table: 0BF79B30]],
+    } --[[table: 149C6598]],
     run = {
       interval = 19
-    } --[[table: 0BF7C6A0]],
+    } --[[table: 149C5F08]],
     SkillA = {
       hit = 25,
       interval = 47,
       reset = 47
-    } --[[table: 0BF79FE0]],
+    } --[[table: 149C64A8]],
     SkillB = {
       hit = 22,
       interval = 40,
       reset = 40
-    } --[[table: 0BF79A90]],
+    } --[[table: 149C62C8]],
     stun = {
       interval = 30
-    } --[[table: 0BF79BD0]],
+    } --[[table: 149C6138]],
     wait = {
       interval = 30
-    } --[[table: 0BF79EF0]]
-  } --[[table: 0BF79950]],
+    } --[[table: 149C60E8]]
+  } --[[table: 149C6048]],
   ["114"] = {
     attack = {
       hit = 23,
       interval = 30
-    } --[[table: 0C64DD30]],
+    } --[[table: 0A40F010]],
     death = {
       interval = 23
-    } --[[table: 0C64D970]],
+    } --[[table: 0A40EC00]],
     hit = {
       interval = 30
-    } --[[table: 0C64E2D0]],
+    } --[[table: 0A40EED0]],
     run = {
       interval = 19
-    } --[[table: 0C64E1E0]],
+    } --[[table: 0A40F380]],
     SkillA = {
       hit = 25,
       interval = 47,
       reset = 47
-    } --[[table: 0C64D920]],
+    } --[[table: 0A40ECF0]],
     SkillB = {
       hit = 22,
       interval = 40,
       reset = 40
-    } --[[table: 0C64E280]],
+    } --[[table: 0A40EBB0]],
     stun = {
       interval = 30
-    } --[[table: 0C64DB50]],
+    } --[[table: 0A40EF20]],
     wait = {
       interval = 30
-    } --[[table: 0C64DBF0]]
-  } --[[table: 0C64E230]],
+    } --[[table: 0A40EF70]]
+  } --[[table: 0A40F290]],
   ["115"] = {
     attack = {
       hit = 22,
       interval = 30
-    } --[[table: 17D56E38]],
+    } --[[table: 0A799060]],
     death = {
       interval = 23
-    } --[[table: 17D56988]],
+    } --[[table: 0A7991F0]],
     hit = {
       interval = 30
-    } --[[table: 17D56488]],
+    } --[[table: 0A799100]],
     run = {
       interval = 19
-    } --[[table: 17D56A78]],
+    } --[[table: 0A7996F0]],
     SkillA = {
       hit = 25,
       interval = 62,
       reset = 47
-    } --[[table: 17D56078]],
+    } --[[table: 0A799790]],
     SkillB = {
       hit = 22,
       interval = 40,
       reset = 40
-    } --[[table: 17D55E98]],
+    } --[[table: 0A799470]],
     stun = {
       interval = 30
-    } --[[table: 17D55CB8]],
+    } --[[table: 0A7997E0]],
     wait = {
       interval = 30
-    } --[[table: 17D54098]]
-  } --[[table: 17D54368]],
+    } --[[table: 0A799380]]
+  } --[[table: 0A799510]],
   ["116"] = {
     attack = {
       hit = 22,
       interval = 30
-    } --[[table: 0CCD0818]],
+    } --[[table: 15298F40]],
     death = {
       interval = 23
-    } --[[table: 0CCCE748]],
+    } --[[table: 15298C70]],
     hit = {
       interval = 30
-    } --[[table: 0CCCE1F8]],
+    } --[[table: 152989F0]],
     run = {
       interval = 19
-    } --[[table: 0CCD0868]],
+    } --[[table: 15298900]],
     SkillA = {
       hit = 25,
       interval = 62,
       reset = 47
-    } --[[table: 0CCCE018]],
+    } --[[table: 15298AE0]],
     SkillB = {
       hit = 22,
       interval = 40,
       reset = 40
-    } --[[table: 0CCCE658]],
+    } --[[table: 152987C0]],
     stun = {
       interval = 30
-    } --[[table: 0CCCDF78]],
+    } --[[table: 15298720]],
     wait = {
       interval = 30
-    } --[[table: 0CCCE518]]
-  } --[[table: 0CCCE6F8]],
+    } --[[table: 15298F90]]
+  } --[[table: 15298EF0]],
   ["117"] = {
     attack = {
       hit = 12,
       interval = 28,
       reset = 28
-    } --[[table: 17BA5628]],
+    } --[[table: 2062D000]],
     death = {
       interval = 20
-    } --[[table: 17BA5A88]],
+    } --[[table: 2062CBF0]],
     hit = {
       interval = 15
-    } --[[table: 17BA59E8]],
+    } --[[table: 2062C920]],
     run = {
       interval = 20
-    } --[[table: 17BA55D8]],
+    } --[[table: 2062CE20]],
     SkillA = {
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 17BA5538]],
+    } --[[table: 2062CA60]],
     SkillB = {
       hit = 35,
       interval = 50,
       reset = 50
-    } --[[table: 17BA58A8]],
+    } --[[table: 2062CF10]],
     stun = {
       interval = 38
-    } --[[table: 17BA5588]],
+    } --[[table: 2062D2D0]],
     wait = {
       interval = 30
-    } --[[table: 17BA5358]]
-  } --[[table: 17BA54E8]],
+    } --[[table: 2062CBA0]]
+  } --[[table: 2062CA10]],
   ["118"] = {
     attack = {
       hit = 12,
       interval = 28,
       reset = 28
-    } --[[table: 13CB1740]],
+    } --[[table: 16416CA8]],
     death = {
       interval = 20
-    } --[[table: 13CB16A0]],
+    } --[[table: 16416618]],
     hit = {
       interval = 15
-    } --[[table: 13CB1330]],
+    } --[[table: 16416C58]],
     run = {
       interval = 20
-    } --[[table: 13CB1470]],
+    } --[[table: 16416668]],
     SkillA = {
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 13CB10B0]],
+    } --[[table: 16416578]],
     SkillB = {
       hit = 35,
       interval = 50,
       reset = 50
-    } --[[table: 13CB1650]],
+    } --[[table: 16416938]],
     stun = {
       interval = 38
-    } --[[table: 13CB12E0]],
+    } --[[table: 16416988]],
     wait = {
       interval = 30
-    } --[[table: 13CB1290]]
-  } --[[table: 13CB1100]],
+    } --[[table: 16416A28]]
+  } --[[table: 16416B18]],
   ["119"] = {
     attack = {
       hit = 12,
       interval = 28,
       reset = 28
-    } --[[table: 1F034170]],
+    } --[[table: 14A15600]],
     death = {
       interval = 20
-    } --[[table: 1F0348A0]],
+    } --[[table: 14A152E0]],
     hit = {
       interval = 15
-    } --[[table: 1F034AD0]],
+    } --[[table: 14A15240]],
     run = {
       interval = 20
-    } --[[table: 1F034A80]],
+    } --[[table: 14A153D0]],
     SkillA = {
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 1F0346C0]],
+    } --[[table: 14A15330]],
     SkillB = {
       hit = 35,
       interval = 50,
       reset = 50
-    } --[[table: 1F034990]],
+    } --[[table: 14A155B0]],
     stun = {
       interval = 38
-    } --[[table: 1F0349E0]],
+    } --[[table: 14A157E0]],
     wait = {
       interval = 30
-    } --[[table: 1F034760]]
-  } --[[table: 1F0344E0]],
+    } --[[table: 14A158D0]]
+  } --[[table: 14A15560]],
   ["120"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 23E51178]],
+    } --[[table: 152A9110]],
     death = {
       interval = 18
-    } --[[table: 23E50DB8]],
+    } --[[table: 152A8FD0]],
     hit = {
       interval = 15
-    } --[[table: 23E513F8]],
+    } --[[table: 152A9390]],
     run = {
       interval = 19
-    } --[[table: 23E50E58]],
+    } --[[table: 152A9020]],
     SkillA = {
       hit = 30,
       interval = 60,
       reset = 60
-    } --[[table: 23E50CC8]],
+    } --[[table: 152A8C60]],
     SkillB = {
       hit = 29,
       interval = 52,
       reset = 50
-    } --[[table: 23E512B8]],
+    } --[[table: 152A8F30]],
     stun = {
       interval = 40
-    } --[[table: 23E50EF8]],
+    } --[[table: 152A8C10]],
     wait = {
       interval = 30
-    } --[[table: 23E50D18]]
-  } --[[table: 23E51308]],
+    } --[[table: 152A8DA0]]
+  } --[[table: 152A8D50]],
   ["121"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 20396C38]],
+    } --[[table: 0CB63758]],
     death = {
       interval = 18
-    } --[[table: 203963C8]],
+    } --[[table: 0CB637F8]],
     hit = {
       interval = 15
-    } --[[table: 20396378]],
+    } --[[table: 0CB63708]],
     run = {
       interval = 19
-    } --[[table: 20396918]],
+    } --[[table: 0CB63898]],
     SkillA = {
       hit = 30,
       interval = 60,
       reset = 60
-    } --[[table: 20396878]],
+    } --[[table: 0CB630C8]],
     SkillB = {
       hit = 29,
       interval = 52,
       reset = 50
-    } --[[table: 20396788]],
+    } --[[table: 0CB62F88]],
     stun = {
       interval = 40
-    } --[[table: 203968C8]],
+    } --[[table: 0CB636B8]],
     wait = {
       interval = 30
-    } --[[table: 20396A08]]
-  } --[[table: 20396418]],
+    } --[[table: 0CB62F38]]
+  } --[[table: 0CB63438]],
   ["122"] = {
     attack = {
       hit = 14,
       interval = 30
-    } --[[table: 0B965A10]],
+    } --[[table: 0A79C940]],
     death = {
       interval = 18
-    } --[[table: 0B965740]],
+    } --[[table: 0A79C5D0]],
     hit = {
       interval = 15
-    } --[[table: 0B9656F0]],
+    } --[[table: 0A79C1C0]],
     run = {
       interval = 19
-    } --[[table: 0B965970]],
+    } --[[table: 0A79CA80]],
     SkillA = {
       hit = 30,
       interval = 60,
       reset = 60
-    } --[[table: 0B9658D0]],
+    } --[[table: 0A79C8A0]],
     SkillB = {
       hit = 29,
       interval = 52,
       reset = 50
-    } --[[table: 0B965AB0]],
+    } --[[table: 0A79C3F0]],
     stun = {
       interval = 40
-    } --[[table: 0B965100]],
+    } --[[table: 0A79CA30]],
     wait = {
       interval = 30
-    } --[[table: 0B9659C0]]
-  } --[[table: 0B965600]],
+    } --[[table: 0A79C300]]
+  } --[[table: 0A79C7B0]],
   ["123"] = {
     wait = {
       interval = 40
-    } --[[table: 14007888]]
-  } --[[table: 140073D8]],
+    } --[[table: 1673EA30]]
+  } --[[table: 1673E2B0]],
   ["124"] = {
     wait = {
       interval = 40
-    } --[[table: 17D6A898]]
-  } --[[table: 17D6A5C8]],
+    } --[[table: 0A91B7C8]]
+  } --[[table: 0A91BD18]],
   ["125"] = {
     wait = {
       interval = 40
-    } --[[table: 0BF8ACA0]]
-  } --[[table: 0BF8A520]],
+    } --[[table: 1FCB52A8]]
+  } --[[table: 1FCB4EE8]],
   ["126"] = {
     wait = {
       interval = 40
-    } --[[table: 17E83DE0]]
-  } --[[table: 17E83610]],
+    } --[[table: 1633BBA8]]
+  } --[[table: 1633B568]],
   ["127"] = {
     Animation1 = {
       hit1 = 14,
       interval = 30,
       over = 29
-    } --[[table: 178BBBE8]],
+    } --[[table: 17A862F8]],
     attack = {
       fire = 15,
       interval = 30
-    } --[[table: 178A6E78]],
+    } --[[table: 17A73A68]],
     death = {
       interval = 20
-    } --[[table: 178A6C48]],
+    } --[[table: 17A73E78]],
     hit = {
       interval = 18
-    } --[[table: 178A6BF8]],
+    } --[[table: 17A6C498]],
     SkillA = {
       hit = 82,
       interval = 148
-    } --[[table: 178A6B58]],
+    } --[[table: 17A73D88]],
     SkillB = {
       interval = 75,
       showEffect = 55
-    } --[[table: 178A70A8]],
+    } --[[table: 17A73978]],
     stun = {
       interval = 38
-    } --[[table: 178A7058]],
+    } --[[table: 17A73DD8]],
     wait = {
       interval = 60
-    } --[[table: 178A6BA8]]
-  } --[[table: 178A6D88]],
+    } --[[table: 17A6C948]]
+  } --[[table: 17A6C8A8]],
   ["128"] = {
     Animation1 = {
       hit1 = 5,
       hit2 = 32,
       interval = 80,
       over = 79
-    } --[[table: 0BDA1170]],
+    } --[[table: 09C55520]],
     attack = {
       hit = 22,
       interval = 50
-    } --[[table: 0BD86690]],
+    } --[[table: 09C3FEA0]],
     death = {
       interval = 45
-    } --[[table: 0BD86960]],
+    } --[[table: 09C400D0]],
     hit = {
       interval = 20
-    } --[[table: 0BD86A00]],
+    } --[[table: 09C3FB80]],
     run = {
       interval = 40
-    } --[[table: 0BD86A50]],
+    } --[[table: 09C3FE00]],
     SkillA = {
       interval = 75,
       showEffect = 40
-    } --[[table: 0BD86320]],
+    } --[[table: 09C3FD60]],
     SkillB = {
       hit = 38,
       interval = 72,
       reset = 0
-    } --[[table: 0BD86B90]],
+    } --[[table: 09C3F9F0]],
     stun = {
       interval = 40
-    } --[[table: 0BD865F0]],
+    } --[[table: 09C3F8B0]],
     wait = {
       interval = 40
-    } --[[table: 0BD86C80]]
-  } --[[table: 0BD86B40]],
+    } --[[table: 09C3F950]]
+  } --[[table: 09C40030]],
   ["129"] = {
     Animation1 = {
       hit1 = 6,
       interval = 22,
       over = 21
-    } --[[table: 25EC75A0]],
+    } --[[table: 266D65D8]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 25ED4840]],
+    } --[[table: 266D2AC8]],
     death = {
       interval = 44
-    } --[[table: 25ED4AC0]],
+    } --[[table: 266CB728]],
     hit = {
       interval = 18
-    } --[[table: 25ED4660]],
+    } --[[table: 266CC038]],
     run = {
       interval = 20
-    } --[[table: 25ED4BB0]],
+    } --[[table: 266CB818]],
     SkillA = {
       interval = 47,
       showEffect = 29
-    } --[[table: 25ED4D90]],
+    } --[[table: 266CB778]],
     SkillB = {
       hit = 62,
       interval = 85
-    } --[[table: 25ED4750]],
+    } --[[table: 266CB868]],
     stun = {
       interval = 30
-    } --[[table: 25ED4C50]],
+    } --[[table: 266CB9A8]],
     wait = {
       interval = 30
-    } --[[table: 25ED4ED0]]
-  } --[[table: 25ED4700]],
+    } --[[table: 266CBF98]]
+  } --[[table: 266CBE08]],
   ["130"] = {
     Animation1 = {
       hit1 = 6,
       interval = 47,
       over = 45
-    } --[[table: 13563D30]],
+    } --[[table: 0B6C0E30]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 1355E3D0]],
+    } --[[table: 0B6BAEE0]],
     death = {
       interval = 44
-    } --[[table: 1355DA20]],
+    } --[[table: 0B6BAE90]],
     hit = {
       interval = 18
-    } --[[table: 1355D890]],
+    } --[[table: 0B6BB200]],
     run = {
       interval = 20
-    } --[[table: 1355DC00]],
+    } --[[table: 0B6BB340]],
     SkillA = {
       interval = 45,
       showEffect = 29
-    } --[[table: 1355D930]],
+    } --[[table: 0B6BAB20]],
     SkillB = {
       hit = 62,
       interval = 85
-    } --[[table: 1355D570]],
+    } --[[table: 0B6BB430]],
     stun = {
       interval = 30
-    } --[[table: 1355DC50]],
+    } --[[table: 0B6BACB0]],
     wait = {
       interval = 30
-    } --[[table: 1355D520]]
-  } --[[table: 1355DA70]],
+    } --[[table: 0B6BB160]]
+  } --[[table: 0B6BADF0]],
   ["131"] = {
     Animation1 = {
       hit1 = 16,
       interval = 31,
       over = 30
-    } --[[table: 17AA9E30]],
+    } --[[table: 15EBC370]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 17AB3F20]],
+    } --[[table: 15EB0BB0]],
     death = {
       interval = 44
-    } --[[table: 17AB4150]],
+    } --[[table: 15EB0ED0]],
     hit = {
       interval = 18
-    } --[[table: 17AB46F0]],
+    } --[[table: 15EB0A20]],
     run = {
       interval = 20
-    } --[[table: 17AB4240]],
+    } --[[table: 15EB0AC0]],
     SkillA = {
       interval = 45,
       showEffect = 29
-    } --[[table: 17AB46A0]],
+    } --[[table: 15EB0E30]],
     SkillB = {
       hit = 63,
       interval = 85
-    } --[[table: 17AB41F0]],
+    } --[[table: 15EB0D90]],
     stun = {
       interval = 30
-    } --[[table: 17AB48D0]],
+    } --[[table: 15EB1240]],
     wait = {
       interval = 30
-    } --[[table: 17AB4830]]
-  } --[[table: 17AB4380]],
-  ["1036"] = {} --[[table: 13FE5718]],
+    } --[[table: 15EB0B10]]
+  } --[[table: 15EB11F0]],
+  ["1036"] = {} --[[table: 0A39CA78]],
   ["1050"] = {
     attack = {
       fire = 13,
       interval = 28
-    } --[[table: 1FFDF868]],
+    } --[[table: 1FCA3378]],
     death = {
       interval = 30
-    } --[[table: 1FFDEF58]],
+    } --[[table: 1FCA3BE8]],
     hit = {
       interval = 28
-    } --[[table: 1FFFBC48]],
+    } --[[table: 1FCA3738]],
     run = {
       interval = 24
-    } --[[table: 1FFDF2C8]],
+    } --[[table: 1FCA3CD8]],
     SkillA = {
       hit = 34,
       interval = 40,
       reset = 40
-    } --[[table: 1FFFBEC8]],
+    } --[[table: 1FCA3AF8]],
     SkillB = {
       hit = 24,
       interval = 50,
       reset = 50
-    } --[[table: 1FFFBF68]],
+    } --[[table: 1FCA36E8]],
     stun = {
       interval = 30
-    } --[[table: 1FFFBBA8]],
+    } --[[table: 1FCA3968]],
     wait = {
       interval = 30
-    } --[[table: 1FFFBE28]]
-  } --[[table: 1FFFBB08]],
+    } --[[table: 1FCA39B8]]
+  } --[[table: 1FCA3828]],
   ["1051"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 0BC91328]],
+    } --[[table: 1493C6A8]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 0BC91378]],
+    } --[[table: 1493C7E8]],
     death = {
       interval = 19
-    } --[[table: 0BC915F8]],
+    } --[[table: 1493C428]],
     hit = {
       interval = 11
-    } --[[table: 0BC91558]],
+    } --[[table: 1493C2E8]],
     run = {
       interval = 16
-    } --[[table: 0BC91738]],
+    } --[[table: 1493C6F8]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 0BC91C88]],
+    } --[[table: 1493C018]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -3803,102 +3803,102 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 0BC915A8]],
+    } --[[table: 1493C608]],
     stun = {
       interval = 36
-    } --[[table: 0BC91C38]],
+    } --[[table: 1493BF78]],
     wait = {
       interval = 30
-    } --[[table: 0BC91508]]
-  } --[[table: 0BC919B8]],
+    } --[[table: 1493C5B8]]
+  } --[[table: 1493C8D8]],
   ["1052"] = {
     Animation1 = {
       hit1 = 6,
       interval = 22,
       over = 21
-    } --[[table: 206D7D50]],
+    } --[[table: 14978EB0]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 206D5050]],
+    } --[[table: 14975E90]],
     death = {
       interval = 44
-    } --[[table: 206D1900]],
+    } --[[table: 149755D0]],
     hit = {
       interval = 18
-    } --[[table: 206D0DC0]],
+    } --[[table: 14975440]],
     run = {
       interval = 20
-    } --[[table: 206D19F0]],
+    } --[[table: 14975D50]],
     SkillA = {
       interval = 45,
       showEffect = 29
-    } --[[table: 206D18B0]],
+    } --[[table: 14975580]],
     SkillB = {
       hit = 62,
       interval = 85
-    } --[[table: 206D0D70]],
+    } --[[table: 14975AD0]],
     stun = {
       interval = 30
-    } --[[table: 206D1680]],
+    } --[[table: 14975940]],
     wait = {
       interval = 30
-    } --[[table: 206C42A0]]
-  } --[[table: 206C4020]],
+    } --[[table: 149753F0]]
+  } --[[table: 14975850]],
   ["1053"] = {
     Animation1 = {
       hit1 = 6,
       interval = 22,
       over = 21
-    } --[[table: 1F02EEF0]],
+    } --[[table: 0B11D4F8]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 1F03B240]],
+    } --[[table: 0B109098]],
     death = {
       interval = 44
-    } --[[table: 1F03B510]],
+    } --[[table: 0B108F08]],
     hit = {
       interval = 18
-    } --[[table: 1F03B100]],
+    } --[[table: 0B109368]],
     run = {
       interval = 20
-    } --[[table: 1F03B330]],
+    } --[[table: 0B109638]],
     SkillA = {
       interval = 45,
       showEffect = 29
-    } --[[table: 1F03B420]],
+    } --[[table: 0B109048]],
     SkillB = {
       hit = 62,
       interval = 85
-    } --[[table: 1F03B380]],
+    } --[[table: 0B1093B8]],
     stun = {
       interval = 30
-    } --[[table: 1F03B010]],
+    } --[[table: 0B1095E8]],
     wait = {
       interval = 30
-    } --[[table: 1F03B2E0]]
-  } --[[table: 1F03B470]],
+    } --[[table: 0B109228]]
+  } --[[table: 0B109458]],
   ["1055"] = {
     attack = {
       hit = 8,
       interval = 14
-    } --[[table: 1C7143E0]],
+    } --[[table: 0C04B9B0]],
     death = {
       interval = 12
-    } --[[table: 1C713C60]],
+    } --[[table: 0C04B690]],
     hit = {
       interval = 12
-    } --[[table: 1C714110]],
+    } --[[table: 0C04B4B0]],
     run = {
       interval = 20
-    } --[[table: 1C713D50]],
+    } --[[table: 0C04B780]],
     sing = {
       interval = 33,
       moveToAndScale = 0,
       reset = 33,
       slowly = 20
-    } --[[table: 1C714480]],
+    } --[[table: 0C04B500]],
     SkillA = {
       clearColorLayer = 41,
       createColorLayer = 0,
@@ -3906,7 +3906,7 @@ return
       interval = 41,
       reset = 41,
       slowly = 40
-    } --[[table: 1C713DF0]],
+    } --[[table: 0C04BC80]],
     SkillB = {
       clearColorLayer = 95,
       createColorLayer = 5,
@@ -3916,188 +3916,188 @@ return
       reset = 95,
       shake = 73,
       slowly = 87
-    } --[[table: 1C714200]],
+    } --[[table: 0C04B820]],
     stun = {
       interval = 40
-    } --[[table: 1C714390]],
+    } --[[table: 0C04BA50]],
     wait = {
       interval = 30
-    } --[[table: 1C7141B0]]
-  } --[[table: 1C7144D0]],
+    } --[[table: 0C04BCD0]]
+  } --[[table: 0C04B6E0]],
   ["1056"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 0D207020]],
+    } --[[table: 0C7A6968]],
     death = {
       interval = 46
-    } --[[table: 0D206D00]],
+    } --[[table: 0C7A6738]],
     hit = {
       interval = 17
-    } --[[table: 0D206CB0]],
+    } --[[table: 0C7A6418]],
     run = {
       interval = 24
-    } --[[table: 0D206F30]],
+    } --[[table: 0C7A6558]],
     SkillA = {
       hit = 45,
       interval = 55
-    } --[[table: 0D206F80]],
+    } --[[table: 0C7A6468]],
     SkillB = {
       hit = 34,
       interval = 66
-    } --[[table: 0D206C60]],
+    } --[[table: 0C7A65A8]],
     stun = {
       interval = 25
-    } --[[table: 0D206FD0]],
+    } --[[table: 0C7A6B48]],
     wait = {
       interval = 30
-    } --[[table: 0D206B70]]
-  } --[[table: 0D206DF0]],
+    } --[[table: 0C7A6698]]
+  } --[[table: 0C7A6648]],
   ["1057"] = {
     attack = {
       fire = 26,
       interval = 35
-    } --[[table: 1FFF0AC8]],
+    } --[[table: 17A89958]],
     death = {
       interval = 17
-    } --[[table: 1FFF0E38]],
+    } --[[table: 17A89D18]],
     hit = {
       interval = 13
-    } --[[table: 1FFF0BB8]],
+    } --[[table: 17A89C28]],
     run = {
       interval = 24
-    } --[[table: 1FFF0ED8]],
+    } --[[table: 17A89778]],
     SkillA = {
       clearColorLayer = 50,
       createColorLayer = 18,
       hit = 38,
       interval = 50,
       reset = 50
-    } --[[table: 1FFF0668]],
+    } --[[table: 17A89B38]],
     SkillB = {
       hit = 24,
       interval = 34,
       reset = 34
-    } --[[table: 1FFF08E8]],
+    } --[[table: 17A89868]],
     stun = {
       interval = 40
-    } --[[table: 1FFF0DE8]],
+    } --[[table: 17A89F98]],
     wait = {
       interval = 38
-    } --[[table: 1FFF0A28]]
-  } --[[table: 1FFF0898]],
+    } --[[table: 17A89AE8]]
+  } --[[table: 17A89EA8]],
   ["1058"] = {
     attack = {
       hit = 14,
       interval = 31
-    } --[[table: 0B036200]],
+    } --[[table: 16428138]],
     death = {
       interval = 38
-    } --[[table: 0B0357B0]],
+    } --[[table: 164285E8]],
     hit = {
       interval = 18
-    } --[[table: 0B0356C0]],
+    } --[[table: 16428598]],
     run = {
       interval = 25
-    } --[[table: 0B035C10]],
+    } --[[table: 16428278]],
     SkillA = {
       hit = 38,
       interval = 57
-    } --[[table: 0B035710]],
+    } --[[table: 16428458]],
     SkillB = {
       hit = 78,
       interval = 78
-    } --[[table: 0B035170]],
+    } --[[table: 16427F58]],
     stun = {
       interval = 40
-    } --[[table: 0B035120]],
+    } --[[table: 16427D28]],
     wait = {
       interval = 30
-    } --[[table: 0B035530]]
-  } --[[table: 0B035490]],
+    } --[[table: 164281D8]]
+  } --[[table: 16427D78]],
   ["1059"] = {
     attack = {
       hit = 21,
       interval = 35
-    } --[[table: 0CE340F8]],
+    } --[[table: 2009DA20]],
     death = {
       interval = 46
-    } --[[table: 0CE34008]],
+    } --[[table: 2009E2E0]],
     hit = {
       interval = 18
-    } --[[table: 0CE33A18]],
+    } --[[table: 2009DE80]],
     run = {
       interval = 24
-    } --[[table: 0CE33CE8]],
+    } --[[table: 2009E0B0]],
     SkillA = {
       hit = 35,
       interval = 51
-    } --[[table: 0CE33C98]],
+    } --[[table: 2009DF70]],
     SkillB = {
       hit = 20,
       interval = 40
-    } --[[table: 0CE340A8]],
+    } --[[table: 2009DF20]],
     stun = {
       interval = 25
-    } --[[table: 0CE33DD8]],
+    } --[[table: 2009E290]],
     wait = {
       interval = 30
-    } --[[table: 0CE33C48]]
-  } --[[table: 0CE33BF8]],
+    } --[[table: 2009DB60]]
+  } --[[table: 2009D980]],
   ["1060"] = {
     attack = {
       hit = 21,
       interval = 35
-    } --[[table: 0B90E8B8]],
+    } --[[table: 208AE870]],
     death = {
       interval = 46
-    } --[[table: 0B90EE08]],
+    } --[[table: 208AE910]],
     hit = {
       interval = 18
-    } --[[table: 0B90ECC8]],
+    } --[[table: 208AE780]],
     run = {
       interval = 24
-    } --[[table: 0B90EB88]],
+    } --[[table: 208AE6E0]],
     SkillA = {
       hit = 35,
       interval = 51
-    } --[[table: 0B90EBD8]],
+    } --[[table: 208AE7D0]],
     SkillB = {
       hit = 20,
       interval = 40
-    } --[[table: 0B90E818]],
+    } --[[table: 208AE5A0]],
     stun = {
       interval = 25
-    } --[[table: 0B90EC78]],
+    } --[[table: 208AE410]],
     wait = {
       interval = 30
-    } --[[table: 0B90E728]]
-  } --[[table: 0B90F0D8]],
+    } --[[table: 208AE640]]
+  } --[[table: 208AE3C0]],
   ["1061"] = {
     attack = {
       hit = 26,
       interval = 46
-    } --[[table: 202BF238]],
+    } --[[table: 1D4CF608]],
     attack2 = {
       hit = 9,
       interval = 25
-    } --[[table: 202BEA68]],
+    } --[[table: 1D4CF568]],
     death = {
       interval = 19
-    } --[[table: 202BEBA8]],
+    } --[[table: 1D4CF388]],
     hit = {
       interval = 11
-    } --[[table: 202BEF68]],
+    } --[[table: 1D4CF8D8]],
     run = {
       interval = 16
-    } --[[table: 202BED88]],
+    } --[[table: 1D4CF428]],
     SkillA = {
       clearColorLayer = 35,
       createColorLayer = 0,
       hit = 22,
       interval = 35,
       reset = 35
-    } --[[table: 202BF288]],
+    } --[[table: 1D4CF338]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 0,
@@ -4105,223 +4105,223 @@ return
       interval = 55,
       reset = 55,
       slowly = 55
-    } --[[table: 202BEBF8]],
+    } --[[table: 1D4CF5B8]],
     stun = {
       interval = 36
-    } --[[table: 202BEFB8]],
+    } --[[table: 1D4CF2E8]],
     wait = {
       interval = 30
-    } --[[table: 202BF058]]
-  } --[[table: 202BF2D8]],
+    } --[[table: 1D4CF7E8]]
+  } --[[table: 1D4CF298]],
   ["1062"] = {
     attack = {
       fire = 22,
       interval = 40
-    } --[[table: 23E4E018]],
+    } --[[table: 241CA270]],
     death = {
       interval = 22
-    } --[[table: 23E478F8]],
+    } --[[table: 241C99B0]],
     hit = {
       interval = 19
-    } --[[table: 23E475D8]],
+    } --[[table: 241C9D20]],
     run = {
       interval = 20
-    } --[[table: 23E4D078]],
+    } --[[table: 241CA1D0]],
     SkillA = {
       clearColorLayer = 55,
       createColorLayer = 0,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 23E47858]],
+    } --[[table: 241C9AA0]],
     SkillB = {
       clearColorLayer = 55,
       createColorLayer = 10,
       hit = 37,
       interval = 55,
       reset = 55
-    } --[[table: 23E47538]],
+    } --[[table: 241CA180]],
     stun = {
       interval = 24
-    } --[[table: 23E47628]],
+    } --[[table: 241C9140]],
     wait = {
       interval = 24
-    } --[[table: 23E47DF8]]
-  } --[[table: 23E47A88]],
+    } --[[table: 241C8F60]]
+  } --[[table: 241C95A0]],
   ["1063"] = {
     attack = {
       hit = 21,
       interval = 37
-    } --[[table: 0BB098E0]],
+    } --[[table: 2061DF10]],
     death = {
       interval = 35
-    } --[[table: 0BB09890]],
+    } --[[table: 2061E230]],
     hit = {
       interval = 18
-    } --[[table: 0BB09E80]],
+    } --[[table: 2061E190]],
     run = {
       interval = 24
-    } --[[table: 0BB09CA0]],
+    } --[[table: 2061DEC0]],
     SkillA = {
       hit = 33,
       interval = 85,
       reset = 85
-    } --[[table: 0BB09D40]],
+    } --[[table: 2061DE70]],
     SkillB = {
       hit = 53,
       interval = 84,
       reset = 84
-    } --[[table: 0BB09110]],
+    } --[[table: 2061E0F0]],
     stun = {
       interval = 30
-    } --[[table: 0BB090C0]],
+    } --[[table: 2061DDD0]],
     wait = {
       interval = 30
-    } --[[table: 0BB08DF0]]
-  } --[[table: 0BB08D50]],
+    } --[[table: 2061E0A0]]
+  } --[[table: 2061D920]],
   ["1064"] = {
     attack = {
       hit = 14,
       interval = 31
-    } --[[table: 184913D8]],
+    } --[[table: 171CC870]],
     death = {
       interval = 38
-    } --[[table: 18490C58]],
+    } --[[table: 171CC550]],
     hit = {
       interval = 18
-    } --[[table: 18490E88]],
+    } --[[table: 171CCAF0]],
     run = {
       interval = 25
-    } --[[table: 18491248]],
+    } --[[table: 171CC5A0]],
     SkillA = {
       hit = 38,
       interval = 57
-    } --[[table: 18490A78]],
+    } --[[table: 171CCC80]],
     SkillB = {
       hit = 78,
       interval = 78
-    } --[[table: 18491298]],
+    } --[[table: 171CC960]],
     stun = {
       interval = 40
-    } --[[table: 184912E8]],
+    } --[[table: 171CC690]],
     wait = {
       interval = 30
-    } --[[table: 184911A8]]
-  } --[[table: 18491018]],
+    } --[[table: 171CCCD0]]
+  } --[[table: 171CCB90]],
   ["1065"] = {
     attack = {
       hit = 15,
       interval = 35
-    } --[[table: 1C709850]],
+    } --[[table: 1C922458]],
     death = {
       interval = 50
-    } --[[table: 1C7099E0]],
+    } --[[table: 1C922688]],
     hit = {
       interval = 19
-    } --[[table: 1C7097B0]],
+    } --[[table: 1C922098]],
     run = {
       interval = 24
-    } --[[table: 1C709350]],
+    } --[[table: 1C922368]],
     SkillA = {
       hit = 8,
       interval = 55,
       reset = 0
-    } --[[table: 1C709300]],
+    } --[[table: 1C9222C8]],
     SkillB = {
       hit = 15,
       interval = 80,
       reset = 0
-    } --[[table: 1C709760]],
+    } --[[table: 1C9227C8]],
     stun = {
       interval = 24
-    } --[[table: 1C709210]],
+    } --[[table: 1C922408]],
     wait = {
       interval = 24
-    } --[[table: 1C709170]]
-  } --[[table: 1C709580]],
+    } --[[table: 1C922818]]
+  } --[[table: 1C922958]],
   ["1066"] = {
     Animation1 = {
       hit1 = 6,
       interval = 22,
       over = 21
-    } --[[table: 14010C08]],
+    } --[[table: 0CE5CE98]],
     attack = {
       fire = 13,
       interval = 32
-    } --[[table: 1400B988]],
+    } --[[table: 0CE59BA8]],
     death = {
       interval = 44
-    } --[[table: 1400BE88]],
+    } --[[table: 0CE59928]],
     hit = {
       interval = 18
-    } --[[table: 1400BB68]],
+    } --[[table: 0CE59518]],
     run = {
       interval = 20
-    } --[[table: 1400BC08]],
+    } --[[table: 0CE594C8]],
     SkillA = {
       interval = 45,
       showEffect = 29
-    } --[[table: 1400B708]],
+    } --[[table: 0CE597E8]],
     SkillB = {
       hit = 62,
       interval = 85
-    } --[[table: 1400BBB8]],
+    } --[[table: 0CE593D8]],
     stun = {
       interval = 30
-    } --[[table: 1400AF88]],
+    } --[[table: 0CE59B58]],
     wait = {
       interval = 30
-    } --[[table: 1400AC68]]
-  } --[[table: 1400AFD8]],
+    } --[[table: 0CE59978]]
+  } --[[table: 0CE599C8]],
   ["1067"] = {
     attack = {
       hit = 14,
       interval = 31
-    } --[[table: 0B038960]],
+    } --[[table: 2A438C80]],
     death = {
       interval = 38
-    } --[[table: 0B038500]],
+    } --[[table: 2A438FF0]],
     hit = {
       interval = 18
-    } --[[table: 0B038370]],
+    } --[[table: 2A438910]],
     run = {
       interval = 25
-    } --[[table: 0B038730]],
+    } --[[table: 2A438AF0]],
     SkillA = {
       hit = 38,
       interval = 57
-    } --[[table: 0B038690]],
+    } --[[table: 2A438CD0]],
     SkillB = {
       hit = 78,
       interval = 78
-    } --[[table: 0B038820]],
+    } --[[table: 2A438DC0]],
     stun = {
       interval = 40
-    } --[[table: 0B038910]],
+    } --[[table: 2A4388C0]],
     wait = {
       interval = 30
-    } --[[table: 0B0385F0]]
-  } --[[table: 0B0384B0]],
+    } --[[table: 2A438FA0]]
+  } --[[table: 2A438E10]],
   ["1068"] = {
     attack = {
       hit = 8,
       interval = 14
-    } --[[table: 163AA128]],
+    } --[[table: 14A24150]],
     death = {
       interval = 12
-    } --[[table: 163AA768]],
+    } --[[table: 14A241F0]],
     hit = {
       interval = 12
-    } --[[table: 163AA858]],
+    } --[[table: 14A23980]],
     run = {
       interval = 20
-    } --[[table: 163AA2B8]],
+    } --[[table: 14A24100]],
     sing = {
       interval = 33,
       moveToAndScale = 0,
       reset = 33,
       slowly = 20
-    } --[[table: 163AA5D8]],
+    } --[[table: 14A241A0]],
     SkillA = {
       clearColorLayer = 41,
       createColorLayer = 0,
@@ -4329,7 +4329,7 @@ return
       interval = 41,
       reset = 41,
       slowly = 40
-    } --[[table: 163AA538]],
+    } --[[table: 14A240B0]],
     SkillB = {
       clearColorLayer = 95,
       createColorLayer = 5,
@@ -4339,212 +4339,212 @@ return
       reset = 95,
       shake = 73,
       slowly = 87
-    } --[[table: 163AA448]],
+    } --[[table: 14A24060]],
     stun = {
       interval = 40
-    } --[[table: 163AA218]],
+    } --[[table: 14A23FC0]],
     wait = {
       interval = 30
-    } --[[table: 163AA1C8]]
-  } --[[table: 163AA268]],
+    } --[[table: 14A23F70]]
+  } --[[table: 14A238E0]],
   ["1069"] = {
     attack = {
       fire = 26,
       interval = 30
-    } --[[table: 1C616388]],
+    } --[[table: 208ADD80]],
     death = {
       interval = 17
-    } --[[table: 1C616068]],
+    } --[[table: 208ADD30]],
     hit = {
       interval = 14
-    } --[[table: 1C6161F8]],
+    } --[[table: 208ADA60]],
     run = {
       interval = 26
-    } --[[table: 1C616748]],
+    } --[[table: 208AD970]],
     SkillA = {
       clearColorLayer = 50,
       createColorLayer = 18,
       hit = 38,
       interval = 50,
       reset = 50
-    } --[[table: 1C6166A8]],
+    } --[[table: 208AE000]],
     SkillB = {
       hit = 24,
       interval = 34,
       reset = 34
-    } --[[table: 1C6165B8]],
+    } --[[table: 208ADB00]],
     stun = {
       interval = 60
-    } --[[table: 1C615FC8]],
+    } --[[table: 208AD8D0]],
     wait = {
       interval = 38
-    } --[[table: 1C616478]]
-  } --[[table: 1C616888]],
+    } --[[table: 208ADFB0]]
+  } --[[table: 208AE190]],
   ["1070"] = {
     attack = {
       hit = 18,
       interval = 34
-    } --[[table: 1F197FC0]],
+    } --[[table: 09C4AA30]],
     death = {
       interval = 46
-    } --[[table: 1F198010]],
+    } --[[table: 09C4AAD0]],
     hit = {
       interval = 17
-    } --[[table: 1F197CA0]],
+    } --[[table: 09C4A670]],
     run = {
       interval = 24
-    } --[[table: 1F198470]],
+    } --[[table: 09C4A440]],
     SkillA = {
       hit = 45,
       interval = 55
-    } --[[table: 1F198330]],
+    } --[[table: 09C4A170]],
     SkillB = {
       hit = 34,
       interval = 66
-    } --[[table: 1F197D40]],
+    } --[[table: 09C4A8F0]],
     stun = {
       interval = 25
-    } --[[table: 1F1982E0]],
+    } --[[table: 09C4A8A0]],
     wait = {
       interval = 30
-    } --[[table: 1F197DE0]]
-  } --[[table: 1F198380]],
+    } --[[table: 09C4A9E0]]
+  } --[[table: 09C4A120]],
   ["1071"] = {
     attack = {
       hit = 14,
       interval = 31
-    } --[[table: 1FC81620]],
+    } --[[table: 152947B0]],
     death = {
       interval = 38
-    } --[[table: 1FC81580]],
+    } --[[table: 152948F0]],
     hit = {
       interval = 18
-    } --[[table: 1FC813F0]],
+    } --[[table: 15294710]],
     run = {
       interval = 25
-    } --[[table: 1FC81300]],
+    } --[[table: 15294760]],
     SkillA = {
       hit = 38,
       interval = 57
-    } --[[table: 1FC816C0]],
+    } --[[table: 15294300]],
     SkillB = {
       hit = 78,
       interval = 78
-    } --[[table: 1FC818F0]],
+    } --[[table: 152942B0]],
     stun = {
       interval = 40
-    } --[[table: 1FC81440]],
+    } --[[table: 15294AD0]],
     wait = {
       interval = 30
-    } --[[table: 1FC819E0]]
-  } --[[table: 1FC81120]],
+    } --[[table: 15291470]]
+  } --[[table: 152913D0]],
   ["10011"] = {
     attack = {
       hit = 24,
       interval = 51
-    } --[[table: 1363A700]],
+    } --[[table: 17C7ED50]],
     death = {
       interval = 20
-    } --[[table: 1363AE80]],
+    } --[[table: 17C7E940]],
     hit = {
       interval = 16
-    } --[[table: 1363AE30]],
+    } --[[table: 17C789F0]],
     run = {
       interval = 20
-    } --[[table: 1363A520]],
+    } --[[table: 17C7E6C0]],
     SkillA = {
       hit = 48,
       interval = 74,
       reset = 74
-    } --[[table: 1363AA20]],
+    } --[[table: 17C78CC0]],
     SkillB = {
       hit = 83,
       interval = 116,
       reset = 116
-    } --[[table: 1363A930]],
+    } --[[table: 17C789A0]],
     stun = {
       interval = 24
-    } --[[table: 1363A7F0]],
+    } --[[table: 17C79300]],
     wait = {
       interval = 24
-    } --[[table: 1363ADE0]]
-  } --[[table: 1363A7A0]],
+    } --[[table: 17C79120]]
+  } --[[table: 17C78FE0]],
   ["10012"] = {
     attack = {
       hit = 24,
       interval = 51
-    } --[[table: 1FFE1A28]],
+    } --[[table: 144803A0]],
     death = {
       interval = 20
-    } --[[table: 1FFE1938]],
+    } --[[table: 14480490]],
     hit = {
       interval = 16
-    } --[[table: 1FFE1E88]],
+    } --[[table: 14480120]],
     run = {
       interval = 20
-    } --[[table: 1FFE1528]],
+    } --[[table: 144804E0]],
     SkillA = {
       hit = 48,
       interval = 74,
       reset = 74
-    } --[[table: 1FFE1ED8]],
+    } --[[table: 144808A0]],
     SkillB = {
       hit = 83,
       interval = 116,
       reset = 116
-    } --[[table: 1FFE1758]],
+    } --[[table: 14480530]],
     stun = {
       interval = 24
-    } --[[table: 1FFE17F8]],
+    } --[[table: 14480670]],
     wait = {
       interval = 24
-    } --[[table: 1FFE1B68]]
-  } --[[table: 1FFE17A8]],
+    } --[[table: 14480A30]]
+  } --[[table: 14480350]],
   ["10013"] = {
     attack = {
       hit = 24,
       interval = 51
-    } --[[table: 17B9D888]],
+    } --[[table: 200B2290]],
     death = {
       interval = 20
-    } --[[table: 17B9D798]],
+    } --[[table: 200B1E30]],
     hit = {
       interval = 16
-    } --[[table: 17B9D158]],
+    } --[[table: 200B21F0]],
     run = {
       interval = 20
-    } --[[table: 17B9D068]],
+    } --[[table: 200B1E80]],
     SkillA = {
       hit = 48,
       interval = 74,
       reset = 74
-    } --[[table: 17B9D748]],
+    } --[[table: 200B1980]],
     SkillB = {
       hit = 83,
       interval = 116,
       reset = 116
-    } --[[table: 17B9D658]],
+    } --[[table: 200B1D40]],
     stun = {
       interval = 24
-    } --[[table: 17B9D6F8]],
+    } --[[table: 200B1AC0]],
     wait = {
       interval = 24
-    } --[[table: 17B9CF28]]
-  } --[[table: 17B9D338]],
+    } --[[table: 200AC7F0]]
+  } --[[table: 200AC110]],
   ["10021"] = {
     attack = {
       hit = 9,
       interval = 17
-    } --[[table: 28532E68]],
+    } --[[table: 20455280]],
     death = {
       interval = 12
-    } --[[table: 28532D28]],
+    } --[[table: 20454D80]],
     hit = {
       interval = 12
-    } --[[table: 28532378]],
+    } --[[table: 20454B50]],
     run = {
       interval = 12
-    } --[[table: 28533548]],
+    } --[[table: 204549C0]],
     SkillA = {
       clearColorLayer = 46,
       createColorLayer = 0,
@@ -4552,7 +4552,7 @@ return
       interval = 47,
       reset = 47,
       slowly = 47
-    } --[[table: 28532FF8]],
+    } --[[table: 20454920]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -4562,28 +4562,28 @@ return
       reset = 0,
       shake = 58,
       slowly = 80
-    } --[[table: 28532698]],
+    } --[[table: 20454D30]],
     stun = {
       interval = 32
-    } --[[table: 28532B48]],
+    } --[[table: 20455050]],
     wait = {
       interval = 28
-    } --[[table: 28532CD8]]
-  } --[[table: 285325A8]],
+    } --[[table: 204552D0]]
+  } --[[table: 204550A0]],
   ["10022"] = {
     attack = {
       hit = 9,
       interval = 17
-    } --[[table: 1551C348]],
+    } --[[table: 0B105FD8]],
     death = {
       interval = 12
-    } --[[table: 1551BE98]],
+    } --[[table: 0B105BC8]],
     hit = {
       interval = 12
-    } --[[table: 1551C2A8]],
+    } --[[table: 0B106168]],
     run = {
       interval = 12
-    } --[[table: 1551C028]],
+    } --[[table: 0B105C18]],
     SkillA = {
       clearColorLayer = 46,
       createColorLayer = 0,
@@ -4591,7 +4591,7 @@ return
       interval = 47,
       reset = 47,
       slowly = 47
-    } --[[table: 1551BE48]],
+    } --[[table: 0B1061B8]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -4601,28 +4601,28 @@ return
       reset = 0,
       shake = 58,
       slowly = 80
-    } --[[table: 1551C258]],
+    } --[[table: 0B105B78]],
     stun = {
       interval = 32
-    } --[[table: 1551C208]],
+    } --[[table: 0B106208]],
     wait = {
       interval = 28
-    } --[[table: 1550C088]]
-  } --[[table: 1550BCC8]],
+    } --[[table: 0B106398]]
+  } --[[table: 0B105F88]],
   ["10023"] = {
     attack = {
       hit = 9,
       interval = 17
-    } --[[table: 27E875E0]],
+    } --[[table: 14855470]],
     death = {
       interval = 12
-    } --[[table: 27E874F0]],
+    } --[[table: 14855010]],
     hit = {
       interval = 12
-    } --[[table: 27E873B0]],
+    } --[[table: 14855650]],
     run = {
       interval = 12
-    } --[[table: 27E87680]],
+    } --[[table: 14855600]],
     SkillA = {
       clearColorLayer = 46,
       createColorLayer = 0,
@@ -4630,7 +4630,7 @@ return
       interval = 47,
       reset = 47,
       slowly = 47
-    } --[[table: 27E87810]],
+    } --[[table: 14854F20]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -4640,38 +4640,38 @@ return
       reset = 0,
       shake = 58,
       slowly = 80
-    } --[[table: 27E871D0]],
+    } --[[table: 14855240]],
     stun = {
       interval = 32
-    } --[[table: 27E87630]],
+    } --[[table: 14855330]],
     wait = {
       interval = 28
-    } --[[table: 27E87360]]
-  } --[[table: 27E87770]],
+    } --[[table: 148554C0]]
+  } --[[table: 14854F70]],
   ["10031"] = {
     Animation1 = {
       interval = 71
-    } --[[table: 150271E8]],
+    } --[[table: 2E4DAD00]],
     attack = {
       fire = 15,
       interval = 20
-    } --[[table: 15030C48]],
+    } --[[table: 2E4E24B0]],
     death = {
       interval = 17
-    } --[[table: 15030A68]],
+    } --[[table: 2E4E1A60]],
     hit = {
       interval = 12
-    } --[[table: 150310A8]],
+    } --[[table: 2E4DF170]],
     run = {
       interval = 18
-    } --[[table: 15030AB8]],
+    } --[[table: 2E4E2960]],
     SkillA = {
       clearColorLayer = 40,
       createColorLayer = 0,
       hit = 31,
       interval = 40,
       reset = 40
-    } --[[table: 15030A18]],
+    } --[[table: 2E4E1A10]],
     SkillB = {
       clearColorLayer = 53,
       createColorLayer = 46,
@@ -4681,38 +4681,38 @@ return
       scaleTo = 19,
       showEffect = 45,
       slowly = 53
-    } --[[table: 15030F68]],
+    } --[[table: 2E4DF990]],
     stun = {
       interval = 41
-    } --[[table: 15031058]],
+    } --[[table: 2E4DF3A0]],
     wait = {
       interval = 25
-    } --[[table: 15030F18]]
-  } --[[table: 150312D8]],
+    } --[[table: 2E4DF940]]
+  } --[[table: 2E4DF8A0]],
   ["10032"] = {
     Animation1 = {
       interval = 71
-    } --[[table: 0CCC55F8]],
+    } --[[table: 17C7FCA0]],
     attack = {
       fire = 15,
       interval = 20
-    } --[[table: 0ABAB1F0]],
+    } --[[table: 17C85560]],
     death = {
       interval = 17
-    } --[[table: 0ABAACA0]],
+    } --[[table: 17C82220]],
     hit = {
       interval = 12
-    } --[[table: 0ABAAE80]],
+    } --[[table: 17C82090]],
     run = {
       interval = 18
-    } --[[table: 0ABAAFC0]],
+    } --[[table: 17C82360]],
     SkillA = {
       clearColorLayer = 40,
       createColorLayer = 0,
       hit = 31,
       interval = 40,
       reset = 40
-    } --[[table: 0ABAB1A0]],
+    } --[[table: 17C82130]],
     SkillB = {
       clearColorLayer = 53,
       createColorLayer = 46,
@@ -4722,38 +4722,38 @@ return
       scaleTo = 19,
       showEffect = 45,
       slowly = 53
-    } --[[table: 0ABAAA70]],
+    } --[[table: 17C82040]],
     stun = {
       interval = 41
-    } --[[table: 0ABAB100]],
+    } --[[table: 17C82950]],
     wait = {
       interval = 25
-    } --[[table: 0ABAA9D0]]
-  } --[[table: 0ABAADE0]],
+    } --[[table: 17C82770]]
+  } --[[table: 17C825E0]],
   ["10033"] = {
     Animation1 = {
       interval = 71
-    } --[[table: 0C3A3230]],
+    } --[[table: 0B223330]],
     attack = {
       fire = 15,
       interval = 20
-    } --[[table: 1F246928]],
+    } --[[table: 0B227020]],
     death = {
       interval = 17
-    } --[[table: 1F246E78]],
+    } --[[table: 0B2272A0]],
     hit = {
       interval = 12
-    } --[[table: 1F246EC8]],
+    } --[[table: 0B226AD0]],
     run = {
       interval = 18
-    } --[[table: 1F246F18]],
+    } --[[table: 0B226B70]],
     SkillA = {
       clearColorLayer = 40,
       createColorLayer = 0,
       hit = 31,
       interval = 40,
       reset = 40
-    } --[[table: 1F247198]],
+    } --[[table: 0B226E40]],
     SkillB = {
       clearColorLayer = 53,
       createColorLayer = 46,
@@ -4763,124 +4763,126 @@ return
       scaleTo = 19,
       showEffect = 45,
       slowly = 53
-    } --[[table: 1F246D38]],
+    } --[[table: 0B226B20]],
     stun = {
       interval = 41
-    } --[[table: 1F2460B8]],
+    } --[[table: 0B227070]],
     wait = {
       interval = 25
-    } --[[table: 1F245FC8]]
-  } --[[table: 1F2461F8]],
+    } --[[table: 0B226FD0]]
+  } --[[table: 0B226A80]],
   ["10051"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 0D226B00]],
+    } --[[table: 20CB7118]],
     death = {
       interval = 66
-    } --[[table: 0D2267E0]],
+    } --[[table: 20CB7258]],
     hit = {
       interval = 17
-    } --[[table: 0D226560]],
+    } --[[table: 20CB6F38]],
     run = {
       interval = 32
-    } --[[table: 0D2268D0]],
+    } --[[table: 20CB6FD8]],
     SkillA = {
       hit = 25,
       interval = 81,
       reset = 0
-    } --[[table: 0D226650]],
+    } --[[table: 20CB6F88]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 0
-    } --[[table: 0D225FC0]],
+    } --[[table: 20CB6DF8]],
     stun = {
       interval = 24
-    } --[[table: 0D226600]],
+    } --[[table: 20CB6D08]],
     wait = {
       interval = 24
-    } --[[table: 0D220D40]]
-  } --[[table: 0D220B10]],
+    } --[[table: 20CB13A8]]
+  } --[[table: 20CB1628]],
   ["10052"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 0ABB1DC0]],
+    } --[[table: 2A442910]],
     death = {
       interval = 66
-    } --[[table: 0ABB1CD0]],
+    } --[[table: 2A442F00]],
     hit = {
       interval = 17
-    } --[[table: 0ABB1F00]],
+    } --[[table: 2A442C80]],
     run = {
       interval = 32
-    } --[[table: 0ABB1D70]],
+    } --[[table: 2A442DC0]],
     SkillA = {
       hit = 25,
       interval = 81,
       reset = 0
-    } --[[table: 0ABB1E10]],
+    } --[[table: 2A442D20]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 0
-    } --[[table: 0ABB2040]],
+    } --[[table: 2A442E10]],
     stun = {
       interval = 24
-    } --[[table: 0ABB1730]],
+    } --[[table: 2A442AA0]],
     wait = {
       interval = 24
-    } --[[table: 0ABB1EB0]]
-  } --[[table: 0ABB1BE0]],
+    } --[[table: 2A442A00]]
+  } --[[table: 2A442960]],
   ["10053"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 18063638]],
+    } --[[table: 2AB30AC0]],
     death = {
       interval = 66
-    } --[[table: 18063048]],
+    } --[[table: 2AB30750]],
     hit = {
       interval = 17
-    } --[[table: 18063548]],
+    } --[[table: 2AB308E0]],
     run = {
       interval = 32
-    } --[[table: 180630E8]],
+    } --[[table: 2AB30A20]],
     SkillA = {
       hit = 25,
       interval = 81,
       reset = 0
-    } --[[table: 18063098]],
+    } --[[table: 2AB30980]],
     SkillB = {
       hit = 34,
       interval = 65,
       reset = 0
-    } --[[table: 180631D8]],
+    } --[[table: 2AB30660]],
     stun = {
       interval = 24
-    } --[[table: 180636D8]],
+    } --[[table: 2AB30A70]],
     wait = {
       interval = 24
-    } --[[table: 180635E8]]
-  } --[[table: 18063138]],
+    } --[[table: 2AB30610]]
+  } --[[table: 2AB30B60]],
   ["10061"] = {
     Animation1 = {
-      interval = 62
-    } --[[table: 2E9BCDD8]],
+      hit1 = 23,
+      interval = 62,
+      over = 61
+    } --[[table: 0D1C06A0]],
     attack = {
       hit = 3,
       interval = 20
-    } --[[table: 2E9A04A8]],
+    } --[[table: 0D1AA4E0]],
     death = {
       interval = 18
-    } --[[table: 2E99FF58]],
+    } --[[table: 0D1CAE20]],
     hit = {
       interval = 16
-    } --[[table: 2E9A0598]],
+    } --[[table: 0D1AA120]],
     run = {
       interval = 20
-    } --[[table: 2E99FFF8]],
+    } --[[table: 0D1CAD30]],
     SkillA = {
       clearColorLayer = 30,
       createColorLayer = 0,
@@ -4889,7 +4891,7 @@ return
       reset = 30,
       shake = 18,
       slowly = 28
-    } --[[table: 2E9A02C8]],
+    } --[[table: 0D1CAF10]],
     SkillB = {
       clearColorLayer = 70,
       createColorLayer = 31,
@@ -4898,34 +4900,36 @@ return
       shake = 21,
       showEffect = 21,
       slowly = 32
-    } --[[table: 2E9A0548]],
+    } --[[table: 0D1CAA10]],
     stun = {
       interval = 15
-    } --[[table: 2E9A05E8]],
+    } --[[table: 0D1CADD0]],
     wait = {
       interval = 24
-    } --[[table: 2E99FEB8]],
+    } --[[table: 0D1CAD80]],
     win = {
       interval = 88
-    } --[[table: 2E99FD78]]
-  } --[[table: 2E9A0098]],
+    } --[[table: 0D1CA920]]
+  } --[[table: 0D1CAC40]],
   ["10062"] = {
     Animation1 = {
-      interval = 62
-    } --[[table: 0B90D058]],
+      hit1 = 23,
+      interval = 62,
+      over = 61
+    } --[[table: 15859CF8]],
     attack = {
       hit = 3,
       interval = 20
-    } --[[table: 09C85990]],
+    } --[[table: 1583FFD8]],
     death = {
       interval = 18
-    } --[[table: 09C852B0]],
+    } --[[table: 1583FB78]],
     hit = {
       interval = 16
-    } --[[table: 09C85030]],
+    } --[[table: 1583FE48]],
     run = {
       interval = 20
-    } --[[table: 09C84E50]],
+    } --[[table: 158401B8]],
     SkillA = {
       clearColorLayer = 30,
       createColorLayer = 0,
@@ -4934,7 +4938,7 @@ return
       reset = 30,
       shake = 18,
       slowly = 28
-    } --[[table: 09C851C0]],
+    } --[[table: 15840118]],
     SkillB = {
       clearColorLayer = 70,
       createColorLayer = 31,
@@ -4943,34 +4947,36 @@ return
       shake = 21,
       showEffect = 21,
       slowly = 32
-    } --[[table: 09C858F0]],
+    } --[[table: 1583FD08]],
     stun = {
       interval = 15
-    } --[[table: 09C84F40]],
+    } --[[table: 158404D8]],
     wait = {
       interval = 24
-    } --[[table: 09C84810]],
+    } --[[table: 15840258]],
     win = {
       interval = 88
-    } --[[table: 09C84E00]]
-  } --[[table: 09C84A90]],
+    } --[[table: 1583FB28]]
+  } --[[table: 1583FF38]],
   ["10063"] = {
     Animation1 = {
-      interval = 62
-    } --[[table: 140003F8]],
+      hit1 = 23,
+      interval = 62,
+      over = 61
+    } --[[table: 0B6BC740]],
     attack = {
       hit = 3,
       interval = 20
-    } --[[table: 1400C2E8]],
+    } --[[table: 0B6C0700]],
     death = {
       interval = 18
-    } --[[table: 1400C798]],
+    } --[[table: 0B6C0D40]],
     hit = {
       interval = 16
-    } --[[table: 1400C298]],
+    } --[[table: 0B6C0840]],
     run = {
       interval = 20
-    } --[[table: 1400BF78]],
+    } --[[table: 0B6C07A0]],
     SkillA = {
       clearColorLayer = 30,
       createColorLayer = 0,
@@ -4979,7 +4985,7 @@ return
       reset = 30,
       shake = 18,
       slowly = 28
-    } --[[table: 1400C888]],
+    } --[[table: 0B6C0610]],
     SkillB = {
       clearColorLayer = 70,
       createColorLayer = 31,
@@ -4988,628 +4994,628 @@ return
       shake = 21,
       showEffect = 21,
       slowly = 32
-    } --[[table: 1400C338]],
+    } --[[table: 0B6C0E80]],
     stun = {
       interval = 15
-    } --[[table: 1400C5B8]],
+    } --[[table: 0B6C0C50]],
     wait = {
       interval = 24
-    } --[[table: 1400C518]],
+    } --[[table: 0B6C0C00]],
     win = {
       interval = 88
-    } --[[table: 1400C428]]
-  } --[[table: 1400C4C8]],
+    } --[[table: 0B6C08E0]]
+  } --[[table: 0B6C0CA0]],
   ["10091"] = {
     attack = {
       hit = 12,
       interval = 27
-    } --[[table: 27E6B430]],
+    } --[[table: 09C3CB60]],
     death = {
       interval = 39
-    } --[[table: 27E6B610]],
+    } --[[table: 09C3CDE0]],
     hit = {
       interval = 26
-    } --[[table: 27E6AE90]],
+    } --[[table: 09C3C520]],
     run = {
       interval = 30
-    } --[[table: 27E6AEE0]],
+    } --[[table: 09C3CB10]],
     SkillA = {
       hit = 90,
       interval = 98
-    } --[[table: 27E6AFD0]],
+    } --[[table: 09C3CD90]],
     SkillB = {
       hit = 70,
       interval = 95
-    } --[[table: 27E6AF30]],
+    } --[[table: 09C3C570]],
     stun = {
       interval = 45
-    } --[[table: 27E6B390]],
+    } --[[table: 09C3C9D0]],
     wait = {
       interval = 45
-    } --[[table: 27E6ADF0]]
-  } --[[table: 27E6B3E0]],
+    } --[[table: 09C3C980]]
+  } --[[table: 09C3CCA0]],
   ["10092"] = {
     attack = {
       hit = 12,
       interval = 27
-    } --[[table: 149EBB68]],
+    } --[[table: 2E3E3520]],
     death = {
       interval = 39
-    } --[[table: 149EBB18]],
+    } --[[table: 2E3E3C50]],
     hit = {
       interval = 26
-    } --[[table: 149EB7F8]],
+    } --[[table: 2E3E3B10]],
     run = {
       interval = 30
-    } --[[table: 149EB848]],
+    } --[[table: 2E3E3B60]],
     SkillA = {
       hit = 90,
       interval = 98
-    } --[[table: 149EBAC8]],
+    } --[[table: 2E3E38E0]],
     SkillB = {
       hit = 70,
       interval = 95
-    } --[[table: 149EBCF8]],
+    } --[[table: 2E3E3E30]],
     stun = {
       interval = 45
-    } --[[table: 149EBCA8]],
+    } --[[table: 2E3E3DE0]],
     wait = {
       interval = 45
-    } --[[table: 149EB758]]
-  } --[[table: 149EB708]],
+    } --[[table: 2E3E3980]]
+  } --[[table: 2E3E36B0]],
   ["10093"] = {
     attack = {
       hit = 12,
       interval = 27
-    } --[[table: 0B804120]],
+    } --[[table: 0B5E1F58]],
     death = {
       interval = 39
-    } --[[table: 0B8043A0]],
+    } --[[table: 0B5E1F08]],
     hit = {
       interval = 26
-    } --[[table: 0B8046C0]],
+    } --[[table: 0B5E1EB8]],
     run = {
       interval = 30
-    } --[[table: 0B804530]],
+    } --[[table: 0B5E2138]],
     SkillA = {
       hit = 90,
       interval = 98
-    } --[[table: 0B804AD0]],
+    } --[[table: 0B5E2048]],
     SkillB = {
       hit = 70,
       interval = 95
-    } --[[table: 0B804210]],
+    } --[[table: 0B5E21D8]],
     stun = {
       interval = 45
-    } --[[table: 0B8042B0]],
+    } --[[table: 0B5E23B8]],
     wait = {
       interval = 45
-    } --[[table: 0B804A80]]
-  } --[[table: 0B804300]],
+    } --[[table: 0B5E2278]]
+  } --[[table: 0B5E2408]],
   ["10101"] = {
     attack = {
       clearColorLayer = 41,
       hit = 18,
       interval = 41
-    } --[[table: 0C7B5F70]],
+    } --[[table: 0A427F20]],
     death = {
       clearColorLayer = 0,
       interval = 49
-    } --[[table: 0C7B6010]],
+    } --[[table: 0A4280B0]],
     hit = {
       clearColorLayer = 12,
       interval = 12
-    } --[[table: 0C7B6330]],
+    } --[[table: 0A427A70]],
     run = {
       interval = 22
-    } --[[table: 0C7B68D0]],
+    } --[[table: 0A428240]],
     SkillA = {
       clearColorLayer = 42,
       createColorLayer = 0,
       hit = 15,
       interval = 42,
       reset = 0
-    } --[[table: 0C7B6650]],
+    } --[[table: 0A4281A0]],
     SkillB = {
       clearColorLayer = 76,
       createColorLayer = 0,
       hit = 63,
       interval = 92,
       reset = 0
-    } --[[table: 0C7B6470]],
+    } --[[table: 0A427D90]],
     stun = {
       interval = 45
-    } --[[table: 0C7B64C0]],
+    } --[[table: 0A427E80]],
     wait = {
       clearColorLayer = 24,
       interval = 24
-    } --[[table: 0C7B65B0]]
-  } --[[table: 0C7B58E0]],
+    } --[[table: 0A428010]]
+  } --[[table: 0A427D40]],
   ["10102"] = {
     attack = {
       clearColorLayer = 41,
       hit = 18,
       interval = 41
-    } --[[table: 202D2B08]],
+    } --[[table: 2BFAD8E0]],
     death = {
       clearColorLayer = 0,
       interval = 49
-    } --[[table: 202D2F68]],
+    } --[[table: 2BFADE30]],
     hit = {
       clearColorLayer = 12,
       interval = 12
-    } --[[table: 202D2BA8]],
+    } --[[table: 2BFADBB0]],
     run = {
       interval = 22
-    } --[[table: 202D3058]],
+    } --[[table: 2BFAD980]],
     SkillA = {
       clearColorLayer = 42,
       createColorLayer = 0,
       hit = 15,
       interval = 42,
       reset = 0
-    } --[[table: 202D2F18]],
+    } --[[table: 2BFADA20]],
     SkillB = {
       clearColorLayer = 76,
       createColorLayer = 0,
       hit = 63,
       interval = 92,
       reset = 0
-    } --[[table: 202D2EC8]],
+    } --[[table: 2BFAD840]],
     stun = {
       interval = 45
-    } --[[table: 202D2AB8]],
+    } --[[table: 2BFAD7F0]],
     wait = {
       clearColorLayer = 24,
       interval = 24
-    } --[[table: 202D2DD8]]
-  } --[[table: 202D2E78]],
+    } --[[table: 2BFAD700]]
+  } --[[table: 2BFADC00]],
   ["10103"] = {
     attack = {
       clearColorLayer = 41,
       hit = 18,
       interval = 41
-    } --[[table: 0AB9F0D0]],
+    } --[[table: 2481A258]],
     death = {
       clearColorLayer = 0,
       interval = 49
-    } --[[table: 0AB9E8B0]],
+    } --[[table: 24819E98]],
     hit = {
       clearColorLayer = 12,
       interval = 12
-    } --[[table: 0AB9A030]],
+    } --[[table: 24819C68]],
     run = {
       interval = 22
-    } --[[table: 0AB9E900]],
+    } --[[table: 24819EE8]],
     SkillA = {
       clearColorLayer = 42,
       createColorLayer = 0,
       hit = 15,
       interval = 42,
       reset = 0
-    } --[[table: 0AB9A210]],
+    } --[[table: 2481A438]],
     SkillB = {
       clearColorLayer = 76,
       createColorLayer = 0,
       hit = 63,
       interval = 92,
       reset = 0
-    } --[[table: 0AB99FE0]],
+    } --[[table: 2481A078]],
     stun = {
       interval = 45
-    } --[[table: 0AB9A0D0]],
+    } --[[table: 24819B78]],
     wait = {
       clearColorLayer = 24,
       interval = 24
-    } --[[table: 0AB99F90]]
-  } --[[table: 0AB99E00]],
+    } --[[table: 24819FD8]]
+  } --[[table: 24819F38]],
   ["10111"] = {
     attack = {
       hit = 22,
       interval = 47
-    } --[[table: 163B7508]],
+    } --[[table: 0B338230]],
     death = {
       interval = 81
-    } --[[table: 163B7B98]],
+    } --[[table: 0B3385F0]],
     hit = {
       interval = 15
-    } --[[table: 163B7418]],
+    } --[[table: 0B3380F0]],
     run = {
       interval = 25
-    } --[[table: 163B7378]],
+    } --[[table: 0B337FB0]],
     SkillA = {
       clearColorLayer = 85,
       createColorLayer = 0,
       hit = 43,
       interval = 85,
       reset = 66
-    } --[[table: 163B7C38]],
+    } --[[table: 0B337D30]],
     SkillB = {
       clearColorLayer = 126,
       createColorLayer = 0,
       hit = 94,
       interval = 127,
       reset = 126
-    } --[[table: 163B7B48]],
+    } --[[table: 0B337F60]],
     stun = {
       interval = 40
-    } --[[table: 163B7AA8]],
+    } --[[table: 0B338500]],
     wait = {
       interval = 40
-    } --[[table: 163B7968]]
-  } --[[table: 163B7918]],
+    } --[[table: 0B338460]]
+  } --[[table: 0B3380A0]],
   ["10112"] = {
     attack = {
       hit = 22,
       interval = 47
-    } --[[table: 0B964AC0]],
+    } --[[table: 1493E8B8]],
     death = {
       interval = 81
-    } --[[table: 0B964A20]],
+    } --[[table: 1493E778]],
     hit = {
       interval = 15
-    } --[[table: 0B964BB0]],
+    } --[[table: 1493EAE8]],
     run = {
       interval = 25
-    } --[[table: 0B964C50]],
+    } --[[table: 1493E9A8]],
     SkillA = {
       clearColorLayer = 85,
       createColorLayer = 0,
       hit = 43,
       interval = 85,
       reset = 66
-    } --[[table: 0B9647F0]],
+    } --[[table: 1493F038]],
     SkillB = {
       clearColorLayer = 126,
       createColorLayer = 0,
       hit = 94,
       interval = 127,
       reset = 126
-    } --[[table: 0B965010]],
+    } --[[table: 1493ED68]],
     stun = {
       interval = 40
-    } --[[table: 0B964F70]],
+    } --[[table: 1493EF98]],
     wait = {
       interval = 40
-    } --[[table: 0B964DE0]]
-  } --[[table: 0B964FC0]],
+    } --[[table: 1493E908]]
+  } --[[table: 1493EF48]],
   ["10113"] = {
     attack = {
       hit = 22,
       interval = 47
-    } --[[table: 0BF87460]],
+    } --[[table: 0B8A2830]],
     death = {
       interval = 81
-    } --[[table: 0BF82500]],
+    } --[[table: 0B89C840]],
     hit = {
       interval = 15
-    } --[[table: 0BF82730]],
+    } --[[table: 0B89CCF0]],
     run = {
       interval = 25
-    } --[[table: 0BF87780]],
+    } --[[table: 0B89CD40]],
     SkillA = {
       clearColorLayer = 85,
       createColorLayer = 0,
       hit = 43,
       interval = 85,
       reset = 66
-    } --[[table: 0BF82370]],
+    } --[[table: 0B89C7F0]],
     SkillB = {
       clearColorLayer = 126,
       createColorLayer = 0,
       hit = 94,
       interval = 127,
       reset = 126
-    } --[[table: 0BF826E0]],
+    } --[[table: 0B89C750]],
     stun = {
       interval = 40
-    } --[[table: 0BF82A50]],
+    } --[[table: 0B89C700]],
     wait = {
       interval = 40
-    } --[[table: 0BF82C80]]
-  } --[[table: 0BF82780]],
+    } --[[table: 0B89CB10]]
+  } --[[table: 0B89CAC0]],
   ["10121"] = {
     attack = {
       hit = 20,
       interval = 43
-    } --[[table: 13FDAE58]],
+    } --[[table: 31246838]],
     death = {
       interval = 35
-    } --[[table: 13FDA9A8]],
+    } --[[table: 31246248]],
     hit = {
       interval = 25
-    } --[[table: 13FDAC78]],
+    } --[[table: 312466F8]],
     run = {
       interval = 30
-    } --[[table: 13FDA908]],
+    } --[[table: 31246748]],
     SkillA = {
       clearColorLayer = 121,
       createColorLayer = 0,
       hit = 80,
       interval = 121
-    } --[[table: 13FDACC8]],
+    } --[[table: 31246518]],
     SkillB = {
       clearColorLayer = 136,
       createColorLayer = 0,
       hit = 70,
       interval = 136
-    } --[[table: 13FDAAE8]],
+    } --[[table: 312461A8]],
     stun = {
       interval = 40
-    } --[[table: 13FDADB8]],
+    } --[[table: 31246608]],
     wait = {
       interval = 40
-    } --[[table: 13FDAA48]]
-  } --[[table: 13FDABD8]],
+    } --[[table: 31246428]]
+  } --[[table: 31245FC8]],
   ["10122"] = {
     attack = {
       hit = 20,
       interval = 43
-    } --[[table: 309FCDC0]],
+    } --[[table: 31155270]],
     death = {
       interval = 35
-    } --[[table: 309FCD20]],
+    } --[[table: 31155590]],
     hit = {
       interval = 25
-    } --[[table: 309FD630]],
+    } --[[table: 31155130]],
     run = {
       interval = 30
-    } --[[table: 309FD400]],
+    } --[[table: 31155360]],
     SkillA = {
       clearColorLayer = 121,
       createColorLayer = 0,
       hit = 80,
       interval = 121
-    } --[[table: 309FD680]],
+    } --[[table: 31155090]],
     SkillB = {
       clearColorLayer = 136,
       createColorLayer = 0,
       hit = 70,
       interval = 136
-    } --[[table: 309FD180]],
+    } --[[table: 311551D0]],
     stun = {
       interval = 40
-    } --[[table: 309FD5E0]],
+    } --[[table: 31155540]],
     wait = {
       interval = 40
-    } --[[table: 309FD540]]
-  } --[[table: 309FD4A0]],
+    } --[[table: 31155040]]
+  } --[[table: 31155450]],
   ["10123"] = {
     attack = {
       hit = 20,
       interval = 43
-    } --[[table: 339FE5C0]],
+    } --[[table: 31B1F168]],
     death = {
       interval = 35
-    } --[[table: 339FE480]],
+    } --[[table: 31B1EDF8]],
     hit = {
       interval = 25
-    } --[[table: 339FE1B0]],
+    } --[[table: 31B1F0C8]],
     run = {
       interval = 30
-    } --[[table: 339FE200]],
+    } --[[table: 31B1EC18]],
     SkillA = {
       clearColorLayer = 121,
       createColorLayer = 0,
       hit = 80,
       interval = 121
-    } --[[table: 339FE160]],
+    } --[[table: 31B1F118]],
     SkillB = {
       clearColorLayer = 136,
       createColorLayer = 0,
       hit = 70,
       interval = 136
-    } --[[table: 339FE390]],
+    } --[[table: 31B1F348]],
     stun = {
       interval = 40
-    } --[[table: 339FE340]],
+    } --[[table: 31B1EB78]],
     wait = {
       interval = 40
-    } --[[table: 339FE840]]
-  } --[[table: 339FE7A0]],
+    } --[[table: 31B1EE48]]
+  } --[[table: 31B1EDA8]],
   ["10131"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 0C0ADED0]],
+    } --[[table: 0C7B9D38]],
     death = {
       interval = 27
-    } --[[table: 0C0ADC50]],
+    } --[[table: 0C7B91A8]],
     hit = {
       interval = 14
-    } --[[table: 0C0ADCA0]],
+    } --[[table: 0C7B9158]],
     run = {
       interval = 22
-    } --[[table: 0C0ADBB0]],
+    } --[[table: 0C7BA198]],
     SkillA = {
       hit = 55,
       interval = 78,
       reset = 78
-    } --[[table: 0C0ADB10]],
+    } --[[table: 0C7B9748]],
     SkillB = {
       hit = 37,
       interval = 58,
       reset = 0
-    } --[[table: 0C0AD700]],
+    } --[[table: 0C7B9108]],
     stun = {
       interval = 30
-    } --[[table: 0C0AD840]],
+    } --[[table: 0C7B8FC8]],
     wait = {
       interval = 24
-    } --[[table: 0C0AD7F0]]
-  } --[[table: 0C0AD6B0]],
+    } --[[table: 0C7B9018]]
+  } --[[table: 0C7B9658]],
   ["10132"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 317CF198]],
+    } --[[table: 16228FC8]],
     death = {
       interval = 27
-    } --[[table: 317CEB08]],
+    } --[[table: 16229478]],
     hit = {
       interval = 14
-    } --[[table: 317CF058]],
+    } --[[table: 16229838]],
     run = {
       interval = 22
-    } --[[table: 317CEE78]],
+    } --[[table: 162294C8]],
     SkillA = {
       hit = 55,
       interval = 78,
       reset = 78
-    } --[[table: 317CE928]],
+    } --[[table: 16229658]],
     SkillB = {
       hit = 37,
       interval = 58,
       reset = 0
-    } --[[table: 317CED88]],
+    } --[[table: 162296F8]],
     stun = {
       interval = 30
-    } --[[table: 317CF008]],
+    } --[[table: 16229888]],
     wait = {
       interval = 24
-    } --[[table: 317CED38]]
-  } --[[table: 317CEFB8]],
+    } --[[table: 16229388]]
+  } --[[table: 16229298]],
   ["10133"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 1368C550]],
+    } --[[table: 1FEBDF68]],
     death = {
       interval = 27
-    } --[[table: 1368C8C0]],
+    } --[[table: 1FEBDBF8]],
     hit = {
       interval = 14
-    } --[[table: 1368C960]],
+    } --[[table: 1FEBDD88]],
     run = {
       interval = 22
-    } --[[table: 1368C000]],
+    } --[[table: 1FEBDC98]],
     SkillA = {
       hit = 55,
       interval = 78,
       reset = 78
-    } --[[table: 1368C870]],
+    } --[[table: 1FEBDFB8]],
     SkillB = {
       hit = 37,
       interval = 58,
       reset = 0
-    } --[[table: 1368C4B0]],
+    } --[[table: 1FEBDB58]],
     stun = {
       interval = 30
-    } --[[table: 1368C2D0]],
+    } --[[table: 1FEBDA18]],
     wait = {
       interval = 24
-    } --[[table: 1368C3C0]]
-  } --[[table: 1368C1E0]],
+    } --[[table: 1FEBDD38]]
+  } --[[table: 1FEBDBA8]],
   ["10151"] = {
     attack = {
       hit = 20,
       interval = 45
-    } --[[table: 13FCC588]],
+    } --[[table: 31157D40]],
     death = {
       interval = 50
-    } --[[table: 13FCC3F8]],
+    } --[[table: 31157CF0]],
     hit = {
       interval = 15
-    } --[[table: 13FCC998]],
+    } --[[table: 31157610]],
     run = {
       interval = 20
-    } --[[table: 13FCC178]],
+    } --[[table: 311576B0]],
     SkillA = {
       hit = 108,
       interval = 120
-    } --[[table: 13FCCAD8]],
+    } --[[table: 31157660]],
     SkillB = {
       hit = 76,
       interval = 121
-    } --[[table: 13FCC448]],
+    } --[[table: 31157CA0]],
     stun = {
       interval = 40
-    } --[[table: 13FCC628]],
+    } --[[table: 31157930]],
     wait = {
       interval = 40
-    } --[[table: 13FCC8F8]]
-  } --[[table: 13FCC2B8]],
+    } --[[table: 31157E30]]
+  } --[[table: 311575C0]],
   ["10152"] = {
     attack = {
       hit = 20,
       interval = 45
-    } --[[table: 309F7C30]],
+    } --[[table: 26DADD80]],
     death = {
       interval = 50
-    } --[[table: 309F7CD0]],
+    } --[[table: 26DAE000]],
     hit = {
       interval = 15
-    } --[[table: 309F7690]],
+    } --[[table: 26DADF10]],
     run = {
       interval = 20
-    } --[[table: 309F7550]],
+    } --[[table: 26DAE050]],
     SkillA = {
       hit = 108,
       interval = 120
-    } --[[table: 309F7BE0]],
+    } --[[table: 26DADE20]],
     SkillB = {
       hit = 76,
       interval = 121
-    } --[[table: 309F73C0]],
+    } --[[table: 26DADCE0]],
     stun = {
       interval = 40
-    } --[[table: 309F7AF0]],
+    } --[[table: 26DADD30]],
     wait = {
       interval = 40
-    } --[[table: 309F78C0]]
-  } --[[table: 309F7370]],
+    } --[[table: 26DADEC0]]
+  } --[[table: 26DADA60]],
   ["10153"] = {
     attack = {
       hit = 20,
       interval = 45
-    } --[[table: 13FE0E48]],
+    } --[[table: 311517B0]],
     death = {
       interval = 50
-    } --[[table: 13FE0B78]],
+    } --[[table: 311519E0]],
     hit = {
       interval = 15
-    } --[[table: 13FE0EE8]],
+    } --[[table: 31151620]],
     run = {
       interval = 20
-    } --[[table: 13FE1078]],
+    } --[[table: 31151260]],
     SkillA = {
       hit = 108,
       interval = 120
-    } --[[table: 13FE1258]],
+    } --[[table: 311511C0]],
     SkillB = {
       hit = 76,
       interval = 121
-    } --[[table: 13FE0DA8]],
+    } --[[table: 311518F0]],
     stun = {
       interval = 40
-    } --[[table: 13FE0D58]],
+    } --[[table: 31151990]],
     wait = {
       interval = 40
-    } --[[table: 13FE10C8]]
-  } --[[table: 13FE1168]],
+    } --[[table: 31151440]]
+  } --[[table: 311512B0]],
   ["10161"] = {
     Animation1 = {
       interval = 31
-    } --[[table: 28840A98]],
+    } --[[table: 20448E40]],
     attack = {
       hit = 12,
       interval = 25
-    } --[[table: 2883E9C8]],
+    } --[[table: 20462700]],
     death = {
       interval = 18
-    } --[[table: 2883E608]],
+    } --[[table: 20462E80]],
     hit = {
       interval = 16
-    } --[[table: 2883E798]],
+    } --[[table: 20462DE0]],
     run = {
       interval = 20
-    } --[[table: 2883EE28]],
+    } --[[table: 20462660]],
     SkillA = {
       hit = 18,
       interval = 30,
       reset = 30,
       slowly = 30
-    } --[[table: 2883E5B8]],
+    } --[[table: 20462A70]],
     SkillB = {
       clearColorLayer = 42,
       createColorLayer = 0,
@@ -5618,37 +5624,37 @@ return
       moveBy = 21,
       reset = 40,
       slowly = 55
-    } --[[table: 2883E6A8]],
+    } --[[table: 20462930]],
     stun = {
       interval = 50
-    } --[[table: 2883E068]],
+    } --[[table: 20462570]],
     wait = {
       interval = 24
-    } --[[table: 2883E568]]
-  } --[[table: 2883DF78]],
+    } --[[table: 20462C50]]
+  } --[[table: 20462B60]],
   ["10162"] = {
     Animation1 = {
       interval = 31
-    } --[[table: 0B99E3F8]],
+    } --[[table: 0B8B5430]],
     attack = {
       hit = 12,
       interval = 25
-    } --[[table: 0B98BB68]],
+    } --[[table: 0B8AAAD0]],
     death = {
       interval = 18
-    } --[[table: 0B98B898]],
+    } --[[table: 0B8AA760]],
     hit = {
       interval = 16
-    } --[[table: 0B98B758]],
+    } --[[table: 0B8AA8F0]],
     run = {
       interval = 20
-    } --[[table: 0B98BB18]],
+    } --[[table: 0B8AAA80]],
     SkillA = {
       hit = 18,
       interval = 30,
       reset = 30,
       slowly = 30
-    } --[[table: 0B98B8E8]],
+    } --[[table: 0B8AA4E0]],
     SkillB = {
       clearColorLayer = 42,
       createColorLayer = 0,
@@ -5657,37 +5663,37 @@ return
       moveBy = 21,
       reset = 40,
       slowly = 55
-    } --[[table: 0B98BA78]],
+    } --[[table: 0B8AA800]],
     stun = {
       interval = 50
-    } --[[table: 0B98B9D8]],
+    } --[[table: 0B8AA1C0]],
     wait = {
       interval = 24
-    } --[[table: 0B98B618]]
-  } --[[table: 0B98B6B8]],
+    } --[[table: 0B8AA7B0]]
+  } --[[table: 0B8AA5D0]],
   ["10163"] = {
     Animation1 = {
       interval = 31
-    } --[[table: 1496BF10]],
+    } --[[table: 20569830]],
     attack = {
       hit = 12,
       interval = 25
-    } --[[table: 14964210]],
+    } --[[table: 2056C260]],
     death = {
       interval = 18
-    } --[[table: 14964120]],
+    } --[[table: 2056C530]],
     hit = {
       interval = 16
-    } --[[table: 14964850]],
+    } --[[table: 2056C670]],
     run = {
       interval = 20
-    } --[[table: 14964170]],
+    } --[[table: 2056BCC0]],
     SkillA = {
       hit = 18,
       interval = 30,
       reset = 30,
       slowly = 30
-    } --[[table: 14964AD0]],
+    } --[[table: 2056C3F0]],
     SkillB = {
       clearColorLayer = 42,
       createColorLayer = 0,
@@ -5696,28 +5702,28 @@ return
       moveBy = 21,
       reset = 40,
       slowly = 55
-    } --[[table: 14964A30]],
+    } --[[table: 2056C300]],
     stun = {
       interval = 50
-    } --[[table: 14964670]],
+    } --[[table: 2056C350]],
     wait = {
       interval = 24
-    } --[[table: 14964620]]
-  } --[[table: 14964A80]],
+    } --[[table: 2056C3A0]]
+  } --[[table: 2056BF40]],
   ["10171"] = {
     attack = {
       fire = 16,
       interval = 31
-    } --[[table: 27F5E020]],
+    } --[[table: 0AF4D908]],
     death = {
       interval = 45
-    } --[[table: 27F5E4D0]],
+    } --[[table: 0AF4D728]],
     hit = {
       interval = 16
-    } --[[table: 27F5DE40]],
+    } --[[table: 0AF4DD18]],
     run = {
       interval = 22
-    } --[[table: 27F5DE90]],
+    } --[[table: 0AF4E0D8]],
     SkillA = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -5725,35 +5731,35 @@ return
       interval = 84,
       reset = 84,
       slowly = 75
-    } --[[table: 27F5E2F0]],
+    } --[[table: 0AF4DF48]],
     SkillB = {
       clearColorLayer = 92,
       createColorLayer = 0,
       hit = 71,
       interval = 92,
       reset = 92
-    } --[[table: 27F5E480]],
+    } --[[table: 0AF4DB38]],
     stun = {
       interval = 30
-    } --[[table: 27F5E110]],
+    } --[[table: 0AF4E038]],
     wait = {
       interval = 30
-    } --[[table: 27F5DEE0]]
-  } --[[table: 27F5DB20]],
+    } --[[table: 0AF4D688]]
+  } --[[table: 0AF4D2C8]],
   ["10172"] = {
     attack = {
       fire = 16,
       interval = 31
-    } --[[table: 1FC30488]],
+    } --[[table: 0ADF4360]],
     death = {
       interval = 45
-    } --[[table: 1FC2FB78]],
+    } --[[table: 0ADF3FA0]],
     hit = {
       interval = 16
-    } --[[table: 1FC30118]],
+    } --[[table: 0ADF3F50]],
     run = {
       interval = 22
-    } --[[table: 1FC2FE48]],
+    } --[[table: 0ADF3E10]],
     SkillA = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -5761,35 +5767,35 @@ return
       interval = 84,
       reset = 84,
       slowly = 75
-    } --[[table: 1FC30398]],
+    } --[[table: 0ADF3DC0]],
     SkillB = {
       clearColorLayer = 92,
       createColorLayer = 0,
       hit = 71,
       interval = 92,
       reset = 92
-    } --[[table: 1FC30208]],
+    } --[[table: 0ADF3D20]],
     stun = {
       interval = 30
-    } --[[table: 1FC301B8]],
+    } --[[table: 0ADF4680]],
     wait = {
       interval = 30
-    } --[[table: 1FC30078]]
-  } --[[table: 1FC2FDA8]],
+    } --[[table: 0ADF45E0]]
+  } --[[table: 0ADF4590]],
   ["10173"] = {
     attack = {
       fire = 16,
       interval = 31
-    } --[[table: 0AFE6CD0]],
+    } --[[table: 373F8200]],
     death = {
       interval = 45
-    } --[[table: 0AFE6910]],
+    } --[[table: 373F7FD0]],
     hit = {
       interval = 16
-    } --[[table: 0AFE6B90]],
+    } --[[table: 373F7EE0]],
     run = {
       interval = 22
-    } --[[table: 0AFE6870]],
+    } --[[table: 373F8160]],
     SkillA = {
       clearColorLayer = 75,
       createColorLayer = 5,
@@ -5797,162 +5803,162 @@ return
       interval = 84,
       reset = 84,
       slowly = 75
-    } --[[table: 0AFE63C0]],
+    } --[[table: 373F7F80]],
     SkillB = {
       clearColorLayer = 92,
       createColorLayer = 0,
       hit = 71,
       interval = 92,
       reset = 92
-    } --[[table: 0AFE6690]],
+    } --[[table: 373F8110]],
     stun = {
       interval = 30
-    } --[[table: 0AFE6640]],
+    } --[[table: 373F7E40]],
     wait = {
       interval = 30
-    } --[[table: 0AFE65A0]]
-  } --[[table: 0AFE6C80]],
+    } --[[table: 373F8340]]
+  } --[[table: 373F8020]],
   ["10181"] = {
     Animation1 = {
       hit1 = 0,
       interval = 24,
       over = 23
-    } --[[table: 2BB205B0]],
+    } --[[table: 14943B88]],
     attack = {
       hit = 13,
       interval = 26
-    } --[[table: 2BB1A6B0]],
+    } --[[table: 14959BB8]],
     death = {
       interval = 32
-    } --[[table: 2BB1A5C0]],
+    } --[[table: 14959578]],
     hit = {
       interval = 18
-    } --[[table: 2BB1A610]],
+    } --[[table: 14959758]],
     run = {
       interval = 20
-    } --[[table: 2BB1A8E0]],
+    } --[[table: 14959ED8]],
     SkillA = {
       hit = 34,
       interval = 46,
       reset = 0
-    } --[[table: 2BB1A7F0]],
+    } --[[table: 14959A28]],
     SkillB = {
       hit = 34,
       interval = 47,
       reset = 0
-    } --[[table: 2BB1A7A0]],
+    } --[[table: 149595C8]],
     stun = {
       interval = 46
-    } --[[table: 2BB1A520]],
+    } --[[table: 14959B18]],
     wait = {
       interval = 24
-    } --[[table: 2BB1AE80]],
+    } --[[table: 149598E8]],
     win = {
       hit = 11,
       interval = 31
-    } --[[table: 2BB1A930]]
-  } --[[table: 2BB1AD40]],
+    } --[[table: 14959988]]
+  } --[[table: 14959708]],
   ["10182"] = {
     Animation1 = {
       hit1 = 0,
       interval = 24,
       over = 23
-    } --[[table: 1503EFC8]],
+    } --[[table: 0C043EE0]],
     attack = {
       hit = 13,
       interval = 26
-    } --[[table: 1503A298]],
+    } --[[table: 0C03F2F0]],
     death = {
       interval = 32
-    } --[[table: 1503A3D8]],
+    } --[[table: 0C03F4D0]],
     hit = {
       interval = 18
-    } --[[table: 1503A068]],
+    } --[[table: 0C03F200]],
     run = {
       interval = 20
-    } --[[table: 1503A338]],
+    } --[[table: 0C03EFD0]],
     SkillA = {
       hit = 34,
       interval = 46,
       reset = 0
-    } --[[table: 1503A478]],
+    } --[[table: 0C03EB70]],
     SkillB = {
       hit = 34,
       interval = 47,
       reset = 0
-    } --[[table: 1503A7E8]],
+    } --[[table: 0C03F1B0]],
     stun = {
       interval = 46
-    } --[[table: 15039F28]],
+    } --[[table: 0C03F110]],
     wait = {
       interval = 24
-    } --[[table: 1503A4C8]],
+    } --[[table: 0C03F0C0]],
     win = {
       hit = 11,
       interval = 31
-    } --[[table: 1503A568]]
-  } --[[table: 1503A798]],
+    } --[[table: 0C03EC60]]
+  } --[[table: 0C03EE90]],
   ["10183"] = {
     Animation1 = {
       hit1 = 0,
       interval = 24,
       over = 23
-    } --[[table: 15869518]],
+    } --[[table: 24901EA0]],
     attack = {
       hit = 13,
       interval = 26
-    } --[[table: 15867358]],
+    } --[[table: 24900C80]],
     death = {
       interval = 32
-    } --[[table: 15867498]],
+    } --[[table: 24900640]],
     hit = {
       interval = 18
-    } --[[table: 15867858]],
+    } --[[table: 24900F00]],
     run = {
       interval = 20
-    } --[[table: 158642E8]],
+    } --[[table: 24900690]],
     SkillA = {
       hit = 34,
       interval = 46,
       reset = 0
-    } --[[table: 15867308]],
+    } --[[table: 249007D0]],
     SkillB = {
       hit = 34,
       interval = 47,
       reset = 0
-    } --[[table: 15867718]],
+    } --[[table: 24900D20]],
     stun = {
       interval = 46
-    } --[[table: 158679E8]],
+    } --[[table: 24900550]],
     wait = {
       interval = 24
-    } --[[table: 15864568]],
+    } --[[table: 24900460]],
     win = {
       hit = 11,
       interval = 31
-    } --[[table: 15864068]]
-  } --[[table: 15863F78]],
+    } --[[table: 24900410]]
+  } --[[table: 24900230]],
   ["10191"] = {
     attack = {
       hit = 23,
       interval = 41
-    } --[[table: 0B8F1128]],
+    } --[[table: 1CBB3E90]],
     death = {
       interval = 54
-    } --[[table: 0B8F15D8]],
+    } --[[table: 1CBB3C10]],
     hit = {
       interval = 13
-    } --[[table: 0B8F1948]],
+    } --[[table: 1CBB3CB0]],
     run = {
       interval = 24
-    } --[[table: 0B8F1588]],
+    } --[[table: 1CBB1550]],
     SkillA = {
       clearColorLayer = 67,
       createColorLayer = 67,
       hit = 53,
       interval = 67,
       reset = 40
-    } --[[table: 0B8F1768]],
+    } --[[table: 1CBB3AD0]],
     SkillB = {
       clearColorLayer = 69,
       createColorLayer = 0,
@@ -5961,39 +5967,39 @@ return
       reset = 69,
       shake = 58,
       slowly = 69
-    } --[[table: 0B8F1448]],
+    } --[[table: 1CBB3C60]],
     stun = {
       interval = 40
-    } --[[table: 0B8F11C8]],
+    } --[[table: 1CBB15F0]],
     wait = {
       interval = 24
-    } --[[table: 0B8F1538]],
+    } --[[table: 1CBB1640]],
     win = {
       hit = 13,
       interval = 41
-    } --[[table: 0B8F1998]]
-  } --[[table: 0B8F1A88]],
+    } --[[table: 1CBB1410]]
+  } --[[table: 1CBB11E0]],
   ["10192"] = {
     attack = {
       hit = 23,
       interval = 41
-    } --[[table: 2BB37300]],
+    } --[[table: 14948188]],
     death = {
       interval = 54
-    } --[[table: 2BB37710]],
+    } --[[table: 149480E8]],
     hit = {
       interval = 13
-    } --[[table: 2BB37940]],
+    } --[[table: 149484F8]],
     run = {
       interval = 24
-    } --[[table: 2BB34D80]],
+    } --[[table: 149483B8]],
     SkillA = {
       clearColorLayer = 67,
       createColorLayer = 67,
       hit = 53,
       interval = 67,
       reset = 40
-    } --[[table: 2BB379E0]],
+    } --[[table: 14947FA8]],
     SkillB = {
       clearColorLayer = 69,
       createColorLayer = 0,
@@ -6002,39 +6008,39 @@ return
       reset = 69,
       shake = 58,
       slowly = 69
-    } --[[table: 2BB378A0]],
+    } --[[table: 14947FF8]],
     stun = {
       interval = 40
-    } --[[table: 2BB376C0]],
+    } --[[table: 14947F08]],
     wait = {
       interval = 24
-    } --[[table: 2BB372B0]],
+    } --[[table: 149484A8]],
     win = {
       hit = 13,
       interval = 41
-    } --[[table: 2BB35280]]
-  } --[[table: 2BB34BA0]],
+    } --[[table: 14945708]]
+  } --[[table: 14945D98]],
   ["10193"] = {
     attack = {
       hit = 23,
       interval = 41
-    } --[[table: 0D20DB50]],
+    } --[[table: 208AC930]],
     death = {
       interval = 54
-    } --[[table: 0D20DCE0]],
+    } --[[table: 208ACAC0]],
     hit = {
       interval = 13
-    } --[[table: 0D20DD30]],
+    } --[[table: 208AC4D0]],
     run = {
       interval = 24
-    } --[[table: 0D20DC40]],
+    } --[[table: 208AC610]],
     SkillA = {
       clearColorLayer = 67,
       createColorLayer = 67,
       hit = 53,
       interval = 67,
       reset = 40
-    } --[[table: 0D20DA60]],
+    } --[[table: 208AC660]],
     SkillB = {
       clearColorLayer = 69,
       createColorLayer = 0,
@@ -6043,137 +6049,137 @@ return
       reset = 69,
       shake = 58,
       slowly = 69
-    } --[[table: 0D20DAB0]],
+    } --[[table: 208AC520]],
     stun = {
       interval = 40
-    } --[[table: 0D20DEC0]],
+    } --[[table: 208ACB10]],
     wait = {
       interval = 24
-    } --[[table: 0D20DC90]],
+    } --[[table: 208AC6B0]],
     win = {
       hit = 13,
       interval = 41
-    } --[[table: 0D20E050]]
-  } --[[table: 0D20E2D0]],
+    } --[[table: 208A9DC0]]
+  } --[[table: 208AA1D0]],
   ["10201"] = {
     attack = {
       hit = 37,
       interval = 59
-    } --[[table: 13FD3158]],
+    } --[[table: 0CA8BCF0]],
     death = {
       interval = 59
-    } --[[table: 13FD34C8]],
+    } --[[table: 0CA8BFC0]],
     hit = {
       interval = 30
-    } --[[table: 13FD3388]],
+    } --[[table: 0CA8BCA0]],
     run = {
       interval = 24
-    } --[[table: 13FD36A8]],
+    } --[[table: 0CA8B930]],
     SkillA = {
       hit = 103,
       interval = 120,
       reset = 120
-    } --[[table: 13FD38D8]],
+    } --[[table: 0CA8BAC0]],
     SkillB = {
       hit = 15,
       interval = 45,
       reset = 45
-    } --[[table: 13FD3338]],
+    } --[[table: 0CA8BA20]],
     stun = {
       interval = 30
-    } --[[table: 13FD30B8]],
+    } --[[table: 0CA8B9D0]],
     wait = {
       interval = 30
-    } --[[table: 13FD3798]]
-  } --[[table: 13FD3248]],
+    } --[[table: 0CA8BB10]]
+  } --[[table: 0CA8C290]],
   ["10202"] = {
     attack = {
       hit = 37,
       interval = 59
-    } --[[table: 27E72730]],
+    } --[[table: 0A3C95B0]],
     death = {
       interval = 59
-    } --[[table: 27E727D0]],
+    } --[[table: 0A3C9790]],
     hit = {
       interval = 30
-    } --[[table: 27E729B0]],
+    } --[[table: 0A3C92E0]],
     run = {
       interval = 24
-    } --[[table: 27E72780]],
+    } --[[table: 0A3C94C0]],
     SkillA = {
       hit = 103,
       interval = 120,
       reset = 120
-    } --[[table: 27E72690]],
+    } --[[table: 0A3C91F0]],
     SkillB = {
       hit = 15,
       interval = 45,
       reset = 45
-    } --[[table: 27E72F50]],
+    } --[[table: 0A3C9150]],
     stun = {
       interval = 30
-    } --[[table: 27E72EB0]],
+    } --[[table: 0A3C9330]],
     wait = {
       interval = 30
-    } --[[table: 27E72E60]]
-  } --[[table: 27E72D20]],
+    } --[[table: 0A3C9470]]
+  } --[[table: 0A3C9740]],
   ["10203"] = {
     attack = {
       hit = 37,
       interval = 59
-    } --[[table: 30C48350]],
+    } --[[table: 3794E070]],
     death = {
       interval = 59
-    } --[[table: 30C48260]],
+    } --[[table: 3794DFD0]],
     hit = {
       interval = 30
-    } --[[table: 30C48120]],
+    } --[[table: 3794DD50]],
     run = {
       interval = 24
-    } --[[table: 30C482B0]],
+    } --[[table: 3794DCB0]],
     SkillA = {
       hit = 103,
       interval = 120,
       reset = 120
-    } --[[table: 30C483A0]],
+    } --[[table: 3794DC60]],
     SkillB = {
       hit = 15,
       interval = 45,
       reset = 45
-    } --[[table: 30C48AD0]],
+    } --[[table: 3794DE40]],
     stun = {
       interval = 30
-    } --[[table: 30C48530]],
+    } --[[table: 3794E4D0]],
     wait = {
       interval = 30
-    } --[[table: 30C489E0]]
-  } --[[table: 30C48760]],
+    } --[[table: 3794E430]]
+  } --[[table: 3794E1B0]],
   ["10211"] = {
     Animation1 = {
       hit4 = 120,
       interval = 152,
       over = 150,
       ["shake50,1"] = 11
-    } --[[table: 240EC1D0]],
+    } --[[table: 1495F7D0]],
     attack = {
       hit = 15,
       interval = 31
-    } --[[table: 240D5520]],
+    } --[[table: 14976D40]],
     death = {
       interval = 30
-    } --[[table: 240D5430]],
+    } --[[table: 14976750]],
     hit = {
       interval = 30
-    } --[[table: 240D53E0]],
+    } --[[table: 14976980]],
     run = {
       interval = 40
-    } --[[table: 240D54D0]],
+    } --[[table: 14976C00]],
     SkillA = {
       hit = 45,
       interval = 83,
       newhit = 45,
       reset = 0
-    } --[[table: 240D5340]],
+    } --[[table: 14976570]],
     SkillB = {
       clearColorLayer = 170,
       createColorLayer = 49,
@@ -6184,40 +6190,40 @@ return
       newhit = 141,
       reset = 170,
       scaleTo = 0
-    } --[[table: 240D57A0]],
+    } --[[table: 14976ED0]],
     stun = {
       interval = 30
-    } --[[table: 240D5610]],
+    } --[[table: 14976BB0]],
     wait = {
       interval = 30
-    } --[[table: 240D5200]]
-  } --[[table: 240D4F80]],
+    } --[[table: 14976B10]]
+  } --[[table: 14975F80]],
   ["10212"] = {
     Animation1 = {
       hit4 = 120,
       interval = 152,
       over = 150,
       ["shake50,1"] = 11
-    } --[[table: 0CE22D08]],
+    } --[[table: 14A1ADD0]],
     attack = {
       hit = 15,
       interval = 31
-    } --[[table: 0CE191B8]],
+    } --[[table: 14A2DAC0]],
     death = {
       interval = 30
-    } --[[table: 0CE18628]],
+    } --[[table: 14A2A7D0]],
     hit = {
       interval = 30
-    } --[[table: 0CE36628]],
+    } --[[table: 14A2A6E0]],
     run = {
       interval = 40
-    } --[[table: 0CE18998]],
+    } --[[table: 14A2D980]],
     SkillA = {
       hit = 45,
       interval = 83,
       newhit = 45,
       reset = 0
-    } --[[table: 0CE187B8]],
+    } --[[table: 14A2A730]],
     SkillB = {
       clearColorLayer = 170,
       createColorLayer = 49,
@@ -6228,40 +6234,40 @@ return
       newhit = 141,
       reset = 170,
       scaleTo = 0
-    } --[[table: 0CE36718]],
+    } --[[table: 14A2AEB0]],
     stun = {
       interval = 30
-    } --[[table: 0CE36358]],
+    } --[[table: 14A2AE60]],
     wait = {
       interval = 30
-    } --[[table: 0CE363F8]]
-  } --[[table: 0CE369E8]],
+    } --[[table: 14A2AD70]]
+  } --[[table: 14A2A690]],
   ["10213"] = {
     Animation1 = {
       hit4 = 120,
       interval = 152,
       over = 150,
       ["shake50,1"] = 11
-    } --[[table: 1C701E20]],
+    } --[[table: 0B6B3B40]],
     attack = {
       hit = 15,
       interval = 31
-    } --[[table: 1C7156F0]],
+    } --[[table: 0B6A5D10]],
     death = {
       interval = 30
-    } --[[table: 1C715790]],
+    } --[[table: 0B6A5A90]],
     hit = {
       interval = 30
-    } --[[table: 1C715880]],
+    } --[[table: 0B6A5E00]],
     run = {
       interval = 40
-    } --[[table: 1C715290]],
+    } --[[table: 0B6A5CC0]],
     SkillA = {
       hit = 45,
       interval = 83,
       newhit = 45,
       reset = 0
-    } --[[table: 1C7154C0]],
+    } --[[table: 0B6A6030]],
     SkillB = {
       clearColorLayer = 170,
       createColorLayer = 49,
@@ -6272,237 +6278,237 @@ return
       newhit = 141,
       reset = 170,
       scaleTo = 0
-    } --[[table: 1C7157E0]],
+    } --[[table: 0B6A5C70]],
     stun = {
       interval = 30
-    } --[[table: 1C7158D0]],
+    } --[[table: 0B6A5A40]],
     wait = {
       interval = 30
-    } --[[table: 1C7155B0]]
-  } --[[table: 1C7153D0]],
+    } --[[table: 0B6A59F0]]
+  } --[[table: 0B6A5FE0]],
   ["10221"] = {
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 0B900B28]],
+    } --[[table: 208BF3F0]],
     death = {
       interval = 26
-    } --[[table: 0B8F9968]],
+    } --[[table: 208BF6C0]],
     hit = {
       interval = 19
-    } --[[table: 0B8F9738]],
+    } --[[table: 208BF0D0]],
     run = {
       interval = 20
-    } --[[table: 0B8F9AA8]],
+    } --[[table: 208BF2B0]],
     SkillA = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 63,
       interval = 84,
       reset = 82
-    } --[[table: 0B8F93C8]],
+    } --[[table: 208BF670]],
     SkillB = {
       clearColorLayer = 65,
       createColorLayer = 0,
       hit = 46,
       interval = 65,
       reset = 65
-    } --[[table: 0B8F9CD8]],
+    } --[[table: 208BF350]],
     stun = {
       interval = 40
-    } --[[table: 0B8F96E8]],
+    } --[[table: 208BF850]],
     wait = {
       interval = 30
-    } --[[table: 0B8F9C38]]
-  } --[[table: 0B8F9B48]],
+    } --[[table: 208BF4E0]]
+  } --[[table: 208BF210]],
   ["10222"] = {
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 33A116C0]],
+    } --[[table: 2E4E6DD0]],
     death = {
       interval = 26
-    } --[[table: 33A11BC0]],
+    } --[[table: 2E4DD960]],
     hit = {
       interval = 19
-    } --[[table: 33A11B70]],
+    } --[[table: 2E4DD780]],
     run = {
       interval = 20
-    } --[[table: 33A118A0]],
+    } --[[table: 2E4DDA00]],
     SkillA = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 63,
       interval = 84,
       reset = 82
-    } --[[table: 33A11EE0]],
+    } --[[table: 2E4DDCD0]],
     SkillB = {
       clearColorLayer = 65,
       createColorLayer = 0,
       hit = 46,
       interval = 65,
       reset = 65
-    } --[[table: 33A11E40]],
+    } --[[table: 2E4DDC80]],
     stun = {
       interval = 40
-    } --[[table: 33A11670]],
+    } --[[table: 2E4DDBE0]],
     wait = {
       interval = 30
-    } --[[table: 33A11B20]]
-  } --[[table: 33A11710]],
+    } --[[table: 2E4DD910]]
+  } --[[table: 2E4DD320]],
   ["10223"] = {
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 0B0E9610]],
+    } --[[table: 1CE2D8A0]],
     death = {
       interval = 26
-    } --[[table: 0B0E9CF0]],
+    } --[[table: 1CE2D9E0]],
     hit = {
       interval = 19
-    } --[[table: 0B0E9C50]],
+    } --[[table: 1CE2DBC0]],
     run = {
       interval = 20
-    } --[[table: 0B0E9890]],
+    } --[[table: 1CE2D710]],
     SkillA = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 63,
       interval = 84,
       reset = 82
-    } --[[table: 0B0E9B60]],
+    } --[[table: 1CE2DB70]],
     SkillB = {
       clearColorLayer = 65,
       createColorLayer = 0,
       hit = 46,
       interval = 65,
       reset = 65
-    } --[[table: 0B0E9E30]],
+    } --[[table: 1CE2D760]],
     stun = {
       interval = 40
-    } --[[table: 0B0E9AC0]],
+    } --[[table: 1CE2D670]],
     wait = {
       interval = 30
-    } --[[table: 0B0E97F0]]
-  } --[[table: 0B0E9D40]],
+    } --[[table: 1CE2D5D0]]
+  } --[[table: 1CE2DAD0]],
   ["10231"] = {
     attack = {
       hit = 18,
       interval = 41
-    } --[[table: 1387EFD8]],
+    } --[[table: 16226E08]],
     death = {
       interval = 18
-    } --[[table: 1387E3A8]],
+    } --[[table: 16226CC8]],
     hit = {
       interval = 12
-    } --[[table: 1387E7B8]],
+    } --[[table: 16226C28]],
     run = {
       interval = 20
-    } --[[table: 1387F078]],
+    } --[[table: 16226D68]],
     SkillA = {
       hit = 22,
       interval = 40,
       reset = 0
-    } --[[table: 1387E358]],
+    } --[[table: 16227038]],
     SkillB = {
       hit = 27,
       interval = 46,
       reset = 0
-    } --[[table: 1387E178]],
+    } --[[table: 16226F98]],
     stun = {
       interval = 50
-    } --[[table: 1387A078]],
+    } --[[table: 16226A48]],
     wait = {
       interval = 24
-    } --[[table: 13879DA8]]
-  } --[[table: 13879EE8]],
+    } --[[table: 162269A8]]
+  } --[[table: 16226B88]],
   ["10232"] = {
     attack = {
       hit = 18,
       interval = 41
-    } --[[table: 18062558]],
+    } --[[table: 386F93E8]],
     death = {
       interval = 18
-    } --[[table: 18062828]],
+    } --[[table: 386F9A28]],
     hit = {
       interval = 12
-    } --[[table: 18062918]],
+    } --[[table: 386F9708]],
     run = {
       interval = 20
-    } --[[table: 18062AF8]],
+    } --[[table: 386F9898]],
     SkillA = {
       hit = 22,
       interval = 40,
       reset = 0
-    } --[[table: 18062E68]],
+    } --[[table: 386F99D8]],
     SkillB = {
       hit = 27,
       interval = 46,
       reset = 0
-    } --[[table: 180626E8]],
+    } --[[table: 386F9258]],
     stun = {
       interval = 50
-    } --[[table: 18062788]],
+    } --[[table: 386F9398]],
     wait = {
       interval = 24
-    } --[[table: 18062C38]]
-  } --[[table: 18062A58]],
+    } --[[table: 386F9208]]
+  } --[[table: 386F51A8]],
   ["10233"] = {
     attack = {
       hit = 18,
       interval = 41
-    } --[[table: 0C85B888]],
+    } --[[table: 0D27C898]],
     death = {
       interval = 18
-    } --[[table: 0C85B838]],
+    } --[[table: 0D27C3E8]],
     hit = {
       interval = 12
-    } --[[table: 0C85B3D8]],
+    } --[[table: 0D27CC58]],
     run = {
       interval = 20
-    } --[[table: 0C85B158]],
+    } --[[table: 0D27C4D8]],
     SkillA = {
       hit = 22,
       interval = 40,
       reset = 0
-    } --[[table: 0C85AF28]],
+    } --[[table: 0D27C708]],
     SkillB = {
       hit = 27,
       interval = 46,
       reset = 0
-    } --[[table: 0C85B7E8]],
+    } --[[table: 0D27CD48]],
     stun = {
       interval = 50
-    } --[[table: 0C85B1F8]],
+    } --[[table: 0D27CC08]],
     wait = {
       interval = 24
-    } --[[table: 0C868C68]]
-  } --[[table: 0C8691B8]],
+    } --[[table: 0D27C5C8]]
+  } --[[table: 0D27CCF8]],
   ["10241"] = {
     Animation1 = {
       hit = 15,
       interval = 45
-    } --[[table: 23C5B048]],
+    } --[[table: 147486B8]],
     attack = {
       hit = 22,
       interval = 30
-    } --[[table: 1C700A20]],
+    } --[[table: 14A16320]],
     death = {
       interval = 32
-    } --[[table: 1C700BB0]],
+    } --[[table: 14A15650]],
     hit = {
       interval = 20
-    } --[[table: 1C700ED0]],
+    } --[[table: 14A15470]],
     run = {
       interval = 24
-    } --[[table: 1C700DE0]],
+    } --[[table: 14A15BA0]],
     SkillA = {
       clearColorLayer = 60,
       createColorLayer = 0,
       hit = 33,
       interval = 60,
       reset = 47
-    } --[[table: 1C7008E0]],
+    } --[[table: 14A154C0]],
     SkillB = {
       clearColorLayer = 48,
       createColorLayer = 0,
@@ -6510,39 +6516,39 @@ return
       reset = 48,
       showEffect = 35,
       slowly = 35
-    } --[[table: 1C700840]],
+    } --[[table: 14A15B50]],
     stun = {
       interval = 30
-    } --[[table: 1C700700]],
+    } --[[table: 14A15880]],
     wait = {
       interval = 30
-    } --[[table: 1C700D90]]
-  } --[[table: 1C700A70]],
+    } --[[table: 14A15B00]]
+  } --[[table: 14A32F70]],
   ["10242"] = {
     Animation1 = {
       hit = 15,
       interval = 45
-    } --[[table: 0AE9E008]],
+    } --[[table: 37180280]],
     attack = {
       hit = 22,
       interval = 30
-    } --[[table: 1F251D28]],
+    } --[[table: 37186360]],
     death = {
       interval = 32
-    } --[[table: 1F252228]],
+    } --[[table: 371863B0]],
     hit = {
       interval = 20
-    } --[[table: 1F252188]],
+    } --[[table: 37186220]],
     run = {
       interval = 24
-    } --[[table: 1F252638]],
+    } --[[table: 37185FA0]],
     SkillA = {
       clearColorLayer = 60,
       createColorLayer = 0,
       hit = 33,
       interval = 60,
       reset = 47
-    } --[[table: 1F252368]],
+    } --[[table: 371862C0]],
     SkillB = {
       clearColorLayer = 48,
       createColorLayer = 0,
@@ -6550,39 +6556,39 @@ return
       reset = 48,
       showEffect = 35,
       slowly = 35
-    } --[[table: 1F251E18]],
+    } --[[table: 37186400]],
     stun = {
       interval = 30
-    } --[[table: 1F252138]],
+    } --[[table: 37186180]],
     wait = {
       interval = 30
-    } --[[table: 1F24ECB8]]
-  } --[[table: 1F24F028]],
+    } --[[table: 37186590]]
+  } --[[table: 37185FF0]],
   ["10243"] = {
     Animation1 = {
       hit = 15,
       interval = 45
-    } --[[table: 0ABA0CA0]],
+    } --[[table: 175296C0]],
     attack = {
       hit = 22,
       interval = 30
-    } --[[table: 0B0EB3C0]],
+    } --[[table: 16FEF058]],
     death = {
       interval = 32
-    } --[[table: 0B0EB370]],
+    } --[[table: 16FEE978]],
     hit = {
       interval = 20
-    } --[[table: 0B0EBAA0]],
+    } --[[table: 16FEF0F8]],
     run = {
       interval = 24
-    } --[[table: 0B0EBCD0]],
+    } --[[table: 16FEEF68]],
     SkillA = {
       clearColorLayer = 60,
       createColorLayer = 0,
       hit = 33,
       interval = 60,
       reset = 47
-    } --[[table: 0B0EB960]],
+    } --[[table: 16FEEA18]],
     SkillB = {
       clearColorLayer = 48,
       createColorLayer = 0,
@@ -6590,205 +6596,205 @@ return
       reset = 48,
       showEffect = 35,
       slowly = 35
-    } --[[table: 0B0EB8C0]],
+    } --[[table: 16FEF2D8]],
     stun = {
       interval = 30
-    } --[[table: 0B0EBBE0]],
+    } --[[table: 16FEF008]],
     wait = {
       interval = 30
-    } --[[table: 0B0EB910]]
-  } --[[table: 0B0EB820]],
+    } --[[table: 16FEBA48]]
+  } --[[table: 16FEB908]],
   ["10251"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 17B87770]],
+    } --[[table: 31A88BF8]],
     death = {
       interval = 23
-    } --[[table: 17B86FF0]],
+    } --[[table: 31A88F18]],
     hit = {
       interval = 14
-    } --[[table: 17B86E10]],
+    } --[[table: 31A889C8]],
     run = {
       interval = 22
-    } --[[table: 17B87540]],
+    } --[[table: 31A88B08]],
     SkillA = {
       hit = 39,
       interval = 52,
       reset = 0
-    } --[[table: 17B86F50]],
+    } --[[table: 31A88EC8]],
     SkillB = {
       hit = 30,
       interval = 65,
       reset = 0
-    } --[[table: 17B872C0]],
+    } --[[table: 31A88AB8]],
     stun = {
       interval = 35
-    } --[[table: 17B87400]],
+    } --[[table: 31A88E28]],
     wait = {
       interval = 30
-    } --[[table: 17B86DC0]]
-  } --[[table: 17B86D70]],
+    } --[[table: 31A88A18]]
+  } --[[table: 31A88978]],
   ["10252"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 0D218B40]],
+    } --[[table: 3795FF50]],
     death = {
       interval = 23
-    } --[[table: 0D218320]],
+    } --[[table: 379606D0]],
     hit = {
       interval = 14
-    } --[[table: 0D218370]],
+    } --[[table: 3795F690]],
     run = {
       interval = 22
-    } --[[table: 0D218910]],
+    } --[[table: 3795FF00]],
     SkillA = {
       hit = 39,
       interval = 52,
       reset = 0
-    } --[[table: 0D218820]],
+    } --[[table: 379600E0]],
     SkillB = {
       hit = 30,
       interval = 65,
       reset = 0
-    } --[[table: 0D218410]],
+    } --[[table: 3795F640]],
     stun = {
       interval = 35
-    } --[[table: 0D218AF0]],
+    } --[[table: 3795F6E0]],
     wait = {
       interval = 30
-    } --[[table: 0D218C80]]
-  } --[[table: 0D218A50]],
+    } --[[table: 3795F550]]
+  } --[[table: 3795FC30]],
   ["10253"] = {
     attack = {
       hit = 22,
       interval = 45
-    } --[[table: 25ED1410]],
+    } --[[table: 1FA66028]],
     death = {
       interval = 23
-    } --[[table: 25ED15A0]],
+    } --[[table: 1FA65CB8]],
     hit = {
       interval = 14
-    } --[[table: 25ED1370]],
+    } --[[table: 1FA65F38]],
     run = {
       interval = 22
-    } --[[table: 25ED1B40]],
+    } --[[table: 1FA65F88]],
     SkillA = {
       hit = 39,
       interval = 52,
       reset = 0
-    } --[[table: 25ED1820]],
+    } --[[table: 1FA664D8]],
     SkillB = {
       hit = 30,
       interval = 65,
       reset = 0
-    } --[[table: 25ED1730]],
+    } --[[table: 1FA65D58]],
     stun = {
       interval = 35
-    } --[[table: 25ED16E0]],
+    } --[[table: 1FA66398]],
     wait = {
       interval = 30
-    } --[[table: 25ED17D0]]
-  } --[[table: 25ED1C80]],
+    } --[[table: 1FA660C8]]
+  } --[[table: 1FA66078]],
   ["10261"] = {
     attack = {
       hit = 15,
       interval = 34
-    } --[[table: 17B8E0B8]],
+    } --[[table: 0AE00A20]],
     death = {
       interval = 39
-    } --[[table: 17B8E158]],
+    } --[[table: 0AE00930]],
     hit = {
       interval = 13
-    } --[[table: 17B8E248]],
+    } --[[table: 0ADFFDF0]],
     run = {
       interval = 20
-    } --[[table: 17B8DFC8]],
+    } --[[table: 0AE00890]],
     SkillA = {
       hit = 11,
       interval = 42,
       reset = 42
-    } --[[table: 17B8DF28]],
+    } --[[table: 0AE009D0]],
     SkillB = {
       hit = 46,
       interval = 66,
       reset = 61
-    } --[[table: 17B8E518]],
+    } --[[table: 0AE00390]],
     stun = {
       interval = 35
-    } --[[table: 17B8E068]],
+    } --[[table: 0ADFFC10]],
     wait = {
       interval = 24
-    } --[[table: 17B8DE38]]
-  } --[[table: 17B8DA78]],
+    } --[[table: 0ADFFDA0]]
+  } --[[table: 0AE00200]],
   ["10262"] = {
     attack = {
       hit = 15,
       interval = 34
-    } --[[table: 0C5FCB20]],
+    } --[[table: 37184A10]],
     death = {
       interval = 39
-    } --[[table: 0C5FD430]],
+    } --[[table: 371852D0]],
     hit = {
       interval = 13
-    } --[[table: 0C5FCDF0]],
+    } --[[table: 37184970]],
     run = {
       interval = 20
-    } --[[table: 0C5FD390]],
+    } --[[table: 37184DD0]],
     SkillA = {
       hit = 11,
       interval = 42,
       reset = 42
-    } --[[table: 0C5FD250]],
+    } --[[table: 37185230]],
     SkillB = {
       hit = 46,
       interval = 66,
       reset = 61
-    } --[[table: 0C5FCBC0]],
+    } --[[table: 37184CE0]],
     stun = {
       interval = 35
-    } --[[table: 0C5FCD50]],
+    } --[[table: 37185140]],
     wait = {
       interval = 24
-    } --[[table: 0C5FCCB0]]
-  } --[[table: 0C5FCB70]],
+    } --[[table: 37185050]]
+  } --[[table: 37184BA0]],
   ["10263"] = {
     attack = {
       hit = 15,
       interval = 34
-    } --[[table: 309E96D0]],
+    } --[[table: 17A86CF8]],
     death = {
       interval = 39
-    } --[[table: 309E91D0]],
+    } --[[table: 17A85F88]],
     hit = {
       interval = 13
-    } --[[table: 309E8E60]],
+    } --[[table: 17A86208]],
     run = {
       interval = 20
-    } --[[table: 309E8F50]],
+    } --[[table: 17A86BB8]],
     SkillA = {
       hit = 11,
       interval = 42,
       reset = 42
-    } --[[table: 309E9220]],
+    } --[[table: 17A85F38]],
     SkillB = {
       hit = 46,
       interval = 66,
       reset = 61
-    } --[[table: 309E3050]],
+    } --[[table: 17A85EE8]],
     stun = {
       interval = 35
-    } --[[table: 309E2B00]],
+    } --[[table: 17A86168]],
     wait = {
       interval = 24
-    } --[[table: 309E3000]]
-  } --[[table: 309E2DD0]],
+    } --[[table: 17A86438]]
+  } --[[table: 17A86258]],
   ["10271"] = {
     Animation1 = {
       interval = 91,
       over = 90
-    } --[[table: 13FD39C8]],
+    } --[[table: 0A399FF8]],
     Animation2 = {
       hit1 = 6,
       hit2 = 75,
@@ -6798,18 +6804,18 @@ return
       ["snake20,0.5"] = 55,
       ["snake50,1"] = 6,
       ["snake60,0.2"] = 70
-    } --[[table: 13FD40F8]],
+    } --[[table: 0A399F08]],
     Animation3 = {
       interval = 91,
       over = 90
-    } --[[table: 13FD3AB8]],
+    } --[[table: 0A39A1D8]],
     Animation4 = {
       ["createImageafter3,2"] = 121,
       ["createImagebefore3,2"] = 121,
       interval = 123,
       over1 = 122,
       reset = 0
-    } --[[table: 13FD3A68]],
+    } --[[table: 0A399F58]],
     Animation5 = {
       hit1 = 75,
       interval = 92,
@@ -6817,49 +6823,49 @@ return
       ["scaleTo[1.5,0.5]"] = 0,
       ["snake50,1"] = 25,
       ["snake50,2"] = 40
-    } --[[table: 13FD3E78]],
+    } --[[table: 0A39A0E8]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 13FCCDF8]],
+    } --[[table: 31259E38]],
     death = {
       interval = 26
-    } --[[table: 13FCC808]],
+    } --[[table: 31259D48]],
     hit = {
       interval = 17
-    } --[[table: 13FCCD58]],
+    } --[[table: 31259BB8]],
     run = {
       interval = 20
-    } --[[table: 13FCC1C8]],
+    } --[[table: 31259AC8]],
     run2 = {
       interval = 20
-    } --[[table: 13FCD168]],
+    } --[[table: 31259668]],
     SkillA = {
       createImageafter = 70,
       createImagebefore = 70,
       interval = 119,
       newhit = 87,
       reset = 119
-    } --[[table: 13FCD0C8]],
+    } --[[table: 312598E8]],
     SkillB = {
       createImageafter = 90,
       createImagebefore = 90,
       interval = 93,
       newhit = 85,
       reset = 0
-    } --[[table: 13FCC768]],
+    } --[[table: 312597F8]],
     stun = {
       interval = 35
-    } --[[table: 13FCC5D8]],
+    } --[[table: 31259578]],
     wait = {
       interval = 30
-    } --[[table: 13FCC128]]
-  } --[[table: 13FCC308]],
+    } --[[table: 31259ED8]]
+  } --[[table: 31259CF8]],
   ["10272"] = {
     Animation1 = {
       interval = 91,
       over = 90
-    } --[[table: 0AB59B80]],
+    } --[[table: 0B226EE0]],
     Animation2 = {
       hit1 = 6,
       hit2 = 75,
@@ -6869,18 +6875,18 @@ return
       ["snake20,0.5"] = 55,
       ["snake50,1"] = 6,
       ["snake60,0.2"] = 70
-    } --[[table: 0AB59EF0]],
+    } --[[table: 0B226CB0]],
     Animation3 = {
       interval = 91,
       over = 90
-    } --[[table: 0AB59EA0]],
+    } --[[table: 0B227160]],
     Animation4 = {
       ["createImageafter3,2"] = 121,
       ["createImagebefore3,2"] = 121,
       interval = 123,
       over1 = 122,
       reset = 0
-    } --[[table: 0AB59900]],
+    } --[[table: 0B226F30]],
     Animation5 = {
       hit1 = 75,
       interval = 92,
@@ -6888,49 +6894,49 @@ return
       ["scaleTo[1.5,0.5]"] = 0,
       ["snake50,1"] = 25,
       ["snake50,2"] = 40
-    } --[[table: 0AB5A210]],
+    } --[[table: 0B226DA0]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 33A06680]],
+    } --[[table: 0CEBBC10]],
     death = {
       interval = 26
-    } --[[table: 33A067C0]],
+    } --[[table: 0CEBB940]],
     hit = {
       interval = 17
-    } --[[table: 33A06630]],
+    } --[[table: 0CEBB8F0]],
     run = {
       interval = 20
-    } --[[table: 33A06450]],
+    } --[[table: 0CEBB9E0]],
     run2 = {
       interval = 20
-    } --[[table: 33A06590]],
+    } --[[table: 0CEBBEE0]],
     SkillA = {
       createImageafter = 70,
       createImagebefore = 70,
       interval = 119,
       newhit = 87,
       reset = 119
-    } --[[table: 33A06130]],
+    } --[[table: 0CEBBE40]],
     SkillB = {
       createImageafter = 90,
       createImagebefore = 90,
       interval = 93,
       newhit = 85,
       reset = 0
-    } --[[table: 33A069F0]],
+    } --[[table: 0CEBB710]],
     stun = {
       interval = 35
-    } --[[table: 33A065E0]],
+    } --[[table: 0CEBB670]],
     wait = {
       interval = 30
-    } --[[table: 33A06540]]
-  } --[[table: 33A06220]],
+    } --[[table: 0CEBB850]]
+  } --[[table: 0CEBB800]],
   ["10273"] = {
     Animation1 = {
       interval = 91,
       over = 90
-    } --[[table: 0C661830]],
+    } --[[table: 15EC32B0]],
     Animation2 = {
       hit1 = 6,
       hit2 = 75,
@@ -6940,18 +6946,18 @@ return
       ["snake20,0.5"] = 55,
       ["snake50,1"] = 6,
       ["snake60,0.2"] = 70
-    } --[[table: 0C661560]],
+    } --[[table: 15EC3030]],
     Animation3 = {
       interval = 91,
       over = 90
-    } --[[table: 0C6611F0]],
+    } --[[table: 15EC2F90]],
     Animation4 = {
       ["createImageafter3,2"] = 121,
       ["createImagebefore3,2"] = 121,
       interval = 123,
       over1 = 122,
       reset = 0
-    } --[[table: 0C661290]],
+    } --[[table: 15EC33F0]],
     Animation5 = {
       hit1 = 75,
       interval = 92,
@@ -6959,137 +6965,137 @@ return
       ["scaleTo[1.5,0.5]"] = 0,
       ["snake50,1"] = 25,
       ["snake50,2"] = 40
-    } --[[table: 0C6615B0]],
+    } --[[table: 15EC3080]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 0CE32528]],
+    } --[[table: 0C5FB538]],
     death = {
       interval = 26
-    } --[[table: 0CE32E38]],
+    } --[[table: 0C5FB718]],
     hit = {
       interval = 17
-    } --[[table: 0CE32A78]],
+    } --[[table: 0C5FB9E8]],
     run = {
       interval = 20
-    } --[[table: 0CE328E8]],
+    } --[[table: 0C5FB6C8]],
     run2 = {
       interval = 20
-    } --[[table: 0CE32E88]],
+    } --[[table: 0C5FB948]],
     SkillA = {
       createImageafter = 70,
       createImagebefore = 70,
       interval = 119,
       newhit = 87,
       reset = 119
-    } --[[table: 0CE32C08]],
+    } --[[table: 0C5FB5D8]],
     SkillB = {
       createImageafter = 90,
       createImagebefore = 90,
       interval = 93,
       newhit = 85,
       reset = 0
-    } --[[table: 0CE32D48]],
+    } --[[table: 0C5FB1C8]],
     stun = {
       interval = 35
-    } --[[table: 0CE32668]],
+    } --[[table: 0C5FB998]],
     wait = {
       interval = 30
-    } --[[table: 0CE32CF8]]
-  } --[[table: 0CE32848]],
+    } --[[table: 0C5FB808]]
+  } --[[table: 0C5FB588]],
   ["10281"] = {
     attack = {
       fire = 19,
       interval = 41
-    } --[[table: 13FFE4B8]],
+    } --[[table: 1D1545F8]],
     death = {
       interval = 31
-    } --[[table: 13FFE3C8]],
+    } --[[table: 1D154A58]],
     hit = {
       interval = 19
-    } --[[table: 13FFE7D8]],
+    } --[[table: 1D154B48]],
     run = {
       interval = 22
-    } --[[table: 13FFE468]],
+    } --[[table: 1D1543C8]],
     SkillA = {
       hit = 25,
       interval = 88
-    } --[[table: 13FFE5A8]],
+    } --[[table: 1D1545A8]],
     SkillB = {
       hit = 45,
       interval = 135
-    } --[[table: 13FFEC38]],
+    } --[[table: 1D154328]],
     stun = {
       interval = 37
-    } --[[table: 13FFE5F8]],
+    } --[[table: 1D1549B8]],
     wait = {
       interval = 37
-    } --[[table: 13FFE328]]
-  } --[[table: 13FFE508]],
+    } --[[table: 1D154558]]
+  } --[[table: 1D154508]],
   ["10282"] = {
     attack = {
       fire = 19,
       interval = 41
-    } --[[table: 0B0FC7B0]],
+    } --[[table: 0CA95FC0]],
     death = {
       interval = 31
-    } --[[table: 0B0FC990]],
+    } --[[table: 0CA95CF0]],
     hit = {
       interval = 19
-    } --[[table: 0B0FC8A0]],
+    } --[[table: 0CA95E30]],
     run = {
       interval = 22
-    } --[[table: 0B0FC760]],
+    } --[[table: 0CA95D90]],
     SkillA = {
       hit = 25,
       interval = 88
-    } --[[table: 0B0FCA30]],
+    } --[[table: 0CA95CA0]],
     SkillB = {
       hit = 45,
       interval = 135
-    } --[[table: 0B0FC440]],
+    } --[[table: 0CA95A70]],
     stun = {
       interval = 37
-    } --[[table: 0B0FC710]],
+    } --[[table: 0CA95E80]],
     wait = {
       interval = 37
-    } --[[table: 0B0FC350]]
-  } --[[table: 0B0FC5D0]],
+    } --[[table: 0CA95C00]]
+  } --[[table: 0CA95D40]],
   ["10283"] = {
     attack = {
       fire = 19,
       interval = 41
-    } --[[table: 0CDF9668]],
+    } --[[table: 3C07A7E8]],
     death = {
       interval = 31
-    } --[[table: 0CDF9C58]],
+    } --[[table: 3C079FC8]],
     hit = {
       interval = 19
-    } --[[table: 0CDF9BB8]],
+    } --[[table: 3C07A338]],
     run = {
       interval = 22
-    } --[[table: 0CDF9ED8]],
+    } --[[table: 3C07A748]],
     SkillA = {
       hit = 25,
       interval = 88
-    } --[[table: 0CDF9A78]],
+    } --[[table: 3C07A108]],
     SkillB = {
       hit = 45,
       interval = 135
-    } --[[table: 0CDF9848]],
+    } --[[table: 3C07A158]],
     stun = {
       interval = 37
-    } --[[table: 0CDF9B18]],
+    } --[[table: 3C07A298]],
     wait = {
       interval = 37
-    } --[[table: 0CDF9528]]
-  } --[[table: 0CDF96B8]],
+    } --[[table: 3C079F78]]
+  } --[[table: 3C079F28]],
   ["10291"] = {
     Animation1 = {
       ["createImagebefore2,2"] = 164,
       interval = 166,
       over1 = 165
-    } --[[table: 28ACA4B8]],
+    } --[[table: 11370470]],
     Animation2 = {
       hit1 = 60,
       hit2 = 85,
@@ -7097,45 +7103,45 @@ return
       interval = 111,
       over = 110,
       ["snake50,2"] = 36
-    } --[[table: 28ACA828]],
+    } --[[table: 113707E0]],
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 28ACB728]],
+    } --[[table: 39DF82A8]],
     death = {
       interval = 47
-    } --[[table: 28ACB8B8]],
+    } --[[table: 39DF7F88]],
     hit = {
       interval = 16
-    } --[[table: 28ACBA48]],
+    } --[[table: 39DF8258]],
     run = {
       interval = 40
-    } --[[table: 28ACBC78]],
+    } --[[table: 39DF7FD8]],
     SkillA = {
       hit = 73,
       interval = 112,
       newhit = 73,
       reset = 112
-    } --[[table: 28ACBAE8]],
+    } --[[table: 39DF81B8]],
     SkillB = {
       createImagebefore = 45,
       interval = 120,
       newhit = 103,
       reset = 120
-    } --[[table: 28ACBF48]],
+    } --[[table: 39DF8118]],
     stun = {
       interval = 35
-    } --[[table: 28ACBEA8]],
+    } --[[table: 39DF7CB8]],
     wait = {
       interval = 60
-    } --[[table: 28ACBA98]]
-  } --[[table: 28ACBC28]],
+    } --[[table: 39DF7C18]]
+  } --[[table: 39DF7C68]],
   ["10292"] = {
     Animation1 = {
       ["createImagebefore2,2"] = 164,
       interval = 166,
       over1 = 165
-    } --[[table: 13FE7DD8]],
+    } --[[table: 3C06B8D8]],
     Animation2 = {
       hit1 = 60,
       hit2 = 85,
@@ -7143,45 +7149,45 @@ return
       interval = 111,
       over = 110,
       ["snake50,2"] = 36
-    } --[[table: 13FC7768]],
+    } --[[table: 3C06AF78]],
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 13FC9E28]],
+    } --[[table: 3C06DA98]],
     death = {
       interval = 47
-    } --[[table: 13FC9A68]],
+    } --[[table: 3C06D958]],
     hit = {
       interval = 16
-    } --[[table: 13FC9C98]],
+    } --[[table: 3C06DEA8]],
     run = {
       interval = 40
-    } --[[table: 13FCA0A8]],
+    } --[[table: 3C06DDB8]],
     SkillA = {
       hit = 73,
       interval = 112,
       newhit = 73,
       reset = 112
-    } --[[table: 13FC9EC8]],
+    } --[[table: 3C06E038]],
     SkillB = {
       createImagebefore = 45,
       interval = 120,
       newhit = 103,
       reset = 120
-    } --[[table: 13FC9CE8]],
+    } --[[table: 3C06DF48]],
     stun = {
       interval = 35
-    } --[[table: 13FC9BF8]],
+    } --[[table: 3C06DEF8]],
     wait = {
       interval = 60
-    } --[[table: 13FC9F18]]
-  } --[[table: 13FCA2D8]],
+    } --[[table: 3C06DCC8]]
+  } --[[table: 3C06D8B8]],
   ["10293"] = {
     Animation1 = {
       ["createImagebefore2,2"] = 164,
       interval = 166,
       over1 = 165
-    } --[[table: 3A32A480]],
+    } --[[table: 1135BF70]],
     Animation2 = {
       hit1 = 60,
       hit2 = 85,
@@ -7189,147 +7195,147 @@ return
       interval = 111,
       over = 110,
       ["snake50,2"] = 36
-    } --[[table: 3A329EE0]],
+    } --[[table: 1135C510]],
     attack = {
       hit = 21,
       interval = 40
-    } --[[table: 3A32B330]],
+    } --[[table: 0ABE3B58]],
     death = {
       interval = 47
-    } --[[table: 3A32B740]],
+    } --[[table: 0ABE3C98]],
     hit = {
       interval = 16
-    } --[[table: 3A32B1F0]],
+    } --[[table: 0ABE4198]],
     run = {
       interval = 40
-    } --[[table: 3A32B0B0]],
+    } --[[table: 0ABE3BF8]],
     SkillA = {
       hit = 73,
       interval = 112,
       newhit = 73,
       reset = 112
-    } --[[table: 3A32B2E0]],
+    } --[[table: 0ABE4148]],
     SkillB = {
       createImagebefore = 45,
       interval = 120,
       newhit = 103,
       reset = 120
-    } --[[table: 3A32B8D0]],
+    } --[[table: 0ABE3BA8]],
     stun = {
       interval = 35
-    } --[[table: 3A32B470]],
+    } --[[table: 0ABE3B08]],
     wait = {
       interval = 60
-    } --[[table: 3A32B560]]
-  } --[[table: 3A32B650]],
+    } --[[table: 0ABE34C8]]
+  } --[[table: 0ABE38D8]],
   ["10321"] = {
     attack = {
       hit = 16,
       interval = 34
-    } --[[table: 2BB19AD0]],
+    } --[[table: 113101A8]],
     death = {
       interval = 58
-    } --[[table: 2BB199E0]],
+    } --[[table: 113106F8]],
     hit = {
       interval = 13
-    } --[[table: 2BB19850]],
+    } --[[table: 11310158]],
     run = {
       interval = 30
-    } --[[table: 2BB196C0]],
+    } --[[table: 11310748]],
     SkillA = {
       hit = 24,
       interval = 38
-    } --[[table: 2BB19800]],
+    } --[[table: 11310518]],
     SkillB = {
       hit = 20,
       interval = 39
-    } --[[table: 2BB198F0]],
+    } --[[table: 113108D8]],
     stun = {
       interval = 34
-    } --[[table: 2BB193F0]],
+    } --[[table: 113106A8]],
     wait = {
       interval = 32
-    } --[[table: 2BB19620]]
-  } --[[table: 2BB19A30]],
+    } --[[table: 113103D8]]
+  } --[[table: 11310478]],
   ["10322"] = {
     attack = {
       hit = 16,
       interval = 34
-    } --[[table: 163A30F8]],
+    } --[[table: 152A1EB0]],
     death = {
       interval = 58
-    } --[[table: 163A3198]],
+    } --[[table: 152A2090]],
     hit = {
       interval = 13
-    } --[[table: 163A0718]],
+    } --[[table: 152A23B0]],
     run = {
       interval = 30
-    } --[[table: 163A3058]],
+    } --[[table: 152A25E0]],
     SkillA = {
       hit = 24,
       interval = 38
-    } --[[table: 163A2C48]],
+    } --[[table: 152A2450]],
     SkillB = {
       hit = 20,
       interval = 39
-    } --[[table: 163A01C8]],
+    } --[[table: 152A2360]],
     stun = {
       interval = 34
-    } --[[table: 163A0498]],
+    } --[[table: 152A1500]],
     wait = {
       interval = 32
-    } --[[table: 163A0948]]
-  } --[[table: 163A0768]],
+    } --[[table: 1529F930]]
+  } --[[table: 1529F660]],
   ["10323"] = {
     attack = {
       hit = 16,
       interval = 34
-    } --[[table: 1356FE50]],
+    } --[[table: 39BBCBD8]],
     death = {
       interval = 58
-    } --[[table: 1356FEF0]],
+    } --[[table: 39BBC9A8]],
     hit = {
       interval = 13
-    } --[[table: 1356CFC0]],
+    } --[[table: 39BBBFF8]],
     run = {
       interval = 30
-    } --[[table: 13570030]],
+    } --[[table: 39BBD038]],
     SkillA = {
       hit = 24,
       interval = 38
-    } --[[table: 1356D0B0]],
+    } --[[table: 39BBD268]],
     SkillB = {
       hit = 20,
       interval = 39
-    } --[[table: 1356D4C0]],
+    } --[[table: 39BBBF58]],
     stun = {
       interval = 34
-    } --[[table: 1356D010]],
+    } --[[table: 39BBBEB8]],
     wait = {
       interval = 32
-    } --[[table: 1356D3D0]]
-  } --[[table: 1356D8D0]],
+    } --[[table: 39BBC868]]
+  } --[[table: 39BBC6D8]],
   ["10331"] = {
     attack = {
       hit = 11,
       interval = 26
-    } --[[table: 1537FA78]],
+    } --[[table: 0A3BAF60]],
     death = {
       interval = 35
-    } --[[table: 1537F6B8]],
+    } --[[table: 0A3BAF10]],
     hit = {
       interval = 13
-    } --[[table: 1537F528]],
+    } --[[table: 0A3BAA60]],
     run = {
       interval = 24
-    } --[[table: 1537FD98]],
+    } --[[table: 0A3BACE0]],
     SkillA = {
       clearColorLayer = 41,
       createColorLayer = 0,
       hit = 28,
       interval = 41,
       reset = 40
-    } --[[table: 1537FED8]],
+    } --[[table: 0A3BB190]],
     SkillB = {
       clearColorLayer = 50,
       createColorLayer = 0,
@@ -7337,39 +7343,39 @@ return
       interval = 51,
       reset = 50,
       shake = 25
-    } --[[table: 1537F7F8]],
+    } --[[table: 0A3BAE70]],
     skillwin = {
       hit = 9,
       interval = 32
-    } --[[table: 1537F668]],
+    } --[[table: 0A3BB0A0]],
     stun = {
       interval = 30
-    } --[[table: 1537F848]],
+    } --[[table: 0A3BA970]],
     wait = {
       interval = 24
-    } --[[table: 1537F618]]
-  } --[[table: 1537FDE8]],
+    } --[[table: 0A3BB0F0]]
+  } --[[table: 0A3BB230]],
   ["10332"] = {
     attack = {
       hit = 11,
       interval = 26
-    } --[[table: 0BC9C228]],
+    } --[[table: 2E7AD900]],
     death = {
       interval = 35
-    } --[[table: 0BC9C688]],
+    } --[[table: 2E7AD310]],
     hit = {
       interval = 13
-    } --[[table: 0BC9C138]],
+    } --[[table: 2E7AD680]],
     run = {
       interval = 24
-    } --[[table: 0BC9C188]],
+    } --[[table: 2E7AD400]],
     SkillA = {
       clearColorLayer = 41,
       createColorLayer = 0,
       hit = 28,
       interval = 41,
       reset = 40
-    } --[[table: 0BC9C408]],
+    } --[[table: 2E7ADA40]],
     SkillB = {
       clearColorLayer = 50,
       createColorLayer = 0,
@@ -7377,39 +7383,39 @@ return
       interval = 51,
       reset = 50,
       shake = 25
-    } --[[table: 0BC9C6D8]],
+    } --[[table: 2E7AD630]],
     skillwin = {
       hit = 9,
       interval = 32
-    } --[[table: 0BC9BFF8]],
+    } --[[table: 2E7AD540]],
     stun = {
       interval = 30
-    } --[[table: 0BC9C2C8]],
+    } --[[table: 2E7AD2C0]],
     wait = {
       interval = 24
-    } --[[table: 0BC9C598]]
-  } --[[table: 0BC9C3B8]],
+    } --[[table: 2E7AD590]]
+  } --[[table: 2E7AD9A0]],
   ["10333"] = {
     attack = {
       hit = 11,
       interval = 26
-    } --[[table: 0B04A1B0]],
+    } --[[table: 20B9E4E0]],
     death = {
       interval = 35
-    } --[[table: 0B049F30]],
+    } --[[table: 20B9E7B0]],
     hit = {
       interval = 13
-    } --[[table: 0B04A070]],
+    } --[[table: 20B9E850]],
     run = {
       interval = 24
-    } --[[table: 0B049FD0]],
+    } --[[table: 20B9E670]],
     SkillA = {
       clearColorLayer = 41,
       createColorLayer = 0,
       hit = 28,
       interval = 41,
       reset = 40
-    } --[[table: 0B049B20]],
+    } --[[table: 20B9E800]],
     SkillB = {
       clearColorLayer = 50,
       createColorLayer = 0,
@@ -7417,1039 +7423,1039 @@ return
       interval = 51,
       reset = 50,
       shake = 25
-    } --[[table: 0B049B70]],
+    } --[[table: 20B9E580]],
     skillwin = {
       hit = 9,
       interval = 32
-    } --[[table: 0B049E40]],
+    } --[[table: 20B9E490]],
     stun = {
       interval = 30
-    } --[[table: 0B04A480]],
+    } --[[table: 20B9E940]],
     wait = {
       interval = 24
-    } --[[table: 0B04A0C0]]
-  } --[[table: 0B049DA0]],
+    } --[[table: 20B9E3A0]]
+  } --[[table: 20B9EA80]],
   ["10341"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 0B7FF3F0]],
+    } --[[table: 11312EA8]],
     death = {
       interval = 37
-    } --[[table: 0B7FF1C0]],
+    } --[[table: 11310AB8]],
     hit = {
       interval = 16
-    } --[[table: 0B7FF670]],
+    } --[[table: 11310338]],
     run = {
       interval = 23
-    } --[[table: 0B7FF2B0]],
+    } --[[table: 11312B38]],
     SkillA = {
       hit = 13,
       interval = 50,
       reset = 50
-    } --[[table: 0B7FF6C0]],
+    } --[[table: 11310F68]],
     SkillB = {
       hit = 88,
       interval = 100,
       reset = 0
-    } --[[table: 0B7FF300]],
+    } --[[table: 113102E8]],
     stun = {
       interval = 30
-    } --[[table: 0B7FF120]],
+    } --[[table: 11310298]],
     wait = {
       interval = 24
-    } --[[table: 0B7FFA30]]
-  } --[[table: 0B7FF9E0]],
+    } --[[table: 11310608]]
+  } --[[table: 113105B8]],
   ["10342"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 2E65F958]],
+    } --[[table: 0B238460]],
     death = {
       interval = 37
-    } --[[table: 2E676388]],
+    } --[[table: 0B238550]],
     hit = {
       interval = 16
-    } --[[table: 2E6767E8]],
+    } --[[table: 0B237C90]],
     run = {
       interval = 23
-    } --[[table: 2E676158]],
+    } --[[table: 0B238730]],
     SkillA = {
       hit = 13,
       interval = 50,
       reset = 50
-    } --[[table: 2E6768D8]],
+    } --[[table: 0B238140]],
     SkillB = {
       hit = 88,
       interval = 100,
       reset = 0
-    } --[[table: 2E676658]],
+    } --[[table: 0B237B50]],
     stun = {
       interval = 30
-    } --[[table: 2E676748]],
+    } --[[table: 0B237D80]],
     wait = {
       interval = 24
-    } --[[table: 2E676518]]
-  } --[[table: 2E6763D8]],
+    } --[[table: 0B234860]]
+  } --[[table: 0B2345E0]],
   ["10343"] = {
     attack = {
       hit = 17,
       interval = 32
-    } --[[table: 1C61ED08]],
+    } --[[table: 244B7200]],
     death = {
       interval = 37
-    } --[[table: 1C6180E8]],
+    } --[[table: 244B7610]],
     hit = {
       interval = 16
-    } --[[table: 1C6185E8]],
+    } --[[table: 244B72F0]],
     run = {
       interval = 23
-    } --[[table: 1C61ECB8]],
+    } --[[table: 244B7660]],
     SkillA = {
       hit = 13,
       interval = 50,
       reset = 50
-    } --[[table: 1C618098]],
+    } --[[table: 244B7980]],
     SkillB = {
       hit = 88,
       interval = 100,
       reset = 0
-    } --[[table: 1C618548]],
+    } --[[table: 244B72A0]],
     stun = {
       interval = 30
-    } --[[table: 1C618048]],
+    } --[[table: 244C4EF0]],
     wait = {
       interval = 24
-    } --[[table: 1C617F08]]
-  } --[[table: 1C617E18]],
+    } --[[table: 244C4E00]]
+  } --[[table: 244C4D10]],
   ["10351"] = {
     Animation1 = {
       interval = 65
-    } --[[table: 3113E4A0]],
+    } --[[table: 2E3F2B10]],
     attack = {
       hit = 11,
       interval = 22
-    } --[[table: 3113B750]],
+    } --[[table: 2E3F0450]],
     death = {
       interval = 15
-    } --[[table: 3113B520]],
+    } --[[table: 2E3F0180]],
     hit = {
       interval = 15
-    } --[[table: 3113B6B0]],
+    } --[[table: 2E3F0090]],
     run = {
       interval = 20
-    } --[[table: 3113B930]],
+    } --[[table: 2E3EFDC0]],
     SkillA = {
       interval = 42,
       reset = 42,
       showEffect = 23
-    } --[[table: 3113BE30]],
+    } --[[table: 2E3EFEB0]],
     SkillB = {
       hit = 64,
       interval = 108,
       reset = 108
-    } --[[table: 3113B660]],
+    } --[[table: 2E3EFF50]],
     stun = {
       interval = 42,
       reset = 42
-    } --[[table: 3113BDE0]],
+    } --[[table: 2E3F0130]],
     wait = {
       interval = 36
-    } --[[table: 3113BD40]],
+    } --[[table: 2E3EFE10]],
     win = {
       interval = 41
-    } --[[table: 3113B610]]
-  } --[[table: 3113BCF0]],
+    } --[[table: 2E3F0590]]
+  } --[[table: 2E3F0540]],
   ["10352"] = {
     Animation1 = {
       interval = 65
-    } --[[table: 3A3263D0]],
+    } --[[table: 0C9BC440]],
     attack = {
       hit = 11,
       interval = 22
-    } --[[table: 3A31FEE0]],
+    } --[[table: 0C9BA280]],
     death = {
       interval = 15
-    } --[[table: 3A31FDA0]],
+    } --[[table: 0C9BA0F0]],
     hit = {
       interval = 15
-    } --[[table: 3A31FC10]],
+    } --[[table: 0C9B9BA0]],
     run = {
       interval = 20
-    } --[[table: 3A320160]],
+    } --[[table: 0C9B99C0]],
     SkillA = {
       interval = 42,
       reset = 42,
       showEffect = 23
-    } --[[table: 3A31FDF0]],
+    } --[[table: 0C9BA230]],
     SkillB = {
       hit = 64,
       interval = 108,
       reset = 108
-    } --[[table: 3A31FBC0]],
+    } --[[table: 0C9B9A10]],
     stun = {
       interval = 42,
       reset = 42
-    } --[[table: 3A31FB20]],
+    } --[[table: 0C9BA190]],
     wait = {
       interval = 36
-    } --[[table: 3A31FE90]],
+    } --[[table: 0C9B9C40]],
     win = {
       interval = 41
-    } --[[table: 3A31FE40]]
-  } --[[table: 3A320110]],
+    } --[[table: 0C9BA050]]
+  } --[[table: 0C9B9BF0]],
   ["10353"] = {
     Animation1 = {
       interval = 65
-    } --[[table: 31153DA0]],
+    } --[[table: 367CB5E0]],
     attack = {
       hit = 11,
       interval = 22
-    } --[[table: 311519B0]],
+    } --[[table: 367C8660]],
     death = {
       interval = 15
-    } --[[table: 31151820]],
+    } --[[table: 367C87A0]],
     hit = {
       interval = 15
-    } --[[table: 31151780]],
+    } --[[table: 367C8570]],
     run = {
       interval = 20
-    } --[[table: 31151C30]],
+    } --[[table: 367C8D90]],
     SkillA = {
       interval = 42,
       reset = 42,
       showEffect = 23
-    } --[[table: 31151500]],
+    } --[[table: 367C8A70]],
     SkillB = {
       hit = 64,
       interval = 108,
       reset = 108
-    } --[[table: 31151B40]],
+    } --[[table: 367C8B10]],
     stun = {
       interval = 42,
       reset = 42
-    } --[[table: 31151640]],
+    } --[[table: 367C8610]],
     wait = {
       interval = 36
-    } --[[table: 31151870]],
+    } --[[table: 367C8A20]],
     win = {
       interval = 41
-    } --[[table: 31151CD0]]
-  } --[[table: 31151B90]],
+    } --[[table: 367C85C0]]
+  } --[[table: 367C8AC0]],
   ["10371"] = {
     attack = {
       hit = 16,
       interval = 31
-    } --[[table: 3C593838]],
+    } --[[table: 09C3C070]],
     death = {
       interval = 30
-    } --[[table: 3C593068]],
+    } --[[table: 09C3BE40]],
     hit = {
       interval = 18
-    } --[[table: 3C592AC8]],
+    } --[[table: 09C3BDF0]],
     run = {
       interval = 27
-    } --[[table: 3C593798]],
+    } --[[table: 09C3C480]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 0,
       hit = 22,
       interval = 83
-    } --[[table: 3C593018]],
+    } --[[table: 09C3BB20]],
     SkillB = {
       clearColorLayer = 90,
       createColorLayer = 0,
       hit = 13,
       interval = 90,
       reset = 90
-    } --[[table: 3C5929D8]],
+    } --[[table: 09C3C1B0]],
     stun = {
       interval = 40
-    } --[[table: 3C592848]],
+    } --[[table: 09C3BDA0]],
     wait = {
       interval = 45
-    } --[[table: 3C592988]]
-  } --[[table: 3C592B68]],
+    } --[[table: 09C3BEE0]]
+  } --[[table: 09C3BB70]],
   ["10372"] = {
     attack = {
       hit = 16,
       interval = 31
-    } --[[table: 347A7598]],
+    } --[[table: 2E4EB880]],
     death = {
       interval = 30
-    } --[[table: 347A6F58]],
+    } --[[table: 2E4EB100]],
     hit = {
       interval = 18
-    } --[[table: 347A6DC8]],
+    } --[[table: 2E4EAA70]],
     run = {
       interval = 27
-    } --[[table: 347A7458]],
+    } --[[table: 2E4EB150]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 0,
       hit = 22,
       interval = 83
-    } --[[table: 347A73B8]],
+    } --[[table: 2E4EB600]],
     SkillB = {
       clearColorLayer = 90,
       createColorLayer = 0,
       hit = 13,
       interval = 90,
       reset = 90
-    } --[[table: 347A76D8]],
+    } --[[table: 2E4EA750]],
     stun = {
       interval = 40
-    } --[[table: 347A7548]],
+    } --[[table: 2E4EA9D0]],
     wait = {
       interval = 45
-    } --[[table: 347A74F8]]
-  } --[[table: 347A6F08]],
+    } --[[table: 2E4EA700]]
+  } --[[table: 2E4EA660]],
   ["10373"] = {
     attack = {
       hit = 16,
       interval = 31
-    } --[[table: 100FC128]],
+    } --[[table: 18033A90]],
     death = {
       interval = 30
-    } --[[table: 100FC498]],
+    } --[[table: 18033E00]],
     hit = {
       interval = 18
-    } --[[table: 100FC8F8]],
+    } --[[table: 18033B80]],
     run = {
       interval = 27
-    } --[[table: 100FC7B8]],
+    } --[[table: 18033CC0]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 0,
       hit = 22,
       interval = 83
-    } --[[table: 100FC2B8]],
+    } --[[table: 180339A0]],
     SkillB = {
       clearColorLayer = 90,
       createColorLayer = 0,
       hit = 13,
       interval = 90,
       reset = 90
-    } --[[table: 100FC3A8]],
+    } --[[table: 18033C70]],
     stun = {
       interval = 40
-    } --[[table: 100FC588]],
+    } --[[table: 18033A40]],
     wait = {
       interval = 45
-    } --[[table: 100FC628]]
-  } --[[table: 100FC538]],
+    } --[[table: 180339F0]]
+  } --[[table: 18033950]],
   ["10381"] = {
     attack = {
       hit = 25,
       interval = 52
-    } --[[table: 15877A78]],
+    } --[[table: 31B16B08]],
     death = {
       interval = 53
-    } --[[table: 15877BB8]],
+    } --[[table: 31B16DD8]],
     hit = {
       interval = 25
-    } --[[table: 15877758]],
+    } --[[table: 31B16BA8]],
     run = {
       interval = 25
-    } --[[table: 15877A28]],
+    } --[[table: 31B170F8]],
     SkillA = {
       clearColorLayer = 107,
       createColorLayer = 34,
       hit = 23,
       interval = 107,
       reset = 0
-    } --[[table: 15877578]],
+    } --[[table: 31B16C98]],
     SkillB = {
       clearColorLayer = 155,
       createColorLayer = 0,
       hit = 90,
       interval = 155
-    } --[[table: 15877898]],
+    } --[[table: 31B169C8]],
     stun = {
       interval = 30
-    } --[[table: 15877B18]],
+    } --[[table: 31B171E8]],
     wait = {
       interval = 30
-    } --[[table: 15877D98]]
-  } --[[table: 15877488]],
+    } --[[table: 31B16E78]]
+  } --[[table: 31B16E28]],
   ["10382"] = {
     attack = {
       hit = 25,
       interval = 52
-    } --[[table: 33A16F30]],
+    } --[[table: 2AB2C010]],
     death = {
       interval = 53
-    } --[[table: 33A17660]],
+    } --[[table: 2AB2C380]],
     hit = {
       interval = 25
-    } --[[table: 33A17750]],
+    } --[[table: 2AB2C1A0]],
     run = {
       interval = 25
-    } --[[table: 33A176B0]],
+    } --[[table: 2AB2C3D0]],
     SkillA = {
       clearColorLayer = 107,
       createColorLayer = 34,
       hit = 23,
       interval = 107,
       reset = 0
-    } --[[table: 33A17390]],
+    } --[[table: 2AB2C600]],
     SkillB = {
       clearColorLayer = 155,
       createColorLayer = 0,
       hit = 90,
       interval = 155
-    } --[[table: 33A17840]],
+    } --[[table: 2AB2C650]],
     stun = {
       interval = 30
-    } --[[table: 33A17250]],
+    } --[[table: 2AB2C060]],
     wait = {
       interval = 30
-    } --[[table: 33A177A0]]
-  } --[[table: 33A16FD0]],
+    } --[[table: 2AB2BF20]]
+  } --[[table: 2AB2C740]],
   ["10383"] = {
     attack = {
       hit = 25,
       interval = 52
-    } --[[table: 23E553B8]],
+    } --[[table: 11A59750]],
     death = {
       interval = 53
-    } --[[table: 23E54EB8]],
+    } --[[table: 11A59700]],
     hit = {
       interval = 25
-    } --[[table: 23E54C38]],
+    } --[[table: 11A59520]],
     run = {
       interval = 25
-    } --[[table: 23E55408]],
+    } --[[table: 11A59CF0]],
     SkillA = {
       clearColorLayer = 107,
       createColorLayer = 34,
       hit = 23,
       interval = 107,
       reset = 0
-    } --[[table: 23E54D28]],
+    } --[[table: 11A59BB0]],
     SkillB = {
       clearColorLayer = 155,
       createColorLayer = 0,
       hit = 90,
       interval = 155
-    } --[[table: 23E54DC8]],
+    } --[[table: 11A596B0]],
     stun = {
       interval = 30
-    } --[[table: 23E54FA8]],
+    } --[[table: 11A59C50]],
     wait = {
       interval = 30
-    } --[[table: 23E54968]]
-  } --[[table: 23E54AF8]],
+    } --[[table: 11A58BC0]]
+  } --[[table: 11A58B20]],
   ["10391"] = {
     attack = {
       hit = 14,
       interval = 40
-    } --[[table: 0B1A7B60]],
+    } --[[table: 30DE7538]],
     death = {
       interval = 28
-    } --[[table: 0B1A2C00]],
+    } --[[table: 30DE7448]],
     hit = {
       interval = 30
-    } --[[table: 0B1A2E80]],
+    } --[[table: 30DE76C8]],
     run = {
       interval = 16
-    } --[[table: 0B1A3330]],
+    } --[[table: 30DE7178]],
     SkillA = {
       clearColorLayer = 82,
       createColorLayer = 0,
       hit = 50,
       interval = 82
-    } --[[table: 0B1A2BB0]],
+    } --[[table: 30DE7588]],
     SkillB = {
       hit = 85,
       interval = 118,
       reset = 0
-    } --[[table: 0B1A34C0]],
+    } --[[table: 30DE7628]],
     stun = {
       interval = 30
-    } --[[table: 0B1A3060]],
+    } --[[table: 30DE7768]],
     wait = {
       interval = 30
-    } --[[table: 0B1A3470]]
-  } --[[table: 0B1A2CF0]],
+    } --[[table: 30DE7358]]
+  } --[[table: 30DE73F8]],
   ["10392"] = {
     attack = {
       hit = 14,
       interval = 40
-    } --[[table: 13697310]],
+    } --[[table: 3F47C2B0]],
     death = {
       interval = 28
-    } --[[table: 13697090]],
+    } --[[table: 3F47C990]],
     hit = {
       interval = 30
-    } --[[table: 13696FF0]],
+    } --[[table: 3F47C260]],
     run = {
       interval = 16
-    } --[[table: 13696C30]],
+    } --[[table: 3F47C760]],
     SkillA = {
       clearColorLayer = 82,
       createColorLayer = 0,
       hit = 50,
       interval = 82
-    } --[[table: 13696AF0]],
+    } --[[table: 3F47C350]],
     SkillB = {
       hit = 85,
       interval = 118,
       reset = 0
-    } --[[table: 13696A50]],
+    } --[[table: 3F47C850]],
     stun = {
       interval = 30
-    } --[[table: 136971D0]],
+    } --[[table: 3F47C440]],
     wait = {
       interval = 30
-    } --[[table: 13696DC0]]
-  } --[[table: 13696B90]],
+    } --[[table: 3F47C940]]
+  } --[[table: 3F47C490]],
   ["10393"] = {
     attack = {
       hit = 14,
       interval = 40
-    } --[[table: 3A326100]],
+    } --[[table: 0CA88AA0]],
     death = {
       interval = 28
-    } --[[table: 3A326600]],
+    } --[[table: 0CA890E0]],
     hit = {
       interval = 30
-    } --[[table: 3A3264C0]],
+    } --[[table: 0CA88C80]],
     run = {
       interval = 16
-    } --[[table: 3A3260B0]],
+    } --[[table: 0CA88A50]],
     SkillA = {
       clearColorLayer = 82,
       createColorLayer = 0,
       hit = 50,
       interval = 82
-    } --[[table: 3A326060]],
+    } --[[table: 0CA889B0]],
     SkillB = {
       hit = 85,
       interval = 118,
       reset = 0
-    } --[[table: 3A326380]],
+    } --[[table: 0CA89090]],
     stun = {
       interval = 30
-    } --[[table: 3A326740]],
+    } --[[table: 0CA89040]],
     wait = {
       interval = 30
-    } --[[table: 3A325F70]]
-  } --[[table: 3A325F20]],
+    } --[[table: 0CA88FF0]]
+  } --[[table: 0CA88E60]],
   ["10401"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 398D0958]],
+    } --[[table: 4044BDE0]],
     death = {
       interval = 35
-    } --[[table: 398D0D68]],
+    } --[[table: 4044BB60]],
     hit = {
       interval = 20
-    } --[[table: 398E1028]],
+    } --[[table: 4044BED0]],
     run = {
       interval = 35
-    } --[[table: 398D10D8]],
+    } --[[table: 4044BA20]],
     SkillA = {
       hit = 99,
       interval = 135
-    } --[[table: 398D0FE8]],
+    } --[[table: 4044BD90]],
     SkillB = {
       hit = 61,
       interval = 105,
       reset = 0
-    } --[[table: 398E0F38]],
+    } --[[table: 4044BA70]],
     stun = {
       interval = 40
-    } --[[table: 398E0E48]],
+    } --[[table: 4044BCA0]],
     wait = {
       interval = 40
-    } --[[table: 398E1208]]
-  } --[[table: 398E1398]],
+    } --[[table: 4044B9D0]]
+  } --[[table: 4044BAC0]],
   ["10402"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 3CE5A480]],
+    } --[[table: 0C7B3CF8]],
     death = {
       interval = 35
-    } --[[table: 3CE5A3E0]],
+    } --[[table: 0C7B3AC8]],
     hit = {
       interval = 20
-    } --[[table: 3CE5A0C0]],
+    } --[[table: 0C7B3ED8]],
     run = {
       interval = 35
-    } --[[table: 3CE5A4D0]],
+    } --[[table: 0C7B3B18]],
     SkillA = {
       hit = 99,
       interval = 135
-    } --[[table: 3CE5A110]],
+    } --[[table: 0C7B37A8]],
     SkillB = {
       hit = 61,
       interval = 105,
       reset = 0
-    } --[[table: 3CE59CB0]],
+    } --[[table: 0C7B3A78]],
     stun = {
       interval = 40
-    } --[[table: 3CE59C10]],
+    } --[[table: 0C7BF7D8]],
     wait = {
       interval = 40
-    } --[[table: 3CE5A250]]
-  } --[[table: 3CE59EE0]],
+    } --[[table: 0C7BF648]]
+  } --[[table: 0C7BF558]],
   ["10403"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 3C0ED590]],
+    } --[[table: 0B226760]],
     death = {
       interval = 35
-    } --[[table: 3C0ED9F0]],
+    } --[[table: 0B233FA0]],
     hit = {
       interval = 20
-    } --[[table: 3C0ED8B0]],
+    } --[[table: 0B233E10]],
     run = {
       interval = 35
-    } --[[table: 3C0ED4F0]],
+    } --[[table: 0B2264E0]],
     SkillA = {
       hit = 99,
       interval = 135
-    } --[[table: 3C0ED950]],
+    } --[[table: 0B233EB0]],
     SkillB = {
       hit = 61,
       interval = 105,
       reset = 0
-    } --[[table: 3C0ED900]],
+    } --[[table: 0B233C30]],
     stun = {
       interval = 40
-    } --[[table: 3C0EDA40]],
+    } --[[table: 0B233B90]],
     wait = {
       interval = 40
-    } --[[table: 3C0ED810]]
-  } --[[table: 3C0EDAE0]],
+    } --[[table: 0B234220]]
+  } --[[table: 0B234450]],
   ["10411"] = {
     attack = {
       hit = 17,
       interval = 43
-    } --[[table: 3EF23E38]],
+    } --[[table: 1474B9A8]],
     death = {
       interval = 40
-    } --[[table: 3EF23B18]],
+    } --[[table: 1474BDB8]],
     hit = {
       interval = 20
-    } --[[table: 3EF23938]],
+    } --[[table: 1474BBD8]],
     run = {
       interval = 26
-    } --[[table: 3EF236B8]],
+    } --[[table: 1474BA98]],
     SkillA = {
       clearColorLayer = 116,
       createColorLayer = 0,
       hit = 58,
       interval = 116,
       reset = 116
-    } --[[table: 3EF23668]],
+    } --[[table: 1474B9F8]],
     SkillB = {
       clearColorLayer = 142,
       createColorLayer = 0,
       hit = 96,
       interval = 142
-    } --[[table: 3EF235C8]],
+    } --[[table: 1474B778]],
     stun = {
       interval = 34
-    } --[[table: 3EF237F8]],
+    } --[[table: 1474B818]],
     wait = {
       interval = 40
-    } --[[table: 3EF23D48]]
-  } --[[table: 3EF239D8]],
+    } --[[table: 1474B7C8]]
+  } --[[table: 1474B8B8]],
   ["10412"] = {
     attack = {
       hit = 17,
       interval = 43
-    } --[[table: 0BB09570]],
+    } --[[table: 17521100]],
     death = {
       interval = 40
-    } --[[table: 0BB09750]],
+    } --[[table: 17521600]],
     hit = {
       interval = 20
-    } --[[table: 0BB001F0]],
+    } --[[table: 1751B7F0]],
     run = {
       interval = 26
-    } --[[table: 0BB09BB0]],
+    } --[[table: 17521650]],
     SkillA = {
       clearColorLayer = 116,
       createColorLayer = 0,
       hit = 58,
       interval = 116,
       reset = 116
-    } --[[table: 0BB00420]],
+    } --[[table: 175211F0]],
     SkillB = {
       clearColorLayer = 142,
       createColorLayer = 0,
       hit = 96,
       interval = 142
-    } --[[table: 0BB006F0]],
+    } --[[table: 1751B7A0]],
     stun = {
       interval = 34
-    } --[[table: 0BB00010]],
+    } --[[table: 1751B660]],
     wait = {
       interval = 40
-    } --[[table: 0BAFFFC0]]
-  } --[[table: 0BB00060]],
+    } --[[table: 1751B610]]
+  } --[[table: 1751ACB0]],
   ["10413"] = {
     attack = {
       hit = 17,
       interval = 43
-    } --[[table: 13865DA8]],
+    } --[[table: 11A73330]],
     death = {
       interval = 40
-    } --[[table: 138662F8]],
+    } --[[table: 11A734C0]],
     hit = {
       interval = 20
-    } --[[table: 13865EE8]],
+    } --[[table: 11A73010]],
     run = {
       interval = 26
-    } --[[table: 13865F88]],
+    } --[[table: 11A73380]],
     SkillA = {
       clearColorLayer = 116,
       createColorLayer = 0,
       hit = 58,
       interval = 116,
       reset = 116
-    } --[[table: 13866398]],
+    } --[[table: 11A732E0]],
     SkillB = {
       clearColorLayer = 142,
       createColorLayer = 0,
       hit = 96,
       interval = 142
-    } --[[table: 13866028]],
+    } --[[table: 11A72660]],
     stun = {
       interval = 34
-    } --[[table: 138662A8]],
+    } --[[table: 11A72B60]],
     wait = {
       interval = 40
-    } --[[table: 13865D08]]
-  } --[[table: 13865DF8]],
+    } --[[table: 11A72610]]
+  } --[[table: 11A72750]],
   ["10421"] = {
     attack = {
       hit = 18,
       interval = 42
-    } --[[table: 1FC1B8F8]],
+    } --[[table: 20B96BF0]],
     death = {
       interval = 22
-    } --[[table: 1FC1B5D8]],
+    } --[[table: 20B96F60]],
     hit = {
       interval = 16
-    } --[[table: 1FC1B268]],
+    } --[[table: 20B96E20]],
     run = {
       interval = 20
-    } --[[table: 1FC1B768]],
+    } --[[table: 20B96970]],
     SkillA = {
       clearColorLayer = 47,
       createColorLayer = 0,
       hit = 28,
       interval = 52,
       reset = 52
-    } --[[table: 1FC1B4E8]],
+    } --[[table: 20B96E70]],
     SkillB = {
       hit = 20,
       interval = 35,
       reset = 0
-    } --[[table: 1FC1B1C8]],
+    } --[[table: 20B97140]],
     stun = {
       interval = 32
-    } --[[table: 1FC1B218]],
+    } --[[table: 20B96D30]],
     wait = {
       interval = 24
-    } --[[table: 1FC1B3A8]]
-  } --[[table: 1FC1B858]],
+    } --[[table: 20B96EC0]]
+  } --[[table: 20B972D0]],
   ["10422"] = {
     attack = {
       hit = 18,
       interval = 42
-    } --[[table: 27F5E660]],
+    } --[[table: 208B2DD0]],
     death = {
       interval = 22
-    } --[[table: 27F54390]],
+    } --[[table: 208B2D30]],
     hit = {
       interval = 16
-    } --[[table: 27F53F80]],
+    } --[[table: 208B30F0]],
     run = {
       interval = 20
-    } --[[table: 27F5E340]],
+    } --[[table: 208B2920]],
     SkillA = {
       clearColorLayer = 47,
       createColorLayer = 0,
       hit = 28,
       interval = 52,
       reset = 52
-    } --[[table: 27F54160]],
+    } --[[table: 208B2CE0]],
     SkillB = {
       hit = 20,
       interval = 35,
       reset = 0
-    } --[[table: 27F53D00]],
+    } --[[table: 208B2AB0]],
     stun = {
       interval = 32
-    } --[[table: 27F541B0]],
+    } --[[table: 208B2F10]],
     wait = {
       interval = 24
-    } --[[table: 27F54110]]
-  } --[[table: 27F53EE0]],
+    } --[[table: 208B2880]]
+  } --[[table: 208B2830]],
   ["10423"] = {
     attack = {
       hit = 18,
       interval = 42
-    } --[[table: 313BD910]],
+    } --[[table: 2E3E6770]],
     death = {
       interval = 22
-    } --[[table: 313BD730]],
+    } --[[table: 2E3E69A0]],
     hit = {
       interval = 16
-    } --[[table: 313BD9B0]],
+    } --[[table: 2E3E6BD0]],
     run = {
       interval = 20
-    } --[[table: 313BD960]],
+    } --[[table: 2E3E6C20]],
     SkillA = {
       clearColorLayer = 47,
       createColorLayer = 0,
       hit = 28,
       interval = 52,
       reset = 52
-    } --[[table: 313BD6E0]],
+    } --[[table: 2E3E6E50]],
     SkillB = {
       hit = 20,
       interval = 35,
       reset = 0
-    } --[[table: 313BD640]],
+    } --[[table: 2E3E6A40]],
     stun = {
       interval = 32
-    } --[[table: 313BD370]],
+    } --[[table: 2E3E6A90]],
     wait = {
       interval = 24
-    } --[[table: 313BDC80]]
-  } --[[table: 313BD5F0]],
+    } --[[table: 2E3E70D0]]
+  } --[[table: 2E3E6FE0]],
   ["10431"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 17E90FE0]],
+    } --[[table: 311615C0]],
     death = {
       interval = 27
-    } --[[table: 17E910D0]],
+    } --[[table: 311617A0]],
     hit = {
       interval = 20
-    } --[[table: 17E90C20]],
+    } --[[table: 31161750]],
     run = {
       interval = 20
-    } --[[table: 17E908B0]],
+    } --[[table: 31161890]],
     SkillA = {
       clearColorLayer = 66,
       createColorLayer = 0,
       hit = 51,
       interval = 66
-    } --[[table: 17E91080]],
+    } --[[table: 31161840]],
     SkillB = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 37,
       interval = 96
-    } --[[table: 17E90A40]],
+    } --[[table: 31161CA0]],
     stun = {
       interval = 32
-    } --[[table: 17E90D10]],
+    } --[[table: 311619D0]],
     wait = {
       interval = 40
-    } --[[table: 17E90B30]]
-  } --[[table: 17E90DB0]],
+    } --[[table: 31161570]]
+  } --[[table: 31161B10]],
   ["10432"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 0B2B3218]],
+    } --[[table: 31681098]],
     death = {
       interval = 27
-    } --[[table: 0B2B3448]],
+    } --[[table: 316814F8]],
     hit = {
       interval = 20
-    } --[[table: 0B2B31C8]],
+    } --[[table: 31680E18]],
     run = {
       interval = 20
-    } --[[table: 0B2B3A88]],
+    } --[[table: 316812C8]],
     SkillA = {
       clearColorLayer = 66,
       createColorLayer = 0,
       hit = 51,
       interval = 66
-    } --[[table: 0B2B39E8]],
+    } --[[table: 31680F08]],
     SkillB = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 37,
       interval = 96
-    } --[[table: 0B2B3178]],
+    } --[[table: 31680F58]],
     stun = {
       interval = 32
-    } --[[table: 0B2B32B8]],
+    } --[[table: 31681638]],
     wait = {
       interval = 40
-    } --[[table: 0B2B3678]]
-  } --[[table: 0B2D3C48]],
+    } --[[table: 31680DC8]]
+  } --[[table: 31680E68]],
   ["10433"] = {
     attack = {
       hit = 11,
       interval = 25
-    } --[[table: 0AFD62E0]],
+    } --[[table: 0B5E8768]],
     death = {
       interval = 27
-    } --[[table: 0AFD6420]],
+    } --[[table: 0B5E8678]],
     hit = {
       interval = 20
-    } --[[table: 0AFD5FC0]],
+    } --[[table: 0B5E85D8]],
     run = {
       interval = 20
-    } --[[table: 0AFD6830]],
+    } --[[table: 0B5E81C8]],
     SkillA = {
       clearColorLayer = 66,
       createColorLayer = 0,
       hit = 51,
       interval = 66
-    } --[[table: 0AFD6470]],
+    } --[[table: 0B5E8718]],
     SkillB = {
       clearColorLayer = 84,
       createColorLayer = 0,
       hit = 37,
       interval = 96
-    } --[[table: 0AFD6380]],
+    } --[[table: 0B5E8448]],
     stun = {
       interval = 32
-    } --[[table: 0AFD59D0]],
+    } --[[table: 0B5E86C8]],
     wait = {
       interval = 40
-    } --[[table: 0AFD5A20]]
-  } --[[table: 0AFD5D90]],
+    } --[[table: 0B5E88F8]]
+  } --[[table: 0B5E88A8]],
   ["10441"] = {
     attack = {
       hit = 20,
       interval = 40
-    } --[[table: 0C79E640]],
+    } --[[table: 35E0F668]],
     death = {
       interval = 17
-    } --[[table: 0C79BE40]],
+    } --[[table: 35E0F5C8]],
     hit = {
       interval = 16
-    } --[[table: 0C79BB70]],
+    } --[[table: 35E0F528]],
     run = {
       interval = 20
-    } --[[table: 0C79E460]],
+    } --[[table: 35E0FA28]],
     SkillA = {
       clearColorLayer = 70,
       createColorLayer = 10,
       hit = 45,
       interval = 70,
       reset = 70
-    } --[[table: 0C79BD00]],
+    } --[[table: 35E0FC58]],
     SkillB = {
       clearColorLayer = 40,
       createColorLayer = 7,
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 0C79BC60]],
+    } --[[table: 35E0F7A8]],
     stun = {
       interval = 30
-    } --[[table: 0C79BB20]],
+    } --[[table: 35E0FBB8]],
     wait = {
       interval = 24
-    } --[[table: 0C79BC10]]
-  } --[[table: 0C79BFD0]],
+    } --[[table: 35E0FD98]]
+  } --[[table: 35E0FC08]],
   ["10442"] = {
     attack = {
       hit = 20,
       interval = 40
-    } --[[table: 15509298]],
+    } --[[table: 148521D0]],
     death = {
       interval = 17
-    } --[[table: 155041F8]],
+    } --[[table: 14851500]],
     hit = {
       interval = 16
-    } --[[table: 15503F28]],
+    } --[[table: 148519B0]],
     run = {
       interval = 20
-    } --[[table: 155090B8]],
+    } --[[table: 14851320]],
     SkillA = {
       clearColorLayer = 70,
       createColorLayer = 10,
       hit = 45,
       interval = 70,
       reset = 70
-    } --[[table: 15504108]],
+    } --[[table: 14851A00]],
     SkillB = {
       clearColorLayer = 40,
       createColorLayer = 7,
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 155040B8]],
+    } --[[table: 14851960]],
     stun = {
       interval = 30
-    } --[[table: 15504838]],
+    } --[[table: 14851B90]],
     wait = {
       interval = 24
-    } --[[table: 15504068]]
-  } --[[table: 15504608]],
+    } --[[table: 1484FCA0]]
+  } --[[table: 1484FB60]],
   ["10443"] = {
     attack = {
       hit = 20,
       interval = 40
-    } --[[table: 13FDD798]],
+    } --[[table: 15A26E40]],
     death = {
       interval = 17
-    } --[[table: 13FDCFC8]],
+    } --[[table: 15A26D00]],
     hit = {
       interval = 16
-    } --[[table: 13FDD6F8]],
+    } --[[table: 15A26DF0]],
     run = {
       interval = 20
-    } --[[table: 13FDD108]],
+    } --[[table: 15A26800]],
     SkillA = {
       clearColorLayer = 70,
       createColorLayer = 10,
       hit = 45,
       interval = 70,
       reset = 70
-    } --[[table: 13FDD298]],
+    } --[[table: 15A26D50]],
     SkillB = {
       clearColorLayer = 40,
       createColorLayer = 7,
       hit = 20,
       interval = 40,
       reset = 40
-    } --[[table: 13FDD6A8]],
+    } --[[table: 15A26580]],
     stun = {
       interval = 30
-    } --[[table: 13FDD658]],
+    } --[[table: 15A26C10]],
     wait = {
       interval = 24
-    } --[[table: 13FDD608]]
-  } --[[table: 13FDD3D8]],
+    } --[[table: 15A26B70]]
+  } --[[table: 15A26940]],
   ["10451"] = {
     Animation1 = {
       hit5 = 245,
       interval = 329,
       over = 328
-    } --[[table: 33A05F50]],
+    } --[[table: 110EEE40]],
     attack = {
       hit = 30,
       interval = 56
-    } --[[table: 3B294B50]],
+    } --[[table: 0ABD7F38]],
     death = {
       interval = 63
-    } --[[table: 3B294E70]],
+    } --[[table: 0ABD84D8]],
     hit = {
       interval = 17
-    } --[[table: 3B2949C0]],
+    } --[[table: 0ABD8078]],
     run = {
       interval = 27
-    } --[[table: 3B294AB0]],
+    } --[[table: 0ABD7CB8]],
     SkillA = {
       clearColorLayer = 65,
       createColorLayer = 0,
@@ -8460,39 +8466,39 @@ return
       newhit = 147,
       reset = 185,
       toCenter = 65
-    } --[[table: 3B294F10]],
+    } --[[table: 0ABD7EE8]],
     SkillB = {
       hit = 129,
       interval = 170,
       newhit = 129,
       reset = 170
-    } --[[table: 3B294DD0]],
+    } --[[table: 0ABD7B78]],
     stun = {
       interval = 33
-    } --[[table: 3B294A10]],
+    } --[[table: 0ABD7B28]],
     wait = {
       interval = 40
-    } --[[table: 3B295230]]
-  } --[[table: 3B294920]],
+    } --[[table: 0ABD7AD8]]
+  } --[[table: 0ABD7448]],
   ["10452"] = {
     Animation1 = {
       hit5 = 245,
       interval = 329,
       over = 328
-    } --[[table: 1F4D1328]],
+    } --[[table: 3BD45F10]],
     attack = {
       hit = 30,
       interval = 56
-    } --[[table: 13B029E0]],
+    } --[[table: 24CCDB28]],
     death = {
       interval = 63
-    } --[[table: 13B025D0]],
+    } --[[table: 24CCDE48]],
     hit = {
       interval = 17
-    } --[[table: 13B02990]],
+    } --[[table: 24CCDFD8]],
     run = {
       interval = 27
-    } --[[table: 13B02AD0]],
+    } --[[table: 24CCDCB8]],
     SkillA = {
       clearColorLayer = 65,
       createColorLayer = 0,
@@ -8503,39 +8509,39 @@ return
       newhit = 147,
       reset = 185,
       toCenter = 65
-    } --[[table: 13B02CB0]],
+    } --[[table: 24CCE1B8]],
     SkillB = {
       hit = 129,
       interval = 170,
       newhit = 129,
       reset = 170
-    } --[[table: 13B02D50]],
+    } --[[table: 24CCDF88]],
     stun = {
       interval = 33
-    } --[[table: 13B028A0]],
+    } --[[table: 24CCDDF8]],
     wait = {
       interval = 40
-    } --[[table: 13B02DF0]]
-  } --[[table: 13B02C10]],
+    } --[[table: 24CC51F8]]
+  } --[[table: 24CC5248]],
   ["10453"] = {
     Animation1 = {
       hit5 = 245,
       interval = 329,
       over = 328
-    } --[[table: 0AB56750]],
+    } --[[table: 0B838D50]],
     attack = {
       hit = 30,
       interval = 56
-    } --[[table: 0BD964A0]],
+    } --[[table: 14D34AA8]],
     death = {
       interval = 63
-    } --[[table: 0BD965E0]],
+    } --[[table: 14D343C8]],
     hit = {
       interval = 17
-    } --[[table: 0BD95410]],
+    } --[[table: 14D34468]],
     run = {
       interval = 27
-    } --[[table: 0BD96270]],
+    } --[[table: 14D344B8]],
     SkillA = {
       clearColorLayer = 65,
       createColorLayer = 0,
@@ -8546,441 +8552,441 @@ return
       newhit = 147,
       reset = 185,
       toCenter = 65
-    } --[[table: 0BD95730]],
+    } --[[table: 14D34418]],
     SkillB = {
       hit = 129,
       interval = 170,
       newhit = 129,
       reset = 170
-    } --[[table: 0BD95690]],
+    } --[[table: 14D34828]],
     stun = {
       interval = 33
-    } --[[table: 0BD953C0]],
+    } --[[table: 14D34788]],
     wait = {
       interval = 40
-    } --[[table: 0BD95C30]]
-  } --[[table: 0BD95500]],
+    } --[[table: 14D34C88]]
+  } --[[table: 14D34B48]],
   ["10461"] = {
     attack = {
       hit = 16,
       interval = 30
-    } --[[table: 2BB25510]],
+    } --[[table: 0D26C768]],
     death = {
       interval = 40
-    } --[[table: 2BB25240]],
+    } --[[table: 0D26C038]],
     hit = {
       interval = 16
-    } --[[table: 2BB1F840]],
+    } --[[table: 0D266EA8]],
     run = {
       interval = 20
-    } --[[table: 2BB25100]],
+    } --[[table: 0D26C538]],
     SkillA = {
       clearColorLayer = 117,
       createColorLayer = 0,
       hit = 84,
       interval = 117,
       reset = 117
-    } --[[table: 2BB256F0]],
+    } --[[table: 0D26C628]],
     SkillB = {
       clearColorLayer = 100,
       createColorLayer = 9,
       hit = 52,
       interval = 100,
       reset = 100
-    } --[[table: 2BB1F570]],
+    } --[[table: 0D266D18]],
     stun = {
       interval = 30
-    } --[[table: 2BB1FDE0]],
+    } --[[table: 0D266CC8]],
     wait = {
       interval = 30
-    } --[[table: 2BB1FA20]]
-  } --[[table: 2BB1FAC0]],
+    } --[[table: 0D266B38]]
+  } --[[table: 0D266A98]],
   ["10462"] = {
     attack = {
       hit = 16,
       interval = 30
-    } --[[table: 3B2ABB20]],
+    } --[[table: 2ED48420]],
     death = {
       interval = 40
-    } --[[table: 3B2ABD00]],
+    } --[[table: 2ED484C0]],
     hit = {
       interval = 16
-    } --[[table: 3B2AC1B0]],
+    } --[[table: 2ED42B60]],
     run = {
       interval = 20
-    } --[[table: 3B2AC430]],
+    } --[[table: 2ED482E0]],
     SkillA = {
       clearColorLayer = 117,
       createColorLayer = 0,
       hit = 84,
       interval = 117,
       reset = 117
-    } --[[table: 3B2AC2A0]],
+    } --[[table: 2ED42C50]],
     SkillB = {
       clearColorLayer = 100,
       createColorLayer = 9,
       hit = 52,
       interval = 100,
       reset = 100
-    } --[[table: 3B2ABF80]],
+    } --[[table: 2ED42AC0]],
     stun = {
       interval = 30
-    } --[[table: 3B2AC070]],
+    } --[[table: 2ED42DE0]],
     wait = {
       interval = 30
-    } --[[table: 3B2ABBC0]]
-  } --[[table: 3B2ABC10]],
+    } --[[table: 2ED42660]]
+  } --[[table: 2ED42D90]],
   ["10463"] = {
     attack = {
       hit = 16,
       interval = 30
-    } --[[table: 0C6E6580]],
+    } --[[table: 1CBAE080]],
     death = {
       interval = 40
-    } --[[table: 0C6E6260]],
+    } --[[table: 1CBAD9F0]],
     hit = {
       interval = 16
-    } --[[table: 0C6E6620]],
+    } --[[table: 1CBAD4F0]],
     run = {
       interval = 20
-    } --[[table: 0C6E6530]],
+    } --[[table: 1CBAE170]],
     SkillA = {
       clearColorLayer = 117,
       createColorLayer = 0,
       hit = 84,
       interval = 117,
       reset = 117
-    } --[[table: 0C6E66C0]],
+    } --[[table: 1CBADA90]],
     SkillB = {
       clearColorLayer = 100,
       createColorLayer = 9,
       hit = 52,
       interval = 100,
       reset = 100
-    } --[[table: 0C6E6A80]],
+    } --[[table: 1CBAD590]],
     stun = {
       interval = 30
-    } --[[table: 0C6E64E0]],
+    } --[[table: 1CBAD180]],
     wait = {
       interval = 30
-    } --[[table: 0C6E6A30]]
-  } --[[table: 0C6E6850]],
+    } --[[table: 1CBAD950]]
+  } --[[table: 1CBAD450]],
   ["10471"] = {
     attack = {
       hit = 14,
       interval = 26
-    } --[[table: 173D3EA8]],
+    } --[[table: 39DF35C8]],
     death = {
       interval = 36
-    } --[[table: 173D37C8]],
+    } --[[table: 39DF3C08]],
     hit = {
       interval = 20
-    } --[[table: 173D3AE8]],
+    } --[[table: 39DF3708]],
     run = {
       interval = 30
-    } --[[table: 173D3818]],
+    } --[[table: 39DF36B8]],
     SkillA = {
       hit = 46,
       interval = 57
-    } --[[table: 173D3908]],
+    } --[[table: 39DF3A28]],
     SkillB = {
       hit = 68,
       interval = 83
-    } --[[table: 173D3A48]],
+    } --[[table: 39DF3668]],
     stun = {
       interval = 40
-    } --[[table: 173D3778]],
+    } --[[table: 39DF3E88]],
     stun22 = {
       interval = 40
-    } --[[table: 173D40D8]],
+    } --[[table: 39DF3E38]],
     wait = {
       interval = 40
-    } --[[table: 173D38B8]]
-  } --[[table: 173D3548]],
+    } --[[table: 39DF3758]]
+  } --[[table: 39DF3ED8]],
   ["10472"] = {
     attack = {
       hit = 14,
       interval = 26
-    } --[[table: 13884668]],
+    } --[[table: 205687A0]],
     death = {
       interval = 36
-    } --[[table: 13884A78]],
+    } --[[table: 2056C080]],
     hit = {
       interval = 20
-    } --[[table: 13884618]],
+    } --[[table: 2056C710]],
     run = {
       interval = 30
-    } --[[table: 138847A8]],
+    } --[[table: 2056C4E0]],
     SkillA = {
       hit = 46,
       interval = 57
-    } --[[table: 13884AC8]],
+    } --[[table: 2056CC10]],
     SkillB = {
       hit = 68,
       interval = 83
-    } --[[table: 138848E8]],
+    } --[[table: 2056CF80]],
     stun = {
       interval = 40
-    } --[[table: 13884A28]],
+    } --[[table: 2056BE50]],
     stun22 = {
       interval = 40
-    } --[[table: 138849D8]],
+    } --[[table: 2056BE00]],
     wait = {
       interval = 40
-    } --[[table: 13884938]]
-  } --[[table: 13884D48]],
+    } --[[table: 2056C620]]
+  } --[[table: 2056BF90]],
   ["10473"] = {
     attack = {
       hit = 14,
       interval = 26
-    } --[[table: 0C5E4ED0]],
+    } --[[table: 40436490]],
     death = {
       interval = 36
-    } --[[table: 0C5E4700]],
+    } --[[table: 404363A0]],
     hit = {
       interval = 20
-    } --[[table: 0C5E4DE0]],
+    } --[[table: 40436170]],
     run = {
       interval = 30
-    } --[[table: 0C5E4E30]],
+    } --[[table: 40436710]],
     SkillA = {
       hit = 46,
       interval = 57
-    } --[[table: 0C5E4CA0]],
+    } --[[table: 40436120]],
     SkillB = {
       hit = 68,
       interval = 83
-    } --[[table: 0C5E4C00]],
+    } --[[table: 404363F0]],
     stun = {
       interval = 40
-    } --[[table: 0C5E4E80]],
+    } --[[table: 40436620]],
     stun22 = {
       interval = 40
-    } --[[table: 0C5E4B10]],
+    } --[[table: 404367B0]],
     wait = {
       interval = 40
-    } --[[table: 0C5E48E0]]
-  } --[[table: 0C5E4D90]],
+    } --[[table: 40436A30]]
+  } --[[table: 40435D10]],
   ["10481"] = {
     attack = {
       hit = 18,
       interval = 36,
       reset = 36
-    } --[[table: 149EC6F8]],
+    } --[[table: 0CA83320]],
     death = {
       interval = 30
-    } --[[table: 149EC658]],
+    } --[[table: 0CA83230]],
     hit = {
       interval = 20
-    } --[[table: 149EC018]],
+    } --[[table: 0CA831E0]],
     run = {
       interval = 30
-    } --[[table: 149EC748]],
+    } --[[table: 0CA836E0]],
     SkillA = {
       hit = 34,
       interval = 75,
       reset = 70
-    } --[[table: 149EC1A8]],
+    } --[[table: 0CA83190]],
     SkillB = {
       hit = 76,
       interval = 98,
       reset = 97
-    } --[[table: 149EC158]],
+    } --[[table: 0CA82E70]],
     stun = {
       interval = 35
-    } --[[table: 149EC108]],
+    } --[[table: 0CA83140]],
     wait = {
       interval = 45
-    } --[[table: 149EC068]]
-  } --[[table: 149EC428]],
+    } --[[table: 0CA830F0]]
+  } --[[table: 0CA833C0]],
   ["10482"] = {
     attack = {
       hit = 18,
       interval = 36,
       reset = 36
-    } --[[table: 3CE5F980]],
+    } --[[table: 3A36A850]],
     death = {
       interval = 30
-    } --[[table: 3CE5FD90]],
+    } --[[table: 3A36AA80]],
     hit = {
       interval = 20
-    } --[[table: 3CE5F840]],
+    } --[[table: 3A36ADA0]],
     run = {
       interval = 30
-    } --[[table: 3CE5FED0]],
+    } --[[table: 3A36A580]],
     SkillA = {
       hit = 34,
       interval = 75,
       reset = 70
-    } --[[table: 3CE5FA70]],
+    } --[[table: 3A36A620]],
     SkillB = {
       hit = 76,
       interval = 98,
       reset = 97
-    } --[[table: 3CE5FB10]],
+    } --[[table: 3A36AB70]],
     stun = {
       interval = 35
-    } --[[table: 3CE5FE80]],
+    } --[[table: 3A36A530]],
     wait = {
       interval = 45
-    } --[[table: 3CE5F890]]
-  } --[[table: 3CE5F7A0]],
+    } --[[table: 3A36AD50]]
+  } --[[table: 3A36A8A0]],
   ["10483"] = {
     attack = {
       hit = 18,
       interval = 36,
       reset = 36
-    } --[[table: 41737860]],
+    } --[[table: 35D28460]],
     death = {
       interval = 30
-    } --[[table: 41737950]],
+    } --[[table: 35D28AF0]],
     hit = {
       interval = 20
-    } --[[table: 41737360]],
+    } --[[table: 35D28910]],
     run = {
       interval = 30
-    } --[[table: 41737450]],
+    } --[[table: 35D289B0]],
     SkillA = {
       hit = 34,
       interval = 75,
       reset = 70
-    } --[[table: 417373B0]],
+    } --[[table: 35D28A50]],
     SkillB = {
       hit = 76,
       interval = 98,
       reset = 97
-    } --[[table: 417375E0]],
+    } --[[table: 35D28500]],
     stun = {
       interval = 35
-    } --[[table: 417379F0]],
+    } --[[table: 35D28A00]],
     wait = {
       interval = 45
-    } --[[table: 41737220]]
-  } --[[table: 417372C0]],
+    } --[[table: 35D28870]]
+  } --[[table: 35D284B0]],
   ["10491"] = {
     attack = {
       hit = 20,
       interval = 35
-    } --[[table: 40462A40]],
+    } --[[table: 39E3B7D0]],
     death = {
       interval = 38
-    } --[[table: 40462E00]],
+    } --[[table: 39E3AFB0]],
     hit = {
       interval = 20
-    } --[[table: 40462C70]],
+    } --[[table: 39E3B460]],
     run = {
       interval = 24
-    } --[[table: 40462860]],
+    } --[[table: 39E3AF60]],
     SkillA = {
       clearColorLayer = 45,
       createColorLayer = 5,
       hit = 22,
       interval = 45,
       reset = 45
-    } --[[table: 40462770]],
+    } --[[table: 39E3B690]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 0,
       hit = 60,
       interval = 75,
       reset = 75
-    } --[[table: 404630D0]],
+    } --[[table: 39E3AEC0]],
     stun = {
       interval = 35
-    } --[[table: 404628B0]],
+    } --[[table: 39E3B1E0]],
     wait = {
       interval = 30
-    } --[[table: 404629A0]]
-  } --[[table: 40462AE0]],
+    } --[[table: 39E411D0]]
+  } --[[table: 39E40C30]],
   ["10492"] = {
     attack = {
       hit = 20,
       interval = 35
-    } --[[table: 3CD1FE80]],
+    } --[[table: 2004AD60]],
     death = {
       interval = 38
-    } --[[table: 3CD1FBB0]],
+    } --[[table: 2004B5D0]],
     hit = {
       interval = 20
-    } --[[table: 3CD11290]],
+    } --[[table: 2004B170]],
     run = {
       interval = 24
-    } --[[table: 3CD1FC50]],
+    } --[[table: 2004AEA0]],
     SkillA = {
       clearColorLayer = 45,
       createColorLayer = 5,
       hit = 22,
       interval = 45,
       reset = 45
-    } --[[table: 3CD1F570]],
+    } --[[table: 2004B4E0]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 0,
       hit = 60,
       interval = 75,
       reset = 75
-    } --[[table: 3CD11150]],
+    } --[[table: 2004B300]],
     stun = {
       interval = 35
-    } --[[table: 3CD11100]],
+    } --[[table: 2004B670]],
     wait = {
       interval = 30
-    } --[[table: 3CD11650]]
-  } --[[table: 3CD11560]],
+    } --[[table: 2004AEF0]]
+  } --[[table: 2004B030]],
   ["10493"] = {
     attack = {
       hit = 20,
       interval = 35
-    } --[[table: 148604E0]],
+    } --[[table: 3125ABF8]],
     death = {
       interval = 38
-    } --[[table: 1485F630]],
+    } --[[table: 3125A9C8]],
     hit = {
       interval = 20
-    } --[[table: 1485F3B0]],
+    } --[[table: 3125B0F8]],
     run = {
       interval = 24
-    } --[[table: 148602B0]],
+    } --[[table: 3125B1E8]],
     SkillA = {
       clearColorLayer = 45,
       createColorLayer = 5,
       hit = 22,
       interval = 45,
       reset = 45
-    } --[[table: 1485F450]],
+    } --[[table: 3125AA18]],
     SkillB = {
       clearColorLayer = 75,
       createColorLayer = 0,
       hit = 60,
       interval = 75,
       reset = 75
-    } --[[table: 1485B170]],
+    } --[[table: 3125A928]],
     stun = {
       interval = 35
-    } --[[table: 1485B080]],
+    } --[[table: 3125B058]],
     wait = {
       interval = 30
-    } --[[table: 1485ACC0]]
-  } --[[table: 1485AEF0]],
+    } --[[table: 3125AF68]]
+  } --[[table: 3125B198]],
   ["10541"] = {
     Animation1 = {
       hit1 = 0,
       interval = 34,
       over = 33
-    } --[[table: 173DFD48]],
+    } --[[table: 2E4F4480]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 173D7738]],
+    } --[[table: 2E4D54E0]],
     death = {
       interval = 35
-    } --[[table: 173D7968]],
+    } --[[table: 2E4D5260]],
     hit = {
       interval = 14
-    } --[[table: 173D75A8]],
+    } --[[table: 2E4D58A0]],
     run = {
       interval = 24
-    } --[[table: 173D74B8]],
+    } --[[table: 2E4D5530]],
     SkillA = {
       clearColorLayer = 44,
       createColorLayer = 5,
@@ -8988,40 +8994,40 @@ return
       interval = 44,
       reset = 44,
       slowly = 44
-    } --[[table: 173D77D8]],
+    } --[[table: 2E4D59E0]],
     SkillB = {
       clearColorLayer = 36,
       createColorLayer = 5,
       hit = 27,
       interval = 36,
       reset = 36
-    } --[[table: 173D7C88]],
+    } --[[table: 2E4D5210]],
     stun = {
       interval = 40
-    } --[[table: 173D7828]],
+    } --[[table: 2E4D5990]],
     wait = {
       interval = 24
-    } --[[table: 173D7AF8]]
-  } --[[table: 173D7878]],
+    } --[[table: 2E4D5350]]
+  } --[[table: 2E4D5940]],
   ["10542"] = {
     Animation1 = {
       hit1 = 0,
       interval = 34,
       over = 33
-    } --[[table: 0C862A98]],
+    } --[[table: 0BA99068]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 0C85E628]],
+    } --[[table: 0BAAC208]],
     death = {
       interval = 35
-    } --[[table: 0C85E268]],
+    } --[[table: 0BAABCB8]],
     hit = {
       interval = 14
-    } --[[table: 0C85DC78]],
+    } --[[table: 0BAABC18]],
     run = {
       interval = 24
-    } --[[table: 0C85E2B8]],
+    } --[[table: 0BAABD58]],
     SkillA = {
       clearColorLayer = 44,
       createColorLayer = 5,
@@ -9029,40 +9035,40 @@ return
       interval = 44,
       reset = 44,
       slowly = 44
-    } --[[table: 0C85E6C8]],
+    } --[[table: 0BAABB78]],
     SkillB = {
       clearColorLayer = 36,
       createColorLayer = 5,
       hit = 27,
       interval = 36,
       reset = 36
-    } --[[table: 0C85DAE8]],
+    } --[[table: 0BAABE48]],
     stun = {
       interval = 40
-    } --[[table: 0C85DF48]],
+    } --[[table: 0BAAC2A8]],
     wait = {
       interval = 24
-    } --[[table: 0C85DA98]]
-  } --[[table: 0C85DF98]],
+    } --[[table: 0BAAC258]]
+  } --[[table: 0BAABDF8]],
   ["10543"] = {
     Animation1 = {
       hit1 = 0,
       interval = 34,
       over = 33
-    } --[[table: 2BC98908]],
+    } --[[table: 0A795AA0]],
     attack = {
       hit = 17,
       interval = 33
-    } --[[table: 2BC90898]],
+    } --[[table: 0A78A0B0]],
     death = {
       interval = 35
-    } --[[table: 2BC90B18]],
+    } --[[table: 0A78A240]],
     hit = {
       interval = 14
-    } --[[table: 2BC90528]],
+    } --[[table: 0A78A600]],
     run = {
       interval = 24
-    } --[[table: 2BC90758]],
+    } --[[table: 0A78A650]],
     SkillA = {
       clearColorLayer = 44,
       createColorLayer = 5,
@@ -9070,895 +9076,895 @@ return
       interval = 44,
       reset = 44,
       slowly = 44
-    } --[[table: 2BC90708]],
+    } --[[table: 0A78A060]],
     SkillB = {
       clearColorLayer = 36,
       createColorLayer = 5,
       hit = 27,
       interval = 36,
       reset = 36
-    } --[[table: 2BC90578]],
+    } --[[table: 0A78A1F0]],
     stun = {
       interval = 40
-    } --[[table: 2BC90668]],
+    } --[[table: 0A78A5B0]],
     wait = {
       interval = 24
-    } --[[table: 2BC90618]]
-  } --[[table: 2BC90BB8]],
+    } --[[table: 0A78A6F0]]
+  } --[[table: 0A78A4C0]],
   ["10721"] = {
     attack = {
       fire = 20,
       interval = 35
-    } --[[table: 34795F28]],
+    } --[[table: 367DB760]],
     death = {
       interval = 18
-    } --[[table: 34796108]],
+    } --[[table: 367DB8F0]],
     hit = {
       interval = 11
-    } --[[table: 34796388]],
+    } --[[table: 367DB800]],
     run = {
       interval = 20
-    } --[[table: 347966A8]],
+    } --[[table: 367DB940]],
     SkillA = {
       hit = 70,
       interval = 94
-    } --[[table: 34795F78]],
+    } --[[table: 367DB210]],
     SkillB = {
       hit = 65,
       interval = 90
-    } --[[table: 34796248]],
+    } --[[table: 367DB7B0]],
     stun = {
       interval = 40
-    } --[[table: 347965B8]],
+    } --[[table: 367DB990]],
     wait = {
       interval = 40
-    } --[[table: 34796338]]
-  } --[[table: 34795FC8]],
+    } --[[table: 367DB6C0]]
+  } --[[table: 367DB1C0]],
   ["10722"] = {
     attack = {
       fire = 20,
       interval = 35
-    } --[[table: 3C0D6930]],
+    } --[[table: 37415CB0]],
     death = {
       interval = 18
-    } --[[table: 3C0D72E0]],
+    } --[[table: 37415C60]],
     hit = {
       interval = 11
-    } --[[table: 3C0D7150]],
+    } --[[table: 374160C0]],
     run = {
       interval = 20
-    } --[[table: 3C0D6CF0]],
+    } --[[table: 37416110]],
     SkillA = {
       hit = 70,
       interval = 94
-    } --[[table: 3C0D71A0]],
+    } --[[table: 37416070]],
     SkillB = {
       hit = 65,
       interval = 90
-    } --[[table: 3C0D7290]],
+    } --[[table: 37415E40]],
     stun = {
       interval = 40
-    } --[[table: 3C0D6FC0]],
+    } --[[table: 37416020]],
     wait = {
       interval = 40
-    } --[[table: 3C0D6BB0]]
-  } --[[table: 3C0D71F0]],
+    } --[[table: 37415D00]]
+  } --[[table: 37415F80]],
   ["10723"] = {
     attack = {
       fire = 20,
       interval = 35
-    } --[[table: 13FD1858]],
+    } --[[table: 09C4DE10]],
     death = {
       interval = 18
-    } --[[table: 13FD1678]],
+    } --[[table: 09C4E090]],
     hit = {
       interval = 11
-    } --[[table: 13FD11C8]],
+    } --[[table: 09C4E630]],
     run = {
       interval = 20
-    } --[[table: 13FD17B8]],
+    } --[[table: 09C4DEB0]],
     SkillA = {
       hit = 70,
       interval = 94
-    } --[[table: 13FD19E8]],
+    } --[[table: 09C4E6D0]],
     SkillB = {
       hit = 65,
       interval = 90
-    } --[[table: 13FD1498]],
+    } --[[table: 09C4DF50]],
     stun = {
       interval = 40
-    } --[[table: 13FD1768]],
+    } --[[table: 09C4E450]],
     wait = {
       interval = 40
-    } --[[table: 13FD1218]]
-  } --[[table: 13FD1948]],
+    } --[[table: 09C4E4F0]]
+  } --[[table: 09C4E540]],
   ["10731"] = {
     attack = {
       fire = 15,
       interval = 24
-    } --[[table: 0B817B80]],
+    } --[[table: 0CA92370]],
     death = {
       interval = 28
-    } --[[table: 0B817630]],
+    } --[[table: 0CA91E70]],
     hit = {
       interval = 15
-    } --[[table: 0B817090]],
+    } --[[table: 0CA92230]],
     run = {
       interval = 20
-    } --[[table: 0B817810]],
+    } --[[table: 0CA91EC0]],
     SkillA = {
       hit = 97,
       interval = 124
-    } --[[table: 0B817220]],
+    } --[[table: 0CA92690]],
     SkillB = {
       hit = 76,
       interval = 90
-    } --[[table: 0B8173B0]],
+    } --[[table: 0CA92410]],
     stun = {
       interval = 40
-    } --[[table: 0B816F00]],
+    } --[[table: 0CA922D0]],
     wait = {
       interval = 40
-    } --[[table: 0B816F50]]
-  } --[[table: 0B8171D0]],
+    } --[[table: 0CA92190]]
+  } --[[table: 0CA91FB0]],
   ["10732"] = {
     attack = {
       fire = 15,
       interval = 24
-    } --[[table: 1503ECF8]],
+    } --[[table: 200A3510]],
     death = {
       interval = 28
-    } --[[table: 1503E898]],
+    } --[[table: 200A3380]],
     hit = {
       interval = 15
-    } --[[table: 1503E3E8]],
+    } --[[table: 200A3CE0]],
     run = {
       interval = 20
-    } --[[table: 1503ED48]],
+    } --[[table: 200A3420]],
     SkillA = {
       hit = 97,
       interval = 124
-    } --[[table: 1503DB78]],
+    } --[[table: 200A3330]],
     SkillB = {
       hit = 76,
       interval = 90
-    } --[[table: 1503DFD8]],
+    } --[[table: 200A3C40]],
     stun = {
       interval = 40
-    } --[[table: 1503E208]],
+    } --[[table: 200A3BF0]],
     wait = {
       interval = 40
-    } --[[table: 1503E398]]
-  } --[[table: 1503E118]],
+    } --[[table: 200A35B0]]
+  } --[[table: 200A3830]],
   ["10733"] = {
     attack = {
       fire = 15,
       interval = 24
-    } --[[table: 34284078]],
+    } --[[table: 3BD43580]],
     death = {
       interval = 28
-    } --[[table: 342846B8]],
+    } --[[table: 3BD43440]],
     hit = {
       interval = 15
-    } --[[table: 34284168]],
+    } --[[table: 3BD43260]],
     run = {
       interval = 20
-    } --[[table: 34284028]],
+    } --[[table: 3BD43940]],
     SkillA = {
       hit = 97,
       interval = 124
-    } --[[table: 342841B8]],
+    } --[[table: 3BD43710]],
     SkillB = {
       hit = 76,
       interval = 90
-    } --[[table: 34284618]],
+    } --[[table: 3BD435D0]],
     stun = {
       interval = 40
-    } --[[table: 342842A8]],
+    } --[[table: 3BD433F0]],
     wait = {
       interval = 40
-    } --[[table: 342842F8]]
-  } --[[table: 342840C8]],
+    } --[[table: 3BD43530]]
+  } --[[table: 3BD438A0]],
   ["10741"] = {
     attack = {
       fire = 21,
       interval = 36
-    } --[[table: 0C602390]],
+    } --[[table: 3BB24F18]],
     death = {
       interval = 19
-    } --[[table: 0C6022F0]],
+    } --[[table: 3BB24E28]],
     hit = {
       interval = 15
-    } --[[table: 0C602110]],
+    } --[[table: 3BB24B08]],
     run = {
       interval = 24
-    } --[[table: 0C601D00]],
+    } --[[table: 3BB24D38]],
     SkillA = {
       hit = 108,
       interval = 124
-    } --[[table: 0C6022A0]],
+    } --[[table: 3BB24E78]],
     SkillB = {
       hit = 57,
       interval = 89
-    } --[[table: 0C601FD0]],
+    } --[[table: 3BB24BF8]],
     stun = {
       interval = 40
-    } --[[table: 0C602340]],
+    } --[[table: 3BB24D88]],
     wait = {
       interval = 80
-    } --[[table: 0C601E90]]
-  } --[[table: 0C601F30]],
+    } --[[table: 3BB24A18]]
+  } --[[table: 3BB24DD8]],
   ["10742"] = {
     attack = {
       fire = 21,
       interval = 36
-    } --[[table: 2F29F1F8]],
+    } --[[table: 37417C90]],
     death = {
       interval = 19
-    } --[[table: 2F29EF28]],
+    } --[[table: 37417920]],
     hit = {
       interval = 15
-    } --[[table: 2F29E7F8]],
+    } --[[table: 37417E20]],
     run = {
       interval = 24
-    } --[[table: 2F29F068]],
+    } --[[table: 37417E70]],
     SkillA = {
       hit = 108,
       interval = 124
-    } --[[table: 2F29EE38]],
+    } --[[table: 37417F60]],
     SkillB = {
       hit = 57,
       interval = 89
-    } --[[table: 2F29EDE8]],
+    } --[[table: 37417B00]],
     stun = {
       interval = 40
-    } --[[table: 2F29ED48]],
+    } --[[table: 37417FB0]],
     wait = {
       interval = 80
-    } --[[table: 2F29EC58]]
-  } --[[table: 2F29EBB8]],
+    } --[[table: 37417D80]]
+  } --[[table: 37417D30]],
   ["10743"] = {
     attack = {
       fire = 21,
       interval = 36
-    } --[[table: 2D2E2238]],
+    } --[[table: 09C47E20]],
     death = {
       interval = 19
-    } --[[table: 2D2E20A8]],
+    } --[[table: 09C480A0]],
     hit = {
       interval = 15
-    } --[[table: 2D2E1D88]],
+    } --[[table: 09C48050]],
     run = {
       interval = 24
-    } --[[table: 2D2E20F8]],
+    } --[[table: 09C48140]],
     SkillA = {
       hit = 108,
       interval = 124
-    } --[[table: 2D2E2198]],
+    } --[[table: 09C47A10]],
     SkillB = {
       hit = 57,
       interval = 89
-    } --[[table: 2D2E1F68]],
+    } --[[table: 09C479C0]],
     stun = {
       interval = 40
-    } --[[table: 2D2E1E78]],
+    } --[[table: 09C47DD0]],
     wait = {
       interval = 80
-    } --[[table: 2D2E1B58]]
-  } --[[table: 2D2E1CE8]],
+    } --[[table: 09C48280]]
+  } --[[table: 09C47BA0]],
   ["10751"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 347A68C8]],
+    } --[[table: 0CE5CC68]],
     death = {
       interval = 18
-    } --[[table: 347A66E8]],
+    } --[[table: 0CE5CC18]],
     hit = {
       interval = 15
-    } --[[table: 347A65F8]],
+    } --[[table: 0CE5CDA8]],
     run = {
       interval = 20
-    } --[[table: 347A67D8]],
+    } --[[table: 0CE5C5D8]],
     SkillA = {
       hit = 135,
       interval = 168
-    } --[[table: 347A6738]],
+    } --[[table: 0CE5C808]],
     SkillB = {
       hit = 191,
       interval = 210
-    } --[[table: 347A65A8]],
+    } --[[table: 0CE5CB28]],
     stun = {
       interval = 40
-    } --[[table: 347A6648]],
+    } --[[table: 0CE5C948]],
     wait = {
       interval = 35
-    } --[[table: 347A6558]]
-  } --[[table: 347A6878]],
+    } --[[table: 0CE5CAD8]]
+  } --[[table: 0CE5CD58]],
   ["10752"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 2D2E16A8]],
+    } --[[table: 3A36F260]],
     death = {
       interval = 18
-    } --[[table: 2D2E0FC8]],
+    } --[[table: 3A36EC70]],
     hit = {
       interval = 15
-    } --[[table: 2D2E1068]],
+    } --[[table: 3A36F030]],
     run = {
       interval = 20
-    } --[[table: 2D2E12E8]],
+    } --[[table: 3A36ED60]],
     SkillA = {
       hit = 135,
       interval = 168
-    } --[[table: 2D2E1478]],
+    } --[[table: 3A36F210]],
     SkillB = {
       hit = 191,
       interval = 210
-    } --[[table: 2D2E1298]],
+    } --[[table: 3A36F170]],
     stun = {
       interval = 40
-    } --[[table: 2D2E1658]],
+    } --[[table: 3A36EB30]],
     wait = {
       interval = 35
-    } --[[table: 2D2E1608]]
-  } --[[table: 2D2E10B8]],
+    } --[[table: 3A36EF90]]
+  } --[[table: 3A36EFE0]],
   ["10753"] = {
     attack = {
       hit = 18,
       interval = 40
-    } --[[table: 40331A90]],
+    } --[[table: 25530C60]],
     death = {
       interval = 18
-    } --[[table: 40331CC0]],
+    } --[[table: 255312F0]],
     hit = {
       interval = 15
-    } --[[table: 40331810]],
+    } --[[table: 255311B0]],
     run = {
       interval = 20
-    } --[[table: 40331A40]],
+    } --[[table: 25530EE0]],
     SkillA = {
       hit = 135,
       interval = 168
-    } --[[table: 40331F40]],
+    } --[[table: 255312A0]],
     SkillB = {
       hit = 191,
       interval = 210
-    } --[[table: 403319F0]],
+    } --[[table: 25530B70]],
     stun = {
       interval = 40
-    } --[[table: 40331E50]],
+    } --[[table: 25530F30]],
     wait = {
       interval = 35
-    } --[[table: 40331770]]
-  } --[[table: 40331EA0]],
+    } --[[table: 25531480]]
+  } --[[table: 255314D0]],
   ["10761"] = {
     attack = {
       hit = 30,
       interval = 65
-    } --[[table: 369C0B98]],
+    } --[[table: 177D2520]],
     death = {
       interval = 20
-    } --[[table: 369C0648]],
+    } --[[table: 177D2660]],
     hit = {
       interval = 15
-    } --[[table: 369C0788]],
+    } --[[table: 177D2CF0]],
     run = {
       interval = 24
-    } --[[table: 369C0918]],
+    } --[[table: 177D2DE0]],
     SkillA = {
       hit = 146,
       interval = 170
-    } --[[table: 369C0B48]],
+    } --[[table: 177D2D90]],
     SkillB = {
       hit = 95,
       interval = 145
-    } --[[table: 369C06E8]],
+    } --[[table: 177D2E80]],
     stun = {
       interval = 40
-    } --[[table: 369C0C88]],
+    } --[[table: 177D2CA0]],
     wait = {
       interval = 32
-    } --[[table: 369C07D8]]
-  } --[[table: 369C0378]],
+    } --[[table: 177D2A70]]
+  } --[[table: 177D26B0]],
   ["10762"] = {
     attack = {
       hit = 30,
       interval = 65
-    } --[[table: 3B45F8D0]],
+    } --[[table: 27D549E8]],
     death = {
       interval = 20
-    } --[[table: 3B45F2E0]],
+    } --[[table: 27D548A8]],
     hit = {
       interval = 15
-    } --[[table: 3B45F060]],
+    } --[[table: 27D54218]],
     run = {
       interval = 24
-    } --[[table: 3B45F3D0]],
+    } --[[table: 27D54178]],
     SkillA = {
       hit = 146,
       interval = 170
-    } --[[table: 3B45F150]],
+    } --[[table: 27D54128]],
     SkillB = {
       hit = 95,
       interval = 145
-    } --[[table: 3B45F010]],
+    } --[[table: 27D544E8]],
     stun = {
       interval = 40
-    } --[[table: 3B45F650]],
+    } --[[table: 27D547B8]],
     wait = {
       interval = 32
-    } --[[table: 3B45F100]]
-  } --[[table: 3B45F240]],
+    } --[[table: 27D54308]]
+  } --[[table: 27D54A38]],
   ["10763"] = {
     attack = {
       hit = 30,
       interval = 65
-    } --[[table: 4747CB30]],
+    } --[[table: 0E1D7848]],
     death = {
       interval = 20
-    } --[[table: 4747CD60]],
+    } --[[table: 0E1D6EE8]],
     hit = {
       interval = 15
-    } --[[table: 4747D2B0]],
+    } --[[table: 0E1D72A8]],
     run = {
       interval = 24
-    } --[[table: 4747D3F0]],
+    } --[[table: 0E1D76B8]],
     SkillA = {
       hit = 146,
       interval = 170
-    } --[[table: 4747D4E0]],
+    } --[[table: 0E1D72F8]],
     SkillB = {
       hit = 95,
       interval = 145
-    } --[[table: 4747D030]],
+    } --[[table: 0E1D7208]],
     stun = {
       interval = 40
-    } --[[table: 4747D080]],
+    } --[[table: 0E1D7398]],
     wait = {
       interval = 32
-    } --[[table: 4747D300]]
-  } --[[table: 4747CBD0]],
+    } --[[table: 0E1D6CB8]]
+  } --[[table: 0E1D71B8]],
   ["10771"] = {
     attack = {
       fire = 26,
       interval = 37
-    } --[[table: 4128EB30]],
+    } --[[table: 1CBA8EF0]],
     death = {
       interval = 58
-    } --[[table: 4128EAE0]],
+    } --[[table: 1CBA9170]],
     hit = {
       interval = 19
-    } --[[table: 4128E5E0]],
+    } --[[table: 1CBA8D60]],
     run = {
       interval = 20
-    } --[[table: 4128EE50]],
+    } --[[table: 1CBA8E50]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 83,
       hit = 60,
       interval = 83
-    } --[[table: 4128E090]],
+    } --[[table: 1CBA8DB0]],
     SkillB = {
       hit = 95,
       interval = 98
-    } --[[table: 4128E4F0]],
+    } --[[table: 1CBA9440]],
     stun = {
       interval = 30
-    } --[[table: 4128E0E0]],
+    } --[[table: 1CBA8C20]],
     wait = {
       interval = 40
-    } --[[table: 4128E2C0]]
-  } --[[table: 4128E270]],
+    } --[[table: 1CBA9080]]
+  } --[[table: 1CBA93A0]],
   ["10772"] = {
     attack = {
       fire = 26,
       interval = 37
-    } --[[table: 4767CA38]],
+    } --[[table: 20501718]],
     death = {
       interval = 58
-    } --[[table: 4767C2B8]],
+    } --[[table: 20501178]],
     hit = {
       interval = 19
-    } --[[table: 4767C7B8]],
+    } --[[table: 20501588]],
     run = {
       interval = 20
-    } --[[table: 4767C948]],
+    } --[[table: 205018F8]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 83,
       hit = 60,
       interval = 83
-    } --[[table: 4767C858]],
+    } --[[table: 20501628]],
     SkillB = {
       hit = 95,
       interval = 98
-    } --[[table: 4767C268]],
+    } --[[table: 205011C8]],
     stun = {
       interval = 30
-    } --[[table: 4767C498]],
+    } --[[table: 205012B8]],
     wait = {
       interval = 40
-    } --[[table: 4767C6C8]]
-  } --[[table: 4767C538]],
+    } --[[table: 20501218]]
+  } --[[table: 20501AD8]],
   ["10773"] = {
     attack = {
       fire = 26,
       interval = 37
-    } --[[table: 0CE2AC38]],
+    } --[[table: 1475CC58]],
     death = {
       interval = 58
-    } --[[table: 0CE2A558]],
+    } --[[table: 1475CE88]],
     hit = {
       interval = 19
-    } --[[table: 0CE2AC88]],
+    } --[[table: 1475C7A8]],
     run = {
       interval = 20
-    } --[[table: 0CE2A698]],
+    } --[[table: 1475C988]],
     SkillA = {
       clearColorLayer = 83,
       createColorLayer = 83,
       hit = 60,
       interval = 83
-    } --[[table: 0CE2A418]],
+    } --[[table: 1475CE38]],
     SkillB = {
       hit = 95,
       interval = 98
-    } --[[table: 0CE2A378]],
+    } --[[table: 1475C578]],
     stun = {
       interval = 30
-    } --[[table: 0CE2ABE8]],
+    } --[[table: 1475C8E8]],
     wait = {
       interval = 40
-    } --[[table: 0CE29B08]]
-  } --[[table: 0CE2A198]],
+    } --[[table: 1475C758]]
+  } --[[table: 1475C708]],
   ["10781"] = {
     attack = {
       fire = 10,
       interval = 26
-    } --[[table: 0B9642F0]],
+    } --[[table: 0B108558]],
     death = {
       interval = 22
-    } --[[table: 0B9636C0]],
+    } --[[table: 0B108AF8]],
     hit = {
       interval = 14
-    } --[[table: 0B9633F0]],
+    } --[[table: 0B108968]],
     run = {
       interval = 24
-    } --[[table: 0B964520]],
+    } --[[table: 0B108B98]],
     SkillA = {
       hit = 108,
       interval = 137
-    } --[[table: 0B963580]],
+    } --[[table: 0B108A58]],
     SkillB = {
       hit = 74,
       interval = 99
-    } --[[table: 0B963BC0]],
+    } --[[table: 0B108CD8]],
     stun = {
       interval = 40
-    } --[[table: 0B963760]],
+    } --[[table: 0B108418]],
     wait = {
       interval = 40
-    } --[[table: 0B963B70]]
-  } --[[table: 0B963A80]],
+    } --[[table: 0B108878]]
+  } --[[table: 0B108328]],
   ["10782"] = {
     attack = {
       fire = 10,
       interval = 26
-    } --[[table: 369BEE88]],
+    } --[[table: 27D6CEF8]],
     death = {
       interval = 22
-    } --[[table: 369BE708]],
+    } --[[table: 27D6CCC8]],
     hit = {
       interval = 14
-    } --[[table: 369BEC08]],
+    } --[[table: 27D6CB88]],
     run = {
       interval = 24
-    } --[[table: 369BEAC8]],
+    } --[[table: 27D6C778]],
     SkillA = {
       hit = 108,
       interval = 137
-    } --[[table: 369BEE38]],
+    } --[[table: 27D6CC28]],
     SkillB = {
       hit = 74,
       interval = 99
-    } --[[table: 369BEED8]],
+    } --[[table: 27D6CA98]],
     stun = {
       interval = 40
-    } --[[table: 369BEA78]],
+    } --[[table: 27D6CD68]],
     wait = {
       interval = 40
-    } --[[table: 369BE758]]
-  } --[[table: 369BE988]],
+    } --[[table: 27D6CFE8]]
+  } --[[table: 27D6CDB8]],
   ["10783"] = {
     attack = {
       fire = 10,
       interval = 26
-    } --[[table: 13FD0458]],
+    } --[[table: 3689C748]],
     death = {
       interval = 22
-    } --[[table: 13FD0318]],
+    } --[[table: 3689C478]],
     hit = {
       interval = 14
-    } --[[table: 13FD03B8]],
+    } --[[table: 3689C2E8]],
     run = {
       interval = 24
-    } --[[table: 13FD0408]],
+    } --[[table: 3689C658]],
     SkillA = {
       hit = 108,
       interval = 137
-    } --[[table: 13FD0228]],
+    } --[[table: 3689C3D8]],
     SkillB = {
       hit = 74,
       interval = 99
-    } --[[table: 13FCFD28]],
+    } --[[table: 3689C4C8]],
     stun = {
       interval = 40
-    } --[[table: 13FD0048]],
+    } --[[table: 3689C298]],
     wait = {
       interval = 40
-    } --[[table: 13FCFFF8]]
-  } --[[table: 13FCFE68]],
+    } --[[table: 3689C518]]
+  } --[[table: 3689C5B8]],
   ["10791"] = {
     attack = {
       hit = 25,
       interval = 45
-    } --[[table: 309F6DD0]],
+    } --[[table: 27C4A120]],
     death = {
       interval = 25
-    } --[[table: 309F6F10]],
+    } --[[table: 27C4A0D0]],
     hit = {
       interval = 15
-    } --[[table: 309F69C0]],
+    } --[[table: 27C49B80]],
     run = {
       interval = 24
-    } --[[table: 309F70F0]],
+    } --[[table: 27C49D10]],
     SkillA = {
       hit = 86,
       interval = 106
-    } --[[table: 309F6C90]],
+    } --[[table: 27C49EA0]],
     SkillB = {
       hit = 110,
       interval = 150
-    } --[[table: 309F6D80]],
+    } --[[table: 27C4A080]],
     stun = {
       interval = 40
-    } --[[table: 309F6970]],
+    } --[[table: 27C49BD0]],
     wait = {
       interval = 35
-    } --[[table: 309F6920]]
-  } --[[table: 309F6FB0]],
+    } --[[table: 27C4A4E0]]
+  } --[[table: 27C49EF0]],
   ["10792"] = {
     attack = {
       hit = 25,
       interval = 45
-    } --[[table: 1609EF78]],
+    } --[[table: 0A39FBD8]],
     death = {
       interval = 25
-    } --[[table: 1609F298]],
+    } --[[table: 0A39FCC8]],
     hit = {
       interval = 15
-    } --[[table: 1609F798]],
+    } --[[table: 0A39F8B8]],
     run = {
       interval = 24
-    } --[[table: 1609F428]],
+    } --[[table: 0A39FDB8]],
     SkillA = {
       hit = 86,
       interval = 106
-    } --[[table: 1609F388]],
+    } --[[table: 0A39FC78]],
     SkillB = {
       hit = 110,
       interval = 150
-    } --[[table: 1609F248]],
+    } --[[table: 0A39FB88]],
     stun = {
       interval = 40
-    } --[[table: 1609F5B8]],
+    } --[[table: 0A39F868]],
     wait = {
       interval = 35
-    } --[[table: 1609F338]]
-  } --[[table: 1609F108]],
+    } --[[table: 0A39F7C8]]
+  } --[[table: 0A39F958]],
   ["10793"] = {
     attack = {
       hit = 25,
       interval = 45
-    } --[[table: 3479CB98]],
+    } --[[table: 3BD2A710]],
     death = {
       interval = 25
-    } --[[table: 3479C8C8]],
+    } --[[table: 3BD2A300]],
     hit = {
       interval = 15
-    } --[[table: 3479CAA8]],
+    } --[[table: 3BD2A2B0]],
     run = {
       interval = 24
-    } --[[table: 3479C378]],
+    } --[[table: 3BD2A490]],
     SkillA = {
       hit = 86,
       interval = 106
-    } --[[table: 3479C5F8]],
+    } --[[table: 3BD2A3A0]],
     SkillB = {
       hit = 110,
       interval = 150
-    } --[[table: 3479CC38]],
+    } --[[table: 3BD2A8A0]],
     stun = {
       interval = 40
-    } --[[table: 3479C3C8]],
+    } --[[table: 3BD2A120]],
     wait = {
       interval = 35
-    } --[[table: 3479C6E8]]
-  } --[[table: 3479CC88]],
+    } --[[table: 3BD2AAD0]]
+  } --[[table: 3BD2A1C0]],
   ["10801"] = {
     attack = {
       hit = 23,
       interval = 44
-    } --[[table: 29D806C0]],
+    } --[[table: 16734E40]],
     death = {
       interval = 18
-    } --[[table: 29D80170]],
+    } --[[table: 167349E0]],
     hit = {
       interval = 14
-    } --[[table: 29D808A0]],
+    } --[[table: 167346C0]],
     run = {
       interval = 24
-    } --[[table: 29D80440]],
+    } --[[table: 16735430]],
     SkillA = {
       hit = 56,
       interval = 95
-    } --[[table: 29D80530]],
+    } --[[table: 167342B0]],
     SkillB = {
       hit = 121,
       interval = 178
-    } --[[table: 29D80A80]],
+    } --[[table: 16734760]],
     stun = {
       interval = 40
-    } --[[table: 29D80350]],
+    } --[[table: 16734670]],
     wait = {
       interval = 40
-    } --[[table: 29D80300]]
-  } --[[table: 29D80850]],
+    } --[[table: 167345D0]]
+  } --[[table: 16734580]],
   ["10802"] = {
     attack = {
       hit = 23,
       interval = 44
-    } --[[table: 41195900]],
+    } --[[table: 24CD4FB8]],
     death = {
       interval = 18
-    } --[[table: 41195720]],
+    } --[[table: 24CD4D88]],
     hit = {
       interval = 14
-    } --[[table: 411AA8F0]],
+    } --[[table: 24CD4A18]],
     run = {
       interval = 24
-    } --[[table: 411956D0]],
+    } --[[table: 24CD4AB8]],
     SkillA = {
       hit = 56,
       interval = 95
-    } --[[table: 41195D60]],
+    } --[[table: 24CD4B58]],
     SkillB = {
       hit = 121,
       interval = 178
-    } --[[table: 411AA440]],
+    } --[[table: 24CD4C48]],
     stun = {
       interval = 40
-    } --[[table: 411AA1C0]],
+    } --[[table: 24CD4978]],
     wait = {
       interval = 40
-    } --[[table: 411AA710]]
-  } --[[table: 411AA260]],
+    } --[[table: 24CD49C8]]
+  } --[[table: 24CD4E28]],
   ["10803"] = {
     attack = {
       hit = 23,
       interval = 44
-    } --[[table: 0AFD5070]],
+    } --[[table: 2C957730]],
     death = {
       interval = 18
-    } --[[table: 0AFD52A0]],
+    } --[[table: 2C957F50]],
     hit = {
       interval = 14
-    } --[[table: 0AFD4F30]],
+    } --[[table: 2C957B40]],
     run = {
       interval = 24
-    } --[[table: 0AFD4E90]],
+    } --[[table: 2C957B90]],
     SkillA = {
       hit = 56,
       interval = 95
-    } --[[table: 0AFD5250]],
+    } --[[table: 2C957DC0]],
     SkillB = {
       hit = 121,
       interval = 178
-    } --[[table: 0AFD4DF0]],
+    } --[[table: 2C957AA0]],
     stun = {
       interval = 40
-    } --[[table: 0AFD4E40]],
+    } --[[table: 2C957CD0]],
     wait = {
       interval = 40
-    } --[[table: 0AFD4DA0]]
-  } --[[table: 0AFD42B0]],
+    } --[[table: 2C957820]]
+  } --[[table: 2C957A50]],
   ["10811"] = {
     attack = {
       hit = 21,
       interval = 48
-    } --[[table: 17B972F8]],
+    } --[[table: 150CBFA0]],
     death = {
       interval = 24
-    } --[[table: 17B96CB8]],
+    } --[[table: 150CC0E0]],
     hit = {
       interval = 15
-    } --[[table: 17B973E8]],
+    } --[[table: 150CBB90]],
     run = {
       interval = 26
-    } --[[table: 17B96B78]],
+    } --[[table: 150CBFF0]],
     SkillA = {
       hit = 64,
       interval = 106
-    } --[[table: 17B97028]],
+    } --[[table: 150CBD20]],
     SkillB = {
       hit = 121,
       interval = 170
-    } --[[table: 17B96FD8]],
+    } --[[table: 150CBF00]],
     stun = {
       interval = 40
-    } --[[table: 17B97118]],
+    } --[[table: 150CBEB0]],
     wait = {
       interval = 40
-    } --[[table: 17B97258]]
-  } --[[table: 17B96EE8]],
+    } --[[table: 150CBC80]]
+  } --[[table: 150CBAA0]],
   ["10812"] = {
     attack = {
       hit = 21,
       interval = 48
-    } --[[table: 0BC8A7A8]],
+    } --[[table: 0C037910]],
     death = {
       interval = 24
-    } --[[table: 0BC8AE38]],
+    } --[[table: 0C0372D0]],
     hit = {
       interval = 15
-    } --[[table: 0BC8A5C8]],
+    } --[[table: 0C036E70]],
     run = {
       interval = 26
-    } --[[table: 0BC8A938]],
+    } --[[table: 0C036BF0]],
     SkillA = {
       hit = 64,
       interval = 106
-    } --[[table: 0BC8AA28]],
+    } --[[table: 0C036BA0]],
     SkillB = {
       hit = 121,
       interval = 170
-    } --[[table: 0BC8A8E8]],
+    } --[[table: 0C037230]],
     stun = {
       interval = 40
-    } --[[table: 0BC8AE88]],
+    } --[[table: 0C036970]],
     wait = {
       interval = 40
-    } --[[table: 0BC8A898]]
-  } --[[table: 0BC8A758]],
+    } --[[table: 0C036E20]]
+  } --[[table: 0C037140]],
   ["10813"] = {
     attack = {
       hit = 21,
       interval = 48
-    } --[[table: 3A3A94F8]],
+    } --[[table: 35E16648]],
     death = {
       interval = 24
-    } --[[table: 3A3A9458]],
+    } --[[table: 35E16B98]],
     hit = {
       interval = 15
-    } --[[table: 3A3A9318]],
+    } --[[table: 35E16C38]],
     run = {
       interval = 26
-    } --[[table: 3A3A94A8]],
+    } --[[table: 35E16508]],
     SkillA = {
       hit = 64,
       interval = 106
-    } --[[table: 3A3A9368]],
+    } --[[table: 35E163C8]],
     SkillB = {
       hit = 121,
       interval = 170
-    } --[[table: 3A3A9188]],
+    } --[[table: 35E16B48]],
     stun = {
       interval = 40
-    } --[[table: 3A3A9408]],
+    } --[[table: 35E16918]],
     wait = {
       interval = 40
-    } --[[table: 3A3A8FA8]]
-  } --[[table: 3A3A93B8]]
-} --[[table: 09C816B0]]
+    } --[[table: 35E16468]]
+  } --[[table: 35E16558]]
+} --[[table: 09A576F0]]

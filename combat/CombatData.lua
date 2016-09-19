@@ -60,6 +60,9 @@ function __init_groups(data)
   	{
 		[ATTACKER] = {HeroGroupData},
 		[DEFENDER]  = BattleGroupData
+
+		-- [DEFENDER] = {HeroGroupData},
+		-- [ATTACKER]  = BattleGroupData
   	} 
 	for k,v in pairs(groupMap) do 
 		local initData = transDataForGroupInit[k]

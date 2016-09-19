@@ -74,12 +74,12 @@ function think()
 end
 
 function getReadySkills(skills)
-	local readySkills = {}
-
-	for i,skill in ipairs(skills) do
-
+	local readySkills = {} 
+	 
+	for i,skill in ipairs(skills) do 
+		 
 		if skill:getCdLeft()<=0 then  
-			table.insert(readySkills, v)
+			table.insert(readySkills, skill)
 		end
 	end
 

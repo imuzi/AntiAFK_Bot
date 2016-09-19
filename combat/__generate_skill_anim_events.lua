@@ -144,7 +144,8 @@ end
 local colorfulEventKeys = {
 ["event1"]=true,
 ["event"]=true,
-["even"]=true
+["even"]=true,
+["事件"]=true
 } 
 function getCcsAnimEvetnPoint(jsonName,animName)
 	local resPath = CCFileUtils:sharedFileUtils():getWritablePath() .. 'res/'
@@ -200,8 +201,10 @@ function getCcsAnimEvetnPoint(jsonName,animName)
 	return data--[animName]
 end
 
- 
-
+local needTransKeyNames = {
+["skill1"] = "SkillA",
+["skill2"] = "SkillB"
+} 
 function getSpineAnimEvetnPoint(jsonName,animName,avatarData)
 	local resPath = CCFileUtils:sharedFileUtils():getWritablePath() .. 'res/'
 	local jsonDir = resPath..spinePath..jsonName..".json" 
@@ -243,8 +246,7 @@ function getSpineAnimEvetnPoint(jsonName,animName,avatarData)
 					end
 					-- print("____actionName",actionName)
 					-- print("____eventName,____point",eventName,point*30)
-	 
-				 
+				 	local eventName = needTransKeyNames[eventName] or  eventName
 					data[__actionName][eventName] = time_to_frame(point)
 					 
 					-- table.insert(data[__actionName] , {eventName=eventName,point=point})
