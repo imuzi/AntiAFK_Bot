@@ -15,6 +15,8 @@ parent = nil
 spines = {}
 
 spineActionCurrent = {}
+
+buffIcons = {}
  
 
 function init(scene)
@@ -46,10 +48,21 @@ function updateAction(hero,name,isloop)
 	end 
 
 	if __getActionCurrent(hero) == name then return end 
+ 	
+ -- 	--  降帧要先于一切行为 WARN
+ -- 	if not setDropFrameRatio(hero) then 
+	-- 	spine:setTimeScale(1)
+	-- end 
+	parent:resetGameSpeed()
 
 	if not dealRun(hero) then 
-		spine:setAnimation(0, name, isloop) 
-	end
+		setDropFrameRatioGloble(hero)
+
+		spine:setAnimation(0, name, isloop)  
+		
+	end 
+
+	
 
 	print("hero ",hero:getCfgByKey("Name"),"ID",hero:getAttr("id"))
 	print("spine:setAnimation",hero:getStatus(),name)
@@ -59,13 +72,7 @@ function updateAction(hero,name,isloop)
 end
 
 
-local __ATTACK_STUATUSES = {
-	STATUS.BASEACTION,
-STATUS.BASICATTACK,
-STATUS.COUNTERATTACK,
-STATUS.COMBOATTACK,
-STATUS.CASTSKILL,
-}
+
 -- VARN 跑的时候要多加 2*RUN_FRAME
 local __runkeyMap = 
 {
@@ -73,19 +80,60 @@ local __runkeyMap =
 	["SkillA"] = "IsAMelee",
 	["SkillB"] = "IsBMelee"
 }
-function isNeedRun(hero)  
+function isNeedRun(hero)   
 	-- 暂定 敌方才跑  WARN
 	local skill = hero:getSkillToCast()
-	local target = skill:getTargets()[1]
-	local isEnemy = hero:getGroup():getName() ~= target:getGroup():getName()
-	local skillKeyType = skill:getKeyType()
-	local meleeKey = __runkeyMap[skillKeyType]
+ 	local target = skill:getTargets()[1]    -- FIX ME 技能指定目标和 效果目标不一致时。。。
+	local isEnemy = hero:getGroup():getName() ~= target:getGroup():getName() 
 
- 	local isShortRange = hero:getAvatarCfgByKey(meleeKey) == 1
+ 	local isShortRange = __getAvatarDataByKeyMap(hero,__runkeyMap) == 1
 
  	return isEnemy and isShortRange
 end
 
+local __dropFrameKeyMap=
+{
+	["SkillA"] = "SKADropFrameTo",
+	["SkillB"] = "SKBDropFrameTo" 
+}
+-- 单体降
+function setDropFrameRatio(hero)  
+ 	local val = __getAvatarDataByKeyMap(hero,__dropFrameKeyMap)
+
+ 	if val and val ~= 100 then
+ 		-- val = 20--val/2 
+ 		local ratio = val/100
+ 		__getSpine(hero):setTimeScale(ratio) 
+ 		hero:setFrameScaleRatio(1/ratio)
+ 		-- print("__________getSpine(hero):setTimeScale(ratio) ___",ratio)
+ 		return true 
+ 	end 
+ 	
+ 	return false
+end
+-- 全体降
+function setDropFrameRatioGloble(hero)
+	local val = __getAvatarDataByKeyMap(hero,__dropFrameKeyMap)
+
+ 	if val and val ~= 100 then
+ 		val = 20--val/2 
+ 		local ratio = val/100
+ 		 
+ 		parent:dropFrame(ratio)
+ 		-- print("__________getSpine(hero):setTimeScale(ratio) ___",ratio)
+ 		return true 
+ 	end 
+ 	
+ 	return false
+end
+
+local __ATTACK_STUATUSES = {
+	STATUS.BASEACTION,
+STATUS.BASICATTACK,
+STATUS.COUNTERATTACK,
+STATUS.COMBOATTACK,
+STATUS.CASTSKILL,
+}
 function isAttackStatus(hero)
 	local status = hero:getStatus()
 	local isContain = false 
@@ -95,6 +143,7 @@ function isAttackStatus(hero)
 			break 
 		end
 	end 
+ 
 
 	if isContain then 
 		__topSpineZorder(hero)
@@ -106,26 +155,26 @@ function isAttackStatus(hero)
 end
 
 -- 普通骨骼的宽度 WARN
-local NORMAL_SPINE_WIDHT = 100  
+local NORMAL_SPINE_WIDHT = 130  
 -- 处理近战跑动
-function dealRun(hero) 
-	 
-	if not isAttackStatus(hero) or not isNeedRun(hero) then 
+
+function dealRun(hero)  
+	if not isAttackStatus(hero) or not isNeedRun(hero) then  
 		return false
 	end  
- 	
- 	-- __topSpineZorder(hero)
+ 
+ 	local skill = hero:getSkillToCast()  
+	if skill == "nil" or not skill then return false end 
 
-	local target = hero:getSkillToCast():getTargets()[1]
+	local target = skill:getTargets()[1]
 	 
 	local tarX,tarY = __getSpineOriginPos(target) 
-	local backX,backY = __getSpineOriginPos(hero)
-	local moveBackDelay = (RUN_FRAME + hero:getSkillToCast():getInterval())/LOGIC_FPS 
+	local backX,backY = __getSpineOriginPos(hero) 
 
-
+	local moveBackDelay = (Behaviors.getAdjustedInterval(hero)-RUN_FRAME*2)/LOGIC_FPS  
 
 	tarX = target:getGroup():getName() == DEFENDER and tarX-NORMAL_SPINE_WIDHT or tarX+NORMAL_SPINE_WIDHT
-
+ 
 	manualUpdateAction(hero,"run",false)
 	local spineNode = __getSpineNode(hero)
 	transition.moveTo(
@@ -134,34 +183,45 @@ function dealRun(hero)
 		time = RUN_FRAME/LOGIC_FPS, x = tarX, y = tarY, 
 		onComplete = 
 		function ()
+
+			setDropFrameRatioGloble(hero)
+
+			spineNode:setPosition(tarX,tarY) -- fix加速时偶尔跑动不完整   
 			local spine = __getSpine(hero)
 		 	local name_after,loop_after = __getHeroAnimData(hero) 
-			spine:setAnimation(0,name_after,loop_after)  
+			spine:setAnimation(0,name_after,loop_after)   
+			
+
+			parent:performWithDelay(
+				function()
+					parent:resetGameSpeed() 
+				 
+					manualUpdateAction(hero,"run",false)
+					spineNode:setScaleX(spineNode:getScaleX()*-1)
+					transition.moveTo(
+						spineNode, 
+						{
+						time = RUN_FRAME/LOGIC_FPS, x = backX, y = backY, 
+						onComplete = 
+						function ()
+							spineNode:setPosition(backX,backY)-- fix加速时偶尔跑动不完整   
+							local spine = __getSpine(hero)
+						--  	local name_after,loop_after = __getHeroAnimData(hero) 
+							spine:setAnimation(0,"wait",true)  
+							spineNode:setScaleX(spineNode:getScaleX()*-1) 
+							__resetSpineZorder(hero)
+ 
+						end
+						})
+				end,
+				moveBackDelay
+				) 
+
+			
 		end
 		})
+
  
-	parent:performWithDelay(
-		function()
-			manualUpdateAction(hero,"run",false)
-			spineNode:setScaleX(spineNode:getScaleX()*-1)
-			transition.moveTo(
-				spineNode, 
-				{
-				time = RUN_FRAME/LOGIC_FPS, x = backX, y = backY, 
-				onComplete = 
-				function ()
-					local spine = __getSpine(hero)
-				--  	local name_after,loop_after = __getHeroAnimData(hero) 
-					spine:setAnimation(0,"wait",true)  
-					spineNode:setScaleX(spineNode:getScaleX()*-1) 
-					__resetSpineZorder(hero)
-				end
-				})
-		end,
-		moveBackDelay
-		) 
-
-
 	return true
 
 end
@@ -178,7 +238,7 @@ function dealBullet(hero)
 	__addToScene(animation,BULLET_ZORDER)
 
 	
-	local target = hero:getSkillToCast():getTargets()[1]
+	local target = hero:getSkillToCast():getTargets()[1]  -- WARN 如果目标重算了  这里的表现就会有些问题 跑向A B受到伤害 这是正常的
 	local tarX,tarY = __getSpineOriginPos(target) 
 	local backX,backY = __getSpineOriginPos(hero) 
 
@@ -194,9 +254,12 @@ function dealBullet(hero)
 		{x = tarX, y = tarY+90, time = BULLET_FLYFRAME/LOGIC_FPS, 
 		onComplete = 
 		function ()
+			animation:setPosition(tarX,tarY+90)-- fix加速时偶尔跑动不完整   
 			animation:removeFromParentAndCleanup(true)
 			 
 		end})
+
+	
 end
 
 
@@ -249,8 +312,7 @@ function dealShowEffect(hero)
 			__addToScene(animation,CCS_ZORDER)
  			
  			animation:setScaleX(scaleX)
-			
-
+ 
 			animation:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
 					if evt == "over" then
 						animation:removeFromParentAndCleanup(true) 
@@ -265,16 +327,141 @@ function dealShowEffect(hero)
 
 end
 
+local __beHitedKeyMap=
+{
+	["SkillA"] = "IsAAtkEedffect",
+	["SkillB"] = "IsBAtkEedffect" 
+} 
+--HangingPoint{head=170,face=116,body=76}
+-- 处理被命中时 人物身上挂的刀光等效果
+function dealBeHitedEffect(caster,target)
+	local val = __getAvatarDataByKeyMap(caster,__beHitedKeyMap)
 
+ 	if val and val~= '' then
+ 		local animation = 
+ 		newCcs({fullPathName="skillEffect/"..val,
+ 			-- actionName = animName,
+ 			x=0,
+ 			y=76
+ 			}) 
+
+ 		__addToSpine(target,animation)
+
+ 		animation:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
+ 			if evt == "over" then
+ 				animation:removeFromParentAndCleanup(true)
+ 			end
+ 		end)
+ 	end 
+end
+
+
+
+local test_buff_config = 
+{
+	{ID=1,Name="加暴击",Type="buff"--[[buff/debuff]],AttrName="critRate"--[[hero attribute name]],HangingPoin=3--[[挂点 同旧]],TriggerAction="animation2"--[[效果触发时动作]],SpineAction="stun"--[[使目标做出某种动作]],FileName="skillbf127"--[[文件名]],FileType=0--[[文件类型 0动画1png]],Icon="图标不填为老的技能图标 挂点不变",desFileName="描述技能的文字图 挂点不变"}
+}
 -- 处理属性改变的表现
-function dealAttributeChanged(hero,attrName,value)
+function dealAttributeChanged(hero,effect) 
+	local triggerEvtName = effect:getTriggerEvent().name
 
+	print("dealAttributeChanged",triggerEvtName)
+	if triggerEvtName ~= "effectBegin" then return end 
+
+	local params = effect:getAction().params
+	local value = params.value
+	local attrName = params.attrName
+
+
+
+	-- newCcs({fullPathName="buffEffect/".."skillbf109",
+	-- 			-- actionName = animName,
+	-- 			-- x=x,
+	-- 			-- y=y
+	-- 			}) 
+
+	local asset = "skillbf109"
+	local isBuff = value > 0
+
+	local startY, middleY, endY = 0, 60, 120
+	if not isBuff then
+		startY, endY = 120, 0
+	end
+
+	local sp = display.newSprite("buffEffect/" .. asset .. ".png", 0, startY)  
+	local scaleX = __getSpineNode(hero):getScaleX()
+
+
+	sp:setScale(0.5*scaleX)
+	local arr = CCArray:create()
+	arr:addObject(CCScaleTo:create(.2, 2*scaleX,2))
+	arr:addObject(CCScaleTo:create(.3, 1.5*scaleX,1.5))
+	arr:addObject(CCMoveTo:create(.5, CCPoint(0, middleY)))
+	arr:addObject(CCDelayTime:create(.5))
+
+	local arr1 = CCArray:create()
+	arr1:addObject(CCMoveTo:create(.5, CCPoint(0, endY)))
+	arr1:addObject(CCFadeOut:create(0.5))
+	arr:addObject(CCSpawn:create(arr1))
+	arr:addObject(CCCallFunc:create(function ()
+		sp:removeFromParentAndCleanup(true)
+	 
+	end))
+	sp:runAction(CCSequence:create(arr))
+ 
+
+ 	__addToSpine(hero,sp,BULLET_ZORDER)
+
+ 	dealHeadIcons(hero,effect)
 end
 
 -- 头顶图标
-function dealHeadIcons( ... )
-	
+local ICON_SKLL_DIR = "skills/"
+function dealHeadIcons(hero,effect)
+	local skill = effect:getSkill()
+	local code = skill:getCfgByKey("Code") 
+
+
+	--  means this is a basciatack
+	if not code then return end 
+
+	print("____show buff icon",skill:getCfgByKey("Name"),code )
+ 
+    local buffIcon = display.newSprite(string.format("skills/%s.jpg", code))
+   
+    buffIcon.code = code
+
+
+    __addToSpine(hero,buffIcon,1)
+    __addBuffIcon(hero,buffIcon)
+
+ 	buffIcon:setScale(.3*__getSpineNode(hero):getScaleX())
+
+    local icons = __getBuffIcons(hero) 
+ 	for i, v in ipairs(icons) do
+        v:pos(-24 + ((i - 1) % 3) * 27, -27+210 + math.modf((i - 1) / 3) * 27)
+    end
 end
+
+function removeBuffIcon(hero,effect)
+	local skill = effect:getSkill()
+	local code = skill:getCfgByKey("Code") 
+
+	local icons = __getBuffIcons( hero )
+
+	for i,v in ipairs(icons) do
+		if v.code == code then 
+			v:removeFromParent()
+			table.remove(icons,i)
+			break
+		end 
+	end
+
+end
+
+
+
+
 
  
 
@@ -416,6 +603,20 @@ function __getActionCurrent(hero)
 	return spineActionCurrent[heroSvrId] 
 end
 
+
+function __addBuffIcon(hero,icon)
+	local icons = __getBuffIcons( hero )
+	table.insert(icons, icon)
+end
+
+
+
+function __getBuffIcons( hero )
+	local heroSvrId = hero:getAttr("id")
+	buffIcons[heroSvrId] = buffIcons[heroSvrId] or {}
+	return buffIcons[heroSvrId]  
+end
+
  
 
 function __addToSpine(hero,node,zOrder)
@@ -443,6 +644,21 @@ function __spineEventHandler(none, trackIndex, eventType, animationName, event, 
 	end 
 
 
+end
+
+
+function __getAvatarDataByKeyMap(hero,keyMap)
+	local skill = hero:getSkillToCast()  
+	if skill == "nil" or not skill then return   end 
+	local skillKeyType = skill:getKeyType()
+
+	if not keyMap[skillKeyType] then return  end 
+ 
+	local key = keyMap[skillKeyType]
+
+ 	local val = hero:getAvatarCfgByKey(key)
+
+ 	return val 
 end
 
 ------- shanghai 

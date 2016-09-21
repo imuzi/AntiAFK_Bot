@@ -302,25 +302,25 @@ end
 ------ sorting funcs end 
 
 
-local __random_count = 0
-local __random_recoder = {}
-function random__(...)
-	__random_count = __random_count+1
-	local random_result = math.random(...)
-	-- print("__________random_count",__random_count,random_result,...)
+-- local __random_count = 0
+-- local __random_recoder = {}
+-- function random__(...)
+-- 	__random_count = __random_count+1
+-- 	local random_result = math.random(...)
+-- 	-- print("__________random_count",__random_count,random_result,...)
 
-	local string_rec =  "\n"..__random_count.."^^^^"..random_result
-	table.insert(__random_recoder, string_rec)
+-- 	local string_rec =  "\n"..__random_count.."^^^^"..random_result
+-- 	table.insert(__random_recoder, string_rec)
 	
-	return random_result
-end
+-- 	return random_result
+-- end
 
-function set_random_count(var)
-	dump(__random_recoder)
+-- function set_random_count(var)
+-- 	dump(__random_recoder)
  	
-	__random_recoder = {}
-	__random_count = var or 0
-end	
+-- 	__random_recoder = {}
+-- 	__random_count = var or 0
+-- end	
 
 
 function modf__(val)

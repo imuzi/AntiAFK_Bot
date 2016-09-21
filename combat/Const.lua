@@ -44,7 +44,9 @@ SKILLTYPES =
 	"REVIVE"
 }
 
-TEMP_EFFECT_VARS = 
+-- 
+--- 额外的不可见的属性 
+EXTRA_ATTRIBUTES = 
 {
 	"mustCrit",
 	"mustIgnoreDefence",
@@ -57,6 +59,13 @@ TEMP_EFFECT_VARS =
 	"stun",
 	"sleep",
 	"silence",
+	"immunePhysicalAttacks", -- 免疫物理攻击
+	"immuneSpell", -- 免疫法术攻击
+
+	---- 以上为bool 值
+	---  以下为INT 值
+	"reflectDamage",-- 反伤  目前只做成通用属性 反射固定百分比 为INT值
+	"suckBlood",-- 吸血   目前只做成通用属性 吸取固定百分比 为INT值
 }
 
 

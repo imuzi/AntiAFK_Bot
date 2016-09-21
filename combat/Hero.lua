@@ -12,6 +12,7 @@ local Hero = class__("Hero",
 					externAttrs = "{}",
 					status      = STATUS.STANDBY, 
 					frameStep   = "0",
+					frameScaleRatio = "1",   -- 动态降帧用
 					frameEventRecorder = "{}", --记录执行过的事件点
 					skillToCast = "nil",
 					group   = "nil", 
@@ -86,7 +87,7 @@ function Hero:__initAttrs(attrData)
 
 	self:setAttr("hp",self:getAttr("maxHP")) 
 	self:setAttr("hpPercent",self:getAttr("hp")*100/self:getAttr("maxHP")) 
-	for i,v in ipairs(TEMP_EFFECT_VARS) do
+	for i,v in ipairs(EXTRA_ATTRIBUTES) do
 		self:setAttr(v,false) 
 	end
 end
@@ -137,8 +138,14 @@ end
 function Hero:getFrameEventRecorder()
 	return self.frameEventRecorder  
 end
- 
 
+function Hero:getFrameScaleRatio()
+	return self.frameScaleRatio  
+end
+
+function Hero:setFrameScaleRatio(val)
+	self.frameScaleRatio = val 
+end
 
 
 -- function Hero:isSkillOver()
@@ -156,6 +163,16 @@ end
 function Hero:getSkillToCast()
 	return self.skillToCast 
 end
+
+function Hero:setEffectToDo(skill)
+	self.effectToDo = skill
+end
+
+function Hero:getEffectToDo()
+	return self.effectToDo 
+end
+
+
 
 function Hero:setBasicSkill(skill)
 	self.basicSkill = skill

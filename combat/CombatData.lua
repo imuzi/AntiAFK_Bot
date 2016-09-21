@@ -36,14 +36,22 @@ manualCastData  =
 {}
 
 
+random_sequence = {}
+random_index = 0
+
 
 
 -- data 为 服务器返回数据 message levelbegin or arena。。。
 function init(data)
 	local data = data or decodeLocalMsg()
- 
+ 	random_index = 0
+
+
 
 	__init_groups(data) 
+
+
+	
  
 end 
 
@@ -190,5 +198,19 @@ function foreachAllSkills(func)
 	end
 end
 
+function random__( ... )
+	random_index = random_index + 1
+	local result_record = random_sequence[random_index]
+	local result = result_record or math.random(...)
 
+	random_sequence[random_index] = result_record or result
+
+	-- print("random__",result_record,result)
+	-- dump(random_sequence)
+	return result
+end
+
+function set_random_sequence(val)
+	random_sequence = val 
+end
 

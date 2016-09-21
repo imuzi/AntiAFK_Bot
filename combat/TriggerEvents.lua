@@ -12,10 +12,25 @@ eventNames =
 	"behaviorOver",
 	"turnBegin",
 	"turnOver",
+
+	"hit",
 	"onHit",
-	"skillHit",
+
+	"skillHit", 
+	"onSkillHit",
+
 	"basicHit",
+	"onBasicHit",
+
 	"critHit",
+	"onCritHit",
+
+	"slain",--击杀
+	"beenSlain",--被杀
+
+
+
+
 	"effectOver",
 	"effectBegin",
 
@@ -36,14 +51,17 @@ eventNames =
 
 -- critHit = {} 
 
+evtName = nil 
+evtOwner = nil
 
 
-function listen(evtName)
+function listen(evtName,evtOwner)
 	print("\n\n\n\n --listen",evtName)
 	-- for _,name in ipairs(eventNames) do
+	evtName = evtName
+	evtOwner = evtOwner
 
-
-		CombatData.foreachAllHeros(
+	CombatData.foreachAllHeros(
 		function(hero)
 			local effList = hero:getEffectList()
 			local tempEffList = hero:getTempEffectList()
@@ -60,7 +78,7 @@ function listen(evtName)
 			-- print("size--tempEffList",#tempEffList)
 		end)
 		 
-
+	evtOwner = nil 
 	print("listen End \n\n")
  
 end 
@@ -68,6 +86,8 @@ end
 
 function checkDoEffect(eff,evtName)
 	if matchs(eff,evtName) then  
+
+		print("\n\n\n\n ______mathes evtName",evtName)
 		SkillLogic.doEffect(eff) 
 		return true 
  	end
@@ -78,25 +98,46 @@ end
 ----  这里有问题 每次 应该把 当前 时间 所需要的 信息 保存  比如 onHit 该保存 施方和 受方 
 --  这里应该是 当无filter 时 就是全部了 。。 有的时候 判断 是自己还是  对方  该是一个condition 才对 不
 -- 应该是targetfitler  ————FIXME
-function matchTarget(eff)
-	local caster = eff:getSkill():getCaster()
+function matchTarget(eff,evtName)
+	if evtName == "effectBegin" or evtName == "effectOver" then return true end  
 
-	local targetFilter = eff:getTriggerEvent().targetFilter
-	local hasTargetFilter = type(targetFilter) == "table"  -- 如果没有targetfiter 则为自己
+	if not evtOwner then return true end 
 
-	local targets = hasTargetFilter and TargetFilters.do__(targetFilter,caster) or {caster}
+	local targetRule = eff:getTriggerEvent().target or "host"
+	local evtOwnerId = evtOwner:getAttr("id")
 
-	local isIn = false
-
-	for i,v in ipairs(targets) do
-		if v:getAttr("id") == caster:getAttr("id") then 
-			isIn = true 
-			break
-		end 
+	local math_id = function(target)
+		return target:getAttr("id") == evtOwnerId
 	end
+
+	if targetRule == "all" then 
+		return true 
+	elseif targetRule == "host" then 
+		return math_id(eff:getHost())
+	elseif targetRule == "caster" then 
+		return math_id(eff:getSkill():getCaster()) 
+	elseif targetRule == "turnOwner" then 
+		return math_id(CombatLogic.turnOwner) 
+	end 
+	return false 
+	-- local caster = eff:getSkill():getCaster()
+
+	-- local targetFilter = eff:getTriggerEvent().targetFilter
+	-- local hasTargetFilter = type(targetFilter) == "table"  -- 如果没有targetfiter 则为自己
+
+	-- local targets = hasTargetFilter and TargetFilters.do__(targetFilter,caster) or {caster}
+
+	-- local isIn = false
+
+	-- for i,v in ipairs(targets) do
+	-- 	if v:getAttr("id") == caster:getAttr("id") then 
+	-- 		isIn = true 
+	-- 		break
+	-- 	end 
+	-- end
 	
 	-- print("______isIn",isIn)
-	return isIn
+	-- return isIn
 end
 
 function matchName(eff,evtName)	 
@@ -109,7 +150,7 @@ function matchs(eff,evtName)
 	local mathNames = matchName(eff,evtName)
 					or matchEffectOverEvent(eff,evtName)
 					-- or matchEffectBeginEvent(eff,evtName)
-	local matchs = mathNames and matchTarget(eff)	
+	local matchs = mathNames and matchTarget(eff,evtName)	
 
 	-- print("mathNames",mathNames,matchs)		
 	return matchs
@@ -160,7 +201,7 @@ function foreachEffectList(val,evtName,removeAfterDone,isDeBuffList)
 end
 
 function decreaseEffectRound(eff,evtName)
-	if evtName == "turnOver" then
+	if evtName == "turnOver" and eff:getHost():getAttr("id") == CombatLogic.turnOwner:getAttr("id")  then
 		eff:updateRound() 
 	end
 end
@@ -195,7 +236,8 @@ end
 function onEffectRemove(val,isDeBuffList)
 	local isBuffList = #val > 1 
 	if isBuffList then 
-		local host = val[1]:getHost()
+		local effect = val[1]
+		local host = effect:getHost()
 		local buffList
 		if isDeBuffList then 
 			buffList = host:getDeBuffList()
@@ -212,6 +254,10 @@ function onEffectRemove(val,isDeBuffList)
 				end 
 			end 
 		end 
+
+
+		VisualEffect.removeBuffIcon(host,effect)
+		
 
 	end 
 

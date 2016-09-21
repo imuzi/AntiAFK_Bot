@@ -1,5 +1,5 @@
 --
--- Author: (��.��)
+-- Author: (£þ.£þ)
 -- Date: 2016-08-23 16:50:16
 --
 local _ = (...):match("(.-)[^%.]+$") 
@@ -20,6 +20,10 @@ SkillLogic = require(_.."SkillLogic")
 local CDUpdater = require(_.."CDUpdater")
 
 VisualEffect = require(_.."VisualEffect")
+
+-- 用自己的随机
+random__ = CombatData.random__
+
 module(...,package.seeall) 
  
 
@@ -31,7 +35,8 @@ local socket = require "socket"
 looper = nil 
 frame_count = 0
 frame_step = 0
-game_speed = 3   -- 
+game_speed = 1-- 
+
 
 function init()
 	CombatData.init() 
@@ -49,9 +54,8 @@ function start()
 
 	TriggerEvents.listen("combatBegin")
 	
-	print("combat,started!")
-
-	CCDirector:sharedDirector():getScheduler():setTimeScale(game_speed) 
+	print("combat,started!") 
+	 
 end
 
 function stop()
@@ -69,15 +73,46 @@ function resume(  )
 	-- body
 end
 
+function skip()
+	stop()
+	while  true do
+		core_loop()
+	end
+end
+
+
+function set_game_speed(val)
+	game_speed = val 
+	__adjust_frame_count()
+
+
+	CCDirector:sharedDirector():getScheduler():setTimeScale(game_speed) 
+
+	print("_____________game_speed",game_speed)
+end
+
+function __get_scale_ratio()
+	return MAX_FPS/LOGIC_FPS/game_speed 
+end
+
+function __adjust_frame_count()
+	frame_count = frame_step*__get_scale_ratio() 
+end
+
+
+function core_loop()
+	CombatLogic.loop() 
+	CDUpdater.loop() 
+	frame_step = frame_step + 1
+end
 
 function main_loop(_dt_)
 	local gap = _dt_*MAX_FPS/game_speed
 	frame_count = frame_count + gap   --1  
 
-	local scale_ratio = MAX_FPS/LOGIC_FPS/game_speed
-	local frame_count_modf = modf__(frame_count)
+	local scale_ratio = __get_scale_ratio()
 
-
+	-- local frame_count_modf = modf__(frame_count) 
 	-- local real_logic_frame = 1/CCDirector:sharedDirector():getSecondsPerFrame()
 
 	-- local frame_point_scale = real_logic_frame/LOGIC_FPS
@@ -85,13 +120,10 @@ function main_loop(_dt_)
 	local dif_step = frame_count/scale_ratio - frame_step
 	dif_step = modf__(dif_step)
 	for i=1,dif_step do
-		CombatLogic.loop()
-
-		CDUpdater.loop()
+		
+		core_loop()
 
 		VisualEffect.loop()
-		
-		frame_step = frame_step + 1
 	end
 
 	-- if (frame_count_modf%dt == 0)
@@ -109,13 +141,14 @@ function main_loop(_dt_)
 	-- 	frame_step = frame_step + 1
 	-- end
 
-	print("____________________________________________________________________________________\n\n\n"
-		,"\ngap is ",gap
-		,"\dif_step",dif_step
-		,"\nreal_logic_frame",real_logic_frame,1/_dt_,_dt_,frame_point_scale 
-		,"\n_______fame_count",frame_count
-		,"\nframe_step",frame_step
-		,"\nMAXSPEED,game_speed",MAXSPEED,game_speed)
+	-- print("____________________________________________________________________________________\n\n\n"
+	-- 	,"\ngap is ",gap
+	-- 	,"\dif_step",dif_step
+	-- 	,"\nreal_logic_frame",real_logic_frame,1/_dt_,_dt_,frame_point_scale 
+	-- 	,"\n_______fame_count",frame_count
+	-- 	,"\nframe_step",frame_step
+	-- 	,"\nMAXSPEED,game_speed",MAXSPEED,game_speed)
 end
+
 
  

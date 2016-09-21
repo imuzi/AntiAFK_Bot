@@ -14,10 +14,10 @@ baseAction =
 	function(hero) 
 		local skill = hero:getSkillToCast() or hero:getBasicSkill()  -- 
 		local targets = TargetFilters.getTargets(skill)
+		skill:setTargets(targets)
 
 		if #targets > 0 then 
-			SkillLogic.castSkill(skill)
-			skill:setTargets(targets)
+			SkillLogic.castSkill(skill) 
 			tempLoopFlag__(skill,true)
 		else 
 			-- WARN::无目标 技能不能放时  机会还给回去  FIX 如果不停还回去 是否 反复执行
@@ -194,16 +194,19 @@ function isHit(hero,animName,frame_dif)
 	frame_dif = isNeedRun and frame_dif+RUN_FRAME  or frame_dif
 
 	for k,v in pairs(animEvents) do 
-		local v = frame_dif + v
+		local adjustedPoint = frame_dif + __dropFrameScale__(v,hero)
 
-		if ___isHit(k,v,step,0,"fire",hero) then 
+		if ___isHit(k,adjustedPoint,step,0,"fire",hero) then 
 			VisualEffect.dealBullet(hero)
 			-- os.exit()
 		end 
+		if ___isHit(k,adjustedPoint,step,0,"showEffect",hero) then 
+			___dealShowEffectHit(k,v,step,hero)
+		end 
 
-		local isSatisfy =  ___isHit(k,v,step,0,"hit",hero) 
-						or ___isHit(k,v,step,BULLET_FLYFRAME,"fire",hero) 
-						or ___showEffectHit(k,v,step,hero)
+		local isSatisfy =  ___isHit(k,adjustedPoint,step,0,"hit",hero) 
+						or ___isHit(k,adjustedPoint,step,BULLET_FLYFRAME,"fire",hero) 
+						-- or ___showEffectHit(k,v,step,hero)
  	
  
 		if isSatisfy then  
@@ -215,12 +218,19 @@ function isHit(hero,animName,frame_dif)
 end
 
 function isOver(hero)
-	local skill = hero:getSkillToCast()
 	local step = hero:getFrameStep()
+	local interval = getAdjustedInterval(hero)
+ 	return ___isFitFrame___(step,interval) --step >= interval 
+end
+
+function getAdjustedInterval(hero)
+	local skill = hero:getSkillToCast()
+	
 
 	local animEvents = skill:getAnimEvent()
 	local interval = skill:getInterval()
 
+	interval = __dropFrameScale__(interval,hero)
 
 	local hasShowEff,showEffPoint = __checkEvtInfo__("showEffect",animEvents)
 	local hasFire = __checkEvtInfo__("fire",animEvents)
@@ -234,13 +244,13 @@ function isOver(hero)
 	interval = isNeedRun and interval+RUN_FRAME*2  or interval
 	interval = hasFire and interval+BULLET_FLYFRAME or interval  -- 子弹是否需要等命中WARN
 
- 	return ___isFitFrame___(step,interval) --step >= interval 
+	return interval
 end
 
 -- 当是showeffect时  老的逻辑是找到另一个 ccs动画接着放。。。。。
-function ___showEffectHit(k,v,step,hero)
-	local isShowEffEvt = ___isHit(k,v,step,0,"showEffect",hero) 
-	if isShowEffEvt then
+function ___dealShowEffectHit(k,v,step,hero)
+	-- local isShowEffEvt = ___isHit(k,v,step,0,"showEffect",hero) 
+	-- if isShowEffEvt then
 
 		print("__isShowEffEvt__")
 
@@ -254,8 +264,8 @@ function ___showEffectHit(k,v,step,hero)
 		
 		-- local frame_dif = skill:getInterval()
 		-- return isHit(hero,"Animation1",frame_dif)
-	end  
-	return false 
+	-- end  
+	-- return false 
 end
  
 function ___isHit(k,v,step,frame_dif,evt_str,hero) 
@@ -272,11 +282,15 @@ function ___isHit(k,v,step,frame_dif,evt_str,hero)
 	return isSatisfy
 end
 
--- 这里 当超过加速最大值时 再scale到达的点 理论上可以吻合表现 FIXME
+-- 目前用来做 技能降帧用
 function ___isFitFrame___(step,framePoint)
 	return step >= framePoint*frame_point_scale
 end
 
+-- 只scale 动作帧数 不scale runframe 和  bulletframe 。。 warn
+function __dropFrameScale__(point,hero)
+	return point*hero:getFrameScaleRatio()
+end
 
 function __checkEvtInfo__(evtName,animEvents)
 	local hasEvt = false

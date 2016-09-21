@@ -9,9 +9,9 @@ local Effect = class__("Effect",
 					 targetConditions = "nil",
 					 targetFilter = "nil",
 					 triggerEvent = "nil", -- 包含 {eventName，targetFilter}
-					 round = "nil",
+					 round = "1",
 					 times = "9999999", -- WARN  FIXME只是持续回合数限制有一些问题 比如 在接下来的几次攻击中 额外造成什么什么
-
+					 targets = "{}",
 					 skill = "nil",
 					 host = "nil",
 					 _sleep = "false" -- 针对有写效果在不确定情况下才执行 并非施放的时候FIXME
@@ -36,6 +36,13 @@ function Effect:ctor(params)
 	end
  	
  	self:sleep(false)
+end
+
+function Effect:setTargets(val)
+	self.targets = val
+end
+function Effect:getTargets()
+	return self.targets
 end
 
 function Effect:setSkill(val)

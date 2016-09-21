@@ -245,7 +245,7 @@ function getTargets(instance)
 	 	caster = skill:getCaster()
 	 	host = effect:getHost()
 
-	 	filter = effect:targetFilter()	 
+	 	filter = effect:getTargetFilter()	 
 
 	elseif className == "Skill" then 
 		

@@ -46,16 +46,19 @@ turnOwner = nil
 
 counterOwner = nil  -- 一次只有一个人能反击。。  记录下个反击者
 
-
-
+-- 是否在回合中 针对技能游离回合外的问题
+inTurn = false 
+-- 当前行动者  可以多个 FIX ME 针对后期协同作战 反击人数支持多个 
+-- actors = {}
+actor = nil 
 
 function loop()
 	local shouldFindNextTurnOwner = shouldFindNextTurnOwner()
 
 	if shouldFindNextTurnOwner then  
-		if turnOwner then 
-			turn_over()
-		end
+		 
+		turn_over()
+		 
 
 		counterOwner = nil  
 
@@ -96,6 +99,7 @@ function trans_status(hero,status_key)
 	hero:setStatus(val)  
 	hero:resetFrameStep() 
 	hero:resetFrameEventRecorder()
+	hero:setFrameScaleRatio(1)
 	print("改变 ",hero:getCfgByKey("Name"),"状态为 ：",val)
 	Behaviors.begin(hero)
 
@@ -104,11 +108,15 @@ end
 
 
 function turn_begin()
-	TriggerEvents.listen("turnBegin")
+	if inTurn == true then return end 
+	inTurn = true 
+	TriggerEvents.listen("turnBegin",turnOwner)
 end
 
 function turn_over()
-	TriggerEvents.listen("turnOver") 
+	if inTurn == false then return end 
+	inTurn = false 
+	TriggerEvents.listen("turnOver",turnOwner) 
 end
 
 function isOverAction(hero)
@@ -180,8 +188,10 @@ function onHit(skill)
 	-- end
 
 	local evtName = skill:isBasicAttack() and "basicHit" or "skillHit" 
-	TriggerEvents.listen(evtName)
-	TriggerEvents.listen("onHit") 
+	local evtOwner = skill:getCaster()
+
+	TriggerEvents.listen(evtName,evtOwner)
+	TriggerEvents.listen("hit",evtOwner) 
 
 end
 
@@ -250,7 +260,10 @@ function calculateDamage(effect,target)
  
 
 	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate")) 
-	if isCrit then TriggerEvents.listen("critHit") end  -- WARN 要先于计算伤害 
+	if isCrit then 
+		TriggerEvents.listen("critHit",caster) 
+		TriggerEvents.listen("onCritHit",target) 
+	end  -- WARN 要先于计算伤害 
 
 
 	local isBlock = isBingo(target:getAttr("blockRate"))

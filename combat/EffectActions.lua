@@ -63,7 +63,7 @@ end
 -- parma 可能是skill fucntion  or 解析后 power
 revive = 
 function(effect,target)
-	local params = effect:getParams()
+	local params = effect:getAction().params
 	local hpRatio = params.hpRatio/100
 	local maxHp = target:getAttr("maxHP")
 	local reivedHp = maxHp*hpRatio
@@ -89,7 +89,7 @@ function(effect,target)
 
 	local list = isFriend and target:getDeBuffList() or target:getDeBuffList()
 
- 	local params = effect:getParams()
+ 	local params = effect:getAction().params
  	local count = params.count 
 
  	-- 随机选一个 FIXme
@@ -110,7 +110,7 @@ function(effect,target)
 	for i=size,1,-1 do
 		local index = indexsToRemove[i] 
 
-		onEffectRemove(list[index],isFriend)
+		TriggerEvents.onEffectRemove(list[index],isFriend)
 		table.remove(list,index)
  
 	end
@@ -130,12 +130,12 @@ end
 -- 必暴击和 必怎么 怎么样的  护盾和 不死 沉默 眩晕 冰冻 沉睡 等也是 changeattr
 changeAttr = 
 function(effect,target)
-	local params = effect:getParams()
+	local params = effect:getAction().params
 	local mode = params.mode 
 	local value = params.value 
 
 	local valueMax = params.valueMax
-	local attrName = parmas.attrName
+	local attrName = params.attrName
 
 	local attrValue = target:getAttr(attrName)
 
@@ -150,6 +150,10 @@ function(effect,target)
 	end 
 
 	target:setAttr(attrName,attrValue)
+
+	VisualEffect.dealAttributeChanged(target,effect)
+
+
 end
 
 
@@ -165,14 +169,16 @@ end
 	params = 
 	{
 	effect = {},  
- 	
+ 	round = 3
 	}
 } 
 ]]
+
+-- 这个专用来赋予对方技能效果
 local EffectCls = require(_.."Effect")
 newEffect = 
 function(effect,target)
-	local params = effect:getParams()
+	local params = effect:getAction().params
 	local params_ = params.effect 
 
 	local skill = effect:getSkill() 
@@ -211,14 +217,15 @@ end
 	mode = 0,
 	value = 30,
 	attrName = "critRate",
-	stackType = 1
+	stackType = 1,
+	round = 1
 	}
 	]]
 -- stackType = 1,  FIX ME 
 
 -- 逻辑 和 表现用2个列表 buffShowList  FIXME
-buff = function(effect,target,isDebuff) 
-	local params = effect:getParams()
+buff = function(effect,target,isDeBuff) 
+	local params = effect:getAction().params
 	local stackType = params.stackType
 
 	local skill = effect:getSkill()
@@ -228,51 +235,40 @@ buff = function(effect,target,isDebuff)
 	local effectHitRate = caster:getAttr("effectHit") - target:getAttr("effectResist") +100
 	local isHit = CombatLogic.isBingo(hitRate) 
 	local isEffectHit = CombatLogic.isBingo(effectHitRate)
- 
-	local skill = effect:getSkill() 
+   
+	if isHit and isEffectHit then   
+		local skill = effect:getSkill() 
+		local _buff = SkillLogic.generateCommBuffEffects(params,isDeBuff) 
+		for i,v in ipairs(_buff) do
+		  	v:setHost(target)
+		  	v:setSkill(skill)
+		  	v:setTargets({target}) 
+	  	end  
+		local effectBeginEff 
 
-	if isHit and isEffectHit then  
-		 
-		local eff_add = EffectCls.new()
-		eff_add:setSkill(skill)
-		eff_add:setAction({
-							name="changeAttr",
-							params = params
-							}) 
-		eff_add:setHost(target)
+		if not SkillLogic.check_buff_stack(_buff,isDeBuff) then  
+			if isDeBuff then  
 
-
-		local _params = clone(params)
-		_params.value = _params.value*-1
-
-		local eff_reduce = EffectCls.new()
-		eff_reduce:setSkill(skill)
-		eff_reduce:setAction({
-							name="changeAttr",
-							params = _params
-							}) 
-		eff_reduce:setHost(target) 
-		
-
-		local _buff = {eff_add,eff_reduce} 
-
-		if not SkillLogic.check_buff_stack(_buff,isDebuff) then  
-			if isDebuff then 
-				eff_reduce:setTriggerEvent({name = "effectBegin"}) 
-				eff_add:setTriggerEvent({name = "effectOver"}) 
-
-				target:addDeBuff(_buff) 
+				target:addDeBuff(_buff)  
+				effectBeginEff = _buff[2]  
 			else 
-				eff_add:setTriggerEvent({name = "effectBegin"}) 
-				eff_reduce:setTriggerEvent({name = "effectOver"}) 
+			  
+				target:addBuff(_buff)  
+				effectBeginEff = _buff[1]
+			end   
+ 		
+ 			TriggerEvents.checkDoEffect(effectBeginEff,"effectBegin")  
+ 			print("___________effectBeginEff_____")
+ 		else
 
-				target:addBuff(_buff) 
-			end  
-
-			TriggerEvents.checkDoEffect(newEffect,"effectBegin")  
+ 			print("____ignoreed_______")
+ 			-- os.exit()
+ 			-- print("______________________________",os.exit())
 		end
 
 		return true 
+	else
+		VisualEffect.showMiss(target)
 	end
 
 	return false 
@@ -287,11 +283,17 @@ end
 	mode = 0,
 	value = 30,
 	attrName = "critRate",
+	round = 1
 	}
 	]]
 deBuff = function(effect,target) 
 	buff(effect,target,true)
 end
+
+
+
+
+
 
 
 

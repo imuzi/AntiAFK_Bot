@@ -2,7 +2,7 @@
 -- Date: 2016-08-22 15:18:08
 --
 local _ = (...):match("(.-)[^%.]+$") 
- 
+ local __SKILL_TEST = require(_.."__SKILL_TEST")
 local Effect = require(_.."Effect")
 local EffectActions = require(_.."EffectActions")
 local Conditions = require(_.."Conditions")
@@ -18,6 +18,17 @@ local effect_module =
 								element = 0, 
 							} 
 						} ,
+						-- action ={
+						-- 	name="buff",
+						-- 	params = 
+						-- 	{
+						-- 		mode = 0,
+						-- 		value = 30,
+						-- 		attrName = "critRate",
+						-- 		stackType = 0,
+						-- 		round = 3
+						-- 	}
+						-- },
 
 						-- situations = {
 						-- 	{
@@ -74,15 +85,15 @@ local effect_module =
 								 
 							}  
 						},
-						-- targetFilter = {
-						-- 	Target= 2,
-						-- 	TargetFilter= 0,
-						-- 	OrderRule= 0,
-						-- 	Descend= 0,
-						-- 	SelectCount= 1,
-						-- },
+						targetFilter = {
+							Target= 1,
+							TargetFilter= 0,
+							OrderRule= 0,
+							Descend= 0,
+							SelectCount= 1,
+						},
 						triggerEvent = {
-							name= "onHit",
+							name= "hit",
 							-- targetFilter= {
 							-- 	Target= 2,
 							-- 	TargetFilter= 0,
@@ -111,8 +122,16 @@ function castSkill(skill)
 		local eff = Effect.new(v) 
 		eff:setSkill(skill)  
 		eff:setHost(caster)
+		eff:setTargets(skill:getTargets())
 
-		caster:addCastingEffect(eff)
+
+		-- WARN 写一回合就是 即时释放的 会在 行为结束后清空 写 2回合 就是持续2回合的效果了
+		if eff:getRound() <= 1 then 
+			caster:addCastingEffect(eff)
+		else 
+			caster:addTempEffect(eff)
+		end 
+		print("____add__eff",skill:getCfgByKey("Name"))
 	end 
 end
 
@@ -125,7 +144,7 @@ function doEffect(effect)
 
  	local targetConditions = effect:getTargetConditions()
 
- 	local targets = skill:getTargets() 
+ 	local targets = effect:getTargets() 
  	local targetFilter = effect:getTargetFilter()
 
  	local hasTargetFilter = type(targetFilter)=="table" 
@@ -139,6 +158,9 @@ function doEffect(effect)
 			,"\neffectListSize",#caster:getEffectList()
 			,"\ntempEffectListSize",#caster:getTempEffectList()
 			) 
+
+ 	-- skill:setTargets(targets)
+ 	-- effect:setTargets(targets)
 
  	local action = effect:getAction()
  	for i,v in ipairs(targets) do
@@ -156,6 +178,7 @@ function doEffect(effect)
  			EffectActions[name](effect,target)
  		end 
 
+ 		VisualEffect.dealBeHitedEffect(caster,target)
  	end  
 
 end
@@ -182,6 +205,45 @@ function generateBasicSkillStruct(skill)
 end
 
 
+function generateCommBuffEffects(params,isDeBuff)
+	local eff_add = Effect.new() 
+	eff_add:setAction({
+						name="changeAttr",
+						params = params
+						}) 
+	eff_add:setHost(target)
+	eff_add:setRound(params.round) 
+
+	local _params = clone(params) 
+	
+	if _params.mode == 2 then -- bool 
+		_params.value = false 
+	else 
+		_params.value = _params.value*-1
+	end 
+
+	local eff_reduce = Effect.new() 
+	eff_reduce:setAction({
+						name="changeAttr",
+						params = _params
+						})  
+	eff_reduce:setRound(params.round) 
+	
+	if isDeBuff then 
+		eff_reduce:setTriggerEvent({name = "effectBegin"}) 
+		eff_add:setTriggerEvent({name = "effectOver"}) 
+	else 
+		eff_add:setTriggerEvent({name = "effectBegin"}) 
+		eff_reduce:setTriggerEvent({name = "effectOver"})
+	end 
+
+	return {eff_add,eff_reduce} 
+end
+
+
+
+
+
 --[[
  
            0还是若存在，则无视
@@ -194,7 +256,7 @@ check_buff_stack =
 function(buff,isDebuff)
 	local effect = buff[1]
 	local host = effect:getHost()
-	local params = effect:getParams()
+	local params = effect:getAction().params
 	local attrName = params.attrName
 	local value = params.value
 	local stackType = params.stackType
@@ -212,7 +274,7 @@ function(buff,isDebuff)
 
 	for i,v in ipairs(buffList) do
 		local eff_add = v[1]
-		local _params = eff_add:getParams()
+		local _params = eff_add:getAction().params
 		local _attrName = _params.attrName
 		local _value = _params.value
 
@@ -220,11 +282,14 @@ function(buff,isDebuff)
 			local hasSameType = attrName == _attrName
 
 			local better = value > _value
-
+			if _params.mode == 2 then -- bool  
+				stackType = 3  -- WARN 状态类属性 默认都为 叠加 并刷新round 
+			end 
 
 			if hasSameType then 
 				if stackType == 0 then 
 					 isIgnore = true 
+					 -- os.exit()
 				elseif stackType == 1 then 
 					if better then 
 						for _i,eff in ipairs(v) do  
