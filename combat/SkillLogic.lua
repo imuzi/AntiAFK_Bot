@@ -217,7 +217,7 @@ function generateCommBuffEffects(params,isDeBuff)
 	local _params = clone(params) 
 	
 	if _params.mode == 2 then -- bool 
-		_params.value = false 
+		_params.value = not params.value  
 	else 
 		_params.value = _params.value*-1
 	end 
