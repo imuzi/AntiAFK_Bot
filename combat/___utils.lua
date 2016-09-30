@@ -2,9 +2,20 @@
 -- Author: (£þ.£þ)
 -- Date: 2016-08-25 16:20:15
 --
-local _ = (...):match("(.-)[^%.]+$") 
 require("framework.init")
 require('app.net.protobuf')
+ _ = function( )
+ 	-- body
+ end
+ UI_RES = "ui_zh_CN/"
+ UI_RES_TV = UI_RES
+require("app.utils.ClientConfig")
+
+
+
+local _ = (...):match("(.-)[^%.]+$") 
+
+
 local pbPath = "res/sound/bg.mp3"
 -- if device.platform == 'android' then
 -- 	pbPath = CCFileUtils:sharedFileUtils():fullPathForFilename('sound/bg.mp3')
@@ -66,18 +77,29 @@ function class__(classname, super)
 			-- print("_______________cls.new(...)__")
 			local instance = cls.__create(...)
 			-- copy fields from class to native object
-			for k,v in pairs(cls) do  
-				local newVarValue = 0 
-				if v == "{}" then 
-					newVarValue = {}
-				elseif v == "nil" then 
-					newVarValue = nil
-				elseif tonumber(v) then
-					newVarValue = tonumber(v) 
-				end   
-				-- print("v",v,"newVarValue",newVarValue)
-				instance[k] = newVarValue
-		 	end
+			local init_data = function()
+				for k,v in pairs(super) do  
+					 
+					if v == "{}" then 
+						instance[k] = {}
+					elseif v == "nil" then 
+						-- print("____v == nil")
+						instance[k] = false
+					elseif tonumber(v) then
+						instance[k] = tonumber(v) 
+					elseif type(v) == "string" then 
+						instance[k] = v 
+							
+					end   
+					
+					-- if v == newVarValue  then print("v",v,"newVarValue",newVarValue,type(newVarValue)) os.exit() end 
+					-- instance[k] = newVarValue
+
+					-- print("v",v,instance[k],type(instance[k]))
+			 	end
+			end
+			init_data()
+			instance.__init__ = init_data
 			instance.class = cls
 			instance:ctor(...)
 			return instance
@@ -101,26 +123,29 @@ function class__(classname, super)
 			-- print("_______________cls.new(...)__no super")
 			local instance = setmetatable({}, cls)
 
-			for k,v in pairs(super) do  
-				 
-				if v == "{}" then 
-					instance[k] = {}
-				elseif v == "nil" then 
-					-- print("____v == nil")
-					instance[k] = false
-				elseif tonumber(v) then
-					instance[k] = tonumber(v) 
-				elseif type(v) == "string" then 
-					instance[k] = v 
-						
-				end   
-				
-				-- if v == newVarValue  then print("v",v,"newVarValue",newVarValue,type(newVarValue)) os.exit() end 
-				-- instance[k] = newVarValue
+			local init_data = function()
+				for k,v in pairs(super) do  
+					 
+					if v == "{}" then 
+						instance[k] = {}
+					elseif v == "nil" then 
+						-- print("____v == nil")
+						instance[k] = false
+					elseif tonumber(v) then
+						instance[k] = tonumber(v) 
+					elseif type(v) == "string" then 
+						instance[k] = v 
+							
+					end   
+					
+					-- if v == newVarValue  then print("v",v,"newVarValue",newVarValue,type(newVarValue)) os.exit() end 
+					-- instance[k] = newVarValue
 
-				-- print("v",v,instance[k],type(instance[k]))
-		 	end
-
+					-- print("v",v,instance[k],type(instance[k]))
+			 	end
+			end
+			init_data()
+		 	instance.__init__ = init_data
 			instance.class = cls
 			instance:ctor(...)
 			return instance
@@ -182,6 +207,10 @@ function tempVarOfInstance__(keyName,instance,val)
 	instance[key] = value 
 	return instance  
 end 
+
+function varOf__(instance,valName,val)
+	return tempVarOfInstance__(valName,instance,val) 
+end
 
 
 --  
@@ -467,4 +496,52 @@ end
 --- 加载敌方关卡武将Spine
 function loadSpine(avatarData) 
 	return loadWarriorSpine(avatarData.Spine, avatarData.Avatar, avatarData.IsSkin == 1, nil, nil, 0)
+end
+
+
+
+makeNodeClickable = 
+function(node,cb,isSwallowTouches,isDragable)
+	node:setTouchEnabled(true)
+	node:setTouchSwallowEnabled(isSwallowTouches)
+
+	local isMoved =
+	function(node,event)
+		-- return math.abs(node._beganX - event.x) > MOVE_CANCEL_THRESHOLD or math.abs(node._beganY - event.y) > MOVE_CANCEL_THRESHOLD 
+	end
+
+	node:addNodeEventListener(cc.NODE_TOUCH_EVENT, function(event)
+		-- local opacity = node:getOpacity()
+		if event.name == "began" then
+			node._beganX, node._beganY = event.x, event.y
+			node._moved = false
+			return true
+		elseif event.name == "moved" then
+			if isDragable then 
+				node:setPosition(cc.p(event.x,event.y))
+			end
+			if isMoved(node,event) then
+				node._moved = true 
+			end
+			-- node:setOpacity(255)
+		elseif event.name == "ended" then
+			-- node:setOpacity(opacity)
+			if node._moved==false then 
+				cb(event.x, event.y)
+			end
+
+			node._moved = false
+		end
+	end)
+end
+
+
+
+function doWithCheck__(funcName,instance,params)
+	if not instance then return end 
+	
+	local func = instance[funcName]
+	if func then 
+		return func(instance,params)
+	end 
 end

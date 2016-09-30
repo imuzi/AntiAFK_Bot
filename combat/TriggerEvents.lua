@@ -14,16 +14,16 @@ eventNames =
 	"turnOver",
 
 	"hit",
-	"onHit",
+	"beenHit",
 
 	"skillHit", 
-	"onSkillHit",
+	"beenSkillHit",
 
 	"basicHit",
-	"onBasicHit",
+	"beenBasicHit",
 
 	"critHit",
-	"onCritHit",
+	"beenCritHit",
 
 	"slain",--击杀
 	"beenSlain",--被杀

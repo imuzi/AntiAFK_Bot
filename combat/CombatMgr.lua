@@ -101,6 +101,7 @@ end
 
 
 function core_loop()
+	SkillLogic.loop(frame_step) -- 监听强制放出的技能数据
 	CombatLogic.loop() 
 	CDUpdater.loop() 
 	frame_step = frame_step + 1

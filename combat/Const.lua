@@ -18,9 +18,9 @@ LOGIC_FPS = 30
 
 
 -- 公CD
-G_CD = 16*30 
+G_CD = 16*LOGIC_FPS 
 -- 初始CD
-INIT_CD = 4*30
+INIT_CD = 4*LOGIC_FPS
 
 -- 子弹飞行fps
 BULLET_FLYFRAME = 10
@@ -143,3 +143,64 @@ STATION_POSITIONS =  -- 前排只有两个人的站位
         y = 150+0
     }
 }
+
+
+
+
+ATTRS= {
+miss = "miss",
+critRate = "critRate",
+speed = "speed",
+isGoldenHero = "isGoldenHero",
+blockRate = "blockRate",
+grade = "grade",
+critDamage = "critDamage",
+name = "name",
+position = "position",
+attack = "attack",
+awakenTimes = "awakenTimes",
+maxHP = "maxHP",
+cureIncrease = "cureIncrease",
+effectHit = "effectHit",
+damageIncrease = "damageIncrease",
+effectResist = "effectResist",
+hit = "hit",
+lv = "lv",
+exp = "exp",
+skillDamageIncrease = "skillDamageIncrease",
+maxLv = "maxLv",
+awakenLv = "awakenLv",
+skillDamageDecrease = "skillDamageDecrease",
+power = "power",
+id = "id",
+AOEDecrease = "AOEDecrease",
+defence = "defence",
+cureDecrease = "cureDecrease",
+tenacity = "tenacity",
+gradeExp = "gradeExp",
+Count = "Count",
+damageDecrease = "damageDecrease",
+AOEIncrease = "AOEIncrease",
+counterRate = "counterRate",
+type_ = "type",
+comboRate = "comboRate",
+hp = "hp",
+hpPercent = "hpPercent",
+mustCrit = "mustCrit",
+mustIgnoreDefence = "mustIgnoreDefence",
+mustDie = "mustDie",
+mustCounterAttack = "mustCounterAttack",
+buSi = "buSi",
+ignoreSelect = "ignoreSelect",
+selectFirst = "selectFirst",
+iceBlock = "iceBlock",
+stun = "stun",
+sleep = "sleep",
+silence = "silence",
+immunePhysicalAttacks = "immunePhysicalAttacks",
+immuneSpell = "immuneSpell",
+reflectDamage = "reflectDamage",
+suckBlood = "suckBlood",
+	 
+}
+ 

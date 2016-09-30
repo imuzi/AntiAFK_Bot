@@ -56,7 +56,7 @@ function HeroGroup:remove(hero)
 end
 
 function HeroGroup:release()
-	-- body
+	self:__init__()
 end
 
  

@@ -100,7 +100,7 @@ end
 function Hero:setAttr(name,val)
 	local baseAttrs = self.baseAttrs
 	baseAttrs[name] = val
-	print("setAttr：",name,val)
+	print("setAttr：",name)--),val)
 end
 
 

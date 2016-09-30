@@ -18,12 +18,17 @@ spineActionCurrent = {}
 
 buffIcons = {}
  
+skillIcons = {}
+
+-- 这个用来显示当多技能被预约时他们的先后顺序 逻辑已有  
+reservationSkillsOrderLayer = nil
 
 function init(scene)
 	parent = scene
 
 
 	__spines()
+	__skillIcons()
 end
 
 
@@ -56,7 +61,7 @@ function updateAction(hero,name,isloop)
 	parent:resetGameSpeed()
 
 	if not dealRun(hero) then 
-		setDropFrameRatioGloble(hero)
+		setDropFrameRatioGlobal(hero)
 
 		spine:setAnimation(0, name, isloop)  
 		
@@ -112,7 +117,7 @@ function setDropFrameRatio(hero)
  	return false
 end
 -- 全体降
-function setDropFrameRatioGloble(hero)
+function setDropFrameRatioGlobal(hero)
 	local val = __getAvatarDataByKeyMap(hero,__dropFrameKeyMap)
 
  	if val and val ~= 100 then
@@ -172,6 +177,7 @@ function dealRun(hero)
 	local backX,backY = __getSpineOriginPos(hero) 
 
 	local moveBackDelay = (Behaviors.getAdjustedInterval(hero)-RUN_FRAME*2)/LOGIC_FPS  
+	local runTime = RUN_FRAME/LOGIC_FPS
 
 	tarX = target:getGroup():getName() == DEFENDER and tarX-NORMAL_SPINE_WIDHT or tarX+NORMAL_SPINE_WIDHT
  
@@ -180,11 +186,11 @@ function dealRun(hero)
 	transition.moveTo(
 		spineNode, 
 		{
-		time = RUN_FRAME/LOGIC_FPS, x = tarX, y = tarY, 
+		time = runTime, x = tarX, y = tarY, 
 		onComplete = 
 		function ()
 
-			setDropFrameRatioGloble(hero)
+			setDropFrameRatioGlobal(hero)
 
 			spineNode:setPosition(tarX,tarY) -- fix加速时偶尔跑动不完整   
 			local spine = __getSpine(hero)
@@ -197,11 +203,12 @@ function dealRun(hero)
 					parent:resetGameSpeed() 
 				 
 					manualUpdateAction(hero,"run",false)
+
 					spineNode:setScaleX(spineNode:getScaleX()*-1)
 					transition.moveTo(
 						spineNode, 
 						{
-						time = RUN_FRAME/LOGIC_FPS, x = backX, y = backY, 
+						time = runTime, x = backX, y = backY, 
 						onComplete = 
 						function ()
 							spineNode:setPosition(backX,backY)-- fix加速时偶尔跑动不完整   
@@ -247,7 +254,7 @@ function dealBullet(hero)
 	animation:setRotation(rotate)
  
 	animation:pos(backX,backY+90)
-	animation:setScaleX(__getSpineNode(hero):getScaleX())
+	animation:setScaleX( __getHeroScaleX(hero))
 
 
 	transition.moveTo(animation, 
@@ -275,7 +282,8 @@ local ccs_skill_headers = {
 
 }
 -- 处理 骨骼和 cocos动画衔接问题
-function dealShowEffect(hero)
+--  多次showeffect时  传入要show的effAnimName 或者第几段
+function dealShowEffect(hero,effectIndex)
 	local keyType = hero:getSkillToCast():getKeyType() 
 	local headers = ccs_skill_headers[keyType]
 
@@ -299,7 +307,7 @@ function dealShowEffect(hero)
 
 	for i,v in ipairs(headers) do
 		local ccsData = hero:getAvatarCfgByKey(v)
-		for _i,_v in ipairs(ccsData) do
+		for _i,_v in ipairs(ccsData) do  --- or _v = ccsData[effectIndex]
 			local jsonName,animName = unpack(_v)
 
 			local animation = 
@@ -371,9 +379,7 @@ function dealAttributeChanged(hero,effect)
 	local params = effect:getAction().params
 	local value = params.value
 	local attrName = params.attrName
-
-
-
+ 
 	-- newCcs({fullPathName="buffEffect/".."skillbf109",
 	-- 			-- actionName = animName,
 	-- 			-- x=x,
@@ -389,7 +395,7 @@ function dealAttributeChanged(hero,effect)
 	end
 
 	local sp = display.newSprite("buffEffect/" .. asset .. ".png", 0, startY)  
-	local scaleX = __getSpineNode(hero):getScaleX()
+	local scaleX =  __getHeroScaleX(hero)
 
 
 	sp:setScale(0.5*scaleX)
@@ -422,20 +428,20 @@ function dealHeadIcons(hero,effect)
 	local code = skill:getCfgByKey("Code") 
 
 
-	--  means this is a basciatack
+	--  means this is a basciattack
 	if not code then return end 
 
 	print("____show buff icon",skill:getCfgByKey("Name"),code )
  
     local buffIcon = display.newSprite(string.format("skills/%s.jpg", code))
    
-    buffIcon.code = code
-
+    -- buffIcon.code = code
+    varOf__(buffIcon,"code",code)
 
     __addToSpine(hero,buffIcon,1)
     __addBuffIcon(hero,buffIcon)
 
- 	buffIcon:setScale(.3*__getSpineNode(hero):getScaleX())
+ 	buffIcon:setScale(.3*__getHeroScaleX(hero))
 
     local icons = __getBuffIcons(hero) 
  	for i, v in ipairs(icons) do
@@ -450,7 +456,7 @@ function removeBuffIcon(hero,effect)
 	local icons = __getBuffIcons( hero )
 
 	for i,v in ipairs(icons) do
-		if v.code == code then 
+		if varOf__(v,"code") == code then 
 			v:removeFromParent()
 			table.remove(icons,i)
 			break
@@ -460,7 +466,9 @@ function removeBuffIcon(hero,effect)
 end
 
 
-
+function resetSpine(hero)
+	__getSpine(hero):setToSetupPose()
+end
 
 
  
@@ -507,6 +515,238 @@ function __ccs()
 end
 
 
+---------------------------skillIcons ------
+-------------------------------------------------
+
+function __skillIcons() 
+ 
+
+	local skills = CombatData.getGroupByName(ATTACKER):getSkills()
+	-- local formated_skill_data = {}
+
+	local cast_positon = 0
+	local y_index = 1 
+
+	local headIconMark = {}
+	local __headNode = 
+	function(caster,x,positon)
+		if  headIconMark[positon] then return end 
+		 
+		local headPng = caster:getAvatarCfgByKey("Face")
+		local bg_head = display.newSprite("ui_zh_CN/battle/renwukuang.png")
+		local head = display.newSprite("warriorHead/"..headPng.."_s.jpg")
+		:addTo(bg_head,1)
+		:pos(bg_head:getContentSize().width/2,bg_head:getContentSize().height/2)
+		-- :scale(scale)
+		bg_head:setPosition(x-35,80)
+		__addToScene(bg_head,BULLET_ZORDER+1)
+
+		headIconMark[positon] = true
+	end
+	-- 一下算法 依赖一个hero的技能是连续的前提  初始化时是这样的 
+	-- 保证连续时  多个技能也能正确显示位置
+
+	for i,skill in ipairs(skills) do 
+ 	
+		local icon = __createSkillIcon(skill)
+		__saveSkillIcon(icon,skill) 
+
+		local caster = skill:getCaster()
+		local positon = caster:getAttr("position")   
+
+		y_index = cast_positon == positon and y_index+1 or 1
+
+		local x = display.width - positon * 97 + 51
+		local y =(y_index )*83 - 40 
+
+		icon:setPosition(x,y)
+		__addToScene(icon,BULLET_ZORDER) 
+		
+		__headNode(caster,x,positon)
+
+		cast_positon = positon 
+	end
+ 
+end
+
+function dealShowReservationOrder(reservationSkills)
+	reservationSkillsOrderLayer = reservationSkillsOrderLayer or display.newLayer():addTo(parent,BULLET_ZORDER+2)
+	reservationSkillsOrderLayer:removeAllChildren()
+	if #reservationSkills < 2 then return end 
+	for i,skill in ipairs(reservationSkills) do
+		local x,y = getSkillIcon(skill):getPosition()
+		ui.newTTFLabel({text=i,size=30,color=display.COLOR_GREEN,x=x+25,y=y+30})
+ 		:addTo(reservationSkillsOrderLayer) 
+	end
+end
+
+function __createSkillIcon(skill)
+	local code = skill:getCfgByKey("Code")
+	local node = display.newSprite(string.format("skills/%s.jpg", code)) 
+	
+	local mid_x,mid_y = node:getContentSize().width/2, node:getContentSize().height/2
+
+	display.newSprite("ui_zh_CN/battle/kuang_1.png"):addTo(node,-1):pos(mid_x,mid_y)
+
+	local _cdLabel = ui.newBMFontLabel({text = "", font = "nums/num1.fnt"})
+	:addTo(node):pos(mid_x,mid_y)
+
+	local _cdProgress = display.newProgressTimer("ui_zh_CN/battle/kuang_3.png", display.PROGRESS_TIMER_RADIAL)
+	:addTo(node):pos(mid_x,mid_y)
+	_cdProgress:setReverseDirection(true)
+	_cdProgress:setPercentage(100)
+
+
+	local _selectedEffect = newCcs({fullPathName="ui_zh_CN/animation/battle/jinenganniu",
+ 			-- actionName = animName,
+ 			x=mid_x,
+ 			y=mid_y,
+ 			parent = node
+ 			}) 
+	local skillCdClearEffect = newCcs({fullPathName="ui_zh_CN/animation/battle/uijinengxz",
+			-- actionName = animName,
+			x=mid_x,
+			y=mid_y,
+			parent = node
+			}) 
+	local useSkillEffect = newCcs({fullPathName="ui_zh_CN/animation/battle/jinenganniu1",
+			-- actionName = animName,
+			x=mid_x,
+			y=mid_y,
+			parent = node,
+			zorder = 2,
+			}) 
+
+
+	local id = skill:getCfgByKey("ID") 
+	local selected = false 
+
+	local 
+	_____onClick_____ = 
+	function(node)
+		-- local selected = selected--node.selected
+		local skill = CombatData.getSkillById(id)
+
+		if selected then 
+			_selectedEffect:setVisible(false)
+			CastAi.removeReservationSkillById(id) 
+		else  
+			if CastAi.addReservationSkill(skill) then 
+				_selectedEffect:setVisible(true)
+			end
+			
+		end  
+ 
+		selected = not selected 
+ 
+		-- node.selected = not selected
+	end
+
+	local 
+	_____updateCd_____ = 
+	function(node)
+		local cdLeft = skill:getCdLeft()
+		local percent = cdLeft*100/skill:getCd()
+		local sec,modf_ = math.modf(cdLeft/LOGIC_FPS)
+
+		_cdProgress:setPercentage(percent)
+		if modf_== 0 then -- 降低lale刷新频率 30帧一刷
+			
+			_cdLabel:setString(sec)
+		end
+
+		if cdLeft == 0 then  
+			skillCdClearEffect:setVisible(true) 
+			skillCdClearEffect:getAnimation():play("Animation1")
+			skillCdClearEffect:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
+				if evt == "over" then
+					skillCdClearEffect:setVisible(false) 
+				end
+			end)
+
+			_cdLabel:setString("")
+		end 
+	end
+
+	local 
+	_____onUseSkill_____ = 
+	function() 
+		useSkillEffect:setVisible(true) 
+		useSkillEffect:getAnimation():play("Animation1")
+		useSkillEffect:getAnimation():setFrameEventCallFunc(function (bone, evt, originFrameIndex, currentFrameIndex)
+			if evt == "over" then
+				useSkillEffect:setVisible(false) 
+			end
+		end)
+
+		if selected then 
+			_____onClick_____()
+		end  
+
+	end
+
+
+	makeNodeClickable(node,_____onClick_____,true)
+	_selectedEffect:setVisible(false)
+	skillCdClearEffect:setVisible(false) 
+	useSkillEffect:setVisible(false) 
+
+
+	-- node.selected = false 
+	-- node.progressBar = _cdProgress
+	-- node.cdLabel = _cdLabel
+	-- node.updateCd__ = _____updateCd_____
+	-- node.onUseSkill__ = _____onUseSkill_____
+	-- node.clickSkill__ = _____onClick_____
+
+	varOf__(node,"updateCd__",_____updateCd_____)
+	varOf__(node,"onUseSkill__",_____onUseSkill_____)
+
+	-- print("_________________node.updateCd__ = _____updateCd________")
+	return node 
+end
+
+function dealSkillName(skill)
+	local __titleBg = display.newNode():addTo(parent,BULLET_ZORDER)
+	display.newSprite(
+		"ui_zh_CN/battle/battle_skillBg.png", 
+		display.cx, display.top - 62-_DWH)
+	:addTo(__titleBg)
+	ui.newTTFLabelWithOutline(
+		{
+		outlineWidth = 3,outlineColor = ccc3(0, 0, 0),
+		text = skill:getCfgByKey("Name") , font = FONT, 
+		color = ccc3(255,206,0), size = 36, 
+		x = display.cx, y = display.top - 62-_DWH,
+	 	align = ui.TEXT_ALIGN_CENTER
+	 	})
+	:addTo(__titleBg)
+	__titleBg:performWithDelay(function()
+		__titleBg:removeFromParent()
+	end, 1)
+end
+
+
+function __saveSkillIcon(node,skill)
+	local skillId = skill:getCfgByKey("ID")
+	skillIcons[skillId] = node
+end
+
+function getSkillIcon(skill)
+	local skillId = skill:getCfgByKey("ID")
+	return skillIcons[skillId]  
+end
+
+
+---------------------------skillIcons ------
+-------------------------------------------------
+
+
+
+
+
+-------------------- spines 
+---------------------------------------------
 function __spines()
 	CombatData.foreachAllHeros(
 	function(hero)
@@ -521,17 +761,13 @@ function __spines()
 	
 end
 
-
 function __createSpine(hero)
 	local avatarCfg = hero:getAvatarCfg()
-	  -- FIXME战斗表现所用音效都在avatar表中
-  
-  	local is_defender = hero:getGroup():getName() == DEFENDER 
-
+	  -- FIXME战斗表现所用音效都在avatar表中 
 	local spine = loadSpine(avatarCfg)
 	local spineNode = tolua.cast(spine, "CCNode") 
 
-	local scaleX = is_defender and 1 or -1 
+	local scaleX = __getHeroScaleX(hero)
 	local x,y = __getSpineOriginPos(hero) 
  
  	spineNode:setPosition(x,y)  
@@ -567,6 +803,11 @@ function __getSpineOriginPos(hero)
 	return x,y 
 end
 
+function __getHeroScaleX(hero)
+	local is_defender = hero:getGroup():getName() == DEFENDER 
+	local scaleX = is_defender and 1 or -1 
+	return scaleX
+end
 
 function __resetSpineZorder(hero)
 	local position = hero:getAttr("position")
@@ -602,6 +843,9 @@ function __getActionCurrent(hero)
 	local heroSvrId = hero:getAttr("id")
 	return spineActionCurrent[heroSvrId] 
 end
+
+-------------------- spines 
+---------------------------------------------
 
 
 function __addBuffIcon(hero,icon)
@@ -673,7 +917,7 @@ function showMiss(hero)
 	__addToSpine(hero,s,100) 
 
 
-	sequence = transition.sequence({ 
+	local sequence = transition.sequence({ 
 									CCFadeOut:create(0.25),
 									CCFadeIn:create(0.25), 
 									})

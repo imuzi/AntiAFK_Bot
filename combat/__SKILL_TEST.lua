@@ -99,6 +99,18 @@ local effect_module =
 local actionFormats = 
 {
 	{
+		name="Poision",
+		params = 
+		{
+			power = 100,
+			element = 0, -- 0物理 1 法术
+			
+			round = 1,
+			showType = 1, -- 用来定义BUFF的特定类型
+		}
+	}
+	,
+	{
 		name="buff",
 		params = 
 		{
@@ -106,7 +118,8 @@ local actionFormats =
 			value = 30,
 			attrName = "critRate",
 			stackType = 1,
-			round = 1
+			round = 1,
+			showType = 1, -- 用来定义BUFF的特定类型
 		}
 	}
 	,
@@ -115,7 +128,7 @@ local actionFormats =
 		params = 
 		{
 			power = 100,
-			element = 0, 
+			element = 0, -- 0物理 1 法术
 		}
 	}
 	,

@@ -19,11 +19,13 @@ baseAction =
 		if #targets > 0 then 
 			SkillLogic.castSkill(skill) 
 			tempLoopFlag__(skill,true)
+			return true 
 		else 
 			-- WARN::无目标 技能不能放时  机会还给回去  FIX 如果不停还回去 是否 反复执行
 			resetTurnOrders(hero)
 			
 			over(hero)
+			return false 
 		end   
 	end,
 	loop = 
@@ -44,7 +46,8 @@ baseAction =
 		end   
 	end,
 	over = 
-	function(hero)
+	function(hero) 
+
 		local skill = hero:getSkillToCast()
 		tempLoopFlag__(skill,false)   
 		CombatLogic.trans_status(hero,"STANDBY") 
@@ -58,7 +61,9 @@ castSkill =
 {
 	begin =
 	function(hero) 
-		baseAction.begin(hero)
+		if baseAction.begin(hero) then 
+			SkillLogic.onSkillCasted(hero:getSkillToCast())
+		end 
 	end,
 	loop = 
 	function(hero)
@@ -179,7 +184,7 @@ end
 
 function getBehavior(hero)
 	local status = hero:getStatus() 
-	print("status",status,hero:getCfgByKey("Name"))
+	-- print("status",status,hero:getCfgByKey("Name"))
 	return self[status]
 end
 
@@ -248,14 +253,22 @@ function getAdjustedInterval(hero)
 end
 
 -- 当是showeffect时  老的逻辑是找到另一个 ccs动画接着放。。。。。
+
+-- 当多段出现时 规则如下 
+-- Spine中 showeffect的事件的命名规则 定义如下 showEffect 第几段 下划线 cocos动作名  如：showEffect_1_animation1
+--[[ string.gsub("showEffect_1_animation1","([%w]+)",function(v) 
+		 print("______________________:::",v)
+	end)]] --FIXME
+  
 function ___dealShowEffectHit(k,v,step,hero)
 	-- local isShowEffEvt = ___isHit(k,v,step,0,"showEffect",hero) 
 	-- if isShowEffEvt then
 
-		print("__isShowEffEvt__")
+	 
 
 		VisualEffect.dealShowEffect(hero)
 
+		-- animati = hero:getAvatarCfgByKey(v)
 		local skill = hero:getSkillToCast()
 		local anim1 = skill:getAnimEvent("Animation1")
 		for _k,_v in pairs (anim1) do 

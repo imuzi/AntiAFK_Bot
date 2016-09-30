@@ -272,8 +272,75 @@ end
 
  
 
-__g_skillStruct()
+-- __g_skillStruct()
 --Spine part 
 
 
 
+function ____getSpineAnimEvetnPoint(jsonName )
+	local resPath = CCFileUtils:sharedFileUtils():getWritablePath() .. 'res/'
+	local jsonDir = resPath..spinePath..jsonName..".json" 
+
+	print("____________jsonDir",jsonDir) 
+	local file =  io.open(jsonDir, "r")
+	if not file then return end 
+ 	local jsonstring = file:read("*a")
+    io.close(file)
+
+ 	
+	local jsondata = json.decode(jsonstring)
+	local animName = animName or "attack" 
+
+	-- local spineProj = newSpine(jsonDir)
+
+	local data = {}
+	for actionName,actionData in pairs(jsondata.animations) do 
+		local __actionName 
+
+		 
+
+			-- print("-------actionName",actionName,avatarData.Avatar.."_")
+			__actionName =actionName  
+	 
+			data[__actionName] = data[__actionName] or {}
+
+			local haveHitEvent = false
+			local isNeedCheckActionName = table.indexof(spine_actionNames, actionName)
+			if actionData.events then 
+				for i,v in ipairs(actionData.events) do
+					local eventName = v.name
+					local point = v.time 
+
+
+					if isNeedCheckActionName and (string.find(eventName,"hit") or string.find(eventName,"fire")) then 
+						 
+						haveHitEvent = true
+					end
+					-- print("____actionName",actionName)
+					-- print("____eventName,____point",eventName,point*30)
+				 	local eventName = needTransKeyNames[eventName] or  eventName
+					data[__actionName][eventName] = time_to_frame(point)
+					 
+					-- table.insert(data[__actionName] , {eventName=eventName,point=point})
+				end
+			end
+
+			if not haveHitEvent and isNeedCheckActionName then
+				print("WARNING: "..jsonName.." "..actionName.." hit event not exists")
+			end
+			-- local interval = spineProj:getAnimationDuration(actionName)
+			-- spineProj:setAnimation(0, actionName, true)
+			-- data[__actionName].interval = time_to_frame(interval)
+			-- print("------actionName----interval =",actionName,interval*30)
+
+		-- end
+	end
+
+	 dump(data)
+	-- print(table_tostring(data))
+	return data--[animName]
+
+end
+
+
+____getSpineAnimEvetnPoint("spine900")

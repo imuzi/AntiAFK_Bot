@@ -8,108 +8,33 @@ local EffectActions = require(_.."EffectActions")
 local Conditions = require(_.."Conditions")
 module(...,package.seeall)
 
-local effect_module =  
-						{
-						action = {
-							name="damage",
-							params = 
-							{
-								power = 100,
-								element = 0, 
-							} 
-						} ,
-						-- action ={
-						-- 	name="buff",
-						-- 	params = 
-						-- 	{
-						-- 		mode = 0,
-						-- 		value = 30,
-						-- 		attrName = "critRate",
-						-- 		stackType = 0,
-						-- 		round = 3
-						-- 	}
-						-- },
+function loop(frame_step)
+	CombatData.foreachManualCastData(
+		function(data)
+			local cast_frame,skill_id = unpack(data)
 
-						-- situations = {
-						-- 	{
-						-- 	name = "target",
-						-- 	conditions = {
-						-- 			{
-						-- 				name="attribute",
-						-- 				params = {key="hpPercent",value=30,comp="=="}
-										 
-						-- 			},
-						-- 			{
-						-- 				name="haveBuff",
-						-- 				params = {id=1,actionName=""}
-										 
-						-- 			}  
-						-- 		}
-						-- 	},
-						-- 	{
-						-- 	name = "host",
-						-- 	conditions = {
-						-- 			{
-						-- 				name="attribute",
-						-- 				params = {key="hpPercent",value=30,comp="=="}
-										 
-						-- 			},
-						-- 			{
-						-- 				name="haveBuff",
-						-- 				params = {id=1,actionName=""}
-										 
-						-- 			}  
-						-- 		}
-						-- 	},
-						-- 	{
-						-- 	name = "weather",
-						-- 	conditions = {
-						-- 			{
-						-- 				name="attribute",
-						-- 				params = {key="isNight",value=true,comp="=="}
-										 
-						-- 			} 
-						-- 		}
-						-- 	},
+			if frame_step == cast_frame then 
 
-						-- }
-						targetConditions = {
-							{
-								name="attribute",
-								params = {key="hpPercent",value=30,comp="=="}
-								 
-							},
-							{
-								name="haveBuff",
-								params = {id=1,actionName=""}
-								 
-							}  
-						},
-						targetFilter = {
-							Target= 1,
-							TargetFilter= 0,
-							OrderRule= 0,
-							Descend= 0,
-							SelectCount= 1,
-						},
-						triggerEvent = {
-							name= "hit",
-							-- targetFilter= {
-							-- 	Target= 2,
-							-- 	TargetFilter= 0,
-							-- 	OrderRule= 0,
-							-- 	Descend= 0,
-							-- 	SelectCount= 1,
-							-- },
-						},
-						round = 1,
-						} 
+				CombatData.foreachAllSkills(
+					function(skill)
+						if skill:getCfgByKey("ID") == skill_id then 
+							castSkill(skill) 
+							return true 
+						end 
+					end)
+				
+			end 
+		end)
+end
+
+
 -- 讲技能的eff 解压到 hero身上  xxx  不负责执行
 function castSkill(skill)
 
 	local eff_funcs = --skill:getCfgByKey("Functions") or 
 	{
-		effect_module 
+		-- effect_module 
+		generateBasicSkillStruct()
 	}
 
 
@@ -158,8 +83,9 @@ function doEffect(effect)
 			,"\neffectListSize",#caster:getEffectList()
 			,"\ntempEffectListSize",#caster:getTempEffectList()
 			) 
-
- 	-- skill:setTargets(targets)
+ 	if hasTargetFilter then 
+ 		skill:setTargets(targets)  --如果效果重算目标 要不要更新原技能找到的目标呢 WARN FIX ME
+ 	end
  	-- effect:setTargets(targets)
 
  	local action = effect:getAction()
@@ -196,24 +122,39 @@ end
 
 
 
-function generateBasicSkillStruct(skill)
-	local caster = skill:getCaster()
-
-	local targetFilter = TargetFilters.generateFilter(skill)
-
-
+function generateBasicSkillStruct() 
+	return 
+	{
+		action = 
+		{
+		name="buff",
+		params = 
+		{
+			mode = 0,
+			value = 30,
+			attrName = "critRate",
+			stackType = 1,
+			round = 1
+		}
+	},
+		-- {
+		-- 	name="damage",
+		-- 	params = 
+		-- 	{
+		-- 		power = 100,
+		-- 		element = 0, 
+		-- 	} 
+		-- },
+		triggerEvent = {
+			name= "hit",
+			target = "host" 
+		},
+		round = 1,
+	} 
 end
 
 
 function generateCommBuffEffects(params,isDeBuff)
-	local eff_add = Effect.new() 
-	eff_add:setAction({
-						name="changeAttr",
-						params = params
-						}) 
-	eff_add:setHost(target)
-	eff_add:setRound(params.round) 
-
 	local _params = clone(params) 
 	
 	if _params.mode == 2 then -- bool 
@@ -221,13 +162,18 @@ function generateCommBuffEffects(params,isDeBuff)
 	else 
 		_params.value = _params.value*-1
 	end 
+ 
+	local eff_add = Effect.new() 
+	eff_add:setAction({
+						name="changeAttr",
+						params = params
+						})   
 
 	local eff_reduce = Effect.new() 
 	eff_reduce:setAction({
 						name="changeAttr",
 						params = _params
-						})  
-	eff_reduce:setRound(params.round) 
+						})   
 	
 	if isDeBuff then 
 		eff_reduce:setTriggerEvent({name = "effectBegin"}) 
@@ -241,6 +187,27 @@ function generateCommBuffEffects(params,isDeBuff)
 end
 
 
+function onSkillCasted(skillCasting)
+	local skills = skillCasting:getCaster():getGroup():getSkills()
+	-- CombatData.foreachAllSkills(
+	-- function(skill) 
+	for i,skill in ipairs(skills) do 
+		local skillCdToSet = skill:getCdLeft() < G_CD and G_CD or skill:getCdLeft()
+		skill:setCdLeft(skillCdToSet) 
+		skill:setCd(skillCdToSet)
+	end  
+
+	local skillCdToSet = skillCasting:getCfgByKey("CoolDown")*LOGIC_FPS 
+	skillCdToSet = skillCdToSet < G_CD and G_CD or skillCdToSet 
+
+	skillCasting:setCdLeft(skillCdToSet)
+	skillCasting:setCd(skillCdToSet)
+
+
+	doWithCheck__("onUseSkill__",VisualEffect.getSkillIcon(skillCasting)) 
+
+	VisualEffect.dealSkillName(skillCasting)
+end
 
 
 

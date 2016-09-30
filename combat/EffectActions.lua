@@ -4,6 +4,48 @@
 --
 local _ = (...):match("(.-)[^%.]+$") 
 module(...,package.seeall) 
+
+--[[ 
+1. 重命名： onHit -> beenHit
+2. buff (debuf) 的Value有默认值：0，意味不好也不坏的buff
+
+3. 默认的，Purge不能净化value为 0 的 buff(debuf) 
+21. Purge需要有一个默认参数，Count ＝ 99。但Purge只会净化Value不为0的buff
+22. Purge需要一个TypeList，意味净化指定Type
+
+
+4. 封装：RoundDamage
+5. 封装：重伤。效果等于RoundDamage ＋ changeAttr（cureDecrease）
+6. 封装：烧伤。效果等于RoundDamage ＋ changeAttr（atk）
+7. 每个 action 都应该有个 Group。 比如中毒，烧伤，流血属于一个Group。他们也会互相覆盖。
+8. changeAttr的 stackType应该抽象到 action层，与Group一起出现。
+
+
+9. action应该支持数组，意味同时发生
+10. action需要一个新字段： buff type，意味动画表现。比如重伤是一个action组，但buffType只有1个。  若没配bufftype的话，取attrName对应的buff type
+11. 每个attrName都应对应一个buff type。对应关系数据结构在哪里？
+12. AddBuffRound 没实现
+13. ignore buff effect, 没实现
+14. select target, 没实现
+15. ignore action, 没实现
+16. 
+17. target condition 支持数组，并定义 AND , OR 操作。默认是 OR
+19. triggerEvent 支持数组，并定义逻辑操作. 默认是 OR
+20. 对必定暴击进行封装: mustCrit
+21. effect的rate重新封装，效果效果等价于：
+	"targetCondition":{
+  		 "name":"luck",
+   		"params":{
+     			  "param:30
+  		 }
+	}
+
+23. damage公式确认：当power为负时，会受到治疗加成
+24. effect缺少定义：是否是被动技能触发的。若是被动触发，那么无法被任何技能remove，只能等回合用完为止。
+
+
+]]
+
 --[[
 CurePower  
 即 吸血效果
@@ -168,8 +210,7 @@ end
 	name="newEffect",
 	params = 
 	{
-	effect = {},  
- 	round = 3
+	effect = {}  
 	}
 } 
 ]]
@@ -239,11 +280,13 @@ buff = function(effect,target,isDeBuff)
 	if isHit and isEffectHit then   
 		local skill = effect:getSkill() 
 		local _buff = SkillLogic.generateCommBuffEffects(params,isDeBuff) 
+
 		for i,v in ipairs(_buff) do
 		  	v:setHost(target)
 		  	v:setSkill(skill)
 		  	v:setTargets({target}) 
 	  	end  
+	  	
 		local effectBeginEff 
 
 		if not SkillLogic.check_buff_stack(_buff,isDeBuff) then  

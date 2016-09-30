@@ -141,6 +141,7 @@ function __init_skills(group)
 						caster:addPassiveSkill(skill)
 					else 
 						skill:setCdLeft(INIT_CD) 
+						skill:setCd(INIT_CD) 
 						group:addSkill(skill)
 					end 
  
@@ -182,7 +183,9 @@ function foreachAllHeros(func)
 
 		local heros = group:getHeros()
 		for i,hero in ipairs(heros) do 
-			func(hero)
+			if func(hero) then 
+				break
+			end 
 		end
 	end
 end
@@ -193,10 +196,36 @@ function foreachAllSkills(func)
 
 		local skills = group:getSkills() 
 		for i,skill in ipairs(skills) do 
-			func(skill)
+			if func(skill) then 
+				break
+			end 
 		end
 	end
 end
+
+
+function foreachManualCastData(func) 
+	for k,castData in pairs(manualCastData) do 
+		if func(castData) then 
+			break
+		end  
+	end
+end
+
+function getSkillById(id)
+	local _skill 
+	foreachAllSkills(
+		function(skill)
+			if skill:getCfgByKey("ID") == id then 
+				_skill = skill
+				return true 
+			end 
+		end)
+
+	return _skill
+end
+
+
 
 function random__( ... )
 	random_index = random_index + 1

@@ -14,6 +14,7 @@ local Skill = class__("Skill",
 					keytype = "nil",
 					caster = "nil",
 					targets = "{}",
+					cd = "0",
 
 					group = "nil"
 					})
@@ -84,7 +85,7 @@ function Skill:updateCdLeft(gap)
 	if self.cdLeft <0 then 
 		self.cdLeft = -1
 	else
-		print("_______技能：",self:getCfgByKey("Name"),"剩余冷却：",self.cdLeft)
+		-- print("_______技能：",self:getCfgByKey("Name"),"剩余冷却：",self.cdLeft)
 	end
 end
 
@@ -95,6 +96,15 @@ end
 function Skill:setCdLeft(val)
 	self.cdLeft = val
 	print("setCdLeft",self.cdLeft)
+end
+
+function Skill:getCd()
+	return self.cd
+end
+
+function Skill:setCd(val)
+	self.cd = val
+	 
 end
 
 

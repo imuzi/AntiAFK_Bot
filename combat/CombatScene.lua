@@ -51,6 +51,24 @@ end
 
 
 
+---------- ui 
+function CombatScene:BG()
+	-- body
+end
+
+
+
+function CombatScene:FUNCTION_BTNS()
+	local speedBtn,autoCastSwitchBtn 
+
+
+	
+end
+
+function CombatScene:FUNCTION_BTNS()
+	-- body
+end
+
 
 
 return CombatScene

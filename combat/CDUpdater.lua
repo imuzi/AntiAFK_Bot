@@ -18,6 +18,8 @@ function updateSkillCd()
 	CombatData.foreachAllSkills(
 	function(skill)
 		checkSkillCd(skill)
+
+		doWithCheck__("updateCd__",VisualEffect.getSkillIcon(skill)) 
 	end)  
 end
 

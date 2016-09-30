@@ -102,8 +102,10 @@ function trans_status(hero,status_key)
 	hero:setFrameScaleRatio(1)
 	print("改变 ",hero:getCfgByKey("Name"),"状态为 ：",val)
 	Behaviors.begin(hero)
-
+	
+	
 	VisualEffect.updateAction(hero)
+
 end
 
 
@@ -255,6 +257,7 @@ function calculateDamage(effect,target)
 	if not isHit then 
 		print("————未命中,hitRate",hitRate,hitRate*100/(hitRate+100))
 		VisualEffect.showMiss(target)
+		
 		return 0 
 	end 
  
@@ -262,7 +265,7 @@ function calculateDamage(effect,target)
 	local isCrit = caster:getAttr("mustCrit") or isBingo(caster:getAttr("critRate")) 
 	if isCrit then 
 		TriggerEvents.listen("critHit",caster) 
-		TriggerEvents.listen("onCritHit",target) 
+		TriggerEvents.listen("beenCritHit",target) 
 	end  -- WARN 要先于计算伤害 
 
 
@@ -284,7 +287,7 @@ function calculateDamage(effect,target)
  	local AOEIncrease = caster:getAttr("AOEIncrease") - target:getAttr("AOEDecrease")
  	local skillDamageIncrease = caster:getAttr("skillDamageIncrease") - target:getAttr("skillDamageDecrease")
  
- 	local skillDamageScaleRatio = effect:getAction().params.power 
+ 	local skillDamageScaleRatio = effect:getAction().params.power/100
 
 
  	local checkVal = function(val)
